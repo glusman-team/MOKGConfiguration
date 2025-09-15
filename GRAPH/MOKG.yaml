@@ -1,0 +1,24 @@
+# author --> Skye Lane Goetz
+# THIS CONFIG IS KINDA A PC KILLER... EVEN ON WENCESLAUS
+
+metadata:
+  knowledge_graph_name: MULTIOMICS_KG
+  graph_version: 2.0.0
+  graph_description: Connecting Multiomic Factors with Host Health
+
+location:
+  table_config_containing_directories:
+    - /local_raid1/sgoetz/STORE/CONFIG/TABLE/MBKG
+    - /local_raid1/sgoetz/STORE/CONFIG/TABLE/MOKG
+  #local_pmc_download: NO TARS ON WENCESLAUS
+  edge_scoring_model_weights: /local_raid1/sgoetz/STORE/MODELS/WEIGHTS/14_AUG_150_EPOCHS.pt
+  sqlite_databases:
+    babel: /local_raid1/sgoetz/DBSTORE/BABEL/BABEL03.db
+    kg2: /local_raid1/sgoetz/DBSTORE/KG2/KG2.10.1.db
+    pubmed: /local_raid1/sgoetz/DBSTORE/PUBMED/PubMed.db
+    pmc: /local_raid1/sgoetz/DBSTORE/CAPTIONS/PMCSuppCaptions.db
+
+hyperparameters:
+  number_of_parallel_processes_to_run: 30
+  maximum_p_value_in_graph: 0.1
+  sql_progress_handler_timeout: 2.0
