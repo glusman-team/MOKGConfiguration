@@ -13,10 +13,10 @@ location:
   #local_pmc_download: NO TARS ON WENCESLAUS
   edge_scoring_model_weights: /local_raid1/sgoetz/STORE/MODELS/WEIGHTS/14_AUG_150_EPOCHS.pt
   sqlite_databases:
-    babel: /local_raid1/sgoetz/DBSTORE/BABEL/BABEL03.db
-    kg2: /local_raid1/sgoetz/DBSTORE/KG2/KG2.10.1.db
-    pubmed: /local_raid1/sgoetz/DBSTORE/PUBMED/PubMed.db
-    pmc: /local_raid1/sgoetz/DBSTORE/CAPTIONS/PMCSuppCaptions.db
+    babel: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/BABEL/BABEL03.db
+    kg2: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/KG2/KG2.10.1.db
+    pubmed: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/PUBMED/PubMed.db
+    pmc: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/CAPTIONS/PMCSuppCaptions.db
 
 hyperparameters:
   number_of_parallel_processes_to_run: 30
