@@ -8,8 +8,8 @@ metadata:
 
 location:
   table_config_containing_directories:
-    - /local_raid1/sgoetz/STORE/CONFIG/TABLE/MBKG
-    - /local_raid1/sgoetz/STORE/CONFIG/TABLE/MOKG
+    - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG
+    - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG
   #local_pmc_download: NO TARS ON WENCESLAUS
   edge_scoring_model_weights: /local_raid1/sgoetz/STORE/MODELS/WEIGHTS/14_AUG_150_EPOCHS.pt
   sqlite_databases:
