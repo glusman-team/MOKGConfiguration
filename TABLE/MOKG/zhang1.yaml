@@ -58,23 +58,23 @@ sections:
         mapping_hyperparameters:
           classes_to_prioritize:
             - biolink:Protein
-  - attributes:
-      notes:  Table S9. Lists of differentially expressed  genes (DEGs) of osteosarcoma before and after NACT
-    location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: Table S9
-    triple:
-      triple_subject:
-        mapping_hyperparameters:
-          classes_to_prioritize:
-            - biolink:Gene
-  - attributes:
-      notes:  Table S10. Lists of differentially expressed potential target genes for osteosarcoma after neoadjuvant chemotherapy
-    location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: Table S10
-    triple:
-      triple_subject:
-        mapping_hyperparameters:
-          classes_to_prioritize:
-            - biolink:Gene
+  #- attributes:
+      #notes:  Table S9. Lists of differentially expressed  genes (DEGs) of osteosarcoma before and after NACT
+    #location:
+      #download_hyperparameters:
+        #which_excel_sheet_to_use: Table S9
+    #triple:
+      #triple_subject:
+        #mapping_hyperparameters:
+          #classes_to_prioritize:
+            #- biolink:Gene
+  #- attributes:
+      #notes:  Table S10. Lists of differentially expressed potential target genes for osteosarcoma after neoadjuvant chemotherapy
+    #location:
+      #download_hyperparameters:
+        #which_excel_sheet_to_use: Table S10
+    #triple:
+      #triple_subject:
+        #mapping_hyperparameters:
+          #classes_to_prioritize:
+            #- biolink:Gene

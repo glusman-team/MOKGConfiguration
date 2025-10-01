@@ -10,8 +10,8 @@ template:
     config_curator_organization: Institute for Systems Biology
   attributes:
     sample_size:
-      encoding_method: column_of_values
-      value_for_encoding: G
+      encoding_method: value
+      value_for_encoding: 982
     p_value:
       encoding_method: column_of_values
       value_for_encoding: P

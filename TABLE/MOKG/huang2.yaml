@@ -10,9 +10,6 @@ template:
     config_curator_name: Skye Lane Goetz
     config_curator_organization: Institute for Systems Biology
   attributes:
-    sample_size:
-      encoding_method: value
-      value_for_encoding: 4
     multiple_testing_correction_method:
       encoding_method: value
       value_for_encoding: Unspecified
@@ -22,7 +19,7 @@ template:
   triple:
     triple_object: 
       encoding_method: value
-      value_for_encoding: monkey pox
+      value_for_encoding: MONDO:0002594
       mapping_hyperparameters:
         classes_to_prioritize:
           - biolink:Disease

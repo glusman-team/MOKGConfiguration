@@ -9,9 +9,6 @@ template:
     config_curator_name: Skye Lane Goetz
     config_curator_organization: Institute for Systems Biology
   attributes:
-    sample_size:
-      encoding_method: value
-      value_for_encoding: 412
     p_value:
       encoding_method: column_of_values
       value_for_encoding: F
@@ -44,15 +41,35 @@ sections:
   - location:
       download_hyperparameters:
         which_excel_sheet_to_use: training set
+    attributes:
+      sample_size:
+        encoding_method: value
+        value_for_encoding: 213
   - location:
       download_hyperparameters:
         which_excel_sheet_to_use: test set
+    attributes:
+      sample_size:
+        encoding_method: value
+        value_for_encoding: 135
   - location:
       download_hyperparameters:
         which_excel_sheet_to_use: TCGA BLCA
+    attributes:
+      sample_size:
+        encoding_method: value
+        value_for_encoding: 412
   - location:
       download_hyperparameters:
         which_excel_sheet_to_use: GSE15863 CACO2
+    attributes:
+      sample_size:
+        encoding_method: value
+        value_for_encoding: 9
   - location:
       download_hyperparameters:
         which_excel_sheet_to_use: GSE158632-HT29
+    attributes:
+      sample_size:
+        encoding_method: value
+        value_for_encoding: 9
