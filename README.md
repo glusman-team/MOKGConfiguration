@@ -9,6 +9,6 @@ The up-to-date open-source configuration for MicrobiomeKG and MultiomicsKG build
 
 ## Contributors
 
-[Skye Lane Goetz](mailto:sgoetz@isbscience.org)
-[Gwênlyn Glusman](mailto:gglusman@isbscience.org)
-Jared C Roach
+- [Skye Lane Goetz](mailto:sgoetz@isbscience.org)
+- [Gwênlyn Glusman](mailto:gglusman@isbscience.org)
+- Jared C Roach
