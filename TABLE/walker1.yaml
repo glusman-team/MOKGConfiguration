@@ -1,0 +1,110 @@
+template:
+  location:
+    where_to_download_data_from: h/Users/jroach/Computational_Biology_ISB/NCATS_Translator_Project_RTX/Multiomics/NCATS MOKG 9_25/walker1/walker1 11_3_25.yamlttps://pmc.ncbi.nlm.nih.gov/articles/instance/10154040/bin/NIHMS1876340-supplement-Supplementary_Tables.xlsx
+    download_hyperparameters:
+      file_extension: xlsx
+      start_at_line_number:6
+  provenance:
+    publication: PMC10154040
+    config_curator_name: JC Roach; Nov 3, 2025
+    config_curator_organization: Institute for Systems Biology
+  attributes:
+    sample_size:
+      encoding_method: value
+      value_for_encoding: 4110
+    multiple_testing_correction_method:
+      encoding_method: value
+      value_for_encoding: Bonferroni
+    assertion_method:
+      encoding_method: value
+      value_for_encoding: Cox proportional hazards adjusted for baseline age, sex, race-center, education, APOE ε4 status, body mass index, diabetes, hypertension, smoking status, eGFR-creatinine, and baseline cognition
+  notes: Large-scale plasma proteomic analysis identifies proteins and pathways associated with dementia risk
+  triple:
+    triple_subject: 
+      encoding_method: column_of_values
+      value_for_encoding: A
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Protein
+        in_this_organism: NCBITaxon:9606
+    triple_predicate: biolink:correlated_with
+
+sections:
+  - location:
+    download_hyperparameters:
+      which_excel_sheet_to_use: ST5 - Dementia Risk
+  triple_object:
+    encoding_method: value
+    value_for_encoding: dementia
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: K
+  relationship_strength:
+    encoding_method: column_of_values
+    value_for_encoding: H
+
+  - location:
+    download_hyperparameters:
+      which_excel_sheet_to_use: ST8 - Proteins & Cognition
+    triple_object:
+      encoding_method: value
+      value_for_encoding: cognition
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: G
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: D
+
+  - location:
+    download_hyperparameters:
+      which_excel_sheet_to_use: ST8 - Proteins & Cognition
+    triple_object:
+      encoding_method: value
+      value_for_encoding: language
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: H
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: K
+
+  - location:
+    download_hyperparameters:
+      which_excel_sheet_to_use: ST8 - Proteins & Cognition
+    triple_object:
+      encoding_method: value
+      value_for_encoding: executive function
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: L
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: O
+
+  - location:
+    download_hyperparameters:
+      which_excel_sheet_to_use: ST8 - Proteins & Cognition
+    triple_object:
+      encoding_method: value
+      value_for_encoding: memory
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: P
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: S
+
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: ST11 - Midlife Dementia Risk
+    triple_object:
+      encoding_method: value
+      value_for_encoding: dementia
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: G
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: D
+
