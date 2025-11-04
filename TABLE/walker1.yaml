@@ -1,6 +1,6 @@
 template:
   location:
-    where_to_download_data_from: h/Users/jroach/Computational_Biology_ISB/NCATS_Translator_Project_RTX/Multiomics/NCATS MOKG 9_25/walker1/walker1 11_3_25.yamlttps://pmc.ncbi.nlm.nih.gov/articles/instance/10154040/bin/NIHMS1876340-supplement-Supplementary_Tables.xlsx
+    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/10154040/bin/NIHMS1876340-supplement-Supplementary_Tables.xlsx
     download_hyperparameters:
       file_extension: xlsx
       start_at_line_number:6
