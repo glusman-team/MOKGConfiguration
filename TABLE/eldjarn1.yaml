@@ -1,0 +1,79 @@
+template:
+  location:
+    where_to_download_data_from: https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-023-06563-x/MediaObjects/41586_2023_6563_MOESM3_ESM.xlsx
+    download_hyperparameters:
+      file_extension: xlsx
+      start_at_line_number:6
+  provenance:
+    publication: PMC10567571
+    config_curator_name: JC Roach; Nov 3, 2025
+    config_curator_organization: Institute for Systems Biology
+  attributes:
+    sample_size:
+      encoding_method: value
+      value_for_encoding: about 40,000
+    multiple_testing_correction_method:
+      encoding_method: value
+      value_for_encoding: Bonferroni adjustment
+    assertion_method:
+      encoding_method: value
+      value_for_encoding: regression
+  notes: Large-scale plasma proteomics comparisons through genetics and disease associations
+  triple:
+    triple_subject: 
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Protein
+        in_this_organism: NCBITaxon:9606
+    triple_predicate: biolink:correlated_with
+
+sections:
+  - location:
+    download_hyperparameters:
+      which_excel_sheet_to_use: ST16_olink_phenotype_assoc
+  triple_subject: 
+    encoding_method: column_of_values
+    value_for_encoding: C
+  triple_object:
+    encoding_method: column_of_values
+    value_for_encoding: E
+  p_value:
+    encoding_method: column_of_values
+    value_for_encoding: G
+  relationship_strength:
+    encoding_method: column_of_values
+    value_for_encoding: F
+
+  - location:
+    download_hyperparameters:
+      which_excel_sheet_to_use: ST17_somascan_phenotype_assoc
+  triple_subject: 
+    encoding_method: column_of_values
+    value_for_encoding: B
+  triple_object:
+    encoding_method: column_of_values
+    value_for_encoding: G
+  p_value:
+    encoding_method: column_of_values
+    value_for_encoding: F
+  relationship_strength:
+    encoding_method: column_of_values
+    value_for_encoding: E
+
+  - location:
+    download_hyperparameters:
+      which_excel_sheet_to_use: ST18_ibd_assoc
+  triple_subject: 
+    encoding_method: column_of_values
+    value_for_encoding: G
+  triple_object:
+    encoding_method: value
+    value_for_encoding: inflammatory bowel disease
+  p_value:
+    encoding_method: column_of_values
+    value_for_encoding: C
+  relationship_strength:
+    encoding_method: column_of_values
+    value_for_encoding: B
+
+
