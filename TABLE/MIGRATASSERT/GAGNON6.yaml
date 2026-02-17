@@ -1,0 +1,86 @@
+template:
+  syntax: TC3
+  source:
+    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs12967-022-03799-5/MediaObjects/12967_2022_3799_MOESM1_ESM.xlsx
+    local: ./DATALAKE/GAGNON6.xlsx
+    kind: excel
+    sheet: Supplementary Table 6
+    row_slice:
+      - 2
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: E
+      prioritize:
+        - OrganismTaxon
+      remove:
+        - .*_
+        - .*\-
+        - \)
+        - id.*
+        - class
+        - family
+        - genus
+        - order
+        - phylum
+        - \.
+        - levels
+    predicate: affects
+    object:
+      method: column
+      encoding: D
+      taxon: 9606
+      prioritize:
+        - Protein
+        - ClinicalFinding
+        - ChemicalEntity
+        - PhenotypicFeature
+        - Disease
+      regex:
+        - pattern: _
+          replacement: ' '
+        - pattern: Jansen
+          replacement: ''
+        - pattern: 'Jansen '
+          replacement: ''
+        - pattern: 'van der Harst '
+          replacement: ''
+        - pattern: 'Malik '
+          replacement: ''
+        - pattern: 'Howard '
+          replacement: ''
+        - pattern: Stanzick eGFR
+          replacement: Estimated glomerular filtration rate
+        - pattern: 'Deelen '
+          replacement: ''
+        - pattern: 'Mahajan '
+          replacement: ''
+  provenance:
+    repo: PMC
+    publication: PMC9887809
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 142204
+    - annotation: p value
+      method: column
+      encoding: J
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: H
+    - annotation: assertion method
+      method: column
+      encoding: F
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Robust Mendelian randomization results and associated statistics.

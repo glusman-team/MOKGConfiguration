@@ -1,0 +1,120 @@
+template:
+  syntax: TC3
+  source:
+    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-52097-9/MediaObjects/41467_2024_52097_MOESM9_ESM.xlsx
+    local: ./DATALAKE/RAVIK9.xlsx
+    kind: excel
+    row_slice:
+      - 3
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - OrganismTaxon
+    predicate: associated_with
+  provenance:
+    repo: PMC
+    publication: PMC11377447
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 234
+    - annotation: p value
+      method: column
+      encoding: E
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: C
+    - annotation: assertion method
+      method: value
+      encoding: Generalized linear model
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Age corrected species-level associations between taxa and clinical parameters + frailty measures.
+sections:
+  - source:
+      sheet: Fasting blood glucose
+    statement:
+      object:
+        encoding: Fasting blood glucose
+  - source:
+      sheet: Triglycerides
+    statement:
+      object:
+        encoding: Triglycerides
+  - source:
+      sheet: Total Cholesterol
+    statement:
+      object:
+        encoding: Cholesterol
+  - source:
+      sheet: HDL
+    statement:
+      object:
+        encoding: HDL Cholesterol
+  - source:
+      sheet: LDL
+    statement:
+      object:
+        encoding: LDL Cholesterol
+  - source:
+      sheet: hs-CRP
+    statement:
+      object:
+        encoding: hs-CRP
+  - source:
+      sheet: ALT
+    statement:
+      object:
+        encoding: ALT
+  - source:
+      sheet: Vitamin B12
+    statement:
+      object:
+        encoding: Vitamin B12
+  - source:
+      sheet: Right Handgrip
+    statement:
+      object:
+        encoding: Right Handed
+  - source:
+      sheet: Left Handgrip
+    statement:
+      object:
+        encoding: Left Handed
+  - source:
+      sheet: Gait speed
+    statement:
+      object:
+        encoding: Walking speed
+  - source:
+      sheet: Folate
+    statement:
+      object:
+        encoding: Folate
+  - source:
+      sheet: MMSE
+    statement:
+      object:
+        encoding: MMSE
+  - source:
+      sheet: Sleep
+    statement:
+      object:
+        encoding: Sleep
+  - source:
+      sheet: Free Thyroxine
+    statement:
+      object:
+        encoding: Thyroxine

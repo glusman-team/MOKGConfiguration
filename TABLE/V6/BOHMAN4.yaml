@@ -1,0 +1,52 @@
+template:
+  syntax: TC3
+  source:
+    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs12915-024-01887-0/MediaObjects/12915_2024_1887_MOESM1_ESM.xlsx
+    local: ./DATALAKE/BOHMAN4.xlsx
+    kind: excel
+    sheet: Table 4
+    row_slice:
+      - 4
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - OrganismTaxon
+    predicate: associated_with
+    object:
+      method: value
+      encoding: age
+    qualifiers:
+      - qualifier: part_qualifier
+        method: value
+        encoding: UBERON:0001557
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UMLS:C1956108 # MICROBIOM
+  provenance:
+    repo: PMC
+    publication: PMC11040984
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 4706
+    - annotation: p value
+      method: column
+      encoding: C
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: assertion method
+      method: value
+      encoding: ANOVA
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Upper respiratory tract micobiota associated with age in healthy controls. Using 10 studies for which age metadata was available, ANCOVA was conducted using the following formula “clr ~ age + age2 + variable_region + sequencing + URT_site + region” that was used to determine significant associations with age, accounting for URT sampling site, geographic region, sequencing method, and 16S rRNA hypervariable region. The square term for age was included to determine if non-linear relationships existed between CLR and age. The p-values were corrected for multiple comparisons via the Benjamini–Hochberg FDR correction

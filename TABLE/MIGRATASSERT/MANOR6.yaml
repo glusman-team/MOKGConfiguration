@@ -1,0 +1,60 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/7562722/bin/41467_2020_18871_MOESM4_ESM.xlsx
+    local: ./DATALAKE/MANOR6.xlsx
+    kind: excel
+    sheet: Supplementary Data 6
+    row_slice:
+      - 3
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: F
+      remove:
+        - \(.*
+    predicate: associated_with
+    object:
+      method: column
+      encoding: A
+      avoid:
+        - OrganismTaxon
+      remove:
+        - \(.*
+        - s$
+        - ^[^a-zA-Z]*
+        - \s+$
+  provenance:
+    repo: PMC
+    publication: PMC7562722
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 3064
+    - annotation: p value
+      method: column
+      encoding: H
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: G
+      transformations:
+        - function: copysign
+          arguments:
+            - 
+            - -1
+    - annotation: assertion method
+      method: value
+      encoding: Spearman correlation
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Significant associations between microbial pathways and measured factors. For each analyte (e.g., lifestyle, diet, clinical test), associations were tested by fitting generalized linear models. Only associations that passed multiple hypothesis correction with FDR < 0.05 are shown.

@@ -1,0 +1,145 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11748489/bin/msystems.00817-24-s0009.xlsx
+    local: ./DATALAKE/YANG9.xlsx
+    kind: excel
+    row_slice:
+      - 4
+      - auto
+  statement:
+    predicate: associated_with
+  provenance:
+    repo: PMC
+    publication: PMC11748489
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 28813
+    - annotation: assertion method
+      method: value
+      encoding: Mann-Whitney U-test
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Differential secondary bile acid production microorganisms consistent with alteration of corresponding gene in patiens with UC, CD, CRC and NAFLD
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: B
+        prioritize:
+          - OrganismTaxon
+      object:
+        method: value
+        encoding: 7alpha-hydroxysteroid dehydrogenase
+        taxon: 9606
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: E
+  - statement:
+      subject:
+        method: column
+        encoding: L
+        prioritize:
+          - OrganismTaxon
+      object:
+        method: value
+        encoding: Bai genes
+        taxon: 9606
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: O
+  - statement:
+      subject:
+        method: column
+        encoding: Q
+        prioritize:
+          - OrganismTaxon
+      object:
+        method: value
+        encoding: 12alpha-hydroxysteroid dehydrogenase
+        taxon: 9606
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: T
+  - statement:
+      subject:
+        method: column
+        encoding: V
+        prioritize:
+          - OrganismTaxon
+      object:
+        method: value
+        encoding: BSH
+        taxon: 9606
+        prioritize:
+          - Gene
+        avoid:
+          - Disease
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: Y
+  - statement:
+      subject:
+        method: column
+        encoding: AA
+        prioritize:
+          - OrganismTaxon
+      object:
+        method: value
+        encoding: 7alpha-hydroxysteroid dehydrogenase
+        taxon: 9606
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: AD
+  - statement:
+      subject:
+        method: column
+        encoding: AF
+        prioritize:
+          - OrganismTaxon
+      object:
+        method: value
+        encoding: Bai genes
+        taxon: 9606
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: AI
+  - statement:
+      subject:
+        method: column
+        encoding: AK
+        prioritize:
+          - OrganismTaxon
+      object:
+        method: value
+        encoding: 3alpha-hydroxysteroid dehydrogenase
+        taxon: 9606
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: AN

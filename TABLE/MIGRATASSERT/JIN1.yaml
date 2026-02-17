@@ -1,0 +1,52 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10269647/bin/spectrum.03662-22-s0002.xlsx
+    local: ./DATALAKE/JIN1.xlsx
+    kind: excel
+    sheet: Supplementary Table 3
+    row_slice:
+      - 3
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - OrganismTaxon
+      regex:
+        - pattern: _
+          replacement: ' '
+    predicate: associated_with
+    object:
+      encoding: rheumatoid arthritis
+      prioritize:
+        - Disease
+  provenance:
+    repo: PMC
+    publication: PMC10269647
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 39
+    - annotation: p value
+      method: column
+      encoding: D
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Unspecified
+    - annotation: relationship strength
+      method: column
+      encoding: B
+    - annotation: assertion method
+      method: value
+      encoding: Spearman correlation
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Bacterial genera that differed in absolute abundance between RA patients and healthy controls.The microbial profiles and bacterial loads of urinary microbiota were identified and quantified by 16S ribosomal RNA (16S rRNA) gene sequencing and quantitative PCR, respectively. P value < 0.05 was considered statistically significant.

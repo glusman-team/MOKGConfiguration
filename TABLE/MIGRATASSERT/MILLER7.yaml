@@ -1,0 +1,60 @@
+template:
+  syntax: TC3
+  source:
+    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs43856-024-00583-y/MediaObjects/43856_2024_583_MOESM9_ESM.xlsx
+    local: ./DATALAKE/MILLER7.xlsx
+    kind: excel
+    sheet: Supplementary Data 3
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - OrganismTaxon
+    predicate: associated_with
+    object:
+      encoding: urinary tract infection
+      prioritize:
+        - Disease
+  provenance:
+    repo: PMC
+    publication: PMC11329762
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: p value
+      method: column
+      encoding: D
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: C
+    - annotation: assertion method
+      method: value
+      encoding: Linear discriminant analysis
+    - annotation: miscellaneous notes
+      method: value
+      encoding: List of 127 bacterial species that differed significantly between aged-care residents and non-elderly individuals with urinary tract infections
+sections:
+  - source:
+      row_slice:
+        - 2
+        - 66
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 123
+  - source:
+      row_slice:
+        - 67
+        - 128
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 20

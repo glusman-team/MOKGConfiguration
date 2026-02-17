@@ -1,0 +1,114 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10434204/bin/spectrum.03429-22-s0001.xlsx
+    local: ./DATALAKE/ROMERO1.xlsx
+    kind: excel
+    sheet: SupplementalTable_1
+    row_slice:
+      - 6
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+        - OrganismTaxon
+      remove:
+        - ;NA.*
+        - .*;
+    predicate: associated_with
+  provenance:
+    repo: PMC
+    publication: PMC10434204
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 474
+    - annotation: multiple testing correction method
+      method: value
+      encoding: FDR of 10 percent
+    - annotation: assertion method
+      method: value
+      encoding: LME model
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Multivariate analysis of relative abundances of amplicon sequence variants (ASVs) in vaginal 16S rRNA gene data as a function of gestational age, maternal age, parity, ethnicity, and marijuana use among women who ultimately delivered at term. The p-value and false discovery rate adjusted p-value (q-value) are provided for each covariate.
+sections:
+  - statement:
+      object:
+        method: value
+        encoding: gestational age
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: G
+      - annotation: relationship strength
+        method: column
+        encoding: E
+  - statement:
+      object:
+        method: value
+        encoding: maternal age
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: J
+      - annotation: relationship strength
+        method: column
+        encoding: H
+  - statement:
+      object:
+        method: value
+        encoding: cannabis use
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: M
+      - annotation: relationship strength
+        method: column
+        encoding: K
+  - statement:
+      object:
+        method: value
+        encoding: hispanic
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: P
+      - annotation: relationship strength
+        method: column
+        encoding: N
+  - statement:
+      object:
+        method: value
+        encoding: african american
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: S
+        transformations:
+          - function: copysign
+            arguments:
+              - 
+              - -1
+      - annotation: relationship strength
+        method: column
+        encoding: Q
+  - statement:
+      object:
+        method: value
+        encoding: parity
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: T
+      - annotation: relationship strength
+        method: column
+        encoding: V

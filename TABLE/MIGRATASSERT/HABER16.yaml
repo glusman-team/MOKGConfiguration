@@ -1,0 +1,57 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/4109533/bin/JCI75436sd16.xlsx
+    local: ./DATALAKE/HABER16.xlsx
+    kind: excel
+    row_slice:
+      - 5
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+        - OrganismTaxon
+      remove:
+        - .*?__
+    predicate: associated_with
+    object:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+        - Gene
+  provenance:
+    repo: PMC
+    publication: PMC4109533
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: column
+      encoding: D
+    - annotation: p value
+      method: column
+      encoding: F
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: C
+      transformations:
+        - function: copysign
+          arguments:
+            - 
+            - -1
+    - annotation: assertion method
+      method: value
+      encoding: Spearman correlation
+    - annotation: miscellaneous notes
+      method: value
+      encoding: MaAsLin analysis results for all clinical phenotypes and gene expression associated with microbial abundance.

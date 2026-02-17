@@ -1,0 +1,49 @@
+template:
+  syntax: TC3
+  source:
+    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41587-019-0233-9/MediaObjects/41587_2019_233_MOESM5_ESM.xls
+    local: ./DATALAKE/WILMANSKI3.csv
+    kind: text
+    delimiter: ','
+    row_slice:
+      - 3
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+        - Gene
+    predicate: associated_with
+    object:
+      method: value
+      encoding: EUPATH:0009259
+  provenance:
+    repo: PMID
+    publication: '31477923'
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 939
+    - annotation: p value
+      method: column
+      encoding: H
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: F
+    - annotation: assertion method
+      method: value
+      encoding: OLS Regression
+    - annotation: miscellaneous notes
+      method: value
+      encoding: P-value for each analyte from the univariate and multivariable OLS model, respectively, after adjusting for multiple hypothesis correction (Benjamini-Hochberg). Significant associations after multiple hypothesis correction are bolded (FDR<0.05,two-sided).

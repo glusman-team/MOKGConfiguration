@@ -1,0 +1,60 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9212162/bin/pntd.0010491.s003.xlsx
+    local: ./DATALAKE/GOEBERT2.xlsx
+    kind: excel
+    sheet: OTUs
+    row_slice:
+      - 2
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - OrganismTaxon
+      regex:
+        - pattern: .*__
+          replacement: ''
+        - pattern: \.
+          replacement: ' '
+        - pattern: _
+          replacement: ' '
+        - pattern: ' OTU.*'
+          replacement: ''
+        - pattern: 'Unclassified '
+          replacement: ''
+        - pattern: ' unclassified'
+          replacement: ''
+    predicate: associated_with
+    object:
+      method: value
+      encoding: Helminthiasis
+      prioritize:
+        - Disease
+  provenance:
+    repo: PMC
+    publication: PMC9212162
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 66
+    - annotation: p value
+      method: column
+      encoding: C
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Unspecified
+    - annotation: assertion method
+      method: value
+      encoding: ANOVA
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Results include p- value based in Infection category, False Discover Rate (FDR), adjusted p- value based on Tissue and Infection status, Paired p- value (Tukey), and mean abundance for each Tissue and Infection condition.

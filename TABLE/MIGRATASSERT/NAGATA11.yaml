@@ -1,0 +1,55 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9499989/bin/mmc2.xlsx
+    local: ./DATALAKE/NAGATA11.xlsx
+    kind: excel
+    sheet: S11
+    row_slice:
+      - 3
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+        - OrganismTaxon
+      remove:
+        - ' species.*'
+        - ' \(id.*'
+        - ^.*?\]
+        - ' \(.*'
+    predicate: associated_with
+    object:
+      method: value
+      encoding: COVID-19
+      prioritize:
+        - Disease
+  provenance:
+    repo: PMC
+    publication: PMC9499989
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: column
+      encoding: F
+    - annotation: p value
+      method: column
+      encoding: H
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Unspecified
+    - annotation: relationship strength
+      method: column
+      encoding: D
+    - annotation: assertion method
+      method: value
+      encoding: Wilcoxon rank-sum test
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Gut microbial changes between COVID-19 and controls in the Hong Kong cohort

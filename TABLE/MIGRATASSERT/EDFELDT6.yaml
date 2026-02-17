@@ -1,0 +1,61 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10064689/bin/40168_2023_1502_MOESM2_ESM.zip
+    local: ./DATALAKE/EDFELDT6.xlsx
+    kind: excel
+    row_slice:
+      - 2
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      remove:
+        - .*GO_
+        - GO
+      regex:
+        - pattern: _
+          replacement: ' '
+    predicate: associated_with
+    object:
+      method: column
+      encoding: K
+      taxon: 9606
+      prioritize:
+        - Gene
+      explode_by: ;
+  provenance:
+    repo: PMC
+    publication: PMC10064689
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: column
+      encoding: B
+    - annotation: p value
+      method: column
+      encoding: J
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: H
+    - annotation: assertion method
+      method: value
+      encoding: Genewise negative binomial generalized linear model
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Pathway enrichment analysis for the differentially expressed genes across the luminal samples
+sections:
+  - source:
+      sheet: GO_gene_module_4
+  - source:
+      sheet: GO_gene_module_6

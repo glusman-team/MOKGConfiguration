@@ -1,0 +1,195 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/8980904/bin/PHY2-10-e15254-s002.xlsx
+    local: ./DATALAKE/BOMBIN1.xlsx
+    kind: excel
+    row_slice:
+      - 2
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: C
+      taxon: 9606
+      remove:
+        - .*Plasma_
+        - .*Stool_
+        - ' \(.*'
+        - ' \[.*'
+        - \.*
+        - uncharacterized protein
+        - ;.*
+        - /.*
+      explode_by: ','
+    predicate: correlated_with
+    object:
+      method: column
+      encoding: F
+      taxon: 9606
+      remove:
+        - .*Plasma_
+        - .*Stool_
+        - ' \(.*'
+        - ' \[.*'
+        - \.*
+        - uncharacterized protein
+        - ;.*
+        - /.*
+      explode_by: ','
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: MONDO:0011122
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UMLS:C1956108 # MICROBIOM
+  provenance:
+    repo: PMC
+    publication: PMC8980904
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 219
+    - annotation: p value
+      method: column
+      encoding: G
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: assertion method
+      method: value
+      encoding: Spearman correlation
+sections:
+  - source:
+      sheet: S9B
+    attribute:
+      notes: The effect of ECs identified from salivary samples on stool metabolites concentrations
+    statement:
+      qualifiers:
+        - qualifier: object_part_qualifier
+          method: value
+          encoding: UBERON:0001988 # STOOL
+        - qualifier: subject_part_qualifier
+          method: value
+          encoding: UBERON:0001836 # SALIVA
+          # UBERON:0001969 # PLASMA
+  - source:
+      sheet: S9C
+    attribute:
+      notes: The effect of ECs identified from fecal samples on plasma metabolites concentrations
+    statement:
+      qualifiers:
+        - qualifier: subject_part_qualifier
+          method: value
+          encoding: UBERON:0001988 # STOOL
+        - qualifier: object_part_qualifier
+          method: value
+          encoding: UBERON:0001969 # PLASMA
+  - source:
+      sheet: S9D
+    attribute:
+      notes: The effect of ECs identified from fecal samples on stool metabolites concentrations
+    statement:
+      qualifiers:
+        - qualifier: part_qualifier
+          method: value
+          encoding: UBERON:0001988 # STOOL
+  - source:
+      sheet: S9G
+    attribute:
+      notes: The effect of KOs identified from salivary samples on plasma metabolites concentrations
+    statement:
+      qualifiers:
+        - qualifier: object_part_qualifier
+          method: value
+          encoding: UBERON:0001969 # PLASMA
+        - qualifier: subject_part_qualifier
+          method: value
+          encoding: UBERON:0001836 # SALIVA
+  - source:
+      sheet: S9H
+    attribute:
+      notes: The effect of KOs identified from salivary samples on stool metabolites concentrations
+    statement:
+      qualifiers:
+        - qualifier: subject_part_qualifier
+          method: value
+          encoding: UBERON:0001988 # STOOL
+        - qualifier: object_part_qualifier
+          method: value
+          encoding: UBERON:0001836 # SALIVA
+          # UBERON:0001969 # PLASMA
+  - source:
+      sheet: S9I
+    attribute:
+      notes: The effect of KOs identified from fecal samples on plasma metabolites concentrations
+    statement:
+      qualifiers:
+        - qualifier: subject_part_qualifier
+          method: value
+          encoding: UBERON:0001988 # STOOL
+        - qualifier: object_part_qualifier
+          method: value
+          encoding: UBERON:0001969 # PLASMA
+  - source:
+      sheet: S9J
+    attribute:
+      notes: The effect of KOs identified from fecal samples on stool metabolites concentrations
+    statement:
+      qualifiers:
+        - qualifier: part_qualifier
+          method: value
+          encoding: UBERON:0001988 # STOOL
+  - source:
+      sheet: S9K
+    attribute:
+      notes: The effect of MetaCyc pathways identified from salivary samples on plasma metabolites concentrations
+    statement:
+      qualifiers:
+        - qualifier: object_part_qualifier
+          method: value
+          encoding: UBERON:0001969 # PLASMA
+        - qualifier: subject_part_qualifier
+          method: value
+          encoding: UBERON:0001836 # SALIVA
+  - source:
+      sheet: S9L
+    attribute:
+      notes: The effect of MetaCyc pathways identified from salivary samples on stool metabolites concentrations
+    statement:
+      qualifiers:
+        - qualifier: subject_part_qualifier
+          method: value
+          encoding: UBERON:0001988 # STOOL
+        - qualifier: object_part_qualifier
+          method: value
+          encoding: UBERON:0001836 # SALIVA
+          # UBERON:0001969 # PLASMA
+  - source:
+      sheet: S9E
+    attribute:
+      notes: The effect of MetaCyc pathways identified from fecal samples on plasma metabolites concentrations
+    statement:
+      qualifiers:
+        - qualifier: subject_part_qualifier
+          method: value
+          encoding: UBERON:0001988 # STOOL
+        - qualifier: object_part_qualifier
+          method: value
+          encoding: UBERON:0001969 # PLASMA
+  - source:
+      sheet: S9F
+    attribute:
+      notes: The effect of MetaCyc pathways identified from fecal samples on stool metabolites concentrations
+    statement:
+      qualifiers:
+        - qualifier: part_qualifier
+          method: value
+          encoding: UBERON:0001988 # STOOL

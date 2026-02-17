@@ -1,0 +1,74 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/7562722/bin/41467_2020_18871_MOESM4_ESM.xlsx
+    local: ./DATALAKE/MANOR4.xlsx
+    kind: excel
+    sheet: Supplementary Data 4
+    row_slice:
+      - 3
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: D
+      prioritize:
+        - OrganismTaxon
+      regex:
+        - pattern: .unclassified
+          replacement: ''
+        - pattern: \.
+          replacement: ' '
+        - pattern: '^.*? '
+          replacement: ''
+        - pattern: ^[^a-zA-Z]*
+          replacement: ''
+        - pattern: \s?%
+          replacement: ''
+        - pattern: ' .*'
+          replacement: ''
+    predicate: associated_with
+    object:
+      method: column
+      encoding: A
+      taxon: 9606
+      avoid:
+        - OrganismTaxon
+      remove:
+        - \(.*
+        - s$
+        - ^[^a-zA-Z]*
+        - \s+$
+  provenance:
+    repo: PMC
+    publication: PMC7562722
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 3064
+    - annotation: p value
+      method: column
+      encoding: F
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: E
+      transformations:
+        - function: copysign
+          arguments:
+            - 
+            - -1
+    - annotation: assertion method
+      method: value
+      encoding: Spearman correlation
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Significant associations between microbial genera and measured factors. Only associations that passed FDR < 0.05 are shown.

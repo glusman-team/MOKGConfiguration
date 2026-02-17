@@ -1,0 +1,51 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11622590/bin/KVIR_A_2428843_SM0732.xlsx
+    local: ./DATALAKE/LUO1.xlsx
+    kind: excel
+    sheet: Table S1B.
+    row_slice:
+      - 3
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+        - OrganismTaxon
+      regex:
+        - pattern: _
+          replacement: ' '
+    predicate: associated_with
+    object:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+        - Gene
+  provenance:
+    repo: PMC
+    publication: PMC11622590
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 206
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Unspecified
+    - annotation: relationship strength
+      method: column
+      encoding: C
+    - annotation: assertion method
+      method: value
+      encoding: Spearman correlation
+    - annotation: miscellaneous notes
+      method: value
+      encoding: 'Associations of variables and bacterial groups. The following parameters were utilised: (Coeff. >|2.00|; p.adjusted <0.1)'

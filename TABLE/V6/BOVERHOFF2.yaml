@@ -1,0 +1,65 @@
+template:
+  syntax: TC3
+  source:
+    url: https://ars.els-cdn.com/content/image/1-s2.0-S2211124724010805-mmc2.xlsx
+    local: ./DATALAKE/BOVERHOFF2.xlsx
+    kind: excel
+    sheet: Supplementary Table 1
+    row_slice:
+      - 2
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: C
+      prioritize:
+        - OrganismTaxon
+      remove:
+        - f_
+    predicate: associated_with
+    object:
+      method: column
+      encoding: D
+      taxon: 9606
+      remove:
+        - \(.*$
+        - '^[^:]*:'
+        - _9
+    qualifiers:
+      - qualifier: part_qualifier
+        method: value
+        encoding: UBERON:0001988 # FECES
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UMLS:C1956108 # MICROBIOME
+      - qualifier: causal_mechanism_qualifier
+        method: value
+        encoding: UMLS:C0001811 # AGEING
+  provenance:
+    repo: PMID
+    publication: '39264809'
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 3746
+    - annotation: p value
+      method: column
+      encoding: G
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: E
+    - annotation: assertion method
+      method: value
+      encoding: Two-sided unpaired Wilcoxon rank-sum test
+    - annotation: miscellaneous notes
+      method: value
+      encoding: 'Associations of variables and bacterial groups. The following parameters were utilised: (Coeff. >|2.00|; p.adjusted <0.1)'

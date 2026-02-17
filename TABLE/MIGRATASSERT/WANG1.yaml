@@ -1,0 +1,217 @@
+template:
+  syntax: TC3
+  source:
+    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-024-03038-y/MediaObjects/41591_2024_3038_MOESM2_ESM.xlsx
+    local: ./DATALAKE/WANG1.xlsx
+    kind: excel
+    sheet: STable7
+    row_slice:
+      - 5
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - OrganismTaxon
+      regex:
+        - pattern: _
+          replacement: ' '
+    predicate: associated_with
+    object:
+      method: value
+  provenance:
+    repo: PMID
+    publication: '38844795'
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 2929
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: assertion method
+      method: value
+      encoding: Spearman correlation
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Partial Spearman's correlations between species abundances and metabolic variables.
+sections:
+  - statement:
+      object:
+        encoding: Cholesterol
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: D
+      - annotation: relationship strength
+        method: column
+        encoding: B
+  - statement:
+      object:
+        encoding: LDL Cholesterol
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: G
+      - annotation: relationship strength
+        method: column
+        encoding: E
+  - statement:
+      object:
+        encoding: Apolipoprotein B
+        avoid:
+          - Gene
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: J
+      - annotation: relationship strength
+        method: column
+        encoding: H
+  - statement:
+      object:
+        encoding: Body Mass Index
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: M
+      - annotation: relationship strength
+        method: column
+        encoding: K
+  - statement:
+      object:
+        encoding: Waist circumference
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: P
+      - annotation: relationship strength
+        method: column
+        encoding: N
+  - statement:
+      object:
+        encoding: Glucose measurment
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: S
+      - annotation: relationship strength
+        method: column
+        encoding: Q
+  - statement:
+      object:
+        encoding: Fasting insulin
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: V
+      - annotation: relationship strength
+        method: column
+        encoding: T
+  - statement:
+      object:
+        encoding: HOMA-IR
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: Y
+      - annotation: relationship strength
+        method: column
+        encoding: W
+  - statement:
+      object:
+        encoding: Systolic blood pressure
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: AB
+      - annotation: relationship strength
+        method: column
+        encoding: Z
+  - statement:
+      object:
+        encoding: Diastolic blood pressure
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: AE
+      - annotation: relationship strength
+        method: column
+        encoding: AC
+  - statement:
+      object:
+        encoding: Triglycerides
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: AH
+      - annotation: relationship strength
+        method: column
+        encoding: AF
+  - statement:
+      object:
+        encoding: HDL Cholesterol
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: AK
+      - annotation: relationship strength
+        method: column
+        encoding: AI
+  - statement:
+      object:
+        encoding: Aspartate transferase
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: BF
+      - annotation: relationship strength
+        method: column
+        encoding: BD
+  - statement:
+      object:
+        encoding: Uric Acid
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: BI
+      - annotation: relationship strength
+        method: column
+        encoding: BG
+  - statement:
+      object:
+        encoding: Alanine transaminase
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: BC
+      - annotation: relationship strength
+        method: column
+        encoding: BA
+  - statement:
+      object:
+        encoding: Estimated glomerular filtration rate
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: BL
+      - annotation: relationship strength
+        method: column
+        encoding: BJ
+  - statement:
+      object:
+        encoding: ApoB/ApoA1 ratio
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: AN
+      - annotation: relationship strength
+        method: column
+        encoding: AL

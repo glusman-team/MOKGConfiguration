@@ -1,0 +1,63 @@
+template:
+  syntax: TC3
+  source:
+    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs43587-024-00678-0/MediaObjects/43587_2024_678_MOESM12_ESM.csv
+    local: ./DATALAKE/PU12.csv
+    kind: text
+    delimiter: ','
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - OrganismTaxon
+      regex:
+        - pattern: _
+          replacement: ' '
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      regex:
+        - pattern: _
+          replacement: ' '
+        - pattern: ' num'
+          replacement: ''
+        - pattern: B2M
+          replacement: Beta-2 microglobulin
+        - pattern: WBC
+          replacement: Leukocyte count
+        - pattern: HDLC
+          replacement: HDL Cholesterol
+        - pattern: Platelet
+          replacement: Platelet count
+        - pattern: eGFR
+          replacement: Estimated glomerular filtration rate
+  provenance:
+    repo: PMID
+    publication: '39054372'
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 1448
+    - annotation: p value
+      method: column
+      encoding: D
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: C
+    - annotation: assertion method
+      method: value
+      encoding: Linear regression
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Colors of the heatmap are in correspondence to the beta coefficient for frailty-related clinical biomarkers from linear regression models in MaAsLin with frailty-related species (AST-transformed relative abundance) as outcomes. The biomarkers levels were standardized into Z-scores of in before including them in the MaAsLin models. All models corrected for age, sex, BMI, smoking, drinking status, educational level, and physical activity level. The Benjamini-Hochberg method is used to calculate FDR-adjusted P values to address the multiple comparison issue. These analyses were based on 1,448 samples. All the statical tests were two-sided.

@@ -1,0 +1,141 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9499989/bin/mmc2.xlsx
+    local: ./DATALAKE/NAGATA7.xlsx
+    kind: excel
+    sheet: S7
+    row_slice:
+      - 4
+      - auto
+    reindex:
+      - column: relationship_strength
+        comparison: ne
+        comparator: NA
+  statement:
+    subject:
+      method: column
+      encoding: H
+      prioritize:
+        - OrganismTaxon
+      remove:
+        - ' species.*'
+        - ^.*?\]
+        - ' \(.*'
+    predicate: associated_with
+  provenance:
+    repo: PMC
+    publication: PMC9499989
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Unspecified
+    - annotation: assertion method
+      method: value
+      encoding: Wilcoxon rank-sum test
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Gut microbial changes between COVID-19 complications
+sections:
+  - statement:
+      object:
+        method: value
+        encoding: Long COVID-19
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: sample size
+        method: column
+        encoding: L
+      - annotation: p value
+        method: column
+        encoding: N
+      - annotation: relationship strength
+        method: column
+        encoding: J
+  - statement:
+      object:
+        method: value
+        encoding: Pneumonia
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: sample size
+        method: column
+        encoding: Q
+      - annotation: p value
+        method: column
+        encoding: S
+      - annotation: relationship strength
+        method: column
+        encoding: O
+  - statement:
+      object:
+        method: value
+        encoding: Low d-dimmer level
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: sample size
+        method: column
+        encoding: V
+      - annotation: p value
+        method: column
+        encoding: X
+      - annotation: relationship strength
+        method: column
+        encoding: T
+  - statement:
+      object:
+        method: value
+        encoding: Kidney dysfunction
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: sample size
+        method: column
+        encoding: AA
+      - annotation: p value
+        method: column
+        encoding: AC
+      - annotation: relationship strength
+        method: column
+        encoding: Y
+  - statement:
+      object:
+        method: value
+        encoding: Liver dysfunction
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: sample size
+        method: column
+        encoding: AF
+      - annotation: p value
+        method: column
+        encoding: AH
+      - annotation: relationship strength
+        method: column
+        encoding: AD
+  - statement:
+      object:
+        method: value
+        encoding: Diarrhea
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: sample size
+        method: column
+        encoding: AK
+      - annotation: p value
+        method: column
+        encoding: AM
+      - annotation: relationship strength
+        method: column
+        encoding: AI

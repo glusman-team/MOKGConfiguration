@@ -1,0 +1,54 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10574297/bin/jos-2023-00381-Supplementary-Table-9.xlsx
+    local: ./DATALAKE/WANG9.xlsx
+    kind: excel
+    sheet: Table S9
+    row_slice:
+      - 4
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+    predicate: affects
+    object:
+      method: column
+      encoding: B
+      prioritize:
+        - OrganismTaxon
+      remove:
+        - family\.
+        - genus\.
+        - order\.
+        - id.*
+        - \.
+  provenance:
+    repo: PMC
+    publication: PMC10574297
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 1425803
+    - annotation: p value
+      method: column
+      encoding: M
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: E
+    - annotation: assertion method
+      method: column
+      encoding: C
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Five Mendelian randomization models estimate the causal effects of gut microbiota on blood metabolites

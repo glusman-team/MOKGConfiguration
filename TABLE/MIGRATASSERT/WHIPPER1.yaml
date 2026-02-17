@@ -1,0 +1,57 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/7892575/bin/41467_2021_21475_MOESM23_ESM.xlsx
+    local: ./DATALAKE/WHIPPER1.xlsx
+    kind: excel
+    row_slice:
+      - 2
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: C
+      prioritize:
+        - OrganismTaxon
+      regex:
+        - pattern: _
+          replacement: ' '
+        - pattern: \s\..*
+          replacement: ''
+    predicate: associated_with
+    object:
+      method: column
+      encoding: I
+      regex:
+        - pattern: HALLMARK_
+          replacement: ''
+        - pattern: _
+          replacement: ' '
+  provenance:
+    repo: PMC
+    publication: PMC7892575
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 55
+    - annotation: p value
+      method: column
+      encoding: B
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: A
+    - annotation: assertion method
+      method: value
+      encoding: Linear mixed effect model
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Results from linear mixed effect modelling to regress the Euclidean distance between every pair of FC/CC and pre-treatment or during treatment samples against Time, Treatment and patient ID for the Longitudinal Observational Cohort.

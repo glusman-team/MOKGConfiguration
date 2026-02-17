@@ -1,0 +1,81 @@
+template:
+  syntax: TC3
+  source:
+    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-023-31115-8/MediaObjects/41598_2023_31115_MOESM7_ESM.xlsx
+    local: ./DATALAKE/LUI7.xlsx
+    kind: excel
+    sheet: Supplementary Table 6
+    row_slice:
+      - 4
+      - auto
+  statement:
+    predicate: affects
+  provenance:
+    repo: PMC
+    publication: PMC10052271
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: assertion method
+      method: value
+      encoding: Generalised summary-data-based Mendelian randomization
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Two-sample BMR identified causal relationships between the gut microbiome and longevity in the Finnish cohort.
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize:
+          - OrganismTaxon
+        regex:
+          - pattern: _
+            replacement: ' '
+      object:
+        method: value
+        encoding: longevity
+        prioritize:
+          - PhenotypicFeature
+        avoid:
+          - Gene
+    annotations:
+      - annotation: sample size
+        method: column
+        encoding: F
+      - annotation: p value
+        method: column
+        encoding: E
+      - annotation: relationship strength
+        method: column
+        encoding: C
+  - statement:
+      subject:
+        method: value
+        encoding: longevity
+        prioritize:
+          - PhenotypicFeature
+        avoid:
+          - Gene
+      object:
+        method: column
+        encoding: H
+        prioritize:
+          - OrganismTaxon
+        regex:
+          - pattern: _
+            replacement: ' '
+    annotations:
+      - annotation: sample size
+        method: column
+        encoding: L
+      - annotation: p value
+        method: column
+        encoding: K
+      - annotation: relationship strength
+        method: column
+        encoding: I

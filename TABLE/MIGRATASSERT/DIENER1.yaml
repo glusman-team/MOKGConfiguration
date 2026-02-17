@@ -1,0 +1,63 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9691620/bin/NIHMS1845232-supplement-1845232_Sup_Tab_1-5.xlsx
+    local: ./DATALAKE/DIENER1.xlsx
+    kind: excel
+    sheet: Table S3
+  statement:
+    subject:
+      method: column
+      encoding: O
+      remove:
+        - \(.*
+        - \*
+        - \s+$
+        - \.*
+        - \b1\b
+        - ^1
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      prioritize:
+        - OrganismTaxon
+      regex:
+        - pattern: ^.*?\|
+          replacement: ' '
+        - pattern: _(.*)
+          replacement: ''
+        - pattern: ^[^a-zA-Z]*
+          replacement: ''
+        - pattern: Family
+          replacement: ''
+        - pattern: amily
+          replacement: ''
+  provenance:
+    repo: PMC
+    publication: PMC9691620
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 3064
+    - annotation: p value
+      method: column
+      encoding: F
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Bonferroni
+    - annotation: relationship strength
+      method: column
+      encoding: E
+    - annotation: assertion method
+      method: value
+      encoding: Two-sided Wald test
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Genome-microbiome interactions for blood metabolite regression models with a significant interaction term. P-values were obtained from a two-sided Wald test on the interaction term coefficient γ of the ordinary least squares regression model.

@@ -1,0 +1,49 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11166937/bin/41467_2023_42013_MOESM4_ESM.csv
+    local: ./DATALAKE/WU1.csv
+    kind: text
+    delimiter: ','
+  statement:
+    subject:
+      method: value
+      encoding: microgravity
+    predicate: affects
+    object:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+        - Gene
+        - OrganismTaxon
+      remove:
+        - \(.*
+  provenance:
+    repo: PMC
+    publication: PMC11166937
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 27
+    - annotation: p value
+      method: column
+      encoding: F
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: C
+    - annotation: assertion method
+      method: value
+      encoding: Log2 Fold Change From Fishers Exact Test
+    - annotation: miscellaneous notes
+      method: value
+      encoding: A complete list of overall gene expression changes uG vs 1G (25 hours culture) in unstimulated peripheral blood mononuclear cells (PBMCs).

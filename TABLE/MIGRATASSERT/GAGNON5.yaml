@@ -1,0 +1,63 @@
+template:
+  syntax: TC3
+  source:
+    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs12967-022-03799-5/MediaObjects/12967_2022_3799_MOESM1_ESM.xlsx
+    local: ./DATALAKE/GAGNON5.xlsx
+    kind: excel
+    sheet: Supplementary Table 5
+    row_slice:
+      - 2
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: C
+      prioritize:
+        - OrganismTaxon
+      remove:
+        - Pathway PWY-5022
+        - .*\-
+        - \)
+        - id.*
+        - class
+        - family
+        - genus
+        - order
+        - phylum
+        - \.
+    predicate: affects
+    object:
+      method: column
+      encoding: D
+      taxon: 9606
+      regex:
+        - pattern: _
+          replacement: ' '
+  provenance:
+    repo: PMC
+    publication: PMC9887809
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 142204
+    - annotation: p value
+      method: column
+      encoding: I
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: G
+    - annotation: assertion method
+      method: column
+      encoding: E
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Primary Mendelian randomization results and associated statistics.
