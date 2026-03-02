@@ -18,6 +18,13 @@ template:
         - ;NA.*
         - .*;
     predicate: associated_with
+  qualifiers:
+    - qualifier: anatomical_context_qualifier
+      method: value
+      encoding: UBERON:0000996
+    - qualifier: species_context_qualifier
+      method: value
+      encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10434204
@@ -38,6 +45,7 @@ template:
       method: value
       encoding: LME model
     - annotation: miscellaneous notes
+
       method: value
       encoding: Multivariate analysis of relative abundances of amplicon sequence variants (ASVs) in vaginal 16S rRNA gene data as a function of gestational age, maternal age, parity, ethnicity, and marijuana use among women who ultimately delivered at term. The p-value and false discovery rate adjusted p-value (q-value) are provided for each covariate.
 sections:

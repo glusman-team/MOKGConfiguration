@@ -28,6 +28,13 @@ template:
           replacement: Diastolic blood pressure
         - pattern: Systolic BP
           replacement: Systolic blood pressure
+  qualifiers:
+    - qualifier: anatomical_context_qualifier
+      method: value
+      encoding: UBERON:0000160
+    - qualifier: species_context_qualifier
+      method: value
+      encoding: NCBITaxon:9545
   provenance:
     repo: PMC
     publication: PMC7562722

@@ -26,6 +26,13 @@ template:
       prioritize:
         - Gene
       explode_by: ;
+  qualifiers:
+    - qualifier: anatomical_context_qualifier
+      method: value
+      encoding: UBERON:0012249
+    - qualifier: species_context_qualifier
+      method: value
+      encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10064689
@@ -48,6 +55,7 @@ template:
     - annotation: relationship strength
       method: column
       encoding: I
+
     - annotation: assertion method
       method: value
       encoding: Genewise negative binomial generalized linear model

@@ -12,4 +12,5 @@
 *.sh
 *result/
 *result
+*.ralph/
 #XR|.worktrees/
