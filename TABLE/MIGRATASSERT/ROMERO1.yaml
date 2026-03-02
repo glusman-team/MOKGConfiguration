@@ -18,13 +18,13 @@ template:
         - ;NA.*
         - .*;
     predicate: associated_with
-  qualifiers:
-    - qualifier: anatomical_context_qualifier
-      method: value
-      encoding: UBERON:0000996
-    - qualifier: species_context_qualifier
-      method: value
-      encoding: NCBITaxon:9606
+    qualifiers:
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0000996
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10434204
