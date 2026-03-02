@@ -1,0 +1,14 @@
+*.egg-info
+*__pycache__/
+*.logs/
+*.opencode/
+*.sisyphus/
+*.ruff_cache/
+*plans/
+*venv/
+*.log
+*.duckdb
+*.wal
+*.sh
+*result/
+*result
