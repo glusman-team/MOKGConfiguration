@@ -23,6 +23,7 @@ template:
         - ^.*?\]
         - ' \(.*'
     predicate: associated_with
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC9499989

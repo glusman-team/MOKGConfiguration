@@ -39,6 +39,7 @@ template:
       regex:
         - pattern: _
           replacement: ' '
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC10945560

@@ -33,6 +33,10 @@ template:
       encoding: Helminthiasis
       prioritize:
         - Disease
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: MONDO:0004664
   provenance:
     repo: PMC
     publication: PMC9212162

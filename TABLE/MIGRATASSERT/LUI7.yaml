@@ -10,6 +10,7 @@ template:
       - auto
   statement:
     predicate: affects
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC10052271

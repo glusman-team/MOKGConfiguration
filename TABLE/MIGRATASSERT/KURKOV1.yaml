@@ -26,6 +26,7 @@ template:
         - SmallMolecule
       remove:
         - lowenegry
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC8515199

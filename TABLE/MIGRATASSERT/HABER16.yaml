@@ -22,6 +22,7 @@ template:
       taxon: 9606
       prioritize:
         - Gene
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC4109533

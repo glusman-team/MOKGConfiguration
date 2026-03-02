@@ -23,6 +23,7 @@ template:
     predicate: associated_with
     object:
       encoding: Females
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC11224521

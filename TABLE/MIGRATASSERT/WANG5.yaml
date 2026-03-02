@@ -18,6 +18,7 @@ template:
     object:
       prioritize:
         - OrganismTaxon
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC6555748

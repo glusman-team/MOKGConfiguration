@@ -23,6 +23,7 @@ template:
       encoding: Atherosclerotic cardiovascular disease
       prioritize:
         - Disease
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC11705818

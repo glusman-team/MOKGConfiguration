@@ -24,6 +24,7 @@ template:
         - OrganismTaxon
       remove:
         - '.* - '
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC5240274

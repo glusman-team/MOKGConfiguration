@@ -22,6 +22,7 @@ template:
       encoding: rheumatoid arthritis
       prioritize:
         - Disease
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC10269647

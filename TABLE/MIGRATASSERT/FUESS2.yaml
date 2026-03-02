@@ -16,6 +16,7 @@ template:
       method: column
       encoding: C
       taxon: 69293
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC8262870

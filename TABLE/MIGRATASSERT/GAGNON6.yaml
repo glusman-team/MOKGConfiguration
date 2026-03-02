@@ -56,6 +56,13 @@ template:
           replacement: ''
         - pattern: 'Mahajan '
           replacement: ''
+    qualifiers:
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0000160
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC9887809

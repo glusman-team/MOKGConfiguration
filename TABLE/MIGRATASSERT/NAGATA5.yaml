@@ -23,6 +23,7 @@ template:
       encoding: COVID-19
       prioritize:
         - Disease
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC9499989

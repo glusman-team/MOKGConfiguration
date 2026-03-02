@@ -9,6 +9,7 @@ template:
       - auto
   statement:
     predicate: associated_with
+    qualifiers: []
   provenance:
     repo: PMC
     publication: PMC6555748
