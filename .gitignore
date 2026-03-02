@@ -12,3 +12,4 @@
 *.sh
 *result/
 *result
+#XR|.worktrees/
