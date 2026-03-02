@@ -26,7 +26,10 @@ template:
         - pattern: \s+$
           replacement: ''
     predicate: associated_with
-    qualifiers: []
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10124008
@@ -45,124 +48,4 @@ template:
       encoding: PLS regression
     - annotation: miscellaneous notes
       method: value
-      encoding: The key species with VIP score ≥ 1 in more than 50% of the psychological factors
-sections:
-  - statement:
-      object:
-        encoding: mood disturbance
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: B
-  - statement:
-      object:
-        encoding: tension anxiety
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: C
-  - statement:
-      object:
-        encoding: Anger
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: D
-  - statement:
-      object:
-        encoding: fatigue
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: E
-  - statement:
-      object:
-        encoding: Dejection
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: F
-  - statement:
-      object:
-        encoding: Bewilderment
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: G
-  - statement:
-      object:
-        encoding: Vigorous activity
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: H
-  - statement:
-      object:
-        encoding: self esteem
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: I
-  - statement:
-      object:
-        encoding: Somatization
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: K
-  - statement:
-      object:
-        encoding: Obsessive compulsive disorder
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: L
-  - statement:
-      object:
-        encoding: interpersonal sensitivity
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: M
-  - statement:
-      object:
-        encoding: Depression
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: N
-  - statement:
-      object:
-        encoding: Anxiety
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: O
-  - statement:
-      object:
-        encoding: Hostility
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: P
-  - statement:
-      object:
-        encoding: Phobic disorder
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: Q
-  - statement:
-      object:
-        encoding: Paranoid ideation
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: R
-  - statement:
-      object:
-        encoding: Psychoticism
-    annotations:
-      - annotation: relationship strength
-        method: column
-        encoding: S
+      encoding: The key species with VIP score >= 1 in more than 50% of the psychological factors

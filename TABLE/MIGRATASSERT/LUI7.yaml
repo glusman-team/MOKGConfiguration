@@ -10,7 +10,13 @@ template:
       - auto
   statement:
     predicate: affects
-    qualifiers: []
+    qualifiers:
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0000160
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10052271
@@ -26,57 +32,4 @@ template:
       encoding: Generalised summary-data-based Mendelian randomization
     - annotation: miscellaneous notes
       method: value
-      encoding: Two-sample BMR identified causal relationships between the gut microbiome and longevity in the Finnish cohort.
-sections:
-  - statement:
-      subject:
-        method: column
-        encoding: A
-        prioritize:
-          - OrganismTaxon
-        regex:
-          - pattern: _
-            replacement: ' '
-      object:
-        method: value
-        encoding: longevity
-        prioritize:
-          - PhenotypicFeature
-        avoid:
-          - Gene
-    annotations:
-      - annotation: sample size
-        method: column
-        encoding: F
-      - annotation: p value
-        method: column
-        encoding: E
-      - annotation: relationship strength
-        method: column
-        encoding: C
-  - statement:
-      subject:
-        method: value
-        encoding: longevity
-        prioritize:
-          - PhenotypicFeature
-        avoid:
-          - Gene
-      object:
-        method: column
-        encoding: H
-        prioritize:
-          - OrganismTaxon
-        regex:
-          - pattern: _
-            replacement: ' '
-    annotations:
-      - annotation: sample size
-        method: column
-        encoding: L
-      - annotation: p value
-        method: column
-        encoding: K
-      - annotation: relationship strength
-        method: column
-        encoding: I
+      encoding: Two-sample BMR identified causal relationships between gut microbiome and longevity in Finnish cohort.

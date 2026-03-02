@@ -23,7 +23,13 @@ template:
       encoding: Atherosclerotic cardiovascular disease
       prioritize:
         - Disease
-    qualifiers: []
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: MONDO:0005068
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC11705818

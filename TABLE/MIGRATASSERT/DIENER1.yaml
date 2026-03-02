@@ -33,7 +33,10 @@ template:
           replacement: ''
         - pattern: amily
           replacement: ''
-    qualifiers: []
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC9691620
@@ -61,4 +64,4 @@ template:
       encoding: Two-sided Wald test
     - annotation: miscellaneous notes
       method: value
-      encoding: Genome-microbiome interactions for blood metabolite regression models with a significant interaction term. P-values were obtained from a two-sided Wald test on the interaction term coefficient γ of the ordinary least squares regression model.
+      encoding: Genome-microbiome interactions for blood metabolite regression models with a significant interaction term. P-values were obtained from a two-sided Wald test on the interaction term coefficient γ of an ordinary least squares regression model.

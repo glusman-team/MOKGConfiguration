@@ -24,7 +24,10 @@ template:
       taxon: 9606
       prioritize:
         - Gene
-    qualifiers: []
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC11622590

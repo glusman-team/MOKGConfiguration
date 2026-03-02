@@ -17,7 +17,10 @@ template:
       encoding: F
       remove:
         - ' at 5 years.*'
-    qualifiers: []
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10465508

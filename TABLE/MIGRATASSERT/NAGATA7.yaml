@@ -8,10 +8,6 @@ template:
     row_slice:
       - 4
       - auto
-    reindex:
-      - column: relationship_strength
-        comparison: ne
-        comparator: NA
   statement:
     subject:
       method: column
@@ -23,7 +19,16 @@ template:
         - ^.*?\]
         - ' \(.*'
     predicate: associated_with
-    qualifiers: []
+    qualifiers:
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0000160
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: MONDO:0004979
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC9499989
@@ -43,14 +48,14 @@ template:
     - annotation: miscellaneous notes
       method: value
       encoding: Gut microbial changes between COVID-19 complications
-sections:
+  sections:
   - statement:
       object:
         method: value
         encoding: Long COVID-19
         prioritize:
           - Disease
-    annotations:
+      annotations:
       - annotation: sample size
         method: column
         encoding: L
@@ -66,7 +71,7 @@ sections:
         encoding: Pneumonia
         prioritize:
           - Disease
-    annotations:
+      annotations:
       - annotation: sample size
         method: column
         encoding: Q
@@ -82,7 +87,7 @@ sections:
         encoding: Low d-dimmer level
         prioritize:
           - Disease
-    annotations:
+      annotations:
       - annotation: sample size
         method: column
         encoding: V
@@ -98,7 +103,7 @@ sections:
         encoding: Kidney dysfunction
         prioritize:
           - Disease
-    annotations:
+      annotations:
       - annotation: sample size
         method: column
         encoding: AA
@@ -114,7 +119,7 @@ sections:
         encoding: Liver dysfunction
         prioritize:
           - Disease
-    annotations:
+      annotations:
       - annotation: sample size
         method: column
         encoding: AF
@@ -130,7 +135,7 @@ sections:
         encoding: Diarrhea
         prioritize:
           - Disease
-    annotations:
+      annotations:
       - annotation: sample size
         method: column
         encoding: AK

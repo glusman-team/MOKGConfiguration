@@ -23,7 +23,13 @@ template:
       encoding: COVID-19
       prioritize:
         - Disease
-    qualifiers: []
+    qualifiers:
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0000160
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC9499989

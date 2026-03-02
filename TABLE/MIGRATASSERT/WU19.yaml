@@ -23,7 +23,13 @@ template:
     predicate: associated_with
     object:
       encoding: Females
-    qualifiers: []
+    qualifiers:
+      - qualifier: sex_qualifier
+        method: value
+        encoding: PATO:0000384
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC11224521

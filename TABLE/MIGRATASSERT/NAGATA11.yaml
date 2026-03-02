@@ -25,7 +25,16 @@ template:
       encoding: COVID-19
       prioritize:
         - Disease
-    qualifiers: []
+    qualifiers:
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0000160
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: MONDO:0004979
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC9499989
@@ -53,4 +62,4 @@ template:
       encoding: Wilcoxon rank-sum test
     - annotation: miscellaneous notes
       method: value
-      encoding: Gut microbial changes between COVID-19 and controls in the Hong Kong cohort
+      encoding: Gut microbial changes between COVID-19 and controls in Hong Kong cohort

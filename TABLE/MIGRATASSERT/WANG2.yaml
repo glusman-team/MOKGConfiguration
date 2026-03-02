@@ -9,7 +9,13 @@ template:
       - auto
   statement:
     predicate: associated_with
-    qualifiers: []
+    qualifiers:
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0000160
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC6555748
@@ -26,7 +32,7 @@ template:
     - annotation: multiple testing correction method
       method: value
       encoding: Benjamini Hochberg
-sections:
+  sections:
   - source:
       sheet: A. Pathways Exac vs Stable
     statement:
@@ -39,13 +45,16 @@ sections:
         remove:
           - .*_
           - \([^()]*\)
-    annotations:
+      annotations:
       - annotation: p value
         method: column
         encoding: F
+      - annotation: relationship strength
+        method: column
+        encoding: C
       - annotation: miscellaneous notes
         method: value
-        encoding: MetaCore pathways significantly enriched for differential expressed genes (DEGs) between stable and exacerbations (FDR P ≤ 0.01)
+        encoding: MetaCore pathways significantly enriched for differential expressed genes (DEGs) between stable and exacerbations (FDR P <= 0.01)
   - source:
       sheet: B. Proteins COPD ES vs CS
     statement:
@@ -57,7 +66,7 @@ sections:
       object:
         method: value
         encoding: smoking status
-    annotations:
+      annotations:
       - annotation: p value
         method: column
         encoding: D
@@ -69,4 +78,4 @@ sections:
         encoding: Wilcoxon signed-rank test
       - annotation: miscellaneous notes
         method: value
-        encoding: Significantly differentially expressed proteins between sputum samples of COPD ex-smokers and current smokers (Wilcoxon, FDR P ≤ 0.05)
+        encoding: Significantly differentially expressed proteins between sputum samples of COPD ex-smokers and current smokers (Wilcoxon, FDR P <= 0.05)

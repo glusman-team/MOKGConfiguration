@@ -23,7 +23,10 @@ template:
     predicate: associated_with
     object:
       encoding: age
-    qualifiers: []
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC11224521
