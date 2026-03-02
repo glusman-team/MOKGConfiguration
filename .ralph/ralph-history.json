@@ -2,25 +2,56 @@
   "iterations": [
     {
       "iteration": 1,
-      "startedAt": "2026-03-02T05:00:31.410Z",
-      "endedAt": "2026-03-02T05:14:29.749Z",
-      "durationMs": 838203,
+      "startedAt": "2026-03-02T05:43:52.167Z",
+      "endedAt": "2026-03-02T05:50:27.602Z",
+      "durationMs": 395303,
       "agent": "opencode",
       "model": "",
       "toolsUsed": {},
       "filesModified": [
+        "TABLE/MIGRATASSERT/DIENER1.yaml",
+        "TABLE/MIGRATASSERT/EDFELDT6.yaml",
+        "TABLE/MIGRATASSERT/EDFELDT7.yaml",
         "TABLE/MIGRATASSERT/FACKLE13.yaml",
+        "TABLE/MIGRATASSERT/FORSYTH10.yaml",
+        "TABLE/MIGRATASSERT/FUESS2.yaml",
+        "TABLE/MIGRATASSERT/GAGNON5.yaml",
+        "TABLE/MIGRATASSERT/GAGNON6.yaml",
+        "TABLE/MIGRATASSERT/HABER16.yaml",
+        "TABLE/MIGRATASSERT/HAO1.yaml",
+        "TABLE/MIGRATASSERT/HILL18.yaml",
+        "TABLE/MIGRATASSERT/HOSKINSON3.yaml",
+        "TABLE/MIGRATASSERT/JIN1.yaml",
+        "TABLE/MIGRATASSERT/KURKOV1.yaml",
+        "TABLE/MIGRATASSERT/LUI7.yaml",
+        "TABLE/MIGRATASSERT/LUO1.yaml",
+        "TABLE/MIGRATASSERT/MANOR2.yaml",
+        "TABLE/MIGRATASSERT/MANOR4.yaml",
+        "TABLE/MIGRATASSERT/MANOR6.yaml",
         "TABLE/MIGRATASSERT/MILLER7.yaml",
         "TABLE/MIGRATASSERT/MOTTA13.yaml",
+        "TABLE/MIGRATASSERT/NAGATA10.yaml",
+        "TABLE/MIGRATASSERT/NAGATA11.yaml",
+        "TABLE/MIGRATASSERT/NAGATA5.yaml",
+        "TABLE/MIGRATASSERT/NAGATA7.yaml",
         "TABLE/MIGRATASSERT/NGUYEN2.yaml",
         "TABLE/MIGRATASSERT/PU12.yaml",
         "TABLE/MIGRATASSERT/RAVIK9.yaml",
+        "TABLE/MIGRATASSERT/ROMERO1.yaml",
+        "TABLE/MIGRATASSERT/ROMERO2.yaml",
+        "TABLE/MIGRATASSERT/ROMERO3.yaml",
+        "TABLE/MIGRATASSERT/SU3.yaml",
+        "TABLE/MIGRATASSERT/SU5.yaml",
         "TABLE/MIGRATASSERT/WANG1.yaml",
+        "TABLE/MIGRATASSERT/WANG2.yaml",
         "TABLE/MIGRATASSERT/WANG4.yaml",
+        "TABLE/MIGRATASSERT/WANG5.yaml",
         "TABLE/MIGRATASSERT/WANG9.yaml",
         "TABLE/MIGRATASSERT/WHIPPER1.yaml",
         "TABLE/MIGRATASSERT/WILMANSKI3.yaml",
         "TABLE/MIGRATASSERT/WU1.yaml",
+        "TABLE/MIGRATASSERT/WU18.yaml",
+        "TABLE/MIGRATASSERT/WU19.yaml",
         "TABLE/MIGRATASSERT/YANG9.yaml",
         "TABLE/MIGRATASSERT/YUAN2.yaml",
         "TABLE/MIGRATASSERT/YUN1.yaml",
@@ -28,77 +59,13 @@
         ".worktrees/migratassert-qualifiers"
       ],
       "exitCode": 0,
-      "completionDetected": false,
-      "errors": [
-        "\u001b[0m⚙ \u001b[0mdistill {\"targets\":[{\"id\":\"141\",\"distillation\":\"`.sisyphus/evidence/task-11-singleton-b.md` documents Task T11 (10 files: MILLER7, MOTTA13, NGUYEN2, PU12, RAVIK9, FACKLE13, WANG1, WANG4, WAN"
-      ]
-    },
-    {
-      "iteration": 2,
-      "startedAt": "2026-03-02T05:14:30.905Z",
-      "endedAt": "2026-03-02T05:18:21.287Z",
-      "durationMs": 230206,
-      "agent": "opencode",
-      "model": "",
-      "toolsUsed": {},
-      "filesModified": [
-        "TABLE/MIGRATASSERT/EDFELDT6.yaml",
-        "TABLE/MIGRATASSERT/EDFELDT7.yaml",
-        "TABLE/MIGRATASSERT/MANOR2.yaml",
-        "TABLE/MIGRATASSERT/MANOR4.yaml",
-        "TABLE/MIGRATASSERT/MANOR6.yaml",
-        "TABLE/MIGRATASSERT/ROMERO1.yaml",
-        "TABLE/MIGRATASSERT/ROMERO2.yaml",
-        "TABLE/MIGRATASSERT/ROMERO3.yaml",
-        ".worktrees/migratassert-qualifiers"
-      ],
-      "exitCode": 1,
-      "completionDetected": false,
-      "errors": [
-        "TypeError: undefined is not an object (evaluating 'str3.replace')"
-      ]
-    },
-    {
-      "iteration": 3,
-      "startedAt": "2026-03-02T05:18:22.458Z",
-      "endedAt": "2026-03-02T05:19:01.359Z",
-      "durationMs": 38737,
-      "agent": "opencode",
-      "model": "",
-      "toolsUsed": {},
-      "filesModified": [
-        ".worktrees/migratassert-qualifiers"
-      ],
-      "exitCode": 1,
-      "completionDetected": false,
-      "errors": [
-        "TypeError: undefined is not an object (evaluating 'str3.replace')"
-      ]
-    },
-    {
-      "iteration": 4,
-      "startedAt": "2026-03-02T05:19:02.508Z",
-      "endedAt": "2026-03-02T05:19:50.182Z",
-      "durationMs": 47519,
-      "agent": "opencode",
-      "model": "",
-      "toolsUsed": {},
-      "filesModified": [
-        ".worktrees/migratassert-qualifiers"
-      ],
-      "exitCode": 1,
-      "completionDetected": false,
-      "errors": [
-        "TypeError: undefined is not an object (evaluating 'str3.replace')"
-      ]
+      "completionDetected": true,
+      "errors": []
     }
   ],
-  "totalDurationMs": 1154665,
+  "totalDurationMs": 395303,
   "struggleIndicators": {
-    "repeatedErrors": {
-      "\u001b[0m⚙ \u001b[0mdistill {\"targets\":[{\"id\":\"141\",\"distillation\":\"`.sisyphus/evidence/task-11-singleton-b.md": 1,
-      "TypeError: undefined is not an object (evaluating 'str3.replace')": 3
-    },
+    "repeatedErrors": {},
     "noProgressIterations": 0,
     "shortIterations": 0
   }

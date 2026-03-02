@@ -35,6 +35,9 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9545
+      - qualifier: population_context_qualifier
+        method: value
+        encoding: NCBITaxon:9545
   provenance:
     repo: PMC
     publication: PMC7562722

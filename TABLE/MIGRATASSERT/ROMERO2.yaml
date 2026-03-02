@@ -24,6 +24,16 @@ template:
     object:
       method: value
       encoding: gestational age
+    qualifiers:
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0000996
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+      - qualifier: population_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10434204
@@ -33,13 +43,6 @@ template:
         date: 17 FEB 2026
         organizations:
           - Institute for Systems Biology
-    qualifiers:
-      - qualifier: anatomical_context_qualifier
-        method: value
-        encoding: UBERON:0000996
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   annotations:
     - annotation: sample size
       method: value

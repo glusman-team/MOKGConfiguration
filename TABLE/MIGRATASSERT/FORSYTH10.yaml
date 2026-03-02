@@ -43,6 +43,9 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:10090
+      - qualifier: population_context_qualifier
+        method: value
+        encoding: NCBITaxon:10090
   provenance:
     repo: PMC
     publication: PMC10945560

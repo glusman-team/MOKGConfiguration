@@ -22,6 +22,9 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
+      - qualifier: population_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
     object:
       method: value
   provenance:
