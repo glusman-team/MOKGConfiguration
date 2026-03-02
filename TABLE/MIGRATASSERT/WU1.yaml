@@ -10,6 +10,10 @@ template:
       method: value
       encoding: microgravity
     predicate: affects
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
     object:
       method: column
       encoding: A

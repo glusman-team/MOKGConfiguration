@@ -12,6 +12,10 @@ template:
       prioritize:
         - OrganismTaxon
     predicate: associated_with
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
     object:
       encoding: urinary tract infection
       prioritize:

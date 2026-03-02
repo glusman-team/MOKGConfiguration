@@ -14,6 +14,10 @@ template:
       prioritize:
         - OrganismTaxon
     predicate: correlated_with
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
     object:
       method: column
       encoding: B

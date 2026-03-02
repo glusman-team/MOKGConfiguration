@@ -15,6 +15,10 @@ template:
       prioritize:
         - OrganismTaxon
     predicate: affects
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
     object:
       encoding: frailty
   provenance:
