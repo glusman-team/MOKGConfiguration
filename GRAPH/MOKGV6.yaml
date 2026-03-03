@@ -1,0 +1,62 @@
+syntax: GC2
+name: MICROBIOME_KG
+version: INSANE
+tables:
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ALAM1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/AVUTHU1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/AVUTHU2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/BLANTON1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/BOHMAN4.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/BOMBIN1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/BOVERHOFF2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/DIENER1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/EDFELDT6.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/EDFELDT7.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/FACKLE13.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/FORSYTH10.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/FUESS2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/GAGNON5.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/GAGNON6.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/GOEBERT2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/GOEBERT3.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/HABER16.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/HAO1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/HILL18.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/HOSKINSON3.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/JIN1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/KURKOV1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/LUI7.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/LUO1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/MANOR2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/MANOR4.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/MANOR6.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/MILLER7.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/MOTTA13.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/NAGATA5.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/NAGATA7.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/NAGATA10.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/NAGATA11.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/NGUYEN2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/PU12.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/RAVIK9.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ROMERO1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ROMERO2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ROMERO3.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/SU3.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/SU5.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG4.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG5.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG9.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WHIPPER1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WU1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WU18.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WU19.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/YANG9.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/YUAN2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/YUN1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ZHOU29.yaml
+dbssert: /local_raid1/sgoetz/CODE/DBSSERT/dbssert.duckdb
+pubmed_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/PUBMED/PubMed.db
+pmc_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/CAPTIONS/PMCSuppCaptions.db
