@@ -54,9 +54,12 @@ template:
     - annotation: multiple testing correction method
       method: value
       encoding: Benjamini Hochberg
+    - annotation: p value
+      method: column
+      encoding: E
     - annotation: relationship strength
       method: column
-      encoding: B
+      encoding: C
     - annotation: assertion method
       method: value
       encoding: Spearman Correlation

@@ -58,20 +58,11 @@ sections:
       - annotation: p value
         method: column
         encoding: AI
-      - annotation: relationship strength
-        method: column
-        encoding: B
-  - source:
-      row_slice:
-        - 42
-        - 72
-    statement:
-      object:
-        encoding: glycine
-    annotations:
-      - annotation: p value
-        method: column
-        encoding: AI
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: B
@@ -86,6 +77,11 @@ sections:
       - annotation: p value
         method: column
         encoding: AJ
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: C
@@ -100,6 +96,11 @@ sections:
       - annotation: p value
         method: column
         encoding: AM
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: F
@@ -114,6 +115,11 @@ sections:
       - annotation: p value
         method: column
         encoding: AS
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: L
@@ -128,6 +134,11 @@ sections:
       - annotation: p value
         method: column
         encoding: AT
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: M
@@ -142,6 +153,11 @@ sections:
       - annotation: p value
         method: column
         encoding: AY
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: R
@@ -156,6 +172,11 @@ sections:
       - annotation: p value
         method: column
         encoding: AZ
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: S
@@ -170,6 +191,11 @@ sections:
       - annotation: p value
         method: column
         encoding: BB
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: U
@@ -184,6 +210,11 @@ sections:
       - annotation: p value
         method: column
         encoding: BC
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: V
@@ -198,6 +229,11 @@ sections:
       - annotation: p value
         method: column
         encoding: BC
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: V
@@ -212,6 +248,11 @@ sections:
       - annotation: p value
         method: column
         encoding: BD
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: W
@@ -226,6 +267,11 @@ sections:
       - annotation: p value
         method: column
         encoding: BE
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: X
@@ -240,6 +286,11 @@ sections:
       - annotation: p value
         method: column
         encoding: BF
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: Y
@@ -254,6 +305,11 @@ sections:
       - annotation: p value
         method: column
         encoding: BG
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: Z
@@ -268,6 +324,11 @@ sections:
       - annotation: p value
         method: column
         encoding: BH
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: AA
@@ -282,6 +343,11 @@ sections:
       - annotation: p value
         method: column
         encoding: BI
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: AB
@@ -296,6 +362,11 @@ sections:
       - annotation: p value
         method: column
         encoding: T
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: C
@@ -310,6 +381,11 @@ sections:
       - annotation: p value
         method: column
         encoding: V
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: E
@@ -324,6 +400,11 @@ sections:
       - annotation: p value
         method: column
         encoding: W
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: F
@@ -338,6 +419,11 @@ sections:
       - annotation: p value
         method: column
         encoding: X
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: G
@@ -351,7 +437,12 @@ sections:
     annotations:
       - annotation: p value
         method: column
-        encoding: Y
+        encoding: "Y"
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: H
@@ -366,6 +457,11 @@ sections:
       - annotation: p value
         method: column
         encoding: AB
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: K
@@ -380,6 +476,11 @@ sections:
       - annotation: p value
         method: column
         encoding: AD
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: M
@@ -394,6 +495,11 @@ sections:
       - annotation: p value
         method: column
         encoding: AF
+        regex:
+          - pattern: ">0.999"
+            replacement: 0.999
+          - pattern: "<0.001"
+            replacement: 0.001
       - annotation: relationship strength
         method: column
         encoding: O
