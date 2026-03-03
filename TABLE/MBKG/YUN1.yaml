@@ -1,7 +1,6 @@
 template:
   syntax: TC3
   source:
-    local: ./DATALAKE/YUN1.xlsx
     kind: excel
     sheet: 시트1
     row_slice:
@@ -55,12 +54,14 @@ template:
 sections:
   - source:
       url: https://pmc.ncbi.nlm.nih.gov/articles/instance/6417675/bin/pone.0213692.s002.xlsx
+      local: ./DATALAKE/YUN2.xlsx
     annotations:
       - annotation: miscellaneous notes
         method: value
         encoding: Significant taxa in blood microbiota related with NAFLD groups. Both unadjusted and adjusted P-values are provided.
   - source:
       url: https://pmc.ncbi.nlm.nih.gov/articles/instance/6417675/bin/pone.0213692.s001.xlsx
+      local: ./DATALAKE/YUN1.xlsx
     annotations:
       - annotation: miscellaneous notes
         method: value
