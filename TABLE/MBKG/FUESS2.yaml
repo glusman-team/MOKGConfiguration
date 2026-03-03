@@ -45,3 +45,83 @@ template:
     - annotation: miscellaneous notes
       method: value
       encoding: List of transcripts which were significantly correlated with each of the top 15 most correlated microbial families.
+
+sections:
+  - statement:
+      subject:
+        method: value
+        encoding: Betaproteobacteria
+    source:
+      sheet: Betaproteobacteria
+  - statement:
+      subject:
+        method: value
+        encoding: Caulobacteraceae
+    source:
+      sheet: Caulobacteraceae
+  - statement:
+      subject:
+        method: value
+        encoding: Chitinophagaceae
+    source:
+      sheet: Chitinophagaceae
+  - statement:
+      subject:
+        method: value
+        encoding: Chlamydiales
+    source:
+      sheet: Chlamydiales
+  - statement:
+      subject:
+        method: value
+        encoding: Clostridiaceae
+    source:
+      sheet: Clostridiaceae 1
+  - statement:
+      subject:
+        method: value
+        encoding: Geodermatophilaceae
+    source:
+      sheet: Geodermatophilaceae
+  - statement:
+      subject:
+        method: value
+        encoding: Halomonadaceae
+    source:
+      sheet: Halomonadaceae
+  - statement:
+      subject:
+        method: value
+        encoding: Methylobacteriaceae
+    source:
+      sheet: Methylobacteriaceae
+  - statement:
+      subject:
+        method: value
+        encoding: Nocardiaceae
+    source:
+      sheet: Nocardiaceae
+  - statement:
+      subject:
+        method: value
+        encoding: Orbaceae
+    source:
+      sheet: Orbaceae
+  - statement:
+      subject:
+        method: value
+        encoding: Peptostreptococcaceae
+    source:
+      sheet: Peptostreptococcaceae
+  - statement:
+      subject:
+        method: value
+        encoding: Rubrobacteraceae
+    source:
+      sheet: Rubrobacteraceae
+  - statement:
+      subject:
+        method: value
+        encoding: Spartobacteria
+    source:
+      sheet: "Spartobacteria "

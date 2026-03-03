@@ -10,7 +10,7 @@ template:
   statement:
     subject:
       method: column
-      encoding: A
+      encoding: B
       taxon: 9606
       remove:
         - .*GO_

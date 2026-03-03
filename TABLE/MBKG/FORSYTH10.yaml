@@ -68,3 +68,32 @@ template:
     - annotation: assertion method
       method: value
       encoding: SparCC
+
+sections:
+  - source:
+      sheet: Inflam_SparCC_2-15_Mths
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 11
+      - annotation: miscellaneous notes
+        method: value
+        encoding: Inflammation Genes and Bacterial Genera Correlation Outcomes between 2 Month- and 15-Month Old Mice Groups
+  - source:
+      sheet: Inflam_SparCC_2-25_Mths
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 11
+      - annotation: miscellaneous notes
+        method: value
+        encoding: Inflammation Genes and Bacterial Genera Correlation Outcomes between 2 Month- and 25-Month Old Mice Groups
+  - source:
+      sheet: Inflam_SparCC_15-25_Mths
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 12
+      - annotation: miscellaneous notes
+        method: value
+        encoding: Inflammation Genes and Bacterial Genera Correlation Outcomes between 15-Month- and 25-Month Old Mice Groups
