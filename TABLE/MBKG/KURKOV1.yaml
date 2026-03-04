@@ -55,22 +55,23 @@ template:
     - annotation: assertion method
       method: value
       encoding: Spearman correlation
-  sections:
-  - source:
-      sheet: 10_BacPheno_LLD
-    annotations:
-      - annotation: sample size
-        method: value
-        encoding: 1135
-      - annotation: miscellaneous notes
-        method: value
-        encoding: 'The table contains results of correlation analysis of taxa that have at least one mbQTL or mbBTL at P<5x10-8 and the 207 phenotypes measured in the LLD cohort as described in (Zhernakova et al, Science, 2016) 3. MbTLtype: indication if the associated taxon has a mbQTL or mbBTL. Taxon: name of taxon. Phenotype: name of associated phenotype. SpearmanR: Spearman correlation between bacteria and phenotype. Pvalue: p-value for Spearman correlation. FDR: p-value adjusted using Benjamini-Hochberg procedure.'
-  - source:
-      sheet: 11_BacPheno_FGFP
-    annotations:
-      - annotation: sample size
-        method: value
-        encoding: 1106
-      - annotation: miscellaneous notes
-        method: value
-        encoding: 'The table contains results of correlation analysis of taxa that have at least one quantitative or binary mbTL at p<5x10-8 and the 503 phenotypes measured in the FGFP cohort as described in Falony et al, Science, 2016 4. Mb-TLtype: indication if taxon was associated in binary or quantitative analysis. Taxon: name of taxon. Phenotype: name of associated phenotype. SpearmanR: Spearman correlation between bacteria and phenotype. Pvalue: p-value for Spearman correlation. FDR: p-value corrected for false discovery rate.'
+
+sections:
+- source:
+    sheet: 10_BacPheno_LLD
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 1135
+    - annotation: miscellaneous notes
+      method: value
+      encoding: 'The table contains results of correlation analysis of taxa that have at least one mbQTL or mbBTL at P<5x10-8 and the 207 phenotypes measured in the LLD cohort as described in (Zhernakova et al, Science, 2016) 3. MbTLtype: indication if the associated taxon has a mbQTL or mbBTL. Taxon: name of taxon. Phenotype: name of associated phenotype. SpearmanR: Spearman correlation between bacteria and phenotype. Pvalue: p-value for Spearman correlation. FDR: p-value adjusted using Benjamini-Hochberg procedure.'
+- source:
+    sheet: 11_BacPheno_FGFP
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 1106
+    - annotation: miscellaneous notes
+      method: value
+      encoding: 'The table contains results of correlation analysis of taxa that have at least one quantitative or binary mbTL at p<5x10-8 and the 503 phenotypes measured in the FGFP cohort as described in Falony et al, Science, 2016 4. Mb-TLtype: indication if taxon was associated in binary or quantitative analysis. Taxon: name of taxon. Phenotype: name of associated phenotype. SpearmanR: Spearman correlation between bacteria and phenotype. Pvalue: p-value for Spearman correlation. FDR: p-value corrected for false discovery rate.'
