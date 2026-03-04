@@ -52,3 +52,140 @@ template:
     - annotation: miscellaneous notes
       method: value
       encoding: The key species with VIP score >= 1 in more than 50% of the psychological factors
+sections:
+  - statement:
+      object:
+        method: value
+        encoding: mood disturbance
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: B
+  - statement:
+      object:
+        method: value
+        encoding: tension anxiety
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: C
+  - statement:
+      object:
+        method: value
+        encoding: Anger
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: D
+  - statement:
+      object:
+        method: value
+        encoding: fatigue
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: E
+  - statement:
+      object:
+        method: value
+        encoding: Dejection
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: F
+  - statement:
+      object:
+        method: value
+        encoding: Bewilderment
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: G
+  - statement:
+      object:
+        method: value
+        encoding: Vigorous activity
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: H
+  - statement:
+      object:
+        method: value
+        encoding: self esteem
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: I
+  - statement:
+      object:
+        method: value
+        encoding: Somatization
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: K
+  - statement:
+      object:
+        method: value
+        encoding: Obsessive compulsive disorder
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: L
+  - statement:
+      object:
+        method: value
+        encoding: interpersonal sensitivity
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: M
+  - statement:
+      object:
+        method: value
+        encoding: Depression
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: 'N'
+  - statement:
+      object:
+        method: value
+        encoding: Anxiety
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: O
+  - statement:
+      object:
+        method: value
+        encoding: Hostility
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: P
+  - statement:
+      object:
+        method: value
+        encoding: Phobic disorder
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: Q
+  - statement:
+      object:
+        method: value
+        encoding: Paranoid ideation
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: R
+  - statement:
+      object:
+        method: value
+        encoding: Psychoticism
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: S
