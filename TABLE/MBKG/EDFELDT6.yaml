@@ -10,14 +10,15 @@ template:
   statement:
     subject:
       method: column
-      encoding: B
+      encoding: A
       taxon: 9606
       remove:
-        - .*GO_
+        - "GO "
+        - GO_
         - GO
       regex:
         - pattern: _
-          replacement: ' '
+          replacement: " "
     predicate: associated_with
     object:
       method: column

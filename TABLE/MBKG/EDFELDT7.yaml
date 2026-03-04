@@ -13,8 +13,9 @@ template:
       encoding: B
       taxon: 9606
       remove:
-        - .*GO_
+        - "GO "
         - GO
+        - GO_
       regex:
         - pattern: _
           replacement: ' '
