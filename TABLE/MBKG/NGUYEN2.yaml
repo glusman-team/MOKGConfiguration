@@ -37,6 +37,8 @@ template:
     - annotation: p value
       method: column
       encoding: D
+      remove:
+        - "< "
     - annotation: multiple testing correction method
       method: value
       encoding: Benjamini Hochberg

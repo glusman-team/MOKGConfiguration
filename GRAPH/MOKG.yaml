@@ -31,24 +31,24 @@ tables:
   # TODO: - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/MANOR4.yaml
   # TODO: - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/MANOR6.yaml
   # ! - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/MILLER7.yaml
-  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/MOTTA13.yaml
+  # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/MOTTA13.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/NAGATA5.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/NAGATA7.yaml
-  # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/NAGATA10.yaml
-  # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/NAGATA11.yaml
+  # ! - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/NAGATA10.yaml
+  # ! - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/NAGATA11.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/NGUYEN2.yaml
-  # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/PU12.yaml
+  # TODO: - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/PU12.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/RAVIK9.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ROMERO1.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ROMERO2.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ROMERO3.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/SU3.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/SU5.yaml
-  # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG1.yaml
-  # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG2.yaml
+  # ! - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG2.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG4.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG5.yaml
-  # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG9.yaml
+  # ! - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG9.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WHIPPER1.yaml
   # TODO: - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WILMANSKI13.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WU1.yaml

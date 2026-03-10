@@ -51,14 +51,15 @@ template:
     - annotation: miscellaneous notes
       method: value
       encoding: Gut microbial changes between COVID-19 complications
-  sections:
+
+sections:
   - statement:
       object:
         method: value
         encoding: Long COVID-19
         prioritize:
           - Disease
-      annotations:
+    annotations:
       - annotation: sample size
         method: column
         encoding: L
@@ -74,7 +75,7 @@ template:
         encoding: Pneumonia
         prioritize:
           - Disease
-      annotations:
+    annotations:
       - annotation: sample size
         method: column
         encoding: Q
@@ -90,7 +91,7 @@ template:
         encoding: Low d-dimmer level
         prioritize:
           - Disease
-      annotations:
+    annotations:
       - annotation: sample size
         method: column
         encoding: V
@@ -106,7 +107,7 @@ template:
         encoding: Kidney dysfunction
         prioritize:
           - Disease
-      annotations:
+    annotations:
       - annotation: sample size
         method: column
         encoding: AA
@@ -122,7 +123,7 @@ template:
         encoding: Liver dysfunction
         prioritize:
           - Disease
-      annotations:
+    annotations:
       - annotation: sample size
         method: column
         encoding: AF
@@ -138,7 +139,7 @@ template:
         encoding: Diarrhea
         prioritize:
           - Disease
-      annotations:
+    annotations:
       - annotation: sample size
         method: column
         encoding: AK

@@ -35,50 +35,50 @@ template:
     - annotation: multiple testing correction method
       method: value
       encoding: Benjamini Hochberg
-  sections:
-  - source:
-      sheet: A. Pathways Exac vs Stable
-    statement:
-      subject:
-        method: value
-        encoding: chronic obstructive pulmonary disease
-      object:
-        method: column
-        encoding: A
-        remove:
-          - .*_
-          - \([^()]*\)
-      annotations:
-      - annotation: p value
-        method: column
-        encoding: F
-      - annotation: relationship strength
-        method: column
-        encoding: C
-      - annotation: miscellaneous notes
-        method: value
-        encoding: MetaCore pathways significantly enriched for differential expressed genes (DEGs) between stable and exacerbations (FDR P <= 0.01)
-  - source:
-      sheet: B. Proteins COPD ES vs CS
-    statement:
-      subject:
-        method: column
-        encoding: B
-        prioritize:
-          - Protein
-      object:
-        method: value
-        encoding: smoking status
-      annotations:
-      - annotation: p value
-        method: column
-        encoding: D
-      - annotation: relationship strength
-        method: column
-        encoding: C
-      - annotation: assertion method
-        method: value
-        encoding: Wilcoxon signed-rank test
-      - annotation: miscellaneous notes
-        method: value
-        encoding: Significantly differentially expressed proteins between sputum samples of COPD ex-smokers and current smokers (Wilcoxon, FDR P <= 0.05)
+sections:
+- source:
+    sheet: A. Pathways Exac vs Stable
+  statement:
+    subject:
+      method: value
+      encoding: chronic obstructive pulmonary diseaSse
+    object:
+      method: column
+      encoding: A
+      remove:
+        - .*_
+        - \([^()]*\)
+  annotations:
+  - annotation: p value
+    method: column
+    encoding: F
+  - annotation: relationship strength
+    method: column
+    encoding: C
+  - annotation: miscellaneous notes
+    method: value
+    encoding: MetaCore pathways significantly enriched for differential expressed genes (DEGs) between stable and exacerbations (FDR P <= 0.01)
+- source:
+    sheet: B. Proteins COPD ES vs CS
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+        - Protein
+    object:
+      method: value
+      encoding: smoking status
+  annotations:
+  - annotation: p value
+    method: column
+    encoding: D
+  - annotation: relationship strength
+    method: column
+    encoding: C
+  - annotation: assertion method
+    method: value
+    encoding: Wilcoxon signed-rank test
+  - annotation: miscellaneous notes
+    method: value
+    encoding: Significantly differentially expressed proteins between sputum samples of COPD ex-smokers and current smokers (Wilcoxon, FDR P <= 0.05)

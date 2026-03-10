@@ -106,7 +106,7 @@ sections:
         transformations:
           - function: copysign
             arguments:
-              - 
+              - values
               - -1
       - annotation: relationship strength
         method: column
