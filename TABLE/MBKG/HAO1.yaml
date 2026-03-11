@@ -15,8 +15,8 @@ template:
       prioritize:
         - OrganismTaxon
       remove:
-        - '['
-        - ']'
+        - '\['
+        - '\]'
       regex:
         - pattern: ^.*?_
           replacement: ''
