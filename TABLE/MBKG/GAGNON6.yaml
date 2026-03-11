@@ -26,17 +26,12 @@ template:
         - phylum
         - \.
         - levels
+        - group
     predicate: affects
     object:
       method: column
       encoding: D
       taxon: 9606
-      prioritize:
-        - Protein
-        - ClinicalFinding
-        - ChemicalEntity
-        - PhenotypicFeature
-        - Disease
       regex:
         - pattern: _
           replacement: ' '

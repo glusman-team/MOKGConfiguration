@@ -18,6 +18,7 @@ template:
         - \..*
         - s__
         - ' unclassified.*'
+        - "s  "
       regex:
         - pattern: _
           replacement: ' '

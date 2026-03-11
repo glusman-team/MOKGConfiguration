@@ -49,8 +49,6 @@ sections:
       object:
         method: value
         encoding: longevity
-        prioritize:
-          - PhenotypicFeature
         avoid:
           - Gene
     annotations:
@@ -67,8 +65,6 @@ sections:
       subject:
         method: value
         encoding: longevity
-        prioritize:
-          - PhenotypicFeature
         avoid:
           - Gene
       object:

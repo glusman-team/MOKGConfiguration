@@ -25,6 +25,7 @@ template:
         - order
         - phylum
         - \.
+        - group
     predicate: affects
     object:
       method: column

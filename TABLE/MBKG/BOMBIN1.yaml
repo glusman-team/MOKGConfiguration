@@ -66,6 +66,7 @@ template:
     - annotation: assertion method
       method: value
       encoding: Spearman correlation
+
 sections:
   - source:
       sheet: S9B
@@ -87,7 +88,7 @@ sections:
     annotations:
       - annotation: miscellaneous notes
         method: value
-        encoding:  The effect of ECs identified from fecal samples on plasma metabolites concentrations
+        encoding: The effect of ECs identified from fecal samples on plasma metabolites concentrations
     statement:
       qualifiers:
         - qualifier: subject_part_qualifier
@@ -101,7 +102,7 @@ sections:
     annotations:
       - annotation: miscellaneous notes
         method: value
-        encoding:  The effect of ECs identified from fecal samples on stool metabolites concentrations
+        encoding: The effect of ECs identified from fecal samples on stool metabolites concentrations
     statement:
       qualifiers:
         - qualifier: part_qualifier
@@ -112,7 +113,7 @@ sections:
     annotations:
       - annotation: miscellaneous notes
         method: value
-        encoding:  The effect of KOs identified from salivary samples on plasma metabolites concentrations
+        encoding: The effect of KOs identified from salivary samples on plasma metabolites concentrations
     statement:
       qualifiers:
         - qualifier: object_part_qualifier
@@ -126,7 +127,7 @@ sections:
     annotations:
       - annotation: miscellaneous notes
         method: value
-        encoding:  The effect of KOs identified from salivary samples on stool metabolites concentrations
+        encoding: The effect of KOs identified from salivary samples on stool metabolites concentrations
     statement:
       qualifiers:
         - qualifier: subject_part_qualifier
@@ -141,7 +142,7 @@ sections:
     annotations:
       - annotation: miscellaneous notes
         method: value
-        encoding:  The effect of KOs identified from fecal samples on plasma metabolites concentrations
+        encoding: The effect of KOs identified from fecal samples on plasma metabolites concentrations
     statement:
       qualifiers:
         - qualifier: subject_part_qualifier
@@ -155,7 +156,7 @@ sections:
     annotations:
       - annotation: miscellaneous notes
         method: value
-        encoding:  The effect of KOs identified from fecal samples on stool metabolites concentrations
+        encoding: The effect of KOs identified from fecal samples on stool metabolites concentrations
     statement:
       qualifiers:
         - qualifier: part_qualifier
@@ -166,7 +167,7 @@ sections:
     annotations:
       - annotation: miscellaneous notes
         method: value
-        encoding:  The effect of MetaCyc pathways identified from salivary samples on plasma metabolites concentrations
+        encoding: The effect of MetaCyc pathways identified from salivary samples on plasma metabolites concentrations
     statement:
       qualifiers:
         - qualifier: object_part_qualifier
@@ -180,7 +181,7 @@ sections:
     annotations:
       - annotation: miscellaneous notes
         method: value
-        encoding:  The effect of MetaCyc pathways identified from salivary samples on stool metabolites concentrations
+        encoding: The effect of MetaCyc pathways identified from salivary samples on stool metabolites concentrations
     statement:
       qualifiers:
         - qualifier: subject_part_qualifier
@@ -195,7 +196,7 @@ sections:
     annotations:
       - annotation: miscellaneous notes
         method: value
-        encoding:  The effect of MetaCyc pathways identified from fecal samples on plasma metabolites concentrations
+        encoding: The effect of MetaCyc pathways identified from fecal samples on plasma metabolites concentrations
     statement:
       qualifiers:
         - qualifier: subject_part_qualifier
@@ -209,7 +210,7 @@ sections:
     annotations:
       - annotation: miscellaneous notes
         method: value
-        encoding:  The effect of MetaCyc pathways identified from fecal samples on stool metabolites concentrations
+        encoding: The effect of MetaCyc pathways identified from fecal samples on stool metabolites concentrations
     statement:
       qualifiers:
         - qualifier: part_qualifier
