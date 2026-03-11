@@ -20,6 +20,8 @@ template:
         - Gn
         - _Gp
         - Gp
+        - uncultured
+        - unc
       regex:
         - pattern: _
           replacement: ' '
@@ -36,6 +38,8 @@ template:
         - Gn
         - _Gp
         - Gp
+        - uncultured
+        - unc
       regex:
         - pattern: _
           replacement: ' '

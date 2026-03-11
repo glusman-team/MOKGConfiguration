@@ -14,6 +14,9 @@ template:
       encoding: A
       prioritize:
         - OrganismTaxon
+      remove:
+        - '['
+        - ']'
       regex:
         - pattern: ^.*?_
           replacement: ''
@@ -25,6 +28,8 @@ template:
           replacement: ''
         - pattern: \s+$
           replacement: ''
+        - pattern: 'sp\..*$'
+          replacement: 'sp.'
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier

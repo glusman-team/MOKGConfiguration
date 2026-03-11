@@ -16,6 +16,8 @@ template:
         - OrganismTaxon
       remove:
         - .*;
+        - _1
+        - _6
     predicate: associated_with
     object:
       method: column
@@ -24,6 +26,8 @@ template:
         - OrganismTaxon
       remove:
         - .*;
+        - _1
+        - _6
     qualifiers:
       - qualifier: anatomical_context_qualifier
         method: value

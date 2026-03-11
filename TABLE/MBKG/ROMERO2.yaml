@@ -20,6 +20,8 @@ template:
         - OrganismTaxon
       remove:
         - NA*
+        - _1
+        - _6
     predicate: associated_with
     object:
       method: value

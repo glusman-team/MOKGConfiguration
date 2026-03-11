@@ -17,6 +17,8 @@ template:
       remove:
         - ;NA.*
         - .*;
+        - _1
+        - _6
     predicate: associated_with
     qualifiers:
       - qualifier: anatomical_context_qualifier

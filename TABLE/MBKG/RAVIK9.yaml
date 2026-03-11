@@ -13,6 +13,9 @@ template:
       encoding: A
       prioritize:
         - OrganismTaxon
+      regex:
+        - pattern: '(.+?)\s*unclassified$'
+          replacement: 'unclassified ${1}'
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier
