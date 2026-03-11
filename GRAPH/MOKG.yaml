@@ -1,3 +1,8 @@
+# ? == EMPTY RESULT
+# * == UNDESIRABLE RESULT
+# TODO: == REQUIRES FEATURE IMPLEMENTATION
+# ! == NEEDS TO BE MANUALLY DOWNLOADED
+
 syntax: GC2
 name: MICROBIOME_KG
 version: INSANE
@@ -45,7 +50,7 @@ tables:
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/SU3.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/SU5.yaml
   # ! - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG1.yaml
-  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG2.yaml
+  # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG2.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG4.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG5.yaml
   # ! - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/WANG9.yaml
@@ -57,7 +62,7 @@ tables:
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/YANG9.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/YUAN2.yaml
   # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/YUN1.yaml
-  # - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ZHOU29.yaml
+  # ! - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ZHOU29.yaml
 dbssert: /local_raid1/sgoetz/CODE/DBSSERT/dbssert.duckdb
 pubmed_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/PUBMED/PubMed.db
 pmc_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/CAPTIONS/PMCSuppCaptions.db

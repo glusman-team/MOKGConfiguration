@@ -41,7 +41,7 @@ sections:
   statement:
     subject:
       method: value
-      encoding: chronic obstructive pulmonary diseaSse
+      encoding: chronic obstructive pulmonary disease
     object:
       method: column
       encoding: A

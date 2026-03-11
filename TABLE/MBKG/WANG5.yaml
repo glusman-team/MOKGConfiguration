@@ -16,6 +16,7 @@ template:
         - Gene
     predicate: associated_with
     object:
+      method: value
       prioritize:
         - OrganismTaxon
     qualifiers:
@@ -50,3 +51,101 @@ template:
     - annotation: miscellaneous notes
       method: value
       encoding: Cross associations among microbiome (9 microbiome genera and Shannon diversity), host transcriptome (9 tPCs) and proteome (8 pPCs) data both across all samples and within stable samples in a multivariate analysis. FDR P-values are indicated in table.
+
+sections:
+  - source:
+      sheet: A. Th1 and Th2 pathway
+    statement:
+      object:
+        encoding: Haemophilus
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: C
+      - annotation: relationship strength
+        method: column
+        encoding: D
+  - source:
+      sheet: A. Th1 and Th2 pathway
+    statement:
+      object:
+        encoding: Haemophilus influenzae
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: F
+      - annotation: relationship strength
+        method: column
+        encoding: E
+  - source:
+      sheet: A. IL12 pathway
+    statement:
+      object:
+        encoding: Haemophilus
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: C
+      - annotation: relationship strength
+        method: column
+        encoding: D
+  - source:
+      sheet: 
+    statement:
+      object:
+        encoding: Haemophilus influenzae
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: F
+      - annotation: relationship strength
+        method: column
+        encoding: E
+  - source:
+      sheet: B. IFN alpha beta pathway
+    statement:
+      object:
+        encoding: Moraxella
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: C
+      - annotation: relationship strength
+        method: column
+        encoding: D
+  - source:
+      sheet: B. IFN alpha beta pathway
+    statement:
+      object:
+        encoding: Moraxella
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: F
+      - annotation: relationship strength
+        method: column
+        encoding: E
+  - source:
+      sheet: B. antigen presentation pathway
+    statement:
+      object:
+        encoding: Moraxella
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: C
+      - annotation: relationship strength
+        method: column
+        encoding: D
+  - source:
+      sheet: B. antigen presentation pathway
+    statement:
+      object:
+        encoding: Moraxella
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: F
+      - annotation: relationship strength
+        method: column
+        encoding: E
