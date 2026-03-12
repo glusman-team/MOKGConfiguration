@@ -1,0 +1,106 @@
+template:
+  location:
+    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/9616573/bin/supplementarydata/ddac040.xlsx
+    download_hyperparameters:
+      file_extension: xlsx
+      start_at_line_number: 2
+  provenance:
+    publication: PMC9616573
+    config_curator_name: JC Roach
+    config_curator_date: Jan 19, 2026 
+    config_curator_organization: Institute for Systems Biology
+  attributes:
+    sample_size:
+      encoding_method: value
+      value_for_encoding: 4
+    multiple_testing_correction_method:
+      encoding_method: value
+      value_for_encoding: "p-values are reported as adjusted p-value"
+    assertion_method:
+      encoding_method: value
+      value_for_encoding: "Student's t-test"  
+  notes: "Deleterious variants in CRLS1 lead to cardiolipin deficiency and cause an autosomal recessive multi-system mitochondrial disease"
+  triple:
+    triple_subject:
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Gene
+    triple_predicate: biolink:regulates  
+
+sections:
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: Patient cells
+    triple_subject:
+      encoding_method: value
+      value_for_encoding: CRLS1
+      in_this_organism: NCBITaxon:9606
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: D
+      encoding_description: adjusted p-value
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: C
+      encoding_description: "log2 ratio (Patient/WT)"
+    triple_object:
+      encoding_method: column_of_values
+      value_for_encoding: A
+      in_this_organism: NCBITaxon:9606
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: "Crls1 KO mild CL defect"  
+    triple_subject:
+      encoding_method: value
+      value_for_encoding: CRLS1
+      in_this_organism: NCBITaxon:10090  # Mouse
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: D
+      encoding_description: adjusted p-value
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: C
+      encoding_description: "log2 ratio (Patient/WT)"
+    triple_object:
+      encoding_method: column_of_values
+      value_for_encoding: A
+      in_this_organism: NCBITaxon:10090
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: "CRLS1 KO moderate KO defect"
+    triple_subject:
+      encoding_method: value
+      value_for_encoding: CRLS1
+      in_this_organism: NCBITaxon:10090
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: D
+      encoding_description: adjusted p-value
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: C
+      encoding_description: "log2 ratio (Patient/WT)"
+    triple_object:
+      encoding_method: column_of_values
+      value_for_encoding: A
+      in_this_organism: NCBITaxon:10090
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: "CRLS1 KO severe CL defect"
+    triple_subject:
+      encoding_method: value
+      value_for_encoding: CRLS1
+      in_this_organism: NCBITaxon:10090
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: D
+      encoding_description: adjusted p-value
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: C
+      encoding_description: "log2 ratio (Patient/WT)"
+    triple_object:
+      encoding_method: column_of_values
+      value_for_encoding: A
+      in_this_organism: NCBITaxon:10090

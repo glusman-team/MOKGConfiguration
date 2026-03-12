@@ -1,0 +1,71 @@
+template:
+  location:
+    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/8017771/bin/NIHMS1644812-supplement-1644812SuppTab1.xlsx
+    download_hyperparameters:
+      file_extension: xlsx
+      start_at_line_number: 5
+  provenance:
+    publication: PMC8017771
+    config_curator_name: JC Roach
+    config_curator_date: Feb 11, 2026
+    config_curator_organization: Institute for Systems Biology
+  attributes:
+    multiple_testing_correction_method:
+      encoding_method: value
+      value_for_encoding: none
+    assertion_method:
+      encoding_method: value
+      value_for_encoding: "Student's t-test"
+  notes: "DPKC downregulation upon rapamycin treatment attenuates mitochondrial disease"
+  triple:
+    triple_subject:
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Gene
+    triple_predicate: biolink:causes
+
+sections:
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: "Supp. Table 1A log2 LFQ intensity"
+    sample_size:
+      encoding_method: value
+      value_for_encoding: 12  # Section-specific
+    triple_subject:
+      encoding_method: value
+      value_for_encoding: Ndufs4
+      in_this_organism: NCBITaxon:10090
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: S
+      encoding_description: "negative log10 p-value"
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: V
+      encoding_description: "Student's t-test difference"
+    triple_object:
+      encoding_method: column_of_values
+      value_for_encoding: D
+      in_this_organism: NCBITaxon:10090
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: "Supp. Table 1A log2 LFQ intensity"
+    sample_size:
+      encoding_method: value
+      value_for_encoding: 13  # Varies here
+    triple_subject:
+      encoding_method: value
+      value_for_encoding: rapamycin
+      in_this_organism: NCBITaxon:10090
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: W
+      encoding_description: "negative log10 p-value"
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: Y
+      encoding_description: "Student's t-test difference"
+    triple_object:
+      encoding_method: column_of_values
+      value_for_encoding: D
+      in_this_organism: NCBITaxon:10090

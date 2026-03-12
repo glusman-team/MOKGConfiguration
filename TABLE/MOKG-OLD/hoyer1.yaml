@@ -1,0 +1,48 @@
+template:
+  location:
+    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/9377087/bin/12883_2022_2828_MOESM4_ESM.xls
+    download_hyperparameters:
+      file_extension: xls
+      start_at_line_number:7
+  provenance:
+    publication: PMC9377087
+    config_curator_name: JC Roach; Dec 27, 2025
+    config_curator_organization: Institute for Systems Biology
+  attributes:
+    sample_size:
+      encoding_method: value
+      value_for_encoding: 9
+    multiple_testing_correction_method:
+      encoding_method: value
+      value_for_encoding: none
+    assertion_method:
+      encoding_method: value
+      value_for_encoding: Ingenuity Pathway Analysis
+  notes: Clinical characteristics and proteome modifications in two Charcot-Marie-Tooth families with the AARS1 Arg326Trp mutation
+  triple:
+    triple_subject: 
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Pathway
+        in_this_organism: NCBITaxon:9606
+    triple_predicate: biolink:correlated_with
+
+sections:
+  - location:
+    download_hyperparameters:
+      which_excel_sheet_to_use: Sheet 1
+  triple_subject: 
+    encoding_method: column_of_values
+    value_for_encoding: A
+  triple_object:
+    encoding_method: value
+    value_for_encoding: Charcot-Marie-Tooth
+  p_value:
+    encoding_method: column_of_values
+    value_for_encoding: B
+	encoding_description: negative log base 10 of p-values
+  relationship_strength:
+    encoding_method: column_of_values
+    value_for_encoding: C
+
+

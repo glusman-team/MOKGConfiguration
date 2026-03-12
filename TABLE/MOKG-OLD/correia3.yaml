@@ -1,0 +1,161 @@
+template:
+  location:
+    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/11530135/bin/jciinsight-9-178645-s132.xlsx
+    download_hyperparameters:
+      file_extension: xlsx
+      start_at_line_number: 2
+  provenance:
+    publication: PMC11530135
+    config_curator_name: JC Roach
+    config_curator_date: Dec 31, 2025
+    config_curator_organization: Institute for Systems Biology
+  attributes:
+    sample_size:
+      encoding_method: value
+      value_for_encoding: 84
+    multiple_testing_correction_method:
+      encoding_method: value
+      value_for_encoding: "Benjamini-Hochberg method"
+    assertion_method:
+      encoding_method: value
+      value_for_encoding: "Gene set enrichment analysis (GSEA), using consensus pathway annotation catalogues"
+  notes: >
+    Quantitative proteomics of patient fibroblasts reveal biomarkers and
+    diagnostic signatures of mitochondrial disease. correia3 may have overlaps
+    with correia1 and correia2 as the authors may have reported the same data
+    in supplemental tables and in supplemental data for the main article figures.
+  triple:
+    triple_predicate: biolink:correlated_with
+
+sections:
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: "Fig. 3A"
+    triple_subject:
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Protein
+        in_this_organism: NCBITaxon:9606
+      encoding_method: column_of_values
+      value_for_encoding: B
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: D
+      encoding_description: "p-value"
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: C
+      encoding_description: "log fold change"
+    triple_object:
+      encoding_method: value
+      value_for_encoding: "mitochondrial disease"
+
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: "Fig. 3B"
+    triple_subject:
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Protein
+        in_this_organism: NCBITaxon:9606
+      encoding_method: column_of_values
+      value_for_encoding: A
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: D
+      encoding_description: "p-value"
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: C
+      encoding_description: "log fold change"
+    triple_object:
+      encoding_method: value
+      value_for_encoding: "mitochondrial oxidative phosphorylation disorder"
+
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: "Fig. 3F"
+    triple_subject:
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Protein
+        in_this_organism: NCBITaxon:9606
+      encoding_method: column_of_values
+      value_for_encoding: A
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: D
+      encoding_description: "p-value"
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: C
+      encoding_description: "log fold change"
+    triple_object:
+      encoding_method: value
+      value_for_encoding: "mitochondrial oxidative phosphorylation disorder"
+
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: "Fig. 4A"
+    triple_subject:
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Pathway
+        in_this_organism: NCBITaxon:9606
+      encoding_method: column_of_values
+      value_for_encoding: B
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: E
+      encoding_description: "q-value"
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: D
+      encoding_description: "normalized enrichment score (NES)"
+    triple_object:
+      encoding_method: value
+      value_for_encoding: "mitochondrial disease"
+
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: "Fig. 4B"
+    triple_subject:
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Pathway
+        in_this_organism: NCBITaxon:9606
+      encoding_method: column_of_values
+      value_for_encoding: B
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: E
+      encoding_description: "q-value"
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: D
+      encoding_description: "normalized enrichment score (NES)"
+    triple_object:
+      encoding_method: value
+      value_for_encoding: "mitochondrial oxidative phosphorylation disorder"
+
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: "Fig. 4D"
+    triple_subject:
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Pathway
+        in_this_organism: NCBITaxon:9606
+      encoding_method: column_of_values
+      value_for_encoding: B
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: E
+      encoding_description: "q-value"
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: D
+      encoding_description: "normalized enrichment score (NES)"
+    triple_object:
+      encoding_method: value
+      value_for_encoding: "mitochondrial oxidative phosphorylation disorder"
