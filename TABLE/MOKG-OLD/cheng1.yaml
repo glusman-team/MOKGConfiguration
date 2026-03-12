@@ -1,0 +1,49 @@
+template:
+  location:
+    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/7878905/bin/41467_2020_20877_MOESM4_ESM.xlsx
+    download_hyperparameters:
+      file_extension: xlsx
+      start_at_line_number:5
+  provenance:
+    publication: PMC7878905
+    config_curator_name: JC Roach; Dec 27, 2025
+    config_curator_organization: Institute for Systems Biology
+  attributes:
+    sample_size:
+      encoding_method: value
+      value_for_encoding: 4864
+    multiple_testing_correction_method:
+      encoding_method: value
+      value_for_encoding: genome-wide significance threshold
+    assertion_method:
+      encoding_method: value
+      value_for_encoding: SKAT
+  notes: Rare genetic variants affecting urine metabolite levels link population variation to inborn errors of metabolism
+  triple:
+    triple_subject: 
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Metabolite
+          - biolink:Gene
+        in_this_organism: NCBITaxon:9606
+    triple_predicate: biolink:correlated_with
+
+sections:
+  - location:
+    download_hyperparameters:
+      which_excel_sheet_to_use: SD4
+    end_at_line_number: 184
+  triple_subject: 
+    encoding_method: column_of_values
+    value_for_encoding: A
+  triple_object:
+    encoding_method: column_of_values
+    value_for_encoding: B
+  p_value:
+    encoding_method: column_of_values
+    value_for_encoding: F
+  relationship_strength:
+    encoding_method: column_of_values
+    value_for_encoding: D
+
+
