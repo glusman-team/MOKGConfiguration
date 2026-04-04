@@ -1,7 +1,7 @@
 template:
   syntax: TC3
   status: alpha
-  source: 
+  source:
     kind: excel
     local: ./DATALAKE/ALAM.xlsx
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11708054/bin/mbio.01679-24-s0006.xlsx
