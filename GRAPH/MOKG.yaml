@@ -7,7 +7,6 @@ syntax: GC2
 name: MICROBIOME_KG
 version: INSANE
 tables:
-  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ALAM1.yaml
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/AVUTHU1.yaml
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/AVUTHU2.yaml
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/BLANTON1.yaml
@@ -62,6 +61,6 @@ tables:
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/YUAN2.yaml
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/YUN1.yaml
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ZHOU29.yaml
-dbssert: /local_raid1/sgoetz/CODE/DBSSERT/dbssert.duckdb
-pubmed_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/PUBMED/PubMed.db
-pmc_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/CAPTIONS/PMCSuppCaptions.db
+datassert: /local_raid1/sgoetz/STORE/DATASETS/DATASSERT/datassert
+# pubmed_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/PUBMED/PubMed.db
+# pmc_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/CAPTIONS/PMCSuppCaptions.db
