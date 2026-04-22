@@ -13,17 +13,24 @@ template:
       encoding: A
       prioritize:
         - OrganismTaxon
+      regex:
+        - pattern: "_"
+          replacement: " "
+        - pattern: "\\s+\\d+$"
+          replacement: ""
     predicate: correlated_with
     qualifiers:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
+      - qualifier: anatomical_context_qualifier
         method: value
-        encoding: NCBITaxon:9606
+        encoding: UBERON:0001988
     object:
       method: column
       encoding: B
+      prioritize:
+        - SmallMolecule
   provenance:
     repo: PMC
     publication: PMC8400760
@@ -50,7 +57,7 @@ template:
       encoding: Spearman correlation
     - annotation: miscellaneous notes
       method: value
-      encoding: Pairs of microbes and targeted metabolites with significant spearman correlations at q-value < 0.05 with their correlation values for each time point.
+      encoding: Pairs of microbes and targeted metabolites with significant spearman correlations at q-value < 0.05 with their correlation values for each time point.
 sections:
   - source:
       sheet: sig_corr_tar_6W

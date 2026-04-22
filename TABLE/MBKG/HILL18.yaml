@@ -28,9 +28,9 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
+      - qualifier: anatomical_context_qualifier
         method: value
-        encoding: NCBITaxon:9606
+        encoding: UBERON:0001988
   provenance:
     repo: PMC
     publication: PMC5240274
@@ -46,6 +46,9 @@ template:
       encoding: 192
     - annotation: p value
       method: column
+      encoding: C
+    - annotation: adjusted p value
+      method: column
       encoding: D
     - annotation: multiple testing correction method
       method: value
@@ -55,7 +58,7 @@ template:
       encoding: B
     - annotation: assertion method
       method: value
-      encoding: Spearman correlation
+      encoding: Pearson correlation
     - annotation: miscellaneous notes
       method: value
       encoding: Significant negative correlations of abundances of genera pairs. Correlations were tested with Pearson correlation. The false discovery rate was adjusted for with Benjamini-Hochberg adjustment.

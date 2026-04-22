@@ -6,7 +6,7 @@ template:
     kind: excel
     sheet: S5
     row_slice:
-      - 4
+      - 3
       - auto
   statement:
     subject:
@@ -15,12 +15,17 @@ template:
       prioritize:
         - OrganismTaxon
       remove:
-        - ^.*?\]
+        - species.*
         - ' \(.*'
+      regex:
+        - pattern: '\['
+          replacement: ''
+        - pattern: '\]'
+          replacement: ''
     predicate: associated_with
     object:
       method: value
-      encoding: COVID-19
+      encoding: MONDO:0100096
       prioritize:
         - Disease
     qualifiers:
@@ -28,9 +33,6 @@ template:
         method: value
         encoding: UBERON:0000160
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
   provenance:
@@ -47,6 +49,9 @@ template:
       method: column
       encoding: M
     - annotation: p value
+      method: column
+      encoding: N
+    - annotation: q value
       method: column
       encoding: O
     - annotation: multiple testing correction method

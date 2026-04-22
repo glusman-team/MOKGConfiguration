@@ -14,16 +14,18 @@ template:
       encoding: B
       prioritize:
         - OrganismTaxon
+      regex:
+        - pattern: '([^\s])group$'
+          replacement: '\1 group'
     predicate: affects
     qualifiers:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
     object:
       encoding: frailty
+      prioritize:
+        - PhenotypicFeature
   provenance:
     repo: PMC
     publication: PMC11089315

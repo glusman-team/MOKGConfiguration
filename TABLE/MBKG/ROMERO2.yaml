@@ -11,7 +11,7 @@ template:
     reindex:
       - column: N
         comparison: ne
-        comparator: 'FALSE'
+        comparator: 0
   statement:
     subject:
       method: column
@@ -19,7 +19,7 @@ template:
       prioritize:
         - OrganismTaxon
       remove:
-        - NA*
+        - ^NA$
         - _1
         - _6
     predicate: associated_with
@@ -31,9 +31,6 @@ template:
         method: value
         encoding: UBERON:0000996
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
   provenance:
@@ -49,7 +46,7 @@ template:
     - annotation: sample size
       method: value
       encoding: 474
-    - annotation: p value
+    - annotation: q value
       method: column
       encoding: M
     - annotation: multiple testing correction method

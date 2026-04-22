@@ -27,9 +27,6 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10434204
@@ -58,7 +55,7 @@ sections:
         method: value
         encoding: gestational age
     annotations:
-      - annotation: p value
+      - annotation: q value
         method: column
         encoding: G
       - annotation: relationship strength
@@ -69,7 +66,7 @@ sections:
         method: value
         encoding: maternal age
     annotations:
-      - annotation: p value
+      - annotation: q value
         method: column
         encoding: J
       - annotation: relationship strength
@@ -78,9 +75,9 @@ sections:
   - statement:
       object:
         method: value
-        encoding: cannabis use
+        encoding: marijuana use
     annotations:
-      - annotation: p value
+      - annotation: q value
         method: column
         encoding: M
       - annotation: relationship strength
@@ -91,7 +88,7 @@ sections:
         method: value
         encoding: hispanic
     annotations:
-      - annotation: p value
+      - annotation: q value
         method: column
         encoding: P
       - annotation: relationship strength
@@ -100,16 +97,11 @@ sections:
   - statement:
       object:
         method: value
-        encoding: african american
+        encoding: race other than african american
     annotations:
-      - annotation: p value
+      - annotation: q value
         method: column
         encoding: S
-        transformations:
-          - function: copysign
-            arguments:
-              - values
-              - -1
       - annotation: relationship strength
         method: column
         encoding: Q
@@ -118,9 +110,9 @@ sections:
         method: value
         encoding: parity
     annotations:
-      - annotation: p value
-        method: column
-        encoding: T
-      - annotation: relationship strength
+      - annotation: q value
         method: column
         encoding: V
+      - annotation: relationship strength
+        method: column
+        encoding: T

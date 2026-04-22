@@ -13,20 +13,23 @@ template:
       encoding: B
       prioritize:
         - OrganismTaxon
-      remove:
-        - .*?__
+      regex:
+        - pattern: '.*;'
+          replacement: ''
+        - pattern: '^[a-z]__'
+          replacement: ''
+        - pattern: _
+          replacement: ' '
     predicate: associated_with
     object:
       method: column
       encoding: A
-      taxon: 9606
       prioritize:
         - Gene
+        - Disease
+        - PhenotypicFeature
     qualifiers:
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
   provenance:
@@ -44,16 +47,19 @@ template:
       encoding: D
     - annotation: p value
       method: column
+      encoding: E
+    - annotation: false discovery rate
+      method: column
       encoding: F
     - annotation: multiple testing correction method
       method: value
       encoding: Benjamini Hochberg
-    - annotation: relationship strength
+    - annotation: regression coefficient
       method: column
       encoding: C
     - annotation: assertion method
       method: value
-      encoding: Spearman correlation
+      encoding: MaAsLin multivariate linear model
     - annotation: miscellaneous notes
       method: value
-      encoding: MaAsLin analysis results for all clinical phenotypes and gene expression associated with microbial abundance.
+      encoding: MaAsLin associations between ileal microbial abundance and host variables from the pediatric RISK cohort, including gene expression and clinical phenotype variables, while controlling for age, gender, BMI, antibiotic exposure, and NOD2, FUT2, and ATG16L1 risk allele carriage.

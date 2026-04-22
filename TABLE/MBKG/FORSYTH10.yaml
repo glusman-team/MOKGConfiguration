@@ -11,10 +11,6 @@ template:
     subject:
       method: column
       encoding: A
-      taxon: 10090
-      prioritize:
-        - OrganismTaxon
-        - Gene
       remove:
         - _Gn
         - Gn
@@ -29,10 +25,6 @@ template:
     object:
       method: column
       encoding: B
-      taxon: 10090
-      prioritize:
-        - OrganismTaxon
-        - Gene
       remove:
         - _Gn
         - Gn
@@ -47,9 +39,6 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:10090
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:10090
   provenance:
     repo: PMC
     publication: PMC10945560
@@ -62,10 +51,13 @@ template:
   annotations:
     - annotation: p value
       method: column
-      encoding: E
+      encoding: D
     - annotation: multiple testing correction method
       method: value
       encoding: Benjamini Hochberg
+    - annotation: adjusted p value
+      method: column
+      encoding: E
     - annotation: relationship strength
       method: column
       encoding: C
@@ -82,7 +74,7 @@ sections:
         encoding: 11
       - annotation: miscellaneous notes
         method: value
-        encoding: Inflammation Genes and Bacterial Genera Correlation Outcomes between 2 Month- and 15-Month Old Mice Groups
+        encoding: Mixed feature-feature SparCC correlations among inflammation-associated host genes and bacterial taxa for the 2-month versus 15-month mouse comparison.
   - source:
       sheet: Inflam_SparCC_2-25_Mths
     annotations:
@@ -91,7 +83,7 @@ sections:
         encoding: 11
       - annotation: miscellaneous notes
         method: value
-        encoding: Inflammation Genes and Bacterial Genera Correlation Outcomes between 2 Month- and 25-Month Old Mice Groups
+        encoding: Mixed feature-feature SparCC correlations among inflammation-associated host genes and bacterial taxa for the 2-month versus 25-month mouse comparison.
   - source:
       sheet: Inflam_SparCC_15-25_Mths
     annotations:
@@ -100,4 +92,4 @@ sections:
         encoding: 12
       - annotation: miscellaneous notes
         method: value
-        encoding: Inflammation Genes and Bacterial Genera Correlation Outcomes between 15-Month- and 25-Month Old Mice Groups
+        encoding: Mixed feature-feature SparCC correlations among inflammation-associated host genes and bacterial taxa for the 15-month versus 25-month mouse comparison.

@@ -5,6 +5,9 @@ template:
     local: ./DATALAKE/PU12.csv
     kind: text
     delimiter: ','
+    row_slice:
+      - 1
+      - auto
   statement:
     subject:
       method: column
@@ -19,27 +22,42 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
+      - qualifier: anatomical_context_qualifier
         method: value
-        encoding: NCBITaxon:9606
+        encoding: UBERON:0001988
     object:
       method: column
       encoding: B
+      prioritize:
+        - ClinicalMeasurement
+        - Procedure
+        - PhenotypicFeature
+        - SmallMolecule
+      avoid:
+        - Gene
       regex:
         - pattern: _
           replacement: ' '
         - pattern: ' num'
           replacement: ''
+        - pattern: Folatesting glucose
+          replacement: Fasting glucose
         - pattern: B2M
           replacement: Beta-2 microglobulin
         - pattern: WBC
           replacement: Leukocyte count
         - pattern: HDLC
           replacement: HDL Cholesterol
-        - pattern: Platelet
+        - pattern: '^Platelet$'
           replacement: Platelet count
         - pattern: eGFR
           replacement: Estimated glomerular filtration rate
+        - pattern: HBA1c
+          replacement: Hemoglobin A1c
+        - pattern: hsCRP
+          replacement: High-sensitivity C-reactive protein
+        - pattern: '^Pulse$'
+          replacement: Pulse rate
   provenance:
     repo: PMID
     publication: '39054372'

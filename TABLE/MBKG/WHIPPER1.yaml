@@ -5,7 +5,7 @@ template:
     local: ./DATALAKE/WHIPPER1.xlsx
     kind: excel
     row_slice:
-      - 2
+      - 1
       - auto
   statement:
     subject:
@@ -23,12 +23,20 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
+      - qualifier: anatomical_context_qualifier
         method: value
-        encoding: NCBITaxon:9606
+        encoding: UBERON:0001555
+      - qualifier: subject_direction_qualifier
+        method: column
+        encoding: E
     object:
       method: column
       encoding: I
+      prioritize:
+        - BiologicalProcess
+        - Pathway
+      avoid:
+        - Gene
       regex:
         - pattern: HALLMARK_
           replacement: ''
@@ -59,6 +67,9 @@ template:
     - annotation: assertion method
       method: value
       encoding: Linear mixed effect model
+    - annotation: slope
+      method: column
+      encoding: D
     - annotation: miscellaneous notes
       method: value
       encoding: Results from linear mixed effect modelling to regress the Euclidean distance between every pair of FC/CC and pre-treatment or during treatment samples against Time, Treatment and patient ID for the Longitudinal Observational Cohort.

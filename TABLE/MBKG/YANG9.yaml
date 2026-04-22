@@ -5,7 +5,7 @@ template:
     local: ./DATALAKE/YANG9.xlsx
     kind: excel
     row_slice:
-      - 4
+      - 2
       - auto
   statement:
     predicate: associated_with
@@ -13,9 +13,9 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
+      - qualifier: anatomical_context_qualifier
         method: value
-        encoding: NCBITaxon:9606
+        encoding: UBERON:0001555
   provenance:
     repo: PMC
     publication: PMC11748489
@@ -45,13 +45,35 @@ sections:
       object:
         method: value
         encoding: 7alpha-hydroxysteroid dehydrogenase
-        taxon: 9606
         prioritize:
-          - Gene
+          - Protein
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: MONDO:0005101
     annotations:
       - annotation: p value
         method: column
         encoding: E
+  - statement:
+      subject:
+        method: column
+        encoding: G
+        prioritize:
+          - OrganismTaxon
+      object:
+        method: value
+        encoding: bile salt hydrolase
+        prioritize:
+          - Protein
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: MONDO:0005314
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: J
   - statement:
       subject:
         method: column
@@ -60,10 +82,13 @@ sections:
           - OrganismTaxon
       object:
         method: value
-        encoding: Bai genes
-        taxon: 9606
+        encoding: GO:0030573
         prioritize:
-          - Gene
+          - BiologicalProcess
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: MONDO:0005314
     annotations:
       - annotation: p value
         method: column
@@ -77,9 +102,12 @@ sections:
       object:
         method: value
         encoding: 12alpha-hydroxysteroid dehydrogenase
-        taxon: 9606
         prioritize:
-          - Gene
+          - Protein
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: MONDO:0005314
     annotations:
       - annotation: p value
         method: column
@@ -92,12 +120,13 @@ sections:
           - OrganismTaxon
       object:
         method: value
-        encoding: BSH
-        taxon: 9606
+        encoding: bile salt hydrolase
         prioritize:
-          - Gene
-        avoid:
-          - Disease
+          - Protein
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: MONDO:0005575
     annotations:
       - annotation: p value
         method: column
@@ -111,9 +140,12 @@ sections:
       object:
         method: value
         encoding: 7alpha-hydroxysteroid dehydrogenase
-        taxon: 9606
         prioritize:
-          - Gene
+          - Protein
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: MONDO:0005575
     annotations:
       - annotation: p value
         method: column
@@ -126,10 +158,13 @@ sections:
           - OrganismTaxon
       object:
         method: value
-        encoding: Bai genes
-        taxon: 9606
+        encoding: GO:0030573
         prioritize:
-          - Gene
+          - BiologicalProcess
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: MONDO:0011621
     annotations:
       - annotation: p value
         method: column
@@ -143,9 +178,12 @@ sections:
       object:
         method: value
         encoding: 3alpha-hydroxysteroid dehydrogenase
-        taxon: 9606
         prioritize:
-          - Gene
+          - Protein
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: MONDO:0011621
     annotations:
       - annotation: p value
         method: column

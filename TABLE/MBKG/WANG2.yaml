@@ -10,13 +10,7 @@ template:
   statement:
     predicate: associated_with
     qualifiers:
-      - qualifier: anatomical_context_qualifier
-        method: value
-        encoding: UBERON:0000160
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
   provenance:
@@ -45,9 +39,13 @@ sections:
     object:
       method: column
       encoding: A
-      remove:
-        - .*_
-        - \([^()]*\)
+      prioritize:
+        - Pathway
+      regex:
+        - pattern: ^[^_]*_
+          replacement: ''
+        - pattern: \([^()]*\)
+          replacement: ''
   annotations:
   - annotation: p value
     method: column
@@ -64,6 +62,7 @@ sections:
     subject:
       method: column
       encoding: B
+      taxon: 9606
       prioritize:
         - Protein
     object:

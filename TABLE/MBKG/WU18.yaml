@@ -11,23 +11,22 @@ template:
   statement:
     subject:
       method: column
-      encoding: B
+      encoding: A
       prioritize:
         - OrganismTaxon
-      remove:
-        - ^.*?\.
-        - \..*$
-        - _.+$
-        - '7'
-        - Family
+      avoid:
+        - Gene
+      regex:
+        - pattern: '_.+$'
+          replacement: ''
     predicate: associated_with
     object:
+      method: value
       encoding: age
+      prioritize:
+        - ClinicalAttribute
     qualifiers:
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
   provenance:
@@ -52,6 +51,12 @@ template:
     - annotation: assertion method
       method: value
       encoding: Spearman correlation
+    - annotation: reference group
+      method: column
+      encoding: C
+    - annotation: comparison group
+      method: column
+      encoding: D
     - annotation: miscellaneous notes
       method: value
-      encoding: Age-associated genus identified by MaAsLin in each age group.
+      encoding: Age-associated genera identified by MaAsLin with age-group contrasts in the healthy cohort.

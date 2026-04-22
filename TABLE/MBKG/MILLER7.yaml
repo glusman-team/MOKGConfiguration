@@ -11,18 +11,24 @@ template:
       encoding: A
       prioritize:
         - OrganismTaxon
+      regex:
+        - pattern: '\bsp (?=[A-Z0-9])'
+          replacement: 'sp. '
+        - pattern: '\b(CAG) (\d+)\b'
+          replacement: '\1:\2'
+        - pattern: '\b(T\d+) (\d+)\b'
+          replacement: '\1-\2'
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
     object:
-      encoding: urinary tract infection
+      method: value
+      encoding: study cohort
       prioritize:
-        - Disease
+        - Cohort
+        - StudyPopulation
   provenance:
     repo: PMC
     publication: PMC11329762
@@ -39,7 +45,7 @@ template:
     - annotation: multiple testing correction method
       method: value
       encoding: Benjamini Hochberg
-    - annotation: relationship strength
+    - annotation: LDA score
       method: column
       encoding: C
     - annotation: assertion method
@@ -47,12 +53,15 @@ template:
       encoding: Linear discriminant analysis
     - annotation: miscellaneous notes
       method: value
-      encoding: List of 127 bacterial species that differed significantly between aged-care residents and non-elderly individuals with urinary tract infections
+      encoding: List of bacterial species that differed significantly between aged-care residents and non-elderly younger adults
 sections:
   - source:
       row_slice:
         - 2
         - 66
+    statement:
+      object:
+        encoding: aged-care resident cohort
     annotations:
       - annotation: sample size
         method: value
@@ -61,6 +70,9 @@ sections:
       row_slice:
         - 67
         - 128
+    statement:
+      object:
+        encoding: non-elderly adult cohort
     annotations:
       - annotation: sample size
         method: value

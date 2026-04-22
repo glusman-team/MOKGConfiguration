@@ -14,13 +14,10 @@ template:
     predicate: correlated_with
     object:
       method: column
-      encoding: C
+      encoding: A
       taxon: 69293
     qualifiers:
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:69293
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:69293
   provenance:
@@ -33,24 +30,27 @@ template:
         organizations:
           - Institute for Systems Biology
   annotations:
-    - annotation: sample size
-      method: value
-      encoding: 1929
     - annotation: relationship strength
       method: column
       encoding: D
     - annotation: assertion method
       method: value
-      encoding: Signed network using bicor analyses
+      encoding: Kendall tau correlation analysis
+    - annotation: protein names
+      method: column
+      encoding: C
+    - annotation: sequence ontology id
+      method: column
+      encoding: B
     - annotation: miscellaneous notes
       method: value
-      encoding: List of transcripts which were significantly correlated with each of the top 15 most correlated microbial families.
+      encoding: List of stickleback transcripts significantly correlated with each of the top 15 most correlated microbial taxa.
 
 sections:
   - statement:
       subject:
         method: value
-        encoding: Betaproteobacteria
+        encoding: Betaproteobacteria (unclassified)
     source:
       sheet: Betaproteobacteria
   - statement:
@@ -68,13 +68,13 @@ sections:
   - statement:
       subject:
         method: value
-        encoding: Chlamydiales
+        encoding: Chlamydiales (unclassified)
     source:
       sheet: Chlamydiales
   - statement:
       subject:
         method: value
-        encoding: Clostridiaceae
+        encoding: Clostridiaceae 1
     source:
       sheet: Clostridiaceae 1
   - statement:
@@ -83,6 +83,18 @@ sections:
         encoding: Geodermatophilaceae
     source:
       sheet: Geodermatophilaceae
+  - statement:
+      subject:
+        method: value
+        encoding: Gp10 (unclassified)
+    source:
+      sheet: Gp10
+  - statement:
+      subject:
+        method: value
+        encoding: Incertae Sedis XI
+    source:
+      sheet: Incertae Sedis XI
   - statement:
       subject:
         method: value
@@ -122,6 +134,6 @@ sections:
   - statement:
       subject:
         method: value
-        encoding: Spartobacteria
+        encoding: Spartobacteria (unclassified)
     source:
       sheet: "Spartobacteria "

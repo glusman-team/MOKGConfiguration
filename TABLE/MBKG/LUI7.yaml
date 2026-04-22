@@ -17,9 +17,6 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10052271
@@ -43,16 +40,27 @@ sections:
         encoding: A
         prioritize:
           - OrganismTaxon
+        avoid:
+          - Gene
         regex:
           - pattern: '_'
             replacement: ' '
+      qualifiers:
+        - qualifier: subject_aspect_qualifier
+          method: value
+          encoding: abundance
       object:
         method: value
         encoding: longevity
+        prioritize:
+          - PhenotypicFeature
+          - DiseaseOrPhenotypicFeature
         avoid:
           - Gene
+          - PopulationOfIndividualOrganisms
+          - OrganismTaxon
     annotations:
-      - annotation: sample size
+      - annotation: instrument count
         method: column
         encoding: F
       - annotation: p value
@@ -65,18 +73,29 @@ sections:
       subject:
         method: value
         encoding: longevity
+        prioritize:
+          - PhenotypicFeature
+          - DiseaseOrPhenotypicFeature
         avoid:
           - Gene
+          - PopulationOfIndividualOrganisms
+          - OrganismTaxon
+      qualifiers:
+        - qualifier: object_aspect_qualifier
+          method: value
+          encoding: abundance
       object:
         method: column
         encoding: H
         prioritize:
           - OrganismTaxon
+        avoid:
+          - Gene
         regex:
           - pattern: '_'
             replacement: ' '
     annotations:
-      - annotation: sample size
+      - annotation: instrument count
         method: column
         encoding: L
       - annotation: p value

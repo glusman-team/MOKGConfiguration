@@ -17,7 +17,7 @@ template:
       remove:
         - \..*
         - s__
-        - ' unclassified.*'
+        - '_unclassified.*'
         - "s  "
       regex:
         - pattern: _
@@ -25,9 +25,6 @@ template:
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
     object:
@@ -38,7 +35,7 @@ template:
       regex:
         - pattern: _
           replacement: ' '
-        - pattern: veg
+        - pattern: ^veg$
           replacement: vegetables
   provenance:
     repo: PMC
@@ -64,4 +61,4 @@ template:
       encoding: Spearman correlation
     - annotation: miscellaneous notes
       method: value
-      encoding: Significant (FDR < 0.1), meta-analysed Spearman correlations between the arcsine-transformed relative abundances of each SGB within each individual and amount of meat (red and white), dairy products, fruits and vegetables consumed. pval.random, P value for test of overall effect of random-effects model. TE.random, estimated overall effect of random-effects model. seTE.random, standard error of fixed effect model. lower.random and upper.random, lower and upper confidence interval limits of random-effects model.
+      encoding: Significant (FDR < 0.1), meta-analysed Spearman correlations between the arcsine-transformed relative abundances of each SGB within each individual and amount of meat (red and white), dairy products, fruits and vegetables consumed. pval.random, P value for test of overall effect of random-effects model. TE.random, estimated overall effect of random-effects model. seTE.random, standard error of fixed effect model. lower.random and upper.random, lower and upper confidence interval limits of random-effects model.
