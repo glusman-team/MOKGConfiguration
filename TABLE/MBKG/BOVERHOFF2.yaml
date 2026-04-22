@@ -28,7 +28,7 @@ template:
         - BehavioralFeature
       remove:
         - \(.*$
-        - '^[^:]*:'
+        - "^[^:]*:"
         - _9
     qualifiers:
       - qualifier: anatomical_context_qualifier
@@ -36,7 +36,7 @@ template:
         encoding: UBERON:0001988 # FECES
   provenance:
     repo: PMID
-    publication: '39264809'
+    publication: "39264809"
     contributors:
       - kind: curation
         name: Skye Lane Goetz
@@ -61,4 +61,4 @@ template:
       encoding: Two-sided unpaired Wilcoxon rank-sum test
     - annotation: miscellaneous notes
       method: value
-      encoding: 'Associations of variables and bacterial groups across the lifespan. Parameters: (Coeff. >|2.00|; p.adjusted <0.1). Note: some subject taxa (f_ prefix removed) are family-level rather than genus-level identifications.'
+      encoding: "Associations of variables and bacterial groups across the lifespan. Parameters: (Coeff. >|2.00|; p.adjusted <0.1). Note: some subject taxa (f_ prefix removed) are family-level rather than genus-level identifications."
