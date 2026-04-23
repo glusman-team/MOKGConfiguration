@@ -11,7 +11,7 @@ template:
     reindex:
       - column: N
         comparison: ne
-        comparator: 0
+        comparator: "0.00"
   statement:
     subject:
       method: column
