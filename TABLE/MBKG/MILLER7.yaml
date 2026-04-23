@@ -12,8 +12,9 @@ template:
       prioritize:
         - OrganismTaxon
       regex:
-        - pattern: '\bsp (?=[A-Z0-9])'
-          replacement: 'sp. '
+        # Replaced look-ahead with a capture group
+        - pattern: '\bsp ([A-Z0-9])'
+          replacement: 'sp. \1'
         - pattern: '\b(CAG) (\d+)\b'
           replacement: '\1:\2'
         - pattern: '\b(T\d+) (\d+)\b'
