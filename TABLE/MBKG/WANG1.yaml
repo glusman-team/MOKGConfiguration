@@ -16,7 +16,7 @@ template:
         - OrganismTaxon
       regex:
         - pattern: _
-          replacement: ' '
+          replacement: " "
     predicate: correlated_with
     qualifiers:
       - qualifier: species_context_qualifier
@@ -26,7 +26,7 @@ template:
       method: value
   provenance:
     repo: PMID
-    publication: '38844795'
+    publication: "38844795"
     contributors:
       - kind: curation
         name: Skye Lane Goetz
