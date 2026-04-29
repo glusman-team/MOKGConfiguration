@@ -1,0 +1,47 @@
+template:
+  location:
+    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/10766526/bin/43588_2023_453_MOESM6_ESM.xlsx
+    download_hyperparameters:
+      file_extension: xlsx
+      start_at_line_number:3
+  provenance:
+    publication: PMC10766526
+    config_curator_name: JC Roach; Dec 28, 2025
+    config_curator_organization: Institute for Systems Biology
+  attributes:
+    sample_size:
+      encoding_method: value
+      value_for_encoding: 500000
+    multiple_testing_correction_method:
+      encoding_method: value
+      value_for_encoding: Bonferroni correction
+    assertion_method:
+      encoding_method: value
+      value_for_encoding: hierarchical clustering
+  notes: The high-dimensional space of human diseases built from diagnosis records and mapped to genetic loci
+  triple:
+    triple_subject: 
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Disease
+        in_this_organism: NCBITaxon:9606
+    triple_predicate: biolink:correlated_with
+
+sections:
+  - location:
+    download_hyperparameters:
+      which_excel_sheet_to_use: Sheet1
+  triple_subject: 
+    encoding_method: column_of_values
+    value_for_encoding: A
+  triple_object:
+    encoding_method: column_of_values
+    value_for_encoding: B
+  p_value:
+    encoding_method: value
+    value_for_encoding: 0.049999999
+  relationship_strength:
+    encoding_method: column_of_values
+    value_for_encoding: D
+
+

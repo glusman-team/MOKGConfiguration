@@ -1,0 +1,48 @@
+template:
+  location:
+    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/11530135/bin/jciinsight-9-178645-s131.xlsx
+    download_hyperparameters:
+      file_extension: xlsx
+      start_at_line_number: 3
+  provenance:
+    publication: PMC11530135
+    config_curator_name: JC Roach
+    config_curator_date: Dec 31, 2025
+    config_curator_organization: Institute for Systems Biology
+  attributes:
+    sample_size:
+      encoding_method: value
+      value_for_encoding: 84
+    multiple_testing_correction_method:
+      encoding_method: value
+      value_for_encoding: "Differentially enriched gene sets are labeled according to a normalized enrichment score (NES) |1.3| or |1.3| and a q value < 0.05, presented as Log10 q value"
+    assertion_method:
+      encoding_method: value
+      value_for_encoding: "Gene set enrichment analysis (GSEA), using consensus pathway annotation catalogues"
+  notes: "Quantitative proteomics of patient fibroblasts reveal biomarkers and diagnostic signatures of mitochondrial disease"
+  triple:
+    triple_subject:
+      mapping_hyperparameters:
+        classes_to_prioritize:
+          - biolink:Pathway
+        in_this_organism: NCBITaxon:9606
+    triple_predicate: biolink:correlated_with
+    triple_object:
+      encoding_method: value
+      value_for_encoding: mitochondrial disease
+
+sections:
+  - location:
+      download_hyperparameters:
+        which_excel_sheet_to_use: "Data File 5"
+    triple_subject:
+      encoding_method: column_of_values
+      value_for_encoding: B
+    p_value:
+      encoding_method: column_of_values
+      value_for_encoding: H
+      encoding_description: "negative log10 q-value"
+    relationship_strength:
+      encoding_method: column_of_values
+      value_for_encoding: E
+      encoding_description: "normalized enrichment score (NES)"
