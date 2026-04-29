@@ -1,0 +1,147 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/HUANG2.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11310467/bin/41467_2024_51074_MOESM5_ESM.xlsx
+    sheet: A
+    row_slice: [1, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - Gene
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0002594
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+      - qualifier: subject_aspect_qualifier
+        method: value
+        encoding: expression
+
+  provenance:
+    repo: PMC
+    publication: "11310467"
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 28 APR 2026
+        organizations:
+          - Institute for Systems Biology
+
+  annotations:
+    - annotation: assertion method
+      method: value
+      encoding: Log2 Fold Change from Wald Test
+    - annotation: multiple testing correction method
+      method: value
+      encoding: DESeq2 FDR (Benjamini-Hochberg)
+
+sections:
+  # 6 hours post MPXV infection
+  - source:
+      reindex:
+        - column: B
+          comparison: ne
+          comparator: "FALSE"
+    statement:
+      qualifiers:
+        - qualifier: temporal_context_qualifier
+          method: value
+          encoding: "6 hours post infection"
+        - qualifier: subject_direction_qualifier
+          method: column
+          encoding: C
+          regex:
+            - pattern: "\\+"
+              replacement: "upregulated"
+            - pattern: "-"
+              replacement: "downregulated"
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: F
+      - annotation: relationship strength
+        method: column
+        encoding: D
+      - annotation: sample size
+        method: value
+        encoding: 4
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "Statistical analysis of transcriptomic changes in HFF cells 6 hours post MPXV infection (n=4 independent experiments). The two-sided p-values were calculated by Wald test and FDR-adjusted as per standard DESeq2 workflow."
+
+  # 12 hours post MPXV infection
+  - source:
+      reindex:
+        - column: G
+          comparison: ne
+          comparator: "FALSE"
+    statement:
+      qualifiers:
+        - qualifier: temporal_context_qualifier
+          method: value
+          encoding: "12 hours post infection"
+        - qualifier: subject_direction_qualifier
+          method: column
+          encoding: H
+          regex:
+            - pattern: "\\+"
+              replacement: "upregulated"
+            - pattern: "-"
+              replacement: "downregulated"
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: K
+      - annotation: relationship strength
+        method: column
+        encoding: I
+      - annotation: sample size
+        method: value
+        encoding: 4
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "Statistical analysis of transcriptomic changes in HFF cells 12 hours post MPXV infection (n=4 independent experiments). The two-sided p-values were calculated by Wald test and FDR-adjusted as per standard DESeq2 workflow."
+
+  # 24 hours post MPXV infection
+  - source:
+      reindex:
+        - column: L
+          comparison: ne
+          comparator: "FALSE"
+    statement:
+      qualifiers:
+        - qualifier: temporal_context_qualifier
+          method: value
+          encoding: "24 hours post infection"
+        - qualifier: subject_direction_qualifier
+          method: column
+          encoding: M
+          regex:
+            - pattern: "\\+"
+              replacement: "upregulated"
+            - pattern: "-"
+              replacement: "downregulated"
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: P
+      - annotation: relationship strength
+        method: column
+        encoding: N
+      - annotation: sample size
+        method: value
+        encoding: 4
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "Statistical analysis of transcriptomic changes in HFF cells 24 hours post MPXV infection (n=4 independent experiments). The two-sided p-values were calculated by Wald test and FDR-adjusted as per standard DESeq2 workflow."

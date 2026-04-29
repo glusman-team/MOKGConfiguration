@@ -1,0 +1,148 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/HUANG3.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11310467/bin/41467_2024_51074_MOESM6_ESM.xlsx
+    sheet: A
+    row_slice: [1, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: B
+      explode_by: ";"
+      prioritize:
+        - Gene
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0002594
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+      - qualifier: subject_aspect_qualifier
+        method: value
+        encoding: abundance
+
+  provenance:
+    repo: PMC
+    publication: "11310467"
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 28 APR 2026
+        organizations:
+          - Institute for Systems Biology
+
+  annotations:
+    - annotation: assertion method
+      method: value
+      encoding: Log2 Fold Change from Bayesian linear model
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Unspecified
+
+sections:
+  # 6 hours post MPXV infection
+  - source:
+      reindex:
+        - column: G
+          comparison: ne
+          comparator: "FALSE"
+    statement:
+      qualifiers:
+        - qualifier: temporal_context_qualifier
+          method: value
+          encoding: "6 hours post infection"
+        - qualifier: subject_direction_qualifier
+          method: column
+          encoding: H
+          regex:
+            - pattern: "\\+"
+              replacement: "upregulated"
+            - pattern: "-"
+              replacement: "downregulated"
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: J
+      - annotation: relationship strength
+        method: column
+        encoding: I
+      - annotation: sample size
+        method: value
+        encoding: 5
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "Statistical analysis of proteomic changes in HFF cells 6 hours post MPXV infection (n=5 independent experiments) compared to mock infection. Two-sided p-values derived from Bayesian linear model; no multiple hypothesis correction was performed."
+
+  # 12 hours post MPXV infection
+  - source:
+      reindex:
+        - column: L
+          comparison: ne
+          comparator: "FALSE"
+    statement:
+      qualifiers:
+        - qualifier: temporal_context_qualifier
+          method: value
+          encoding: "12 hours post infection"
+        - qualifier: subject_direction_qualifier
+          method: column
+          encoding: M
+          regex:
+            - pattern: "\\+"
+              replacement: "upregulated"
+            - pattern: "-"
+              replacement: "downregulated"
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: O
+      - annotation: relationship strength
+        method: column
+        encoding: N
+      - annotation: sample size
+        method: value
+        encoding: 5
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "Statistical analysis of proteomic changes in HFF cells 12 hours post MPXV infection (n=5 independent experiments) compared to mock infection. Two-sided p-values derived from Bayesian linear model; no multiple hypothesis correction was performed."
+
+  # 24 hours post MPXV infection
+  - source:
+      reindex:
+        - column: Q
+          comparison: ne
+          comparator: "FALSE"
+    statement:
+      qualifiers:
+        - qualifier: temporal_context_qualifier
+          method: value
+          encoding: "24 hours post infection"
+        - qualifier: subject_direction_qualifier
+          method: column
+          encoding: R
+          regex:
+            - pattern: "\\+"
+              replacement: "upregulated"
+            - pattern: "-"
+              replacement: "downregulated"
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: T
+      - annotation: relationship strength
+        method: column
+        encoding: S
+      - annotation: sample size
+        method: value
+        encoding: 5
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "Statistical analysis of proteomic changes in HFF cells 24 hours post MPXV infection (n=5 independent experiments) compared to mock infection. Two-sided p-values derived from Bayesian linear model; no multiple hypothesis correction was performed."

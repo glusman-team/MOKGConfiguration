@@ -1,0 +1,82 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/JIA1.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10766526/bin/43588_2023_453_MOESM6_ESM.xlsx
+    sheet: Sheet1
+    row_slice:
+      - 2
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - Disease
+        - PhenotypicFeature
+    predicate: disease_has_location
+    object:
+      method: column
+      encoding: B
+      prioritize:
+        - GrossAnatomicalStructure
+        - AnatomicalEntity
+      avoid:
+        - Disease
+        - PhenotypicFeature
+        - BiologicalProcess
+        - InformationContentEntity
+        - ClinicalAttribute
+        - Publication
+        - Gene
+        - SmallMolecule
+        - OrganismTaxon
+        - Cohort
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+
+  provenance:
+    repo: PMC
+    publication: "10766526"
+    contributors:
+      - kind: curation
+        name: JC Roach
+        date: 28 DEC 2025
+        organizations:
+          - Institute for Systems Biology
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 28 APR 2026
+        organizations:
+          - Institute for Systems Biology
+        comment: Migrated from legacy syntax to TC3 with full audit corrections
+
+  annotations:
+    - annotation: relationship strength
+      method: column
+      encoding: D
+    - annotation: constellation
+      method: column
+      encoding: C
+    - annotation: assertion method
+      method: value
+      encoding: cosine similarity in disease embedding space
+    - annotation: sample size
+      method: value
+      encoding: 500000
+    - annotation: miscellaneous notes
+      method: value
+      encoding: >
+        Diseases assigned to constellations via clustering in a high-dimensional
+        embedding space built from diagnosis records of over 151 million Americans.
+        Sample size (500000) refers to the UK Biobank cohort used for GWAS validation,
+        not the clustering procedure itself. General System labels are mapped to
+        anatomical entities where possible; rows with non-anatomical system categories
+        (Immune, Development, Neoplastic Process, Neuropsychiatric, Non-Specific)
+        are expected to be filtered out during entity resolution.

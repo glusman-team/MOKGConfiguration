@@ -1,0 +1,208 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/CORREIA3.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11530135/bin/jciinsight-9-178645-s132.xlsx
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    predicate: correlated_with
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+
+  provenance:
+    repo: PMC
+    publication: "11530135"
+    contributors:
+      - kind: curation
+        name: JC Roach
+        date: Dec 31, 2025
+        organizations:
+          - Institute for Systems Biology
+
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 84
+    - annotation: multiple testing correction method
+      method: value
+      encoding: "Benjamini-Hochberg method"
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "Quantitative proteomics of patient fibroblasts reveal biomarkers and diagnostic signatures of mitochondrial disease. correia3 may have overlaps with correia1 and correia2 as the authors may have reported the same data in supplemental tables and in supplemental data for the main article figures."
+
+sections:
+  - source:
+      sheet: "Fig. 3A"
+    statement:
+      subject:
+        method: column
+        encoding: B
+        prefix: "UniProtKB:"
+        prioritize:
+          - Protein
+        taxon: 9606
+      object:
+        method: value
+        encoding: "mitochondrial disease"
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: D
+      - annotation: relationship strength
+        method: column
+        encoding: C
+      - annotation: assertion method
+        method: value
+        encoding: "linear model for differential expression (DE analysis using the limma package in R)"
+
+  - source:
+      sheet: "Fig. 3B"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        prefix: "UniProtKB:"
+        prioritize:
+          - Protein
+        taxon: 9606
+      object:
+        method: value
+        encoding: "mitochondrial oxidative phosphorylation disorder"
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: D
+      - annotation: relationship strength
+        method: column
+        encoding: C
+      - annotation: assertion method
+        method: value
+        encoding: "linear model for differential expression (DE analysis using the limma package in R)"
+
+  - source:
+      sheet: "Fig. 3F"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        prefix: "UniProtKB:"
+        prioritize:
+          - Protein
+        taxon: 9606
+      object:
+        method: value
+        encoding: "mitochondrial oxidative phosphorylation disorder"
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: D
+      - annotation: relationship strength
+        method: column
+        encoding: C
+      - annotation: assertion method
+        method: value
+        encoding: "linear model for differential expression (DE analysis using the limma package in R)"
+
+  - source:
+      sheet: "Fig. 4A"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize:
+          - Pathway
+        taxon: 9606
+        regex:
+          - pattern: "^WP"
+            replacement: "WIKIPATHWAYS:WP"
+          - pattern: "^R-HSA-"
+            replacement: "REACT:R-HSA-"
+      object:
+        method: value
+        encoding: "mitochondrial disease"
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: E
+      - annotation: relationship strength
+        method: column
+        encoding: D
+      - annotation: assertion method
+        method: value
+        encoding: "Gene set enrichment analysis (GSEA), using consensus pathway annotation catalogues"
+
+  - source:
+      sheet: "Fig. 4B"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize:
+          - Pathway
+        taxon: 9606
+        regex:
+          - pattern: "^WP"
+            replacement: "WIKIPATHWAYS:WP"
+          - pattern: "^R-HSA-"
+            replacement: "REACT:R-HSA-"
+      object:
+        method: value
+        encoding: "mitochondrial oxidative phosphorylation disorder"
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: E
+      - annotation: relationship strength
+        method: column
+        encoding: D
+      - annotation: assertion method
+        method: value
+        encoding: "Gene set enrichment analysis (GSEA), using consensus pathway annotation catalogues"
+
+  - source:
+      sheet: "Fig. 4D"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize:
+          - Pathway
+        taxon: 9606
+        regex:
+          - pattern: "^WP"
+            replacement: "WIKIPATHWAYS:WP"
+          - pattern: "^R-HSA-"
+            replacement: "REACT:R-HSA-"
+      object:
+        method: value
+        encoding: "mitochondrial oxidative phosphorylation disorder"
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: E
+      - annotation: relationship strength
+        method: column
+        encoding: D
+      - annotation: assertion method
+        method: value
+        encoding: "Gene set enrichment analysis (GSEA), using consensus pathway annotation catalogues"

@@ -1,0 +1,98 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/CORREIA1.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11530135/bin/jciinsight-9-178645-s129.xlsx
+    row_slice:
+      - 2
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prefix: "UniProtKB:"
+      prioritize:
+        - Protein
+      taxon: 9606
+    predicate: correlated_with
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+
+  provenance:
+    repo: PMC
+    publication: "11530135"
+    contributors:
+      - kind: curation
+        name: JC Roach
+        date: Dec 31, 2025
+        organizations:
+          - Institute for Systems Biology
+
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 84
+    - annotation: multiple testing correction method
+      method: value
+      encoding: "Benjamini-Hochberg method"
+    - annotation: assertion method
+      method: value
+      encoding: "linear model for differential expression (DE analysis using the limma package in R)"
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "Quantitative proteomics of patient fibroblasts reveal biomarkers and diagnostic signatures of mitochondrial disease"
+
+sections:
+  - source:
+      sheet: "Data File 4"
+    statement:
+      object:
+        method: value
+        encoding: mitochondrial disease
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: BA
+      - annotation: relationship strength
+        method: column
+        encoding: AU
+
+  - source:
+      sheet: "Data File 4"
+    statement:
+      object:
+        method: value
+        encoding: "mitochondrial oxidative phosphorylation disorder"
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: BI
+      - annotation: relationship strength
+        method: column
+        encoding: BC
+
+  - source:
+      sheet: "Data File 4"
+    statement:
+      object:
+        method: value
+        encoding: "mitochondrial oxidative phosphorylation disorder"
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: CO
+      - annotation: relationship strength
+        method: column
+        encoding: CI

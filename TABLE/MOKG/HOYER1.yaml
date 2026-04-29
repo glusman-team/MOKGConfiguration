@@ -1,0 +1,80 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/HOYER1.xls
+    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs12883-022-02828-6/MediaObjects/12883_2022_2828_MOESM4_ESM.xls
+    sheet: Sheet 1
+    row_slice:
+      - 3
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - Pathway
+        - BiologicalProcess
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0015626
+      prioritize:
+        - Disease
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: MONDO:0015626
+
+  provenance:
+    repo: PMC
+    publication: "9377087"
+    contributors:
+      - kind: curation
+        name: JC Roach
+        date: 27 DEC 2025
+        organizations:
+          - Institute for Systems Biology
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 28 APR 2026
+        organizations:
+          - Institute for Systems Biology
+          - CalPoly SLO
+        comment: Migrated from pre-TC3 to TC3
+
+  annotations:
+    - annotation: negative log p value
+      method: column
+      encoding: B
+    - annotation: enrichment ratio
+      method: column
+      encoding: C
+    - annotation: z-score
+      method: column
+      encoding: D
+    - annotation: sample size
+      method: value
+      encoding: 9
+    - annotation: assertion method
+      method: value
+      encoding: Ingenuity Pathway Analysis
+    - annotation: multiple testing correction method
+      method: value
+      encoding: none
+    - annotation: miscellaneous notes
+      method: value
+      encoding: >
+        Ingenuity Pathway Analysis canonical pathways enrichment from PBMC
+        proteomic comparison of 4 CMT-affected vs 5 healthy family members
+        with the AARS1 Arg326Trp mutation. Column B is -log10(p-value) from
+        Fisher's exact test. Column C is the enrichment ratio. Column D is
+        the IPA activation z-score (positive = activated, negative = inhibited,
+        blank = no prediction).

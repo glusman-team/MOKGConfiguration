@@ -1,0 +1,104 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/HONG8.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/8657403/bin/Table8.XLSX
+    row_slice:
+      - 2
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - Gene
+      taxon: 9606
+
+    predicate: gene_associated_with_condition
+
+    object:
+      method: value
+      encoding: Urothelial Carcinoma
+      prioritize:
+        - Disease
+
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: MONDO:0040679
+
+  provenance:
+    repo: PMC
+    publication: PMC8657403
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 28 APR 2026
+        organizations:
+          - Institute for Systems Biology
+        comment: Migrated from TC2 to TC3
+
+  annotations:
+    - annotation: p value
+      method: column
+      encoding: F
+
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+
+    - annotation: relationship strength
+      method: column
+      encoding: B
+
+    - annotation: assertion method
+      method: value
+      encoding: Univariate and Multivariate Cox regression
+
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Data of hypoxia-related genes were downloaded from the molecular signatures database (MSigDB), and screened by univariate and multivariate Cox regression analysis to construct a prognosis-predictive model. The robustness of the model was evaluated in two melanoma cohorts. Furthermore, an external validation cohort, the bladder cancer cohort, from the Cancer Genome Atlas (TCGA) database, was used to explore the mechanism of gene mutation, immune cell infiltration, signaling pathway enrichment, and drug sensitivity. Relationship strength values are log2 fold-change from limma differential expression analysis.
+
+sections:
+  - source:
+      sheet: training set
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 213
+
+  - source:
+      sheet: test set
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 135
+
+  - source:
+      sheet: TCGA BLCA
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 412
+
+  - source:
+      sheet: GSE15863 CACO2
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 9
+
+  - source:
+      sheet: GSE158632-HT29
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 9

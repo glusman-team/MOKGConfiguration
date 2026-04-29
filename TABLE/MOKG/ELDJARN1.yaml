@@ -1,0 +1,147 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/ELDJARN1.xlsx
+    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-023-06563-x/MediaObjects/41586_2023_6563_MOESM3_ESM.xlsx
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prefix: "UniProtKB:"
+      prioritize:
+        - Protein
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: column
+      encoding: E
+      prioritize:
+        - DiseaseOrPhenotypicFeature
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: "NCBITaxon:9606"
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: "UBERON:0000178"
+  provenance:
+    repo: PMC
+    publication: "10567571"
+    contributors:
+      - kind: curation
+        name: Classroom
+        date: 01 JAN 2025
+        organizations:
+          - ISB
+
+sections:
+  # Section 1: ST16 — Olink protein–phenotype associations
+  - source:
+      sheet: ST16_olink_phenotype_assoc
+      row_slice: [5, auto]
+      reindex:
+        - column: B
+          comparison: ne
+          comparator: NA
+    statement:
+      subject:
+        method: column
+        encoding: B
+        prefix: "UniProtKB:"
+        prioritize:
+          - Protein
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: column
+        encoding: E
+        prioritize:
+          - DiseaseOrPhenotypicFeature
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: G
+      - annotation: relationship strength
+        method: column
+        encoding: F
+      - annotation: assertion method
+        method: value
+        encoding: "Logistic regression (case-control) or linear regression (quantitative traits)"
+      - annotation: sample size
+        method: column
+        encoding: H
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "Olink plasma protein associations with phenotypes in UK Biobank, British Isles ancestry group. Case-control phenotypes report odds ratio; quantitative traits report regression beta."
+
+  # Section 2: ST17 — SomaScan protein–phenotype associations
+  - source:
+      sheet: ST17_somascan_phenotype_assoc
+      row_slice: [3, auto]
+      reindex:
+        - column: H
+          comparison: ne
+          comparator: ListType
+    statement:
+      subject:
+        method: column
+        encoding: B
+        prioritize:
+          - Protein
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: column
+        encoding: G
+        prioritize:
+          - DiseaseOrPhenotypicFeature
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: F
+      - annotation: relationship strength
+        method: column
+        encoding: E
+      - annotation: assertion method
+        method: value
+        encoding: "Linear regression (SMP normalized)"
+      - annotation: sample size
+        method: column
+        encoding: K
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "SomaScan plasma protein associations with phenotypes in UK Biobank, SMP-normalized beta coefficients. No UniProt column available; subject resolved from gene symbol with taxon constraint."
+
+  # Section 3: ST18 — Protein–IBD associations
+  - source:
+      sheet: ST18_ibd_assoc
+      row_slice: [4, auto]
+    statement:
+      subject:
+        method: column
+        encoding: F
+        prefix: "UniProtKB:"
+        prioritize:
+          - Protein
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: value
+        encoding: "MONDO:0005265"
+        prioritize:
+          - Disease
+    annotations:
+      - annotation: p value
+        method: column
+        encoding: C
+      - annotation: relationship strength
+        method: column
+        encoding: B
+      - annotation: assertion method
+        method: value
+        encoding: "Logistic regression, two-sided likelihood ratio test"
+      - annotation: miscellaneous notes
+        method: column
+        encoding: M

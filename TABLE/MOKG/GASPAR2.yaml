@@ -1,0 +1,64 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/GASPAR2.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/5622077/bin/41598_2017_12325_MOESM2_ESM.xlsx
+    sheet: ST10
+    row_slice:
+      - 3
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: H
+      taxon: 9606
+      prioritize:
+        - Gene
+      avoid:
+        - Protein
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: schizophrenia
+      prioritize:
+        - Disease
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+
+  provenance:
+    repo: PMC
+    publication: "5622077"
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 09 JAN 2025
+        organizations:
+          - Institute for Systems Biology
+        comment: Migrated from legacy pre-TC3 format to TC3
+      - kind: tool
+        name: tablassist
+        date: 28 APR 2026
+        comment: Written by tablassist from legacy pre-TC3 config
+
+  annotations:
+    - annotation: p value
+      method: column
+      encoding: A
+    - annotation: relationship strength
+      method: column
+      encoding: B
+    - annotation: sample size
+      method: value
+      encoding: 58703
+    - annotation: assertion method
+      method: value
+      encoding: "MAGMA v1.06 gene-wise analysis of GWAS summary statistics"
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "Druggable genes associated with schizophrenia in SCZ-PGC2 GWAS. Relationship strength column is -log10(p-value). Gene-wise results for the whole druggable genome."
