@@ -21,9 +21,22 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
+      - qualifier: anatomical_context_qualifier
         method: value
-        encoding: NCBITaxon:9606
+        encoding: UBERON:0001555
+      - qualifier: object_direction_qualifier
+        method: column
+        encoding: C
+        regex:
+          - pattern: '^-\d.*'
+            replacement: decreased
+          - pattern: '^\d.*'
+            replacement: increased
+    object:
+      prioritize:
+        - ClinicalMeasurement
+        - PhenotypicFeature
+        - Procedure
   provenance:
     repo: PMC
     publication: PMC11377447
@@ -89,6 +102,11 @@ sections:
       object:
         encoding: ALT
   - source:
+      sheet: AST
+    statement:
+      object:
+        encoding: aspartate aminotransferase measurement
+  - source:
       sheet: Vitamin B12
     statement:
       object:
@@ -97,12 +115,12 @@ sections:
       sheet: Right Handgrip
     statement:
       object:
-        encoding: Right Handed
+        encoding: EFO:0006941
   - source:
       sheet: Left Handgrip
     statement:
       object:
-        encoding: Left Handed
+        encoding: EFO:0006941
   - source:
       sheet: Gait speed
     statement:

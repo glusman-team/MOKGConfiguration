@@ -11,7 +11,10 @@ template:
     subject:
       method: column
       encoding: C
-      taxon: 9606
+      prioritize:
+        - MolecularActivity
+        - GeneFamily
+        - Pathway
       remove:
         - .*Plasma_
         - .*Stool_
@@ -26,7 +29,8 @@ template:
     object:
       method: column
       encoding: F
-      taxon: 9606
+      prioritize:
+        - ChemicalEntity
       remove:
         - .*Plasma_
         - .*Stool_
@@ -54,9 +58,6 @@ template:
         organizations:
           - Institute for Systems Biology
   annotations:
-    - annotation: sample size
-      method: value
-      encoding: 219
     - annotation: p value
       method: column
       encoding: G
@@ -69,11 +70,31 @@ template:
 
 sections:
   - source:
+      sheet: S9A
+    annotations:
+      - annotation: miscellaneous notes
+        method: value
+        encoding: The effect of ECs identified from salivary samples on plasma metabolites concentrations
+      - annotation: sample size
+        method: value
+        encoding: 49
+    statement:
+      qualifiers:
+        - qualifier: subject_part_qualifier
+          method: value
+          encoding: UBERON:0001836 # SALIVA
+        - qualifier: object_part_qualifier
+          method: value
+          encoding: UBERON:0001969 # PLASMA
+  - source:
       sheet: S9B
     annotations:
-      - annotation: notes
+      - annotation: miscellaneous notes
         method: value
-        encoding:  The effect of ECs identified from salivary samples on stool metabolites concentrations
+        encoding: The effect of ECs identified from salivary samples on stool metabolites concentrations
+      - annotation: sample size
+        method: value
+        encoding: 49
     statement:
       qualifiers:
         - qualifier: object_part_qualifier
@@ -89,6 +110,9 @@ sections:
       - annotation: miscellaneous notes
         method: value
         encoding: The effect of ECs identified from fecal samples on plasma metabolites concentrations
+      - annotation: sample size
+        method: value
+        encoding: 74
     statement:
       qualifiers:
         - qualifier: subject_part_qualifier
@@ -103,6 +127,9 @@ sections:
       - annotation: miscellaneous notes
         method: value
         encoding: The effect of ECs identified from fecal samples on stool metabolites concentrations
+      - annotation: sample size
+        method: value
+        encoding: 74
     statement:
       qualifiers:
         - qualifier: part_qualifier
@@ -114,6 +141,9 @@ sections:
       - annotation: miscellaneous notes
         method: value
         encoding: The effect of KOs identified from salivary samples on plasma metabolites concentrations
+      - annotation: sample size
+        method: value
+        encoding: 49
     statement:
       qualifiers:
         - qualifier: object_part_qualifier
@@ -128,21 +158,26 @@ sections:
       - annotation: miscellaneous notes
         method: value
         encoding: The effect of KOs identified from salivary samples on stool metabolites concentrations
+      - annotation: sample size
+        method: value
+        encoding: 49
     statement:
       qualifiers:
         - qualifier: subject_part_qualifier
           method: value
-          encoding: UBERON:0001988 # STOOL
+          encoding: UBERON:0001836 # SALIVA
         - qualifier: object_part_qualifier
           method: value
-          encoding: UBERON:0001836 # SALIVA
-          # UBERON:0001969 # PLASMA
+          encoding: UBERON:0001988 # STOOL
   - source:
       sheet: S9I
     annotations:
       - annotation: miscellaneous notes
         method: value
         encoding: The effect of KOs identified from fecal samples on plasma metabolites concentrations
+      - annotation: sample size
+        method: value
+        encoding: 74
     statement:
       qualifiers:
         - qualifier: subject_part_qualifier
@@ -157,6 +192,9 @@ sections:
       - annotation: miscellaneous notes
         method: value
         encoding: The effect of KOs identified from fecal samples on stool metabolites concentrations
+      - annotation: sample size
+        method: value
+        encoding: 74
     statement:
       qualifiers:
         - qualifier: part_qualifier
@@ -168,6 +206,9 @@ sections:
       - annotation: miscellaneous notes
         method: value
         encoding: The effect of MetaCyc pathways identified from salivary samples on plasma metabolites concentrations
+      - annotation: sample size
+        method: value
+        encoding: 49
     statement:
       qualifiers:
         - qualifier: object_part_qualifier
@@ -182,21 +223,26 @@ sections:
       - annotation: miscellaneous notes
         method: value
         encoding: The effect of MetaCyc pathways identified from salivary samples on stool metabolites concentrations
+      - annotation: sample size
+        method: value
+        encoding: 49
     statement:
       qualifiers:
         - qualifier: subject_part_qualifier
           method: value
-          encoding: UBERON:0001988 # STOOL
+          encoding: UBERON:0001836 # SALIVA
         - qualifier: object_part_qualifier
           method: value
-          encoding: UBERON:0001836 # SALIVA
-          # UBERON:0001969 # PLASMA
+          encoding: UBERON:0001988 # STOOL
   - source:
       sheet: S9E
     annotations:
       - annotation: miscellaneous notes
         method: value
         encoding: The effect of MetaCyc pathways identified from fecal samples on plasma metabolites concentrations
+      - annotation: sample size
+        method: value
+        encoding: 74
     statement:
       qualifiers:
         - qualifier: subject_part_qualifier
@@ -211,6 +257,9 @@ sections:
       - annotation: miscellaneous notes
         method: value
         encoding: The effect of MetaCyc pathways identified from fecal samples on stool metabolites concentrations
+      - annotation: sample size
+        method: value
+        encoding: 74
     statement:
       qualifiers:
         - qualifier: part_qualifier

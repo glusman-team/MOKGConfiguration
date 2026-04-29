@@ -15,18 +15,15 @@ template:
         - NONE
     predicate: associated_with
     qualifiers:
-      - qualifier: part_qualifier
+      - qualifier: species_context_qualifier
         method: value
-        encoding: UBERON:0001988
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:10095
+        encoding: NCBITaxon:10090
       - qualifier: disease_context_qualifier
         method: value
-        encoding: HP:0004325
+        encoding: MONDO:0001371
       - qualifier: anatomical_context_qualifier
         method: value
-        encoding: UMLS:C1956108 # MICROBIOM
+        encoding: UBERON:0001988 # feces
   provenance:
     repo: PMC
     publication: PMC4787260
@@ -45,7 +42,7 @@ template:
       encoding: Spearman correlation
     - annotation: miscellaneous notes
       method: value
-      encoding: Spearman rank correlations between levels of metabolites and the abundances of bacterial species in the fecal microbiota of mice colonized with the healthy versus the severely stunted/underweight infant microbiota
+      encoding: Spearman rank correlations between levels of metabolites and the abundances of bacterial species in the fecal microbiota of mice colonized with the healthy versus the severely stunted/underweight infant microbiota. Sample size (n=259) refers to the iLiNS-DYAD-M human cohort used for validation, not the mouse experiment.
 sections:
   - source:
       row_slice:
@@ -53,7 +50,10 @@ sections:
         - 72
     statement:
       object:
+        method: value
         encoding: glycine
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -72,7 +72,10 @@ sections:
         - 72
     statement:
       object:
+        method: value
         encoding: alanine
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -91,7 +94,10 @@ sections:
         - 72
     statement:
       object:
+        method: value
         encoding: valine
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -110,7 +116,10 @@ sections:
         - 72
     statement:
       object:
+        method: value
         encoding: aspartate
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -129,7 +138,10 @@ sections:
         - 72
     statement:
       object:
+        method: value
         encoding: glutamine
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -148,26 +160,10 @@ sections:
         - 72
     statement:
       object:
-        encoding: alanine
-    annotations:
-      - annotation: p value
-        method: column
-        encoding: AY
-        regex:
-          - pattern: ">0.999"
-            replacement: 0.999
-          - pattern: "<0.001"
-            replacement: 0.001
-      - annotation: relationship strength
-        method: column
-        encoding: R
-  - source:
-      row_slice:
-        - 42
-        - 72
-    statement:
-      object:
+        method: value
         encoding: serine
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -186,26 +182,10 @@ sections:
         - 72
     statement:
       object:
-        encoding: valine
-    annotations:
-      - annotation: p value
-        method: column
-        encoding: BB
-        regex:
-          - pattern: ">0.999"
-            replacement: 0.999
-          - pattern: "<0.001"
-            replacement: 0.001
-      - annotation: relationship strength
-        method: column
-        encoding: U
-  - source:
-      row_slice:
-        - 42
-        - 72
-    statement:
-      object:
+        method: value
         encoding: leucine
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -224,7 +204,10 @@ sections:
         - 72
     statement:
       object:
+        method: value
         encoding: isoleucine
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -243,7 +226,10 @@ sections:
         - 72
     statement:
       object:
+        method: value
         encoding: isoleucine
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -262,7 +248,10 @@ sections:
         - 72
     statement:
       object:
+        method: value
         encoding: histidine
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -281,7 +270,10 @@ sections:
         - 72
     statement:
       object:
+        method: value
         encoding: phenylalanine
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -300,7 +292,10 @@ sections:
         - 72
     statement:
       object:
+        method: value
         encoding: tyrosine
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -315,49 +310,14 @@ sections:
         encoding: Z
   - source:
       row_slice:
-        - 42
-        - 72
-    statement:
-      object:
-        encoding: aspartate
-    annotations:
-      - annotation: p value
-        method: column
-        encoding: BH
-        regex:
-          - pattern: ">0.999"
-            replacement: 0.999
-          - pattern: "<0.001"
-            replacement: 0.001
-      - annotation: relationship strength
-        method: column
-        encoding: AA
-  - source:
-      row_slice:
-        - 42
-        - 72
-    statement:
-      object:
-        encoding: glutamine
-    annotations:
-      - annotation: p value
-        method: column
-        encoding: BI
-        regex:
-          - pattern: ">0.999"
-            replacement: 0.999
-          - pattern: "<0.001"
-            replacement: 0.001
-      - annotation: relationship strength
-        method: column
-        encoding: AB
-  - source:
-      row_slice:
         - 78
         - 108
     statement:
       object:
+        method: value
         encoding: pyruvate
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -376,7 +336,10 @@ sections:
         - 108
     statement:
       object:
+        method: value
         encoding: fumarate
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -395,7 +358,10 @@ sections:
         - 108
     statement:
       object:
+        method: value
         encoding: malate
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -414,7 +380,10 @@ sections:
         - 108
     statement:
       object:
+        method: value
         encoding: alpha-ketoglutarate
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -433,7 +402,10 @@ sections:
         - 108
     statement:
       object:
+        method: value
         encoding: citrate
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -452,7 +424,10 @@ sections:
         - 108
     statement:
       object:
+        method: value
         encoding: succinate
+        prioritize:
+          - SmallMolecule
     annotations:
       - annotation: p value
         method: column
@@ -465,41 +440,3 @@ sections:
       - annotation: relationship strength
         method: column
         encoding: K
-  - source:
-      row_slice:
-        - 78
-        - 108
-    statement:
-      object:
-        encoding: malate
-    annotations:
-      - annotation: p value
-        method: column
-        encoding: AD
-        regex:
-          - pattern: ">0.999"
-            replacement: 0.999
-          - pattern: "<0.001"
-            replacement: 0.001
-      - annotation: relationship strength
-        method: column
-        encoding: M
-  - source:
-      row_slice:
-        - 78
-        - 108
-    statement:
-      object:
-        encoding: citrate
-    annotations:
-      - annotation: p value
-        method: column
-        encoding: AF
-        regex:
-          - pattern: ">0.999"
-            replacement: 0.999
-          - pattern: "<0.001"
-            replacement: 0.001
-      - annotation: relationship strength
-        method: column
-        encoding: O

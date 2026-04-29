@@ -12,18 +12,22 @@ template:
     subject:
       method: column
       encoding: A
-      remove:
-        - .*_
+      regex:
+        - pattern: ^(C\d+)_.*$
+          replacement: KEGG.COMPOUND:$1
       prioritize:
         - SmallMolecule
         - ChemicalEntity
-    predicate: correlated_with
     object:
       method: column
       encoding: B
       prioritize:
         - OrganismTaxon
       regex:
+        - pattern: _unclassified$
+          replacement: _sp.
+        - pattern: _sp_
+          replacement: _sp._
         - pattern: _
           replacement: ' '
     qualifiers:
@@ -31,9 +35,6 @@ template:
         method: value
         encoding: MONDO:0005575
       - qualifier: anatomical_context_qualifier
-        method: value
-        encoding: UMLS:C1956108 # MICROBIOME
-      - qualifier: part_qualifier
         method: value
         encoding: UBERON:0001555 # GUT
   provenance:
@@ -50,11 +51,11 @@ template:
   annotations:
     - annotation: sample size
       method: value
-      encoding: 28
+      encoding: 179
     - annotation: multiple testing correction method
       method: value
       encoding: Benjamini Hochberg
-    - annotation: p value
+    - annotation: adjusted p value
       method: column
       encoding: E
     - annotation: relationship strength
@@ -65,4 +66,19 @@ template:
       encoding: Spearman Correlation
     - annotation: miscellaneous notes
       method: value
-      encoding: Correlation analysis between 21 CRC microbial markers and 28 metabolites that were significantly different between CRC and healthy gut communities, 14 were enriched in CRC cases and 14 were enriched in healthy controls.
+      encoding: Correlation analysis between 21 CRC microbial markers and 28 metabolites that were significantly different between CRC and healthy gut communities, 14 were enriched in CRC cases and 14 were enriched in healthy controls; 179 CRC samples were used in the correlation analysis, while the article text elsewhere reports 180 CRC samples.
+sections:
+  - source:
+      reindex:
+        - column: C
+          comparison: gt
+          comparator: 0
+    statement:
+      predicate: positively_correlated_with
+  - source:
+      reindex:
+        - column: C
+          comparison: lt
+          comparator: 0
+    statement:
+      predicate: negatively_correlated_with

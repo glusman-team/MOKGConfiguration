@@ -15,25 +15,20 @@ template:
       prioritize:
         - OrganismTaxon
       regex:
-        - pattern: .unclassified
+        - pattern: '\.unclassified'
           replacement: ''
-        - pattern: \.
-          replacement: ' '
-        - pattern: '^.*? '
+        - pattern: '^.*\.'
           replacement: ''
-        - pattern: ^[^a-zA-Z]*
+        - pattern: '^[^a-zA-Z]*'
           replacement: ''
-        - pattern: \s?%
-          replacement: ''
-        - pattern: ' .*'
-          replacement: ''
-    predicate: associated_with
+    predicate: correlated_with
     object:
       method: column
       encoding: A
       taxon: 9606
       avoid:
         - OrganismTaxon
+        - Gene
       remove:
         - \(.*
         - s$
@@ -45,10 +40,7 @@ template:
         encoding: UBERON:0000160
       - qualifier: species_context_qualifier
         method: value
-        encoding: NCBITaxon:9545
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:9545
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC7562722
@@ -74,7 +66,7 @@ template:
       transformations:
         - function: copysign
           arguments:
-            - 
+            - 'values'
             - -1
     - annotation: assertion method
       method: value

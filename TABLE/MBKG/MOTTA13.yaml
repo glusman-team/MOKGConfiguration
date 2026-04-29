@@ -10,21 +10,33 @@ template:
       - auto
   statement:
     subject:
-      method: column
-      encoding: B
-      taxon: 9606
+      method: value
+      encoding: GO:1903561
       prioritize:
-        - Gene
-    predicate: associated_with
+        - CellularComponent
+    predicate: affects
     qualifiers:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
+      - qualifier: object_context_qualifier
         method: value
-        encoding: NCBITaxon:9606
+        encoding: Caco-2 cell
+        prioritize:
+          - Cell
+          - CellLine
+      - qualifier: object_aspect_qualifier
+        method: value
+        encoding: expression
     object:
-      encoding: extracellular vesicles
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+        - Gene
+      regex:
+        - pattern: \.[0-9]+$
+          replacement: ''
   provenance:
     repo: PMC
     publication: PMC11792502
@@ -38,15 +50,36 @@ template:
     - annotation: sample size
       method: value
       encoding: 12
-    - annotation: p value
+    - annotation: adjusted p value
       method: column
       encoding: G
-    - annotation: relationship strength
+    - annotation: log2 fold change
       method: column
       encoding: D
     - annotation: assertion method
       method: value
-      encoding: Spearman correlation
+      encoding: differential expression analysis
     - annotation: miscellaneous notes
       method: value
-      encoding: Table S13. Total number of DEGs with significant (padj ≤ 0.05) expression differences between conditions MEVs treated vs Control (non-treated). Relationship Strengh a log2FoldChange.
+      encoding: Table S13 reports significantly differentially expressed genes (padj ≤ 0.05) in Caco-2 cells comparing MEVs treated versus control conditions.
+sections:
+  - source:
+      reindex:
+        - column: D
+          comparison: gt
+          comparator: 0
+    statement:
+      qualifiers:
+        - qualifier: object_direction_qualifier
+          method: value
+          encoding: increased
+  - source:
+      reindex:
+        - column: D
+          comparison: lt
+          comparator: 0
+    statement:
+      qualifiers:
+        - qualifier: object_direction_qualifier
+          method: value
+          encoding: decreased

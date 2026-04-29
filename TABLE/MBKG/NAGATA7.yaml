@@ -16,8 +16,12 @@ template:
         - OrganismTaxon
       remove:
         - ' species.*'
-        - ^.*?\]
         - ' \(.*'
+      regex:
+        - pattern: '\['
+          replacement: ''
+        - pattern: '\]'
+          replacement: ''
     predicate: associated_with
     qualifiers:
       - qualifier: anatomical_context_qualifier
@@ -25,11 +29,8 @@ template:
         encoding: UBERON:0000160
       - qualifier: disease_context_qualifier
         method: value
-        encoding: MONDO:0004979
+        encoding: MONDO:0100096
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
   provenance:
@@ -56,7 +57,7 @@ sections:
   - statement:
       object:
         method: value
-        encoding: Long COVID-19
+        encoding: DOID:0081013
         prioritize:
           - Disease
     annotations:
@@ -65,6 +66,9 @@ sections:
         encoding: L
       - annotation: p value
         method: column
+        encoding: M
+      - annotation: q value
+        method: column
         encoding: N
       - annotation: relationship strength
         method: column
@@ -72,7 +76,7 @@ sections:
   - statement:
       object:
         method: value
-        encoding: Pneumonia
+        encoding: MONDO:0005249
         prioritize:
           - Disease
     annotations:
@@ -81,6 +85,9 @@ sections:
         encoding: Q
       - annotation: p value
         method: column
+        encoding: R
+      - annotation: q value
+        method: column
         encoding: S
       - annotation: relationship strength
         method: column
@@ -88,14 +95,21 @@ sections:
   - statement:
       object:
         method: value
-        encoding: Low d-dimmer level
+        encoding: UNII:SDD8U8BB2G
         prioritize:
-          - Disease
+          - ChemicalEntity
+      qualifiers:
+        - qualifier: object_direction_qualifier
+          method: value
+          encoding: decreased
     annotations:
       - annotation: sample size
         method: column
         encoding: V
       - annotation: p value
+        method: column
+        encoding: W
+      - annotation: q value
         method: column
         encoding: X
       - annotation: relationship strength
@@ -104,14 +118,17 @@ sections:
   - statement:
       object:
         method: value
-        encoding: Kidney dysfunction
+        encoding: HP:0012211
         prioritize:
-          - Disease
+          - PhenotypicFeature
     annotations:
       - annotation: sample size
         method: column
         encoding: AA
       - annotation: p value
+        method: column
+        encoding: AB
+      - annotation: q value
         method: column
         encoding: AC
       - annotation: relationship strength
@@ -120,14 +137,17 @@ sections:
   - statement:
       object:
         method: value
-        encoding: Liver dysfunction
+        encoding: HP:0001410
         prioritize:
-          - Disease
+          - PhenotypicFeature
     annotations:
       - annotation: sample size
         method: column
         encoding: AF
       - annotation: p value
+        method: column
+        encoding: AG
+      - annotation: q value
         method: column
         encoding: AH
       - annotation: relationship strength
@@ -136,7 +156,7 @@ sections:
   - statement:
       object:
         method: value
-        encoding: Diarrhea
+        encoding: MONDO:0001673
         prioritize:
           - Disease
     annotations:
@@ -144,6 +164,9 @@ sections:
         method: column
         encoding: AK
       - annotation: p value
+        method: column
+        encoding: AL
+      - annotation: q value
         method: column
         encoding: AM
       - annotation: relationship strength

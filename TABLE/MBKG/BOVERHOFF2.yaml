@@ -21,23 +21,22 @@ template:
       method: column
       encoding: D
       taxon: 9606
+      prioritize:
+        - Disease
+        - PhenotypicFeature
+        - ChemicalEntity
+        - BehavioralFeature
       remove:
         - \(.*$
-        - '^[^:]*:'
+        - "^[^:]*:"
         - _9
     qualifiers:
-      - qualifier: part_qualifier
-        method: value
-        encoding: UBERON:0001988 # FECES
       - qualifier: anatomical_context_qualifier
         method: value
-        encoding: UMLS:C1956108 # MICROBIOME
-      - qualifier: causal_mechanism_qualifier
-        method: value
-        encoding: UMLS:C0001811 # AGEING
+        encoding: UBERON:0001988 # FECES
   provenance:
     repo: PMID
-    publication: '39264809'
+    publication: "39264809"
     contributors:
       - kind: curation
         name: Skye Lane Goetz
@@ -48,7 +47,7 @@ template:
     - annotation: sample size
       method: value
       encoding: 3746
-    - annotation: p value
+    - annotation: adjusted p value
       method: column
       encoding: G
     - annotation: multiple testing correction method
@@ -62,4 +61,4 @@ template:
       encoding: Two-sided unpaired Wilcoxon rank-sum test
     - annotation: miscellaneous notes
       method: value
-      encoding: 'Associations of variables and bacterial groups. The following parameters were utilised: (Coeff. >|2.00|; p.adjusted <0.1)'
+      encoding: "Associations of variables and bacterial groups across the lifespan. Parameters: (Coeff. >|2.00|; p.adjusted <0.1). Note: some subject taxa (f_ prefix removed) are family-level rather than genus-level identifications."

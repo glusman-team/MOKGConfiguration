@@ -49,16 +49,19 @@ template:
   annotations:
     - annotation: sample size
       method: value
-      encoding: 66
+      encoding: 90
     - annotation: p value
+      method: column
+      encoding: C
+    - annotation: false discovery rate
       method: column
       encoding: C
     - annotation: multiple testing correction method
       method: value
-      encoding: Unspecified
+      encoding: False discovery rate
     - annotation: assertion method
       method: value
       encoding: ANOVA
     - annotation: miscellaneous notes
       method: value
-      encoding: Results include p- value based in Infection category, False Discover Rate (FDR), adjusted p- value based on Tissue and Infection status, Paired p- value (Tukey), and mean abundance for each Tissue and Infection condition.
+      encoding: ANOVA outputs across four sample types (fecal infected, fecal uninfected, saliva infected, saliva uninfected) with FDR by infection category, tissue and infection adjusted p values, Tukey pairwise p values, and mean abundance for each group.

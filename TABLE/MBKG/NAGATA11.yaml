@@ -17,25 +17,23 @@ template:
       remove:
         - ' species.*'
         - ' \(id.*'
-        - ^.*?\]
         - ' \(.*'
+      regex:
+        - pattern: '\['
+          replacement: ''
+        - pattern: '\]'
+          replacement: ''
     predicate: associated_with
     object:
       method: value
-      encoding: COVID-19
+      encoding: MONDO:0100096
       prioritize:
         - Disease
     qualifiers:
       - qualifier: anatomical_context_qualifier
         method: value
         encoding: UBERON:0000160
-      - qualifier: disease_context_qualifier
-        method: value
-        encoding: MONDO:0004979
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
   provenance:
@@ -52,6 +50,9 @@ template:
       method: column
       encoding: F
     - annotation: p value
+      method: column
+      encoding: G
+    - annotation: q value
       method: column
       encoding: H
     - annotation: multiple testing correction method

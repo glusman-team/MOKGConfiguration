@@ -14,19 +14,13 @@ template:
       taxon: 9606
       prioritize:
         - Gene
-    predicate: associated_with
+    predicate: correlated_with
     object:
       method: value
       prioritize:
         - OrganismTaxon
     qualifiers:
-      - qualifier: anatomical_context_qualifier
-        method: value
-        encoding: UBERON:0000160
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
   provenance:
@@ -59,10 +53,10 @@ sections:
       object:
         encoding: Haemophilus
     annotations:
-      - annotation: p value
+      - annotation: relationship strength
         method: column
         encoding: C
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: D
   - source:
@@ -71,81 +65,81 @@ sections:
       object:
         encoding: Haemophilus influenzae
     annotations:
-      - annotation: p value
-        method: column
-        encoding: F
       - annotation: relationship strength
         method: column
         encoding: E
+      - annotation: p value
+        method: column
+        encoding: F
   - source:
       sheet: A. IL12 pathway
     statement:
       object:
         encoding: Haemophilus
     annotations:
-      - annotation: p value
+      - annotation: relationship strength
         method: column
         encoding: C
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: D
   - source:
-      sheet: 
+      sheet: A. IL12 pathway
     statement:
       object:
         encoding: Haemophilus influenzae
     annotations:
-      - annotation: p value
-        method: column
-        encoding: F
       - annotation: relationship strength
         method: column
         encoding: E
+      - annotation: p value
+        method: column
+        encoding: F
   - source:
       sheet: B. IFN alpha beta pathway
     statement:
       object:
         encoding: Moraxella
     annotations:
-      - annotation: p value
+      - annotation: relationship strength
         method: column
         encoding: C
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: D
   - source:
       sheet: B. IFN alpha beta pathway
     statement:
       object:
-        encoding: Moraxella
+        encoding: Moraxella catarrhalis
     annotations:
-      - annotation: p value
-        method: column
-        encoding: F
       - annotation: relationship strength
         method: column
         encoding: E
+      - annotation: p value
+        method: column
+        encoding: F
   - source:
       sheet: B. antigen presentation pathway
     statement:
       object:
         encoding: Moraxella
     annotations:
-      - annotation: p value
+      - annotation: relationship strength
         method: column
         encoding: C
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: D
   - source:
       sheet: B. antigen presentation pathway
     statement:
       object:
-        encoding: Moraxella
+        encoding: Moraxella catarrhalis
     annotations:
-      - annotation: p value
-        method: column
-        encoding: F
       - annotation: relationship strength
         method: column
         encoding: E
+      - annotation: p value
+        method: column
+        encoding: F

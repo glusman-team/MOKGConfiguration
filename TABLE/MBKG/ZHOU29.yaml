@@ -6,7 +6,7 @@ template:
     kind: excel
     sheet: Table S29
     row_slice:
-      - 4
+      - 3
       - auto
   statement:
     subject:
@@ -20,13 +20,20 @@ template:
         - pattern: _
           replacement: ' '
     predicate: correlated_with
+    object:
+      prioritize:
+        - SmallMolecule
+        - ChemicalEntity
+      avoid:
+        - Protein
+        - Drug
     qualifiers:
       - qualifier: species_context_qualifier
         method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
+        encoding: NCBITaxon:10090
+      - qualifier: anatomical_context_qualifier
         method: value
-        encoding: NCBITaxon:9606
+        encoding: UBERON:0001988
   provenance:
     repo: PMC
     publication: PMC9153113
@@ -36,13 +43,14 @@ template:
         date: 17 FEB 2026
         organizations:
           - Institute for Systems Biology
+        comment: Audited — fixed species context, assertion method, row_slice, added anatomical qualifier, object prioritize, annotation labels
   annotations:
     - annotation: multiple testing correction method
       method: value
       encoding: Bonferroni
     - annotation: assertion method
       method: value
-      encoding: One/Two-way-ANOVA
+      encoding: Spearman correlation
     - annotation: miscellaneous notes
       method: value
       encoding: Detailed information of the relationship between metabolites and the top 50 genera.
@@ -51,83 +59,83 @@ sections:
       object:
         encoding: p-Hydroxyphenylacetic acid
     annotations:
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: B
   - statement:
       object:
         encoding: L-Aspartic acid
     annotations:
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: C
   - statement:
       object:
         encoding: Phenylacetic acid
     annotations:
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: D
   - statement:
       object:
         encoding: 3-Hydroxyphenylacetic acid
     annotations:
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: E
   - statement:
       object:
         encoding: 4-Hydroxybenzoic acid
     annotations:
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: F
   - statement:
       object:
         encoding: Caproic acid
     annotations:
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: G
   - statement:
       object:
         encoding: D-2-Hydroxyglutaric acid
     annotations:
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: H
   - statement:
       object:
         encoding: Heptanoic acid
     annotations:
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: I
   - statement:
       object:
         encoding: Indoleacrylic acid
     annotations:
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: J
   - statement:
       object:
         encoding: Suberic acid
     annotations:
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: K
   - statement:
       object:
         encoding: Nicotinic acid
     annotations:
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: L
   - statement:
       object:
         encoding: Oxalic acid
     annotations:
-      - annotation: relationship strength
+      - annotation: p value
         method: column
         encoding: M

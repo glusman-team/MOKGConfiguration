@@ -20,19 +20,19 @@ template:
     predicate: associated_with
     object:
       method: value
-      encoding: Atherosclerotic cardiovascular disease
+      encoding: MONDO:0005311
       prioritize:
         - Disease
     qualifiers:
-      - qualifier: disease_context_qualifier
-        method: value
-        encoding: MONDO:0005068
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
+      - qualifier: anatomical_context_qualifier
         method: value
-        encoding: NCBITaxon:9606
+        encoding: UBERON:0001988
+      - qualifier: subject_aspect_qualifier
+        method: value
+        encoding: abundance
   provenance:
     repo: PMC
     publication: PMC11705818
@@ -54,7 +54,7 @@ template:
       encoding: Benjamini Hochberg
     - annotation: relationship strength
       method: column
-      encoding: F
+      encoding: B
     - annotation: assertion method
       method: value
       encoding: Wilcoxon rank-sum test

@@ -18,7 +18,7 @@ template:
         - .*;
         - _1
         - _6
-    predicate: associated_with
+    predicate: correlated_with
     object:
       method: column
       encoding: D
@@ -35,9 +35,6 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10434204
@@ -51,7 +48,7 @@ template:
     - annotation: sample size
       method: value
       encoding: 474
-    - annotation: p value
+    - annotation: q value
       method: column
       encoding: H
     - annotation: multiple testing correction method
@@ -65,4 +62,4 @@ template:
       encoding: LME model
     - annotation: miscellaneous notes
       method: value
-      encoding: Comparison of analyses evaluating the relationship between gestational age and the vaginal microbiota using absolute abundance analysis (Analysis of Composition of Microbiomes; ANCOM) and relative abundance analysis (Linear mixed-effects models; LME).
+      encoding: Pairwise microbial correlation analysis in vaginal microbiota among the term-delivery cohort.

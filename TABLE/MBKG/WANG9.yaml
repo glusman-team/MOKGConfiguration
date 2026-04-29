@@ -11,26 +11,28 @@ template:
   statement:
     subject:
       method: column
-      encoding: A
+      encoding: B
+      prioritize:
+        - OrganismTaxon
+      regex:
+        - pattern: '^(family|genus|order)\.'
+          replacement: ''
+        - pattern: '\.id\.\d+$'
+          replacement: ''
+        - pattern: '\.'
+          replacement: ' '
     predicate: affects
     qualifiers:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
     object:
       method: column
-      encoding: B
+      encoding: A
       prioritize:
-        - OrganismTaxon
-      remove:
-        - family\.
-        - genus\.
-        - order\.
-        - id.*
-        - \.
+        - ChemicalEntity
+        - ClinicalMeasurement
+        - PhenotypicFeature
   provenance:
     repo: PMC
     publication: PMC10574297

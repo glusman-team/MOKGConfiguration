@@ -16,20 +16,17 @@ template:
         - OrganismTaxon
       regex:
         - pattern: _
-          replacement: ' '
-    predicate: associated_with
+          replacement: " "
+    predicate: correlated_with
     qualifiers:
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
     object:
       method: value
   provenance:
     repo: PMID
-    publication: '38844795'
+    publication: "38844795"
     contributors:
       - kind: curation
         name: Skye Lane Goetz
@@ -54,7 +51,7 @@ sections:
       object:
         encoding: Cholesterol
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: D
       - annotation: relationship strength
@@ -64,7 +61,7 @@ sections:
       object:
         encoding: LDL Cholesterol
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: G
       - annotation: relationship strength
@@ -73,10 +70,12 @@ sections:
   - statement:
       object:
         encoding: Apolipoprotein B
+        prioritize:
+          - Protein
         avoid:
           - Gene
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: J
       - annotation: relationship strength
@@ -86,7 +85,7 @@ sections:
       object:
         encoding: Body Mass Index
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: M
       - annotation: relationship strength
@@ -96,7 +95,7 @@ sections:
       object:
         encoding: Waist circumference
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: P
       - annotation: relationship strength
@@ -104,9 +103,11 @@ sections:
         encoding: N
   - statement:
       object:
-        encoding: Glucose measurment
+        encoding: Fasting insulin
+        prioritize:
+          - ClinicalMeasurement
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: S
       - annotation: relationship strength
@@ -114,9 +115,11 @@ sections:
         encoding: Q
   - statement:
       object:
-        encoding: Fasting insulin
+        encoding: Glucose measurement
+        prioritize:
+          - ClinicalMeasurement
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: V
       - annotation: relationship strength
@@ -125,8 +128,10 @@ sections:
   - statement:
       object:
         encoding: HOMA-IR
+        prioritize:
+          - PhenotypicFeature
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: Y
       - annotation: relationship strength
@@ -136,7 +141,7 @@ sections:
       object:
         encoding: Systolic blood pressure
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: AB
       - annotation: relationship strength
@@ -146,7 +151,7 @@ sections:
       object:
         encoding: Diastolic blood pressure
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: AE
       - annotation: relationship strength
@@ -156,7 +161,7 @@ sections:
       object:
         encoding: Triglycerides
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: AH
       - annotation: relationship strength
@@ -166,7 +171,7 @@ sections:
       object:
         encoding: HDL Cholesterol
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: AK
       - annotation: relationship strength
@@ -176,7 +181,7 @@ sections:
       object:
         encoding: Aspartate transferase
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: BF
       - annotation: relationship strength
@@ -186,7 +191,7 @@ sections:
       object:
         encoding: Uric Acid
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: BI
       - annotation: relationship strength
@@ -196,7 +201,7 @@ sections:
       object:
         encoding: Alanine transaminase
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: BC
       - annotation: relationship strength
@@ -205,8 +210,10 @@ sections:
   - statement:
       object:
         encoding: Estimated glomerular filtration rate
+        prioritize:
+          - ClinicalMeasurement
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: BL
       - annotation: relationship strength
@@ -216,7 +223,7 @@ sections:
       object:
         encoding: ApoB/ApoA1 ratio
     annotations:
-      - annotation: p value
+      - annotation: adjusted p value
         method: column
         encoding: AN
       - annotation: relationship strength

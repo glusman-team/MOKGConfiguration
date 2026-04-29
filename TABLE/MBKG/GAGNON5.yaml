@@ -6,7 +6,7 @@ template:
     kind: excel
     sheet: Supplementary Table 5
     row_slice:
-      - 2
+      - 1
       - auto
   statement:
     subject:
@@ -41,9 +41,6 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC9887809
@@ -54,9 +51,6 @@ template:
         organizations:
           - Institute for Systems Biology
   annotations:
-    - annotation: sample size
-      method: value
-      encoding: 142204
     - annotation: p value
       method: column
       encoding: I

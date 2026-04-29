@@ -11,7 +11,6 @@ template:
     subject:
       method: column
       encoding: B
-      taxon: 9606
       remove:
         - "GO "
         - GO
@@ -34,9 +33,6 @@ template:
       - qualifier: species_context_qualifier
         method: value
         encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10064689
@@ -47,18 +43,21 @@ template:
         organizations:
           - Institute for Systems Biology
   annotations:
-    - annotation: sample size
+    - annotation: overlap count
       method: column
       encoding: C
-    - annotation: p value
+    - annotation: false discovery rate
       method: column
       encoding: K
     - annotation: multiple testing correction method
       method: value
       encoding: Benjamini Hochberg
-    - annotation: relationship strength
+    - annotation: jaccard index
       method: column
       encoding: I
+    - annotation: regulation direction
+      method: column
+      encoding: A
 
     - annotation: assertion method
       method: value

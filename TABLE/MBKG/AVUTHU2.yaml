@@ -22,7 +22,7 @@ template:
       avoid:
         - OrganismTaxon
       regex:
-        - pattern: Washington,DC
+        - pattern: ^Washington,DC$
           replacement: United States of America
     qualifiers:
       - qualifier: disease_context_qualifier
@@ -40,9 +40,6 @@ template:
           - CalPoly SLO
         comment: Migratassert (TC2-TC3)
   annotations:
-    - annotation: sample size
-      method: value
-      encoding: 28
     - annotation: multiple testing correction method
       method: value
       encoding: Benjamini Hochberg
@@ -54,4 +51,4 @@ template:
       encoding: Relative abundance
     - annotation: miscellaneous notes
       method: value
-      encoding: Top 20 abundance species from each dataset
+      encoding: Top 20 relative-abundance species in CRC samples from China, United States of America, and France datasets.

@@ -1,39 +1,88 @@
 template:
-  location:
-    where_to_download_data_from: https://www.cell.com/cms/10.1016/j.cell.2024.10.045/attachment/765b3106-d659-4412-a27b-b7e76d7895e9/mmc7.xlsx
-    download_hyperparameters:
-      file_extension: xlsx
-      which_excel_sheet_to_use: Table S7
-      start_at_line_number: 3
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    url: https://ars.els-cdn.com/content/image/1-s2.0-S0092867424012686-mmc7.xlsx
+    local: ./DATALAKE/DENG8.xlsx
+    sheet: Table S7
+    row_slice:
+      - 2
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      taxon: 9606
+      prioritize:
+        - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: multimorbidity level
+      prioritize:
+        - ClinicalMeasurement
   provenance:
-    publication: PMID:39579765
-    config_curator_name: Skye Lane Goetz
-    config_curator_organization: Institute for Systems Biology
-  attributes:
-    sample_size:
-      encoding_method: value
-      value_for_encoding: 53026 
-    p_value:
-      encoding_method: column_of_values
-      value_for_encoding: E
-    multiple_testing_correction_method:
-      encoding_method: value
-      value_for_encoding: Bonferroni
-    assertion_method:
-      encoding_method: value
-      value_for_encoding: Pathway score
-    notes: Associations between proteins and cluster's multimorbidity levels. Proteomic classification of 660 diseases into 40 clusters. The heatmap shows the enrichment of GO BP gene sets in disease clusters detected by gene set enrichment analysis. Color of heatmap indicates the mean value of pathway scores for diseases in this cluster. Asterisk∗ depicts pathways differently regulated between one cluster and others (FDR < 0.01).
-  triple:
-    triple_subject: 
-      encoding_method: column_of_values
-      value_for_encoding: B
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Gene
-        in_this_organism: NCBITaxon:9606
-    triple_object:
-      value_for_encoding: multimorbidity
-    triple_predicate: biolink:associated_with
-
-sections:
-  - ~
+    repo: PMID
+    publication: "39579765"
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 09 JAN 2025
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: cluster
+      method: column
+      encoding: A
+    - annotation: odds ratio [95% CI]
+      method: column
+      encoding: C
+    - annotation: odds ratio
+      method: column
+      encoding: C
+      regex:
+        - pattern: '^([^\s]+).*$'
+          replacement: '\1'
+    - annotation: 95% confidence interval
+      method: column
+      encoding: C
+      regex:
+        - pattern: '^[^\[]*\[([^\]]+)\]$'
+          replacement: '\1'
+    - annotation: 95% confidence interval lower bound
+      method: column
+      encoding: C
+      regex:
+        - pattern: '^.*\[([^\]-]+)-[^\]]+\]$'
+          replacement: '\1'
+    - annotation: 95% confidence interval upper bound
+      method: column
+      encoding: C
+      regex:
+        - pattern: '^.*\[[^\]-]+-([^\]]+)\]$'
+          replacement: '\1'
+    - annotation: raw p value
+      method: column
+      encoding: D
+    - annotation: Bonferroni-adjusted p value
+      method: column
+      encoding: E
+    - annotation: sample size
+      method: value
+      encoding: 53026
+    - annotation: assertion method
+      method: value
+      encoding: ordinal regression
+    - annotation: outcome measure
+      method: value
+      encoding: cluster-specific multimorbidity level
+    - annotation: statistical measure
+      method: value
+      encoding: odds ratio with 95% confidence interval
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Bonferroni
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Table S7 reports associations between proteins and study-defined disease multimorbidity clusters; the cluster label is preserved as metadata rather than treated as an ontology-grounded object.

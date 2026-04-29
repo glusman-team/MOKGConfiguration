@@ -13,20 +13,22 @@ template:
       encoding: A
       prioritize:
         - OrganismTaxon
+      avoid:
+        - Gene
       regex:
         - pattern: _
           replacement: ' '
-    predicate: correlated_with
+    predicate: positively_correlated_with
     qualifiers:
       - qualifier: species_context_qualifier
         method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
+        encoding: NCBITaxon:9555
     object:
       method: column
       encoding: B
+      prioritize:
+        - SmallMolecule
+        - ChemicalEntity
   provenance:
     repo: PMC
     publication: PMC7253361
@@ -42,6 +44,9 @@ template:
       encoding: 10
     - annotation: p value
       method: column
+      encoding: D
+    - annotation: q value
+      method: column
       encoding: E
     - annotation: multiple testing correction method
       method: value
@@ -55,13 +60,65 @@ template:
 sections:
   - source:
       sheet: Small Intestine
+      reindex:
+        - column: C
+          comparison: gt
+          comparator: 0
+    statement:
+      predicate: positively_correlated_with
+      qualifiers:
+        - qualifier: anatomical_context_qualifier
+          method: value
+          encoding: UBERON:0002108
     annotations:
       - annotation: miscellaneous notes
         method: value
-        encoding: Spearman’s correlation results for microbiota-metabolome interactions in the small intestine
+        encoding: Spearman's correlation results for positive microbiota-metabolome interactions in the small intestine
+  - source:
+      sheet: Small Intestine
+      reindex:
+        - column: C
+          comparison: lt
+          comparator: 0
+    statement:
+      predicate: negatively_correlated_with
+      qualifiers:
+        - qualifier: anatomical_context_qualifier
+          method: value
+          encoding: UBERON:0002108
+    annotations:
+      - annotation: miscellaneous notes
+        method: value
+        encoding: Spearman's correlation results for negative microbiota-metabolome interactions in the small intestine
   - source:
       sheet: Large Intestine
+      reindex:
+        - column: C
+          comparison: gt
+          comparator: 0
+    statement:
+      predicate: positively_correlated_with
+      qualifiers:
+        - qualifier: anatomical_context_qualifier
+          method: value
+          encoding: UBERON:0000059
     annotations:
       - annotation: miscellaneous notes
         method: value
-        encoding: Spearman’s correlation results for microbiota-metabolome interactions in the large intestine
+        encoding: Spearman's correlation results for positive microbiota-metabolome interactions in the large intestine
+  - source:
+      sheet: Large Intestine
+      reindex:
+        - column: C
+          comparison: lt
+          comparator: 0
+    statement:
+      predicate: negatively_correlated_with
+      qualifiers:
+        - qualifier: anatomical_context_qualifier
+          method: value
+          encoding: UBERON:0000059
+    annotations:
+      - annotation: miscellaneous notes
+        method: value
+        encoding: Spearman's correlation results for negative microbiota-metabolome interactions in the large intestine

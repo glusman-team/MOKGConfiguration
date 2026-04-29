@@ -3,19 +3,28 @@ template:
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9691620/bin/NIHMS1845232-supplement-1845232_Sup_Tab_1-5.xlsx
     local: ./DATALAKE/DIENER1.xlsx
+    row_slice:
+      - 1
+      - auto
     kind: excel
     sheet: Table S3
+    reindex:
+      - column: M
+        comparison: lt
+        comparator: 0.05
   statement:
     subject:
       method: column
       encoding: O
-      remove:
-        - \(.*
-        - \*
-        - \s+$
-        - \.*
-        - \b1\b
-        - ^1
+      regex:
+        - pattern: '^\s+'
+          replacement: ""
+        - pattern: '^\s*(\d+)\s+'
+          replacement: ""
+        - pattern: '\s+(\d+)\s*$'
+          replacement: ""
+        - pattern: '\s*\*+\s*$'
+          replacement: ""
     predicate: associated_with
     object:
       method: column
@@ -23,21 +32,14 @@ template:
       prioritize:
         - OrganismTaxon
       regex:
-        - pattern: ^.*?\|
-          replacement: ' '
-        - pattern: _(.*)
-          replacement: ''
-        - pattern: ^[^a-zA-Z]*
-          replacement: ''
-        - pattern: Family
-          replacement: ''
-        - pattern: amily
-          replacement: ''
+        - pattern: ^.*\|
+          replacement: ""
+        - pattern: ^[^A-Za-z\s]+
+          replacement: ""
+        - pattern: \s+$
+          replacement: ""
     qualifiers:
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
   provenance:
@@ -52,13 +54,16 @@ template:
   annotations:
     - annotation: sample size
       method: value
-      encoding: 3064
+      encoding: 1569
     - annotation: p value
       method: column
       encoding: F
     - annotation: multiple testing correction method
       method: value
-      encoding: Bonferroni
+      encoding: Benjamini Hochberg
+    - annotation: adjusted p value
+      method: column
+      encoding: M
     - annotation: relationship strength
       method: column
       encoding: E

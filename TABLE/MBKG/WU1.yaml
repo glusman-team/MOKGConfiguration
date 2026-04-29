@@ -5,27 +5,48 @@ template:
     local: ./DATALAKE/WU1.csv
     kind: text
     delimiter: ','
+    reindex:
+      - column: A
+        comparison: ne
+        comparator: root
+      - column: A
+        comparison: ne
+        comparator: cellular organisms
+      - column: A
+        comparison: ne
+        comparator: other sequences
+      - column: A
+        comparison: ne
+        comparator: Bacteria
   statement:
     subject:
       method: value
-      encoding: microgravity
+      encoding: UMLS:C0242535
     predicate: affects
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
     object:
       method: column
       encoding: A
       taxon: 9606
       prioritize:
         - Gene
+      avoid:
         - OrganismTaxon
       remove:
-        - \(.*
+        - \s*\(taxid[^)]*\)
+        - ^root$
+        - ^cellular organisms$
+        - ^other sequences$
+        - ^Bacteria$
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0000178
+      - qualifier: object_aspect_qualifier
+        method: value
+        encoding: expression
   provenance:
     repo: PMC
     publication: PMC11166937
@@ -39,18 +60,39 @@ template:
     - annotation: sample size
       method: value
       encoding: 27
-    - annotation: p value
+    - annotation: adjusted p value
       method: column
       encoding: F
     - annotation: multiple testing correction method
       method: value
-      encoding: Benjamini Hochberg
+      encoding: Bonferroni
     - annotation: relationship strength
       method: column
       encoding: C
     - annotation: assertion method
       method: value
-      encoding: Log2 Fold Change From Fishers Exact Test
+      encoding: Seurat findmarker() likelihood ratio test
     - annotation: miscellaneous notes
       method: value
       encoding: A complete list of overall gene expression changes uG vs 1G (25 hours culture) in unstimulated peripheral blood mononuclear cells (PBMCs).
+sections:
+  - source:
+      reindex:
+        - column: C
+          comparison: gt
+          comparator: 0
+    statement:
+      qualifiers:
+        - qualifier: object_direction_qualifier
+          method: value
+          encoding: increased
+  - source:
+      reindex:
+        - column: C
+          comparison: lt
+          comparator: 0
+    statement:
+      qualifiers:
+        - qualifier: object_direction_qualifier
+          method: value
+          encoding: decreased

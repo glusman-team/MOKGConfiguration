@@ -14,12 +14,13 @@ template:
       encoding: F
       remove:
         - \(.*
-    predicate: associated_with
+    predicate: correlated_with
     object:
       method: column
       encoding: A
       avoid:
         - OrganismTaxon
+        - Gene
       remove:
         - \(.*
         - s$
@@ -31,10 +32,7 @@ template:
         encoding: UBERON:0000160
       - qualifier: species_context_qualifier
         method: value
-        encoding: NCBITaxon:9545
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: NCBITaxon:9545
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC7562722
@@ -60,7 +58,7 @@ template:
       transformations:
         - function: copysign
           arguments:
-            - 
+            - 'values'
             - -1
     - annotation: assertion method
       method: value

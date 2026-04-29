@@ -11,18 +11,14 @@ template:
   statement:
     subject:
       method: column
-      encoding: B
-      taxon: 9606
-      remove:
-        - '.*; '
-        - ' \[.*'
-        - uncharacterized protein
-        - ^.*?\]
-        - ' \(.*'
+      encoding: A
+      prioritize:
+        - GeneFamily
+      prefix: 'KEGG.ORTHOLOGY:'
     predicate: associated_with
     object:
       method: value
-      encoding: COVID-19
+      encoding: MONDO:0100096
       prioritize:
         - Disease
     qualifiers:
@@ -30,9 +26,6 @@ template:
         method: value
         encoding: UBERON:0000160
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
   provenance:
@@ -50,6 +43,9 @@ template:
       encoding: 224
     - annotation: p value
       method: column
+      encoding: D
+    - annotation: q value
+      method: column
       encoding: E
     - annotation: multiple testing correction method
       method: value
@@ -57,6 +53,9 @@ template:
     - annotation: relationship strength
       method: column
       encoding: C
+    - annotation: kegg orthology label
+      method: column
+      encoding: B
     - annotation: assertion method
       method: value
       encoding: Wilcoxon rank-sum test

@@ -4,6 +4,7 @@ template:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10465508/bin/41467_2023_40336_MOESM6_ESM.xlsx
     local: ./DATALAKE/HOSKINSON3.xlsx
     kind: excel
+    sheet: Sheet1
     row_slice:
       - 2
       - auto
@@ -11,17 +12,15 @@ template:
     subject:
       method: column
       encoding: A
-    predicate: associated_with
+      prioritize:
+        - Pathway
+        - BiologicalProcess
+    predicate: correlated_with
     object:
-      method: column
-      encoding: F
-      remove:
-        - ' at 5 years.*'
+      method: value
+      encoding: MONDO:0004979
     qualifiers:
       - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
-      - qualifier: population_context_qualifier
         method: value
         encoding: NCBITaxon:9606
   provenance:
@@ -39,6 +38,9 @@ template:
       encoding: 1115
     - annotation: p value
       method: column
+      encoding: D
+    - annotation: FDR
+      method: column
       encoding: E
     - annotation: multiple testing correction method
       method: value
@@ -52,3 +54,41 @@ template:
     - annotation: miscellaneous notes
       method: value
       encoding: While we saw similar patterns across all four of the allergy diagnoses, 11 pathways were significantly different in at least two of the allergy diagnoses and one of the composite groups, all of which were also significantly associated with predicted age
+
+# Composite group labels were omitted because they did not resolve cleanly to ontology-backed disease/population terms during audit.
+sections:
+  - source:
+      reindex:
+        - column: F
+          comparator: Atopic dermatitis at 5 years
+    statement:
+      object:
+        method: value
+        encoding: MONDO:0004980
+
+  - source:
+      reindex:
+        - column: F
+          comparator: Asthma at 5 years
+    statement:
+      object:
+        method: value
+        encoding: MONDO:0004979
+
+  - source:
+      reindex:
+        - column: F
+          comparator: Food allergy at 5 years
+    statement:
+      object:
+        method: value
+        encoding: MONDO:0700226
+
+  - source:
+      reindex:
+        - column: F
+          comparator: Allergic rhinitis at 5 years
+    statement:
+      object:
+        method: value
+        encoding: MONDO:0011786
