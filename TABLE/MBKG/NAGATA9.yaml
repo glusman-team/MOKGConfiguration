@@ -1,0 +1,96 @@
+template:
+  syntax: TC3
+  source:
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9499989/bin/mmc2.xlsx
+    local: ./DATALAKE/NAGATA9.xlsx
+    kind: excel
+    sheet: S9
+    row_slice:
+      - 3
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - SmallMolecule
+        - ChemicalEntity
+      regex:
+        - pattern: '\.'
+          replacement: ' '
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0100096
+      prioritize:
+        - Disease
+    qualifiers:
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0000160
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+  provenance:
+    repo: PMC
+    publication: PMC9499989
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 17 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 224
+    - annotation: p value
+      method: column
+      encoding: C
+    - annotation: q value
+      method: column
+      encoding: D
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Unspecified
+    - annotation: relationship strength
+      method: column
+      encoding: G
+    - annotation: kegg brite category
+      method: column
+      encoding: B
+    - annotation: control mean
+      method: column
+      encoding: E
+    - annotation: covid mean
+      method: column
+      encoding: F
+    - annotation: assertion method
+      method: value
+      encoding: Wilcoxon rank-sum test
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Gut metabolomic changes between COVID-19 and controls
+
+sections:
+  - source:
+      reindex:
+        - column: G
+          comparison: gt
+          comparator: 1
+    statement:
+      qualifiers:
+        - qualifier: object_direction_qualifier
+          method: value
+          encoding: increased
+
+  - source:
+      reindex:
+        - column: G
+          comparison: lt
+          comparator: 1
+    statement:
+      qualifiers:
+        - qualifier: object_direction_qualifier
+          method: value
+          encoding: decreased
