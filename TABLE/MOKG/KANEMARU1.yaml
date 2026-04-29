@@ -1,42 +1,87 @@
 template:
-  location:
-    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/10371870/bin/41586_2023_6311_MOESM4_ESM.xlsx
-    download_hyperparameters:
-      file_extension: xlsx
-      which_excel_sheet_to_use: CCS_cell_DEtest
-      start_at_line_number: 2
-  provenance:
-    publication: PMC:PMC10371870
-    config_curator_name: Skye Lane Goetz
-    config_curator_organization: Institute for Systems Biology
-  attributes:
-    p_value:
-      encoding_method: column_of_values
-      value_for_encoding: F
-    multiple_testing_correction_method:
-      encoding_method: value
-      value_for_encoding: Benjamini Hochberg
-    relationship_strength:
-      encoding_method: column_of_values
-      value_for_encoding: D
-    assertion_method:
-      encoding_method: value
-      value_for_encoding: Log fold change
-    notes: "Differential ion channel expression profiles (relative to non-CCS aCMs) highlighted the electrophysiological specialization of the CCS cell states: SAN and AVN P cells, AV bundle cells and Purkinje cells"
-  triple:
-    triple_subject: 
-      value_for_encoding: cardiac conduction system
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Disease
-    triple_object:
-      encoding_method: column_of_values
-      value_for_encoding: B
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Gene
-        in_this_organism: NCBITaxon:9606
-    triple_predicate: biolink:associated_with
+  syntax: TC3
+  status: alpha
 
-sections:
-  - ~
+  source:
+    kind: excel
+    local: ./DATALAKE/KANEMARU1.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10371870/bin/41586_2023_6311_MOESM4_ESM.xlsx
+    sheet: CCS_cell_DEtest
+    row_slice:
+      - 2
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - Cell
+        - AnatomicalEntity
+      avoid:
+        - Gene
+      regex:
+        - pattern: "_"
+          replacement: " "
+        - pattern: "^SAN P cell"
+          replacement: "sinoatrial node pacemaker cell"
+        - pattern: "^AVN P cell"
+          replacement: "atrioventricular node pacemaker cell"
+        - pattern: "^AV bundle"
+          replacement: "atrioventricular bundle"
+        - pattern: " P cell$"
+          replacement: " pacemaker cell"
+
+    predicate: associated_with
+
+    object:
+      method: column
+      encoding: B
+      taxon: 9606
+      prioritize:
+        - Gene
+
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0002350
+
+      - qualifier: object_aspect_qualifier
+        method: value
+        encoding: expression
+
+  provenance:
+    repo: PMC
+    publication: "10371870"
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 29 APR 2026
+        organizations:
+          - Institute for Systems Biology
+        comment: Migrated from TC2 to TC3
+
+  annotations:
+    - annotation: p value
+      method: column
+      encoding: F
+
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+
+    - annotation: relationship strength
+      method: column
+      encoding: D
+
+    - annotation: assertion method
+      method: value
+      encoding: Wilcoxon rank-sum test
+
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "Differential gene expression in cardiac conduction system cell populations relative to non-CCS atrial cardiomyocytes (scanpy rank_genes_groups). Column A indicates the specific CCS cell type (e.g. Purkinje, SAN pacemaker, AVN pacemaker, AV bundle). Column D is log2 fold change; positive values indicate upregulation in CCS cells."
