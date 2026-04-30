@@ -1,71 +1,196 @@
 template:
-  location:
-    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/8017771/bin/NIHMS1644812-supplement-1644812SuppTab1.xlsx
-    download_hyperparameters:
-      file_extension: xlsx
-      start_at_line_number: 5
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./acquired_sources/NIHMS1644812-supplement-1644812_Supp_Tab1.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC8017771.1/NIHMS1644812-supplement-1644812_Supp_Tab1.xlsx
+    sheet: Supp.Table1A_log2 LFQ intensity
+    row_slice:
+      - 3
+      - auto
+  statement:
+    predicate: affects
+    object:
+      method: column
+      encoding: B
+      prefix: "UniProtKB:"
+      regex:
+        - pattern: ";.*$"
+          replacement: ""
+        - pattern: "-[0-9]+$"
+          replacement: ""
+      prioritize:
+        - Protein
+      taxon: 10090
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:10090
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0000955
+      - qualifier: object_aspect_qualifier
+        method: value
+        encoding: abundance
   provenance:
+    repo: PMC
     publication: PMC8017771
-    config_curator_name: JC Roach
-    config_curator_date: Feb 11, 2026
-    config_curator_organization: Institute for Systems Biology
-  attributes:
-    multiple_testing_correction_method:
-      encoding_method: value
-      value_for_encoding: none
-    assertion_method:
-      encoding_method: value
-      value_for_encoding: "Student's t-test"
-  notes: "DPKC downregulation upon rapamycin treatment attenuates mitochondrial disease"
-  triple:
-    triple_subject:
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Gene
-    triple_predicate: biolink:causes
+    contributors:
+      - kind: curation
+        name: JC Roach
+        date: 11 FEB 2026
+        organizations:
+          - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 29 APR 2026
+  annotations:
+    - annotation: assertion method
+      method: value
+      encoding: Student's t-test
+    - annotation: measurement scale
+      method: value
+      encoding: log2 LFQ intensity
+    - annotation: source protein ids
+      method: column
+      encoding: A
+    - annotation: majority protein ids
+      method: column
+      encoding: B
+    - annotation: protein name
+      method: column
+      encoding: C
+    - annotation: gene symbols
+      method: column
+      encoding: D
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Whole-brain mouse proteomics table; object maps the first majority UniProt accession from column B after semicolon truncation and isoform suffix removal.
 
 sections:
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: "Supp. Table 1A log2 LFQ intensity"
-    sample_size:
-      encoding_method: value
-      value_for_encoding: 12  # Section-specific
-    triple_subject:
-      encoding_method: value
-      value_for_encoding: Ndufs4
-      in_this_organism: NCBITaxon:10090
-    p_value:
-      encoding_method: column_of_values
-      value_for_encoding: S
-      encoding_description: "negative log10 p-value"
-    relationship_strength:
-      encoding_method: column_of_values
-      value_for_encoding: V
-      encoding_description: "Student's t-test difference"
-    triple_object:
-      encoding_method: column_of_values
-      value_for_encoding: D
-      in_this_organism: NCBITaxon:10090
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: "Supp. Table 1A log2 LFQ intensity"
-    sample_size:
-      encoding_method: value
-      value_for_encoding: 13  # Varies here
-    triple_subject:
-      encoding_method: value
-      value_for_encoding: rapamycin
-      in_this_organism: NCBITaxon:10090
-    p_value:
-      encoding_method: column_of_values
-      value_for_encoding: W
-      encoding_description: "negative log10 p-value"
-    relationship_strength:
-      encoding_method: column_of_values
-      value_for_encoding: Y
-      encoding_description: "Student's t-test difference"
-    triple_object:
-      encoding_method: column_of_values
-      value_for_encoding: D
-      in_this_organism: NCBITaxon:10090
+  - source:
+      reindex:
+        - column: U
+          comparison: gt
+          comparator: 0
+    statement:
+      subject:
+        method: value
+        encoding: NCBIGene:17993
+      qualifiers:
+        - qualifier: object_direction_qualifier
+          method: value
+          encoding: increased
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 12
+      - annotation: negative log10 p value
+        method: column
+        encoding: S
+      - annotation: q value
+        method: column
+        encoding: T
+      - annotation: relationship strength
+        method: column
+        encoding: U
+      - annotation: test statistic
+        method: column
+        encoding: V
+      - annotation: comparison label
+        method: value
+        encoding: KO_WT (Ndufs4 knockout vs wild type)
+
+  - source:
+      reindex:
+        - column: U
+          comparison: lt
+          comparator: 0
+    statement:
+      subject:
+        method: value
+        encoding: NCBIGene:17993
+      qualifiers:
+        - qualifier: object_direction_qualifier
+          method: value
+          encoding: decreased
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 12
+      - annotation: negative log10 p value
+        method: column
+        encoding: S
+      - annotation: q value
+        method: column
+        encoding: T
+      - annotation: relationship strength
+        method: column
+        encoding: U
+      - annotation: test statistic
+        method: column
+        encoding: V
+      - annotation: comparison label
+        method: value
+        encoding: KO_WT (Ndufs4 knockout vs wild type)
+
+  - source:
+      reindex:
+        - column: Y
+          comparison: gt
+          comparator: 0
+    statement:
+      subject:
+        method: value
+        encoding: CHEBI:9168
+      qualifiers:
+        - qualifier: object_direction_qualifier
+          method: value
+          encoding: increased
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 13
+      - annotation: negative log10 p value
+        method: column
+        encoding: W
+      - annotation: q value
+        method: column
+        encoding: X
+      - annotation: relationship strength
+        method: column
+        encoding: Y
+      - annotation: comparison label
+        method: value
+        encoding: KR_KO (rapamycin-treated knockout vs vehicle-treated knockout)
+
+  - source:
+      reindex:
+        - column: Y
+          comparison: lt
+          comparator: 0
+    statement:
+      subject:
+        method: value
+        encoding: CHEBI:9168
+      qualifiers:
+        - qualifier: object_direction_qualifier
+          method: value
+          encoding: decreased
+    annotations:
+      - annotation: sample size
+        method: value
+        encoding: 13
+      - annotation: negative log10 p value
+        method: column
+        encoding: W
+      - annotation: q value
+        method: column
+        encoding: X
+      - annotation: relationship strength
+        method: column
+        encoding: Y
+      - annotation: comparison label
+        method: value
+        encoding: KR_KO (rapamycin-treated knockout vs vehicle-treated knockout)

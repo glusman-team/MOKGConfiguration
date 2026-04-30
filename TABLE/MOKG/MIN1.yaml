@@ -1,72 +1,109 @@
 template:
-  location:
-    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/10622416/bin/41467_2023_42626_MOESM4_ESM.xlsx
-    download_hyperparameters:
-      file_extension: xlsx
-      start_at_line_number: 2
+  syntax: TC3
+  status: beta
+
+  source:
+    kind: excel
+    local: ./DATALAKE/MIN1.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10622416/bin/41467_2023_42626_MOESM4_ESM.xlsx
+    row_slice:
+      - 1
+      - auto
+    sheet: PSPvsCtrl
+
+  statement:
+    subject:
+      method: column
+      encoding: B
+      taxon: 9606
+      prioritize:
+        - Gene
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0019037
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: UBERON:0000955
+
   provenance:
-    publication: PMC:PMC10622416
-    config_curator_name: Skye Lane Goetz
-    config_curator_organization: Institute for Systems Biology
-  attributes:
-    sample_size:
-      encoding_method: value
-      value_for_encoding: 408
-    p_value:
-      encoding_method: column_of_values
-      value_for_encoding: L
-    multiple_testing_correction_method:
-      encoding_method: value
-      value_for_encoding: Benjamini Hochberg
-    relationship_strength:
-      encoding_method: column_of_values
-      value_for_encoding: J
-    assertion_method:
-      encoding_method: value
-      value_for_encoding: Differential expression analysis using linear regression adjusting for covariates
-  triple:
-    triple_subject: 
-      encoding_method: column_of_values
-      value_for_encoding: A
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Gene
-        prefix: "ENSEMBL:"
-    triple_object:
-      value_for_encoding: Progressive supranuclear palsy
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Disease
-    triple_predicate: biolink:associated_with
+    repo: PMC
+    publication: PMC10622416
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 29 APR 2026
+        organizations:
+          - Institute for Systems Biology
+          - CalPoly SLO
+        comment: Migrated from TC2 to TC3 with improved predicate and qualifiers
+      - kind: tool
+        name: tablassist
+        date: 29 APR 2026
+
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 408
+    - annotation: FDR
+      method: column
+      encoding: L
+    - annotation: multiple testing correction method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship strength
+      method: column
+      encoding: J
+    - annotation: assertion method
+      method: value
+      encoding: Differential expression analysis using linear regression adjusting for covariates
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Cross-species systems biology analysis of progressive supranuclear palsy (PSP) identifying glial DDR2, STOM, and KANK2 as therapeutic targets. Meta-analysis of two independent RNA-seq studies.
 
 sections:
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: PSPvsCtrl
-    attributes:
-      notes: PSP vs Control DEG, control is the reference group
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: CB
-    attributes:
-      notes: Gene expression association with coiled body (CB) among PSP cases
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: TA
-    attributes:
-      notes: Gene expression association with tufted astrocytes (TA) among PSP cases
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: NFT
-    attributes:
-      notes: Gene expression association with cneurofibrillary tangles (NFT) among PSP cases
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: TauTh
-    attributes:
-      notes: Gene expression association with Tau threads (TauTh) among PSP cases
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: Overall
-    attributes:
-      notes: Gene expression association with overall pathology among PSP cases
+  - source:
+      sheet: PSPvsCtrl
+    annotations:
+      - annotation: miscellaneous notes
+        method: value
+        encoding: PSP vs Control DEG, control is the reference group
+
+  - source:
+      sheet: CB
+    annotations:
+      - annotation: miscellaneous notes
+        method: value
+        encoding: Gene expression association with coiled body (CB) among PSP cases
+
+  - source:
+      sheet: TA
+    annotations:
+      - annotation: miscellaneous notes
+        method: value
+        encoding: Gene expression association with tufted astrocytes (TA) among PSP cases
+
+  - source:
+      sheet: NFT
+    annotations:
+      - annotation: miscellaneous notes
+        method: value
+        encoding: Gene expression association with neurofibrillary tangles (NFT) among PSP cases
+
+  - source:
+      sheet: TauTh
+    annotations:
+      - annotation: miscellaneous notes
+        method: value
+        encoding: Gene expression association with Tau threads (TauTh) among PSP cases
+
+  - source:
+      sheet: Overall
+    annotations:
+      - annotation: miscellaneous notes
+        method: value
+        encoding: Gene expression association with overall pathology among PSP cases

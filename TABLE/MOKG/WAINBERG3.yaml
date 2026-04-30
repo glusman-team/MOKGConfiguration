@@ -1,57 +1,81 @@
 template:
-  location:
-    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/7474629/bin/pnas.2001429117.sd03.xlsx
-    download_hyperparameters:
-      file_extension: xlsx
-      start_at_line_number: 2
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./WAINBERG3.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/2001429117/bin/WAINBERG3.xlsx
+
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+        - Protein
+      regex:
+        - pattern: " \\([^)]+\\)$"
+          replacement: ""
+    predicate: correlated_with
+    object:
+      method: column
+      encoding: A
+      prioritize:
+        - Disease
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+
   provenance:
-    publication: PMC:PMC7474629
-    config_curator_name: Skye Lane Goetz
-    config_curator_organization: Institute for Systems Biology
-  attributes:
-    sample_size:
-      encoding_method: value
-      value_for_encoding: 4905
-    p_value:
-      encoding_method: column_of_values
-      value_for_encoding: E
-    multiple_testing_correction_method:
-      encoding_method: value
-      value_for_encoding: FDR of 10 percent
-    relationship_strength:
-      encoding_method: column_of_values
-      value_for_encoding: C
-    assertion_method:
-      encoding_method: value
-      value_for_encoding: Linear regression
-    notes: We obtained 219 protein–PRS, 259 metabolite–PRS, and 288 clinical lab–PRS correlations at a false discovery rate (FDR) of 10%, for a total of 766 significant analyte–PRS correlations.
-  triple:
-    triple_subject: 
-      encoding_method: column_of_values
-      value_for_encoding: A
-      mapping_hyperparameters:
-        how_to_fill_column: backward
-    triple_object:
-      encoding_method: column_of_values
-      value_for_encoding: B
-    triple_predicate: biolink:correlated_with
+    repo: PMC
+    publication: PMC2001429117
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 29 APR 2026
+        organizations:
+          - Institute for Systems Biology
+          - CalPoly SLO
+        comment: Migrated from TC2 to TC3 syntax
+
+  annotations:
+    - annotation: relationship_strength
+      method: column
+      encoding: C
+    - annotation: p_value
+      method: column
+      encoding: D
+    - annotation: sample_size
+      method: value
+      encoding: 6434
+    - annotation: assertion_method
+      method: value
+      encoding: correlation
 
 sections:
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: Clinical labs, by disease
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: Clinical labs, by analyte
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: Metabolomics, by disease
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: Metabolomics, by analyte
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: Proteomics, by disease
-  - location:
-      download_hyperparameters:
-        which_excel_sheet_to_use: Metabolomics, by analyte
+  - source:
+      sheet: "Proteomics, by disease"
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: B
+      object:
+        method: column
+        encoding: A
+
+  - source:
+      sheet: "Proteomics, by analyte"
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: A
+      object:
+        method: column
+        encoding: B

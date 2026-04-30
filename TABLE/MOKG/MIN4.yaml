@@ -1,78 +1,113 @@
 template:
-  location:
-    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/10622416/bin/41467_2023_42626_MOESM7_ESM.xlsx
-    download_hyperparameters:
-      file_extension: xlsx
-      which_excel_sheet_to_use: snRNAseq_MAST_pseudobulk
-      start_at_line_number: 2
+  syntax: TC3
+  status: beta
+
+  source:
+    kind: excel
+    local: ./DATALAKE/MIN4.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10622416/bin/41467_2023_42626_MOESM7_ESM.xlsx
+    sheet: snRNAseq_MAST_pseudobulk
+    row_slice:
+      - 1
+      - auto
+    reindex:
+      - column: B
+        comparison: ne
+        comparator: ""
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+        - Gene
+
+    predicate: expressed_in
+
+    object:
+      method: column
+      encoding: B
+      prioritize:
+        - Cell
+      avoid:
+        - Gene
+      regex:
+        - pattern: "^ast$"
+          replacement: "Astrocytes"
+        - pattern: "^end$"
+          replacement: "Endothelial cells"
+        - pattern: "^exc_neu$"
+          replacement: "Excitatory neurons"
+        - pattern: "^inh_neu$"
+          replacement: "Inhibitory neurons"
+        - pattern: "^mic$"
+          replacement: "Microglia"
+        - pattern: "^neu$"
+          replacement: "Broad neuronal population"
+        - pattern: "^oli$"
+          replacement: "Oligodendrocytes"
+        - pattern: "^opc$"
+          replacement: "Oligodendrocyte precursor cells"
+        - pattern: "^per$"
+          replacement: "Pericytes"
+
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: "NCBITaxon:9606"
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: "MONDO:0019037"
+      - qualifier: anatomical_context_qualifier
+        method: value
+        encoding: "UBERON:0000955"
+
   provenance:
-    publication: PMC:PMC10622416
-    config_curator_name: Skye Lane Goetz
-    config_curator_organization: Institute for Systems Biology
-  attributes:
-    sample_size:
-      encoding_method: value
-      value_for_encoding: 408
-    multiple_testing_correction_method:
-      encoding_method: value
-      value_for_encoding: Benjamini Hochberg
-    notes: Upon comparison of the expression levels between PSP and control nuclei in each cluster, we identified significant DEGs at FDR < 0.05 for genes expressed in >10% of the nuclei in the cluster analyzed. We detected significantly up- or down-regulated DEGs in both neuronal and glial clusters
-  triple:
-    triple_subject: 
-      encoding_method: column_of_values
-      value_for_encoding: A
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Gene
-        in_this_organism: NCBITaxon:9606
-    triple_object:
-      encoding_method: column_of_values
-      value_for_encoding: B
-      mapping_hyperparameters:
-        regular_expressions: 
-          - pattern: ast
-            replacement: Astrocytes
-          - pattern: end
-            replacement: Endothelial cells
-          - pattern: exc_neu
-            replacement: Excitatory neurons
-          - pattern: inh_neu
-            replacement: Inhibitory neurons
-          - pattern: mic
-            replacement: Microglia
-          - pattern: neu
-            replacement: Broad neuronal population
-          - pattern: oli
-            replacement: Oligodendrocytes
-          - pattern: opc
-            replacement: Oligodendrocyte precursor cells
-          - pattern: per
-            replacement: Pericytes
-    triple_predicate: biolink:associated_with
-  reindexing:
-    - mode: before
-      column: B
-      comparison: ne
-      value_for_comparison: None
-  
+    repo: PMC
+    publication: PMC10622416
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 29 APR 2026
+        organizations:
+          - Institute for Systems Biology
+          - CalPoly SLO
+        comment: Migrated from TC2 to TC3; changed predicate from associated_with to expressed_in; added disease/anatomical/species qualifiers
+      - kind: tool
+        name: tablassist
+        date: 29 APR 2026
+
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 408
+    - annotation: multiple testing correction method
+      method: value
+      encoding: "Benjamini Hochberg"
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "Upon comparison of the expression levels between PSP and control nuclei in each cluster, we identified significant DEGs at FDR < 0.05 for genes expressed in >10% of the nuclei in the cluster analyzed. We detected significantly up- or down-regulated DEGs in both neuronal and glial clusters"
+
 sections:
-  - attributes:
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: H
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: D
-    assertion_method:
-      encoding_method: value
-      value_for_encoding: Log fold change from MAST analysis
-  - attributes:
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: K
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: I
-    assertion_method:
-      encoding_method: value
-      value_for_encoding: Log fold change from Pseudobulk analysis with edgeR
+  - annotations:
+      - annotation: FDR
+        method: column
+        encoding: H
+      - annotation: relationship strength
+        method: column
+        encoding: D
+      - annotation: assertion method
+        method: value
+        encoding: "Log fold change from MAST analysis"
+
+  - annotations:
+      - annotation: FDR
+        method: column
+        encoding: K
+      - annotation: relationship strength
+        method: column
+        encoding: I
+      - annotation: assertion method
+        method: value
+        encoding: "Log fold change from Pseudobulk analysis with edgeR"

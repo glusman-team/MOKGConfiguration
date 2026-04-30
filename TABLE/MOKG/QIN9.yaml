@@ -1,56 +1,74 @@
 template:
-  location:
-    where_to_download_data_from: https://ndownloader.figstatic.com/files/47044431
-    download_hyperparameters:
-      file_extension: xlsx
-      which_excel_sheet_to_use: TableS9 Drug-gene-asso
-      start_at_line_number: 2
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/ccr-23-1674_supplementary_table_s1-s14_suppts1.xlsx
+    url: https://ndownloader.figstatic.com/files/47044431
+    sheet: "TableS9 Drug-gene-asso"
+    row_slice: [1, auto]
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize: [Gene]
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      prioritize: [SmallMolecule, ChemicalEntity]
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: MONDO:0018874
+      - qualifier: subject_form_or_variant_qualifier
+        method: value
+        encoding: mutated
   provenance:
-    publication: PMC:PMC11176916
-    config_curator_name: Skye Lane Goetz
-    config_curator_organization: Institute for Systems Biology
-  attributes:
-    sample_size:
-      encoding_method: value
-      value_for_encoding: 75
-    p_value:
-      encoding_method: column_of_values
-      value_for_encoding: F
-    multiple_testing_correction_method:
-      encoding_method: value
-      value_for_encoding: Benjamini Hochberg
-    relationship_strength:
-      encoding_method: column_of_values
-      value_for_encoding: C
-    assertion_method:
-      encoding_method: value
-      value_for_encoding: Ranksum test
-    notes: Associations between the mutated gene and drug sensitivity for all significant results
-  triple:
-    triple_subject: 
-      encoding_method: column_of_values
-      value_for_encoding: A
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Gene
-        in_this_organism: NCBITaxon:9606
-    triple_object:
-      encoding_method: column_of_values
-      value_for_encoding: B
-    triple_predicate: biolink:associated_with
+    repo: PMC
+    publication: PMC11176916
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 29 APR 2026
+        organizations:
+          - Institute for Systems Biology
+  annotations:
+    - annotation: sample_size
+      method: value
+      encoding: 75
+    - annotation: p_value
+      method: column
+      encoding: F
+    - annotation: multiple_testing_correction_method
+      method: value
+      encoding: Benjamini Hochberg
+    - annotation: relationship_strength
+      method: column
+      encoding: C
+    - annotation: assertion_method
+      method: value
+      encoding: Ranksum test
+    - annotation: miscellaneous_notes
+      method: value
+      encoding: "Associations between mutated genes and drug sensitivity for all significant results"
 
 sections:
-  - triple:
-      triple_predicate: biolink:associated_with_resistance_to
-    reindexing:
-      - mode: before
-        column: C
-        comparison: ge
-        value_for_comparison: 0
-  - triple:
-      triple_predicate: biolink:associated_with_sensitivity_to
-    reindexing:
-      - mode: before
-        column: C
-        comparison: lt
-        value_for_comparison: 0
+  - statement:
+      predicate: associated_with_resistance_to
+    source:
+      reindex:
+        - column: C
+          comparison: gt
+          comparator: 0
+  - statement:
+      predicate: associated_with_sensitivity_to
+    source:
+      reindex:
+        - column: C
+          comparison: lt
+          comparator: 0

@@ -1,493 +1,366 @@
 template:
-  location:
-    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/10567551/bin/41586_2023_6592_MOESM3_ESM.xlsx
-    download_hyperparameters:
-      file_extension: xlsx
-      which_excel_sheet_to_use: ST7
-      start_at_line_number: 6
+  syntax: TC3
+  status: beta
+
+  source:
+    kind: excel
+    local: ./DATALAKE/SUN1.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10567551/bin/41586_2023_6592_MOESM3_ESM.xlsx
+    sheet: ST7
+    row_slice:
+      - 5
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+        - Protein
+      regex:
+        - pattern: "^.*?:"
+          replacement: ""
+        - pattern: ":[^:]*:[^:]*$"
+          replacement: ""
+      prefix: "UniProtKB:"
+
+    predicate: biomarker_for
+
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+
   provenance:
-    publication: PMC:PMC10567551
-    config_curator_name: Skye Lane Goetz
-    config_curator_organization: Institute for Systems Biology
-  attributes:
-    sample_size:
-      encoding_method: value
-      value_for_encoding: 54219
-    assertion_method:
-      encoding_method: value
-      value_for_encoding: Linear regression
-    notes: Proteomic associations with smoking, medication use, liver function, renal function and top 20 most prevalant diseases
-  triple:
-    triple_subject: 
-      encoding_method: column_of_values
-      value_for_encoding: A
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Protein
-        substrings_to_remove:
-          - '^.*?:'
-          - (:[^:]*:[^:]*)$
-        prefix: "UniProtKB:"
-    triple_object:
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Disease
-    triple_predicate: biolink:associated_with
+    repo: PMC
+    publication: PMC10567551
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 29 APR 2026
+        organizations:
+          - Institute for Systems Biology
+        comment: >-
+          Migrated from TC2 to TC3; changed predicate from associated_with to
+          biomarker_for; fixed Subject regex (capturing group removal); fixed
+          Section 1 column swap; removed broken copysign+pow transformations;
+          added species_context_qualifier
+      - kind: tool
+        name: tablassist
+        date: 29 APR 2026
+
+  annotations:
+    - annotation: sample size
+      method: value
+      encoding: 54219
+    - annotation: assertion method
+      method: value
+      encoding: "Multivariable linear regression"
+    - annotation: miscellaneous notes
+      method: value
+      encoding: >-
+        Proteomic associations with smoking, medication use, liver function,
+        renal function and top 20 most prevalent diseases. Plasma proteome
+        profiled via Olink Explore 3k platform (2,923 proteins) in 54,219 UK
+        Biobank participants. Test statistics (two-sided, unadjusted) derived
+        from multivariable linear regression. P-values are reported as
+        log10-transformed from source.
 
 sections:
-  - triple:
-      triple_object:
-        value_for_encoding: Smoking
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: E
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: C
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Hepatic necrosis
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: I
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: K
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: MONDO:0002050
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: L
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: 'N'
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: MONDO:0001134
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: O
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: Q
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: MONDO:0005010
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: R
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: T
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Vincent's Disease
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: U
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: W
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Vasomotor and allergic rhinitis
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: X
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: Z
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Chronic rhinitis
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: AA
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: AC
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: MONDO:0004979
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: AD
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: AF
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: MONDO:0007186
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: AG
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: AI
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: MONDO:0004628
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: AJ
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: AL
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: MONDO:0005711
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: AM
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: AO
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Irritable bowel syndrome
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: AP
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: AR
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Other diseases of intestine
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: AS
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: AU
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Psoriasis
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: AV
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: AX
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Hypertensive heart and renal disease
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: AY
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: BA
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Acquired deformities of fingers and toes
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: BB
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: BD
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Other and unspecified disorders of joint
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: BE
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: BG
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: HP:0003418
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: BH
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: BJ
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Other and unspecified disorders of soft tissue
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: BK
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: BM
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Other disease of urinary system
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: BN
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: BP
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Alanine aminotransferase measurement
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: BQ
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: BS
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Aspartate aminotransferase measurement
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: BT
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: BV
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
-  - triple:
-      triple_object:
-        value_for_encoding: Glomerular Filtration Rate 
-    attributes:
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: BW
-      p_value:
-        encoding_method: column_of_values
-        value_for_encoding: BY
-        math_module_transformations:
-          - attribute: copysign
-            arguments:
-              - -1
-              - ~
-          - attribute: pow
-            arguments:
-              - ~
-              - 10
+  - statement:
+      object:
+        method: value
+        encoding: Smoking
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: C
+      - annotation: negative log10 p value
+        method: column
+        encoding: E
+
+  - statement:
+      object:
+        method: value
+        encoding: Hepatic necrosis
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: I
+      - annotation: negative log10 p value
+        method: column
+        encoding: K
+
+  - statement:
+      object:
+        method: value
+        encoding: MONDO:0002050
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: L
+      - annotation: negative log10 p value
+        method: column
+        encoding: N
+
+  - statement:
+      object:
+        method: value
+        encoding: MONDO:0001134
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: O
+      - annotation: negative log10 p value
+        method: column
+        encoding: Q
+
+  - statement:
+      object:
+        method: value
+        encoding: MONDO:0005010
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: R
+      - annotation: negative log10 p value
+        method: column
+        encoding: T
+
+  - statement:
+      object:
+        method: value
+        encoding: "Vincent's Disease"
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: U
+      - annotation: negative log10 p value
+        method: column
+        encoding: W
+
+  - statement:
+      object:
+        method: value
+        encoding: Vasomotor and allergic rhinitis
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: X
+      - annotation: negative log10 p value
+        method: column
+        encoding: Z
+
+  - statement:
+      object:
+        method: value
+        encoding: Chronic rhinitis
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: AA
+      - annotation: negative log10 p value
+        method: column
+        encoding: AC
+
+  - statement:
+      object:
+        method: value
+        encoding: MONDO:0004979
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: AD
+      - annotation: negative log10 p value
+        method: column
+        encoding: AF
+
+  - statement:
+      object:
+        method: value
+        encoding: MONDO:0007186
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: AG
+      - annotation: negative log10 p value
+        method: column
+        encoding: AI
+
+  - statement:
+      object:
+        method: value
+        encoding: MONDO:0004628
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: AJ
+      - annotation: negative log10 p value
+        method: column
+        encoding: AL
+
+  - statement:
+      object:
+        method: value
+        encoding: MONDO:0005711
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: AM
+      - annotation: negative log10 p value
+        method: column
+        encoding: AO
+
+  - statement:
+      object:
+        method: value
+        encoding: Irritable bowel syndrome
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: AP
+      - annotation: negative log10 p value
+        method: column
+        encoding: AR
+
+  - statement:
+      object:
+        method: value
+        encoding: Other diseases of intestine
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: AS
+      - annotation: negative log10 p value
+        method: column
+        encoding: AU
+
+  - statement:
+      object:
+        method: value
+        encoding: Psoriasis
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: AV
+      - annotation: negative log10 p value
+        method: column
+        encoding: AX
+
+  - statement:
+      object:
+        method: value
+        encoding: Hypertensive heart and renal disease
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: AY
+      - annotation: negative log10 p value
+        method: column
+        encoding: BA
+
+  - statement:
+      object:
+        method: value
+        encoding: Acquired deformities of fingers and toes
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: BB
+      - annotation: negative log10 p value
+        method: column
+        encoding: BD
+
+  - statement:
+      object:
+        method: value
+        encoding: Other and unspecified disorders of joint
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: BE
+      - annotation: negative log10 p value
+        method: column
+        encoding: BG
+
+  - statement:
+      object:
+        method: value
+        encoding: HP:0003418
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: BH
+      - annotation: negative log10 p value
+        method: column
+        encoding: BJ
+
+  - statement:
+      object:
+        method: value
+        encoding: Other and unspecified disorders of soft tissue
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: BK
+      - annotation: negative log10 p value
+        method: column
+        encoding: BM
+
+  - statement:
+      object:
+        method: value
+        encoding: Other disease of urinary system
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: BN
+      - annotation: negative log10 p value
+        method: column
+        encoding: BP
+
+  - statement:
+      object:
+        method: value
+        encoding: Alanine aminotransferase measurement
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: BQ
+      - annotation: negative log10 p value
+        method: column
+        encoding: BS
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "ALT (alanine aminotransferase) measurement — protein association with liver function test"
+
+  - statement:
+      object:
+        method: value
+        encoding: Aspartate aminotransferase measurement
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: BT
+      - annotation: negative log10 p value
+        method: column
+        encoding: BV
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "AST (aspartate aminotransferase) measurement — protein association with liver function test"
+
+  - statement:
+      object:
+        method: value
+        encoding: Glomerular Filtration Rate
+    annotations:
+      - annotation: relationship strength
+        method: column
+        encoding: BW
+      - annotation: negative log10 p value
+        method: column
+        encoding: BY
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "eGFR (estimated glomerular filtration rate) — protein association with renal function test"

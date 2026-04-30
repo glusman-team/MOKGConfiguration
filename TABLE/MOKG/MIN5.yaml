@@ -1,39 +1,64 @@
 template:
-  location:
-    where_to_download_data_from: https://pmc.ncbi.nlm.nih.gov/articles/instance/10622416/bin/41467_2023_42626_MOESM8_ESM.xlsx
-    download_hyperparameters:
-      which_excel_sheet_to_use: Sheet 1
-      file_extension: xlsx
-      start_at_line_number: 2
-  provenance:
-    publication: PMC:PMC10622416
-    config_curator_name: Skye Lane Goetz
-    config_curator_organization: Institute for Systems Biology
-  attributes:
-    relationship_strength:
-      encoding_method: column_of_values
-      value_for_encoding: F
-    assertion_method:
-      encoding_method: value
-      value_for_encoding: Unspecified score
-    notes: Our findings suggest that nilotinib or other small molecules inhibiting DDR2 may also be viable therapeutic candidates in PSP. We provide a list of small molecule inhibitors retrieved from the Drug Gene Interaction database (DGIdb) in Supplementary Data 5.
-  triple:
-    triple_subject: 
-      encoding_method: column_of_values
-      value_for_encoding: C
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Drug
-          - biolink:SmallMolecule
-          - biolink:ChemicalEntity
-    triple_object:
-      encoding_method: column_of_values
-      value_for_encoding: A
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Gene
-        in_this_organism: NCBITaxon:9606
-    triple_predicate: biolink:affects
+  syntax: TC3
+  status: beta
 
-sections:
-  - ~
+  source:
+    kind: excel
+    local: ./DATALAKE/MIN5.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10622416/bin/41467_2023_42626_MOESM8_ESM.xlsx
+    sheet: "Sheet 1"
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: C
+      prioritize:
+        - Drug
+        - SmallMolecule
+        - ChemicalEntity
+
+    predicate: affects
+
+    object:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+        - Gene
+
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+
+  provenance:
+    repo: PMC
+    publication: PMC10622416
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 29 APR 2026
+        organizations:
+          - Institute for Systems Biology
+          - CalPoly SLO
+        comment: Migrated from TC2 to TC3; added species_context_qualifier and interaction type annotation
+      - kind: tool
+        name: tablassist
+        date: 29 APR 2026
+
+  annotations:
+    - annotation: relationship strength
+      method: column
+      encoding: F
+    - annotation: interaction type
+      method: column
+      encoding: B
+    - annotation: assertion method
+      method: value
+      encoding: Unspecified score
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Our findings suggest that nilotinib or other small molecules inhibiting DDR2 may also be viable therapeutic candidates in PSP. We provide a list of small molecule inhibitors retrieved from the Drug Gene Interaction database (DGIdb) in Supplementary Data 5.

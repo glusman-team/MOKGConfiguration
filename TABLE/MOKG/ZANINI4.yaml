@@ -1,63 +1,61 @@
 template:
-  location:
-    where_to_download_data_from: https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-024-03142-z/MediaObjects/41591_2024_3142_MOESM3_ESM.xlsx
-    download_hyperparameters:
-      file_extension: xlsx
-      which_excel_sheet_to_use: Supplementary Table 4
-      start_at_line_number: 5
-  provenance:
-    publication: PMC:PMC11405273
-    config_curator_name: Skye Lane Goetz
-    config_curator_organization: Institute for Systems Biology
-  attributes:
-    assertion_method:
-      encoding_method: value
-      value_for_encoding: Cox regression
-    notes: Predictive performance of protein-based model compared to benchmark patient information models.
-  triple:
-    triple_subject: 
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Protein
-        substrings_to_remove:
-          - _.*
-          - ^[^a-zA-Z]*
-        explode_by_delimiter: ','
-    triple_object:
-      encoding_method: column_of_values
-      value_for_encoding: A
-      mapping_hyperparameters:
-        classes_to_prioritize:
-          - biolink:Disease
-        regular_expressions:
-          - pattern : '.$'
-            replacement : ''
-          - pattern : 'coeliac disease'
-            replacement : 'celiac disease'
-          - pattern : '_'
-            replacement : ''
-    triple_predicate: biolink:associated_with_increased_likelihood_of
+  syntax: TC3
+  status: alpha
 
-sections:
-  - attributes:
-      sample_size:
-        encoding_method: column_of_values
-        value_for_encoding: I
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: F
-    triple:
-      triple_subject:
-        encoding_method: column_of_values
-        value_for_encoding: L
-  - attributes:
-      sample_size:
-        encoding_method: column_of_values
-        value_for_encoding: S
-      relationship_strength:
-        encoding_method: column_of_values
-        value_for_encoding: P
-    triple:
-      triple_subject:
-        encoding_method: column_of_values
-        value_for_encoding: V
+  source:
+    kind: excel
+    local: ./DATALAKE/41591_2024_3142_MOESM3_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/38703046/bin/41591_2024_3142_MOESM3_ESM.xlsx
+    sheet: "Supplementary Table 4"
+    row_slice:
+      - 4
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: L
+      prioritize:
+        - Protein
+      regex:
+        - pattern: "_\\d+$"
+          replacement: ""
+      explode_by: " , "
+    predicate: associated_with
+    object:
+      method: column
+      encoding: A
+      prioritize:
+        - Disease
+      regex:
+        - pattern: "Coeliac"
+          replacement: "Celiac"
+        - pattern: " +$"
+          replacement: ""
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+
+  provenance:
+    repo: PMC
+    publication: PMC38703046
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 29 APR 2026
+        organizations:
+          - Institute for Systems Biology
+          - CalPoly SLO
+        comment: Migrated from TC2 to TC3 syntax
+
+  annotations:
+    - annotation: relationship_strength
+      method: column
+      encoding: F
+    - annotation: sample_size
+      method: column
+      encoding: I
+    - annotation: assertion_method
+      method: value
+      encoding: Cox regression
