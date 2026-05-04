@@ -62,6 +62,33 @@ tables:
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/YUAN2.yaml
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/YUN1.yaml
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/ZHOU29.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/AYOGLU1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/CHENG1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/CORREIA1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/CORREIA2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/CORREIA3.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/DENG8.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/DURAZO1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/ELDJARN1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/GASPAR2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/HONG8.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/HOYER1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/HUANG1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/HUANG2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/HUANG3.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/JIA1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/KANEMARU1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/LEE1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/MARTINPEREZ1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/MIN1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/MIN4.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/MIN5.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/QIN2.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/QIN3.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/QIN9.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/SUN1.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/WAINBERG3.yaml
+  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/WALKER1.yaml
 datassert: /local_raid1/sgoetz/STORE/DATASETS/DATASSERT/datassert
 # pubmed_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/PUBMED/PubMed.db
 # pmc_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/CAPTIONS/PMCSuppCaptions.db
