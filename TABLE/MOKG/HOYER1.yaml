@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ./DATALAKE/HOYER1.xls
+    local: ./DATALAKE/HOYER1.xlsx
     url: https://static-content.springer.com/esm/art%3A10.1186%2Fs12883-022-02828-6/MediaObjects/12883_2022_2828_MOESM4_ESM.xls
     sheet: Sheet 1
     row_slice:

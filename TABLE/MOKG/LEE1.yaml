@@ -4,7 +4,7 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/LEE1.xlsx
-    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9616573/bin/supplementary_data_ddac040.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9616573/bin/supplementary_data_ddac040.xlsx
     row_slice: [1, auto]
   provenance:
     repo: PMC
