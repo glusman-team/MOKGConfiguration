@@ -30,7 +30,7 @@ template:
 
   provenance:
     repo: PMC
-    publication: "11310467"
+    publication: PMC11310467
     contributors:
       - kind: curation
         name: Skye Lane Goetz

@@ -28,7 +28,7 @@ template:
         encoding: "UBERON:0000178"
   provenance:
     repo: PMC
-    publication: "10567571"
+    publication: PMC10567571
     contributors:
       - kind: curation
         name: Classroom
