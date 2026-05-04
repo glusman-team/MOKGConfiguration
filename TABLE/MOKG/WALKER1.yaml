@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ./DATALAKE/NIHMS1876340-supplement-Supplementary_Tables.xlsx
+    local: ./DATALAKE/WALKER1.xlsx
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/38703046/bin/NIHMS1876340-supplement-Supplementary_Tables.xlsx
 
   statement:

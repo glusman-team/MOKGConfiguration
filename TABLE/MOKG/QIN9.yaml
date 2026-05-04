@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: ./DATALAKE/ccr-23-1674_supplementary_table_s1-s14_suppts1.xlsx
+    local: ./DATALAKE/QIN9.xlsx
     url: https://ndownloader.figstatic.com/files/47044431
     sheet: "TableS9 Drug-gene-asso"
     row_slice: [1, auto]

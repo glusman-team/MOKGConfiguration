@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ./WAINBERG3.xlsx
+    local: ./DATALAKE/WAINBERG3.xlsx
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/2001429117/bin/WAINBERG3.xlsx
 
   statement:

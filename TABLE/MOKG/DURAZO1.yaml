@@ -4,7 +4,7 @@ template:
   source:
     kind: excel
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10349864/bin/42003_2023_5113_MOESM4_ESM.xlsx
-    local: ./PMC10349864/42003_2023_5113_MOESM4_ESM.xlsx
+    local: ./DATALAKE/DURAZO1.yaml
     row_slice:
       - 2
       - auto
