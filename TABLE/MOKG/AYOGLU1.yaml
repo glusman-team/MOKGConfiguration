@@ -58,5 +58,5 @@ template:
       method: column
       encoding: D
     - annotation: miscellaneous notes
-      methoc: value
+      method: value
       encoding: antibody bead array platform with 384 antibodies
