@@ -15,13 +15,13 @@ template:
       prioritize:
         - OrganismTaxon
       remove:
-        - ' species.*'
+        - " species.*"
         - ' \(.*'
       regex:
         - pattern: '\['
-          replacement: ''
+          replacement: ""
         - pattern: '\]'
-          replacement: ''
+          replacement: ""
     predicate: associated_with
     qualifiers:
       - qualifier: anatomical_context_qualifier
