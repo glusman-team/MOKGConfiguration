@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: ./DATALAKE/MARTINPEREZ1.yaml
+    local: ./DATALAKE/MARTINPEREZ1.xlsx
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC8017771.1/NIHMS1644812-supplement-1644812_Supp_Tab1.xlsx
     sheet: Supp.Table1A_log2 LFQ intensity
     row_slice:
