@@ -13,7 +13,6 @@ template:
       encoding: C
       taxon: 9606
       prioritize: [Gene]
-      prefix: "ENSEMBL:"
     predicate: associated_with_resistance_to
     object:
       method: column
