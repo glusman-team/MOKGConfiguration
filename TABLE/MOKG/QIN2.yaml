@@ -10,15 +10,16 @@ template:
   statement:
     subject:
       method: column
-      encoding: C
+      encoding: B
+      prefix: "ENSEMBL:"
       taxon: 9606
-      prioritize: [Gene]
+      prioritize: [Gene, Protein]
     predicate: associated_with_resistance_to
     object:
       method: column
       encoding: A
       remove: ["\\s*\\(.*"]
-      prioritize: [SmallMolecule, ChemicalEntity]
+      prioritize: [SmallMolecule, ChemicalEntity, Drug]
     qualifiers:
       - qualifier: species_context_qualifier
         method: value
