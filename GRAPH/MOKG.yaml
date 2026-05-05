@@ -4,8 +4,8 @@
 # ! == NEEDS TO BE MANUALLY DOWNLOADED
 
 syntax: GC2
-name: MICROBIOME_KG
-version: INSANE
+name: MULTIOMICS_KG
+version: 3.0.0
 tables:
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/AVUTHU1.yaml
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/AVUTHU2.yaml
