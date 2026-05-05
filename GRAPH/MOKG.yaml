@@ -88,7 +88,6 @@ tables:
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/QIN9.yaml
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/SUN1.yaml
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/WAINBERG3.yaml
-  - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MOKG/WALKER1.yaml
 datassert: /local_raid1/sgoetz/STORE/DATASETS/DATASSERT/datassert
 # pubmed_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/PUBMED/PubMed.db
 # pmc_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/CAPTIONS/PMCSuppCaptions.db
