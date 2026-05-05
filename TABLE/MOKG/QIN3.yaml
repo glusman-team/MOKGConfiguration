@@ -10,10 +10,9 @@ template:
   statement:
     subject:
       method: column
-      encoding: B
+      encoding: E
       taxon: 9606
       prioritize: [Gene]
-      prefix: "ENSEMBL:"
       remove:
         - "_RSS$"
         - "_intercept_$"

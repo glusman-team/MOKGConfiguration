@@ -10,7 +10,7 @@ template:
   statement:
     subject:
       method: column
-      encoding: B
+      encoding: C
       taxon: 9606
       prioritize: [Gene]
       prefix: "ENSEMBL:"
