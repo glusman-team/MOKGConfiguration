@@ -91,3 +91,5 @@ tables:
 datassert: /local_raid1/sgoetz/STORE/DATASETS/DATASSERT/datassert
 # pubmed_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/PUBMED/PubMed.db
 # pmc_db: /local_raid1/sgoetz/DBSTORE/local_raid1/sgoetz/DBSTORE/CAPTIONS/PMCSuppCaptions.db
+qc: true
+log: true
