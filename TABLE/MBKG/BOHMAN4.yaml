@@ -21,7 +21,7 @@ template:
     qualifiers:
       - qualifier: anatomical_context_qualifier
         method: value
-        encoding: UBERON:0001557
+        encoding: UMLS:C0458578
   provenance:
     repo: PMC
     publication: PMC11040984

@@ -26,7 +26,7 @@ template:
         encoding: NCBITaxon:9606
       - qualifier: disease_context_qualifier
         method: value
-        encoding: MONDO:0018874
+        encoding: MONDO:0015667
   provenance:
     repo: PMC
     publication: PMC11401200
