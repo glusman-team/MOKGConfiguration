@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: ./PMC12131765_autoimmune_data.xlsx
+    local: ./DATALAKE/PMC12131765_autoimmune_data.xlsx
     url: https://example.com/PMC12131765_autoimmune_data.xlsx
     sheet: "Crohn's disease"
     row_slice: [1, auto]

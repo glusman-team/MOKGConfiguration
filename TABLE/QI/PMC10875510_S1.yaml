@@ -4,7 +4,7 @@ template:
   
   source:
     kind: text
-    local: ./PMC10875510_TABLE_S1.csv
+    local: ./DATALAKE/PMC10875510_TABLE_S1.csv
     url: https://example.com/PMC10875510_TABLE_S1.csv
     row_slice: [1, auto]
     delimiter: ","

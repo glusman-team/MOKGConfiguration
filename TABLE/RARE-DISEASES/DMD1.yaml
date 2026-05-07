@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: .ledger/rare-neuromuscular-myopathy-omics/data/PMC12618936/source/PMC12618936.1/41598_2025_23758_MOESM1_ESM.xlsx
+    local: ./DATALAKE/PMC12618936.1__41598_2025_23758_MOESM1_ESM.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12618936/
     sheet: Significant
 

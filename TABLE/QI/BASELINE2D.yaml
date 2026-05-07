@@ -4,7 +4,7 @@ template:
 
   source:
     kind: text
-    local: ./BASELINE_TABLE_S2.csv
+    local: ./DATALAKE/BASELINE_TABLE_S2.csv
     url: https://raw.githubusercontent.com/skyeav/TableConfigs/main/TABLE/QI/BASELINE_TABLE_S2.csv
     delimiter: ","
     row_slice: [28, 29]  # Only the severe outcome row

@@ -4,7 +4,7 @@ template:
 
   source:
     kind: text
-    local: 13148_2026_2120_MOESM3_ESM.docx
+    local: ./DATALAKE/13148_2026_2120_MOESM3_ESM.docx
     url: https://static-content.springer.com/esm/art%3A10.1186%2Fs13053-026-02120-7/MediaObjects/13148_2026_2120_MOESM3_ESM.docx
 
   statement:

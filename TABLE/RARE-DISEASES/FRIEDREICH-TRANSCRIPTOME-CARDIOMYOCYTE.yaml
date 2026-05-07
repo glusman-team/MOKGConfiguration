@@ -4,7 +4,7 @@ template:
   
   source:
     kind: excel
-    local: .ledger/friedreich-ataxia-fxn/data/PMC13015369/source/PMC13015369.1/media-1.xlsx
+    local: ./DATALAKE/PMC13015369.1__media-1.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13015369/
     sheet: cardiomyocyte_only
     row_slice: [1, auto]

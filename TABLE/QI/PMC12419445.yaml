@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: text
-    local: ./data/PMC12419445_Sheet1.csv
+    local: ./DATALAKE/PMC12419445_Sheet1.csv
     url: https://placeholder-url-for-supplementary-table/PMC12419445_S1.csv
     delimiter: ","
     row_slice:

@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: .ledger/source/PMC13134772.1/TableS5.xlsx
+    local: ./DATALAKE/TableS5.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13134772/bin/TableS5.xlsx
     sheet: Table S5
     row_slice:

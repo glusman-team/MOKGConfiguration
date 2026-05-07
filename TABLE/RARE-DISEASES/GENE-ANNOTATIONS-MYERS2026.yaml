@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: .ledger/rett-syndrome-mecp2/data/PMC13133546/source/PMC13133546.1/DNEU-86-0-s006.xlsx
+    local: ./DATALAKE/DNEU-86-0-s006.xlsx
     url: https://pubmed.ncbi.nlm.nih.gov/13133546/
     sheet: "Differentially Expressed"
     row_slice: [1, auto]

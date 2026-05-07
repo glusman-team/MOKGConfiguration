@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: Table2.xlsx
+    local: ./DATALAKE/Table2.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13079709/bin/Table2.xlsx
     sheet: 'NEW EXTRACTION'
     row_slice: [1, auto]

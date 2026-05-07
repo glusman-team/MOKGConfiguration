@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ./PMC13040371_gene_database.xlsx
+    local: ./DATALAKE/PMC13040371_gene_database.xlsx
     url: https://example.com/PMC13040371_gene_database.xlsx
     sheet: "Sheet1"
     row_slice: [1, auto]

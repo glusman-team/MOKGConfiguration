@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: .ledger/mendelian-neurodevelopmental-episignatures/data/PMC13083260/raw/41588_2026_2547_MOESM4_ESM.xlsx
+    local: ./DATALAKE/41588_2026_2547_MOESM4_ESM.xlsx
     url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-026-02547-9/MediaObjects/41588_2026_2547_MOESM4_ESM.xlsx
     sheet: Supp. Table 1
     row_slice: [0, auto]

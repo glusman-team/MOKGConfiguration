@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ".ledger/tnf-alpha-inhibitors-covid-19-risk/data/PMC13141636/source/PMC13141636.1/mmc8.xlsx"
+    local: ./DATALAKE/mmc8.xlsx
     url: "https://www.sciencedirect.com/cms/attachment/pmc13141636/mmc8.xlsx"
 
   provenance:

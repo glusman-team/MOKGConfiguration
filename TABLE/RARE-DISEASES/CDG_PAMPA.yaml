@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: .ledger/cdg/data/PMC13071126/source/PMC13071126.1/IUB-78-0-s002.xlsx
+    local: ./DATALAKE/IUB-78-0-s002.xlsx
     url: https://journals.iucr.org/iucr/publications/iub/iub78/iub78-supplementary/IUB-78-0-s002.xlsx
     sheet: "PAMPA assay"
     row_slice: [1, auto]  # Skip header row

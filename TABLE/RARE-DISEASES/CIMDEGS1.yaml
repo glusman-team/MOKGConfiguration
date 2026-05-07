@@ -4,7 +4,7 @@ template:
 
   source:
     kind: text
-    local: .ledger/rare-neuromuscular-myopathy-omics/data/PMC6466682/source/PMC6466682/13395_2019_194_MOESM2_ESM.txt
+    local: ./DATALAKE/13395_2019_194_MOESM2_ESM.txt
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6466682/
     delimiter: "\t"
     row_slice:

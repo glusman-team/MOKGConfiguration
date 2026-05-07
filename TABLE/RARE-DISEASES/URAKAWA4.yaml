@@ -4,7 +4,7 @@ template:
 
   source:
     kind: text
-    local: ./.ledger/imprinting-disorder-methylomics/data/PMC13104445/source/derived/gnas_php1b.csv
+    local: ./DATALAKE/gnas_php1b.csv
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13104445/
     delimiter: ","
     row_slice:

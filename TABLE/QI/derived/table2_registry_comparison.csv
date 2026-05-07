@@ -1,7 +1,0 @@
-Feature,Rheumatry (Iran),CorEvitas / CORRONA [1] (USA),Reuma.pt [10] (Portugal),BSRBR-RA [2] (UK),EUSTAR [3] (Europe)
-Diseases covered,RA, SLE, SSc, AS, TAK, OA – multi-disease,Primarily RA, plus PsA, SpA (PsA added 2013),Multi-disease (13 protocols incl. RA, AS, PsA, JIA, SLE, SSc, etc.),RA only (mostly biologics users),SSc only (23,000+ patients)
-Enrollment,2016; 26 centers; ~11,943 patients; MOH-funded,2001; 170+ sites; >45,000 RA patients,2008; nationwide; all patients on biologics,2001; ~20,000 patients on biologics,2004; 200+ centers; >23,000 SSc patients
-Data capture,Web-based electronic forms (since 2018),Electronic forms by physicians; includes patient questionnaires,Web-based EHR module; patient PRO portal,Paper/electronic forms; NHS data linkages,Online annual entry by centers
-Patient-reported data,Included: HAQ, pain VAS, patient global, BASDAI/BASFI,Included: HAQ, pain VAS, patient & physician global,Included: PROs (HAQ, SF-36, etc.) via portal,Included: HAQ, VAS,Partial: skin VAS, disability; EUSTAR-AI for disease activity
-Disease indices,DAS28 (RA), BASDAI/BASFI (AS), SLEDAI, SLICC (SLE), Medsger (SSc), NIH (TAK),CDAI, DAS28 (RA), BASDAI, PsARC,DAS28, ASDAS/BASDAI, others per protocol,DAS28, HAQ,EUSTAR-AI, mRSS, pulmonary/fibrosis scores
-Pharmacovigilance,Captures drug use and adverse events; MedDRA coding enabled,Long-term biologic safety monitoring,Required for all on biologics; tracks indication and safety,Main purpose: monitor safety of anti-TNF,Ancillary to research; can analyze treatment outcomes

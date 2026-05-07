@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ./.ledger/pediatric-acute-care-multi-omics/data/PMC13140575/raw/source/PMC13140575.1/JCMM-30-e71102-s004.xlsx
+    local: ./DATALAKE/JCMM-30-e71102-s004.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13140575/
     sheet: Table S12
     row_slice: [1, auto]

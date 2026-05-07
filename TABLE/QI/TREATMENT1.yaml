@@ -4,7 +4,7 @@ template:
 
   source:
     kind: text
-    local: ./TREATMENT_TABLE_S1.csv
+    local: ./DATALAKE/TREATMENT_TABLE_S1.csv
     url: https://raw.githubusercontent.com/skyeav/TableConfigs/main/TABLE/QI/TREATMENT_TABLE_S1.csv
     delimiter: ","
     row_slice: [1, auto]

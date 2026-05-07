@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: .ledger/ace2-expression-spondyloarthritis-patients/data/PMC13112774/raw/12863_2026_1414_MOESM2_ESM.xlsx
+    local: ./DATALAKE/12863_2026_1414_MOESM2_ESM.xlsx
     url: https://static-content.springer.com/esm/art%3A10.1186%2Fs12863-026-01414-w/MediaObjects/12863_2026_1414_MOESM2_ESM.xlsx
     sheet: Sheet1
     row_slice:

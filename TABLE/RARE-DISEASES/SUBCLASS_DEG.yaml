@@ -40,7 +40,7 @@ template:
 
 sections:
   - source:
-      local: ./.ledger/pediatric-acute-care-multi-omics/data/PMC10709863/raw/source/PMC10709863.1/13054_2023_4689_MOESM5_ESM.csv
+      local: ./DATALAKE/13054_2023_4689_MOESM5_ESM.csv
     annotations:
       - annotation: log2_fold_change
         method: column
@@ -62,7 +62,7 @@ sections:
         encoding: subclass1_vs_subclass2
 
   - source:
-      local: ./.ledger/pediatric-acute-care-multi-omics/data/PMC10709863/raw/source/PMC10709863.1/13054_2023_4689_MOESM6_ESM.csv
+      local: ./DATALAKE/13054_2023_4689_MOESM6_ESM.csv
     annotations:
       - annotation: log2_fold_change
         method: column

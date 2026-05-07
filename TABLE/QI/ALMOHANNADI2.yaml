@@ -4,7 +4,7 @@ template:
 
   source:
     kind: text
-    local: .ledger/ace2-expression-spondyloarthritis-patients/data/PMC13112774/source/PMC13112774.1/PMC13112774.1.txt
+    local: ./DATALAKE/PMC13112774.1.txt
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13112774/
     delimiter: "\t"
     row_slice:

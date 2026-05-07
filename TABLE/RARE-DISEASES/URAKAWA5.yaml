@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ./.ledger/imprinting-disorder-methylomics/data/PMC12958509/raw/source/PMC12958509.1/13148_2026_2065_MOESM5_ESM.xlsx
+    local: ./DATALAKE/13148_2026_2065_MOESM5_ESM.xlsx
     url: https://static-content.springer.com/esm/art%3A10.1186%2Fs13148-026-02065-5/MediaObjects/13148_2026_2065_MOESM5_ESM.xlsx
     sheet: Sheet1
     row_slice:

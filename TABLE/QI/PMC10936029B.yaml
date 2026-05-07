@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: ./12967_2024_5077_MOESM2_ESM.xls
+    local: ./DATALAKE/12967_2024_5077_MOESM2_ESM.xls
     url: https://example.com/12967_2024_5077_MOESM2_ESM.xls
     sheet: "Sheet1"
     row_slice: [1, auto]

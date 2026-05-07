@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: .ledger/il-17-pathway-respiratory-infections/data/PMC12800128/source/source/PMC12800128.1/41467_2025_67120_MOESM4_ESM.xlsx
+    local: ./DATALAKE/41467_2025_67120_MOESM4_ESM.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12800128/bin/41467_2025_67120_MOESM4_ESM.xlsx
     sheet: "Fig. 4f-g & Suppl. Fig. 5b-c"
     row_slice:

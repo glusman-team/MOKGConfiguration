@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: 41541_2025_1234_MOESM2_ESM.xlsx
+    local: ./DATALAKE/41541_2025_1234_MOESM2_ESM.xlsx
     url: https://example.com/41541_2025_1234_MOESM2_ESM.xlsx
     sheet: peptide vs donor
     row_slice:

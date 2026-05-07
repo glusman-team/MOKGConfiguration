@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ./.ledger/il-23-il-17-axis-sars-cov-2/data/PMC7788102/source/PMC7788102.2/mmc1.xlsx
+    local: ./DATALAKE/mmc1.xlsx
     url: https://ftp.ncbi.nlm.nih.gov/pub/pmc/supplemental/PMC7788102/mmc1.xlsx
     sheet: Sup_Table 6 Group 1 vs ALL
     row_slice: [0, auto]

@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: .ledger/rare-neuromuscular-myopathy-omics/data/PMC7710136/source/PMC7710136/163442_0_supp_594814_qgmj1m.xlsx
+    local: ./DATALAKE/163442_0_supp_594814_qgmj1m.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7710136/
     sheet: "Protein Data"
     row_slice:

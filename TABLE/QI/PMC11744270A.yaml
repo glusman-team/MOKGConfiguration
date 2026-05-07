@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: Table14.xlsx
+    local: ./DATALAKE/Table14.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11744270/bin/Table14.xlsx
     sheet: Sheet1
   statement:

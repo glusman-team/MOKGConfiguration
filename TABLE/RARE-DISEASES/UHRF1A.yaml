@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ./.ledger/imprinting-disorder-methylomics/data/PMC12403135/raw/source/PMC12403135.1/pnas.2505884122.sd01.xlsx
+    local: ./DATALAKE/pnas.2505884122.sd01.xlsx
     url: https://www.pnas.org/doi/suppl/10.1073/pnas.2505884122/suppl_file/pnas.2505884122.sd01.xlsx
     sheet: Sheet1
     row_slice: [0, auto]

@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: .ledger/rare-neuromuscular-myopathy-omics/data/PMC8242265/source/PMC8242265/mmc13.xlsx
+    local: ./DATALAKE/mmc13.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8242265/
     sheet: Table S7
     row_slice:

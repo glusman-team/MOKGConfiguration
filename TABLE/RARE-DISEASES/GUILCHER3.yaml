@@ -4,7 +4,7 @@ template:
   
   source:
     kind: text
-    local: ./suppl_table_s5_supplements.csv
+    local: ./DATALAKE/suppl_table_s5_supplements.csv
     url: https://doi.org/10.1136/jpn-2022-000015
     row_slice: [1, auto]
     delimiter: ","

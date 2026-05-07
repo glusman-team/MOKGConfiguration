@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: .ledger/rare-neuromuscular-myopathy-omics/data/PMC6466682/source/PMC6466682/13395_2019_194_MOESM4_ESM.xlsx
+    local: ./DATALAKE/13395_2019_194_MOESM4_ESM.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6466682/
     sheet: 68genes_overlap_182_loaded_vs_n
     row_slice:

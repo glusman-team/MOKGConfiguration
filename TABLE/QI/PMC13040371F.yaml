@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ./PMC13040371_classifier_performance.xlsx
+    local: ./DATALAKE/PMC13040371_classifier_performance.xlsx
     url: https://example.com/PMC13040371_classifier_performance.xlsx
     sheet: "Sheet1"
     row_slice: [1, auto]

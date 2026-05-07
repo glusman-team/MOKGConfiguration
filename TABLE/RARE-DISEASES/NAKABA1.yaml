@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: /home/skyeav/Code/ISB/TableConfigs/TABLE/RARE-DISEASES/.ledger/imprinting-disorder-methylomics/data/PMC12628973/raw/source/PMC12628973.1/13073_2025_1559_MOESM3_ESM.xlsx
+    local: ./DATALAKE/13073_2025_1559_MOESM3_ESM.xlsx
     url: https://static-content.springer.com/esm/art%3A10.1186%2Fs13073-025-01559-0/MediaObjects/13073_2025_1559_MOESM3_ESM.xlsx
     sheet: Table S3A
     row_slice: [3, auto]

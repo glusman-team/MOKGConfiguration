@@ -4,7 +4,7 @@ template:
 
   source:
     kind: text
-    local: ./.ledger/pediatric-acute-care-multi-omics/data/PMC13125234/source/43856_2026_1489_MOESM6_ESM.csv
+    local: ./DATALAKE/43856_2026_1489_MOESM6_ESM.csv
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13125234/
     row_slice: [1, "auto"]
     delimiter: ","

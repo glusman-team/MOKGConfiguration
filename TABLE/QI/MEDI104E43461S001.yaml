@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ./.ledger/finngen-autoimmune-gwas-summary/data/PMC12323946/source/PMC12323946.1/medi-104-e43461-s001.xlsx
+    local: ./DATALAKE/medi-104-e43461-s001.xlsx
     url: https://links.lww.com/MD/P447
     sheet: Sheet1
     row_slice:

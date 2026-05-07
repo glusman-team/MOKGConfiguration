@@ -4,7 +4,7 @@ template:
 
   source:
     kind: text
-    local: ./.ledger/imprinting-disorder-methylomics/data/PMC11452994/source/derived/urakawa_variants.csv
+    local: ./DATALAKE/urakawa_variants.csv
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11452994/
     delimiter: ","
     row_slice:

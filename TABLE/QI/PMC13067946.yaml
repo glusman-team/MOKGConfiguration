@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: ./source/PMC13067946/csbj.0002.f1.xlsx
+    local: ./DATALAKE/csbj.0002.f1.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13067946/bin/csbj.0002.f1.xlsx
     sheet: supp_data
     row_slice: [1, auto]

@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: .ledger/shared-gwas-loci-covid-psoriasis/data/PMC12790996/source/mmc4.xlsx
+    local: ./DATALAKE/mmc4.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12790996/bin/mmc4.xlsx
     sheet: "Table S9"
     row_slice:

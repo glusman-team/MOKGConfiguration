@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: PMC13018755.xlsx
+    local: ./DATALAKE/PMC13018755.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13018755/
     sheet: ST3
     row_slice: [1, auto]

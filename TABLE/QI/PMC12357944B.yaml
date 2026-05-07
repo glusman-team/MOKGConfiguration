@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: text
-    local: MOESM3_ESM.csv
+    local: ./DATALAKE/MOESM3_ESM.csv
     url: https://example.com/MOESM3_ESM.csv
     delimiter: ","
     row_slice:

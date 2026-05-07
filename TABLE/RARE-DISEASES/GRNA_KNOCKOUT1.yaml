@@ -4,7 +4,7 @@ template:
   
   source:
     kind: text
-    local: ./data/PMC13143275/source/PMC13143275.1/elife-106587-supp4.docx
+    local: ./DATALAKE/elife-106587-supp4.docx
     url: https://pubmed.ncbi.nlm.nih.gov/13143275/
   
   statement:

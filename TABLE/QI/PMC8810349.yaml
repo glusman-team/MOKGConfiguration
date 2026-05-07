@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: mmc2.xlsx
+    local: ./DATALAKE/mmc2.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8810349/bin/mmc2.xlsx
     sheet: "FINAL TABLE"
     row_slice: [1, auto]

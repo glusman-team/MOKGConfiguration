@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: ./source/PMC12768973/source/PMC12768973.1/41564_2025_2200_MOESM4_ESM.xlsx
+    local: ./DATALAKE/41564_2025_2200_MOESM4_ESM.xlsx
     url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41564-025-2200-x/MediaObjects/41564_2025_2200_MOESM4_ESM.xlsx
     sheet: "Figure 1d"
     row_slice: [1, auto]

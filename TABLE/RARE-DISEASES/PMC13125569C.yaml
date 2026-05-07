@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ".ledger/systemic-sclerosis-scleroderma/data/PMC13125569/raw/raw/41467_2026_70395_MOESM5_ESM.xlsx"
+    local: ./DATALAKE/41467_2026_70395_MOESM5_ESM.xlsx
     url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13125569/"
     sheet: "Supplementary Fig. 4A-B"
     row_slice: [2, auto]

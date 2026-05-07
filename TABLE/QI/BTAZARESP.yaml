@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: ./pone.0273612.s002.xlsx
+    local: ./DATALAKE/pone.0273612.s002.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9439210/bin/pone.0273612.s002.xlsx
     sheet: BT and AZA
     row_slice:

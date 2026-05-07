@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: ./.ledger/pediatric-acute-care-multi-omics/data/PMC13141636/source/mmc8.xlsx
+    local: ./DATALAKE/source__mmc8.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13141636/bin/mmc8.xlsx
     row_slice: [1, "auto"]
 

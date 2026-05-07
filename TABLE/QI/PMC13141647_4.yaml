@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: /home/skyeav/Code/ISB/TableConfigs/.ledger/tnf-alpha-inhibitors-covid-19-risk/data/PMC13141647/source/PMC13141647.1/mmc5.xlsx
+    local: ./DATALAKE/PMC13141647.1__mmc5.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13141647/bin/mmc5.xlsx
     sheet: "Sheet 1 - Table S6"
     row_slice:

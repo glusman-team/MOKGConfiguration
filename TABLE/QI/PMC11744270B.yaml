@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: Table1.xlsx
+    local: ./DATALAKE/Table1.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11744270/bin/Table1.xlsx
     sheet: Ma-Mel-63a_mock_MQ.peptides
   statement:

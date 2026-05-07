@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: .ledger/rare-diseases/data/PMC12618936/source/PMC12618936/41598_2025_23758_MOESM1_ESM.xlsx
+    local: ./DATALAKE/41598_2025_23758_MOESM1_ESM.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12618936/
     row_slice:
       - 1

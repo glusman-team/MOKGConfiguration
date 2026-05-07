@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: 41467_2025_63288_MOESM3_ESM.xlsx
+    local: ./DATALAKE/41467_2025_63288_MOESM3_ESM.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12394707/bin/41467_2025_63288_MOESM3_ESM.xlsx
     sheet: "Table 3 "
     row_slice: [2, auto]

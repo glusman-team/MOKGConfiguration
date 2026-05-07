@@ -4,7 +4,7 @@ template:
 
   source:
     kind: excel
-    local: Table_1.xlsx
+    local: ./DATALAKE/Table_1.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13132834/bin/Table_1.xlsx
     sheet: "SupTable-8"
     row_slice: [1, "auto"]

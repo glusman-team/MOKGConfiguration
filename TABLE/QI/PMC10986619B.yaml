@@ -3,7 +3,7 @@ template:
   status: alpha
   source:
     kind: excel
-    local: ./source/PMC10986619/spectrum.02981-23-s0001.xlsx
+    local: ./DATALAKE/spectrum.02981-23-s0001.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10986619/bin/spectrum.02981-23-s0001.xlsx
     sheet: Patienter
     row_slice:
