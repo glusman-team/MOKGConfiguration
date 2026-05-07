@@ -1,0 +1,69 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./12967_2024_5077_MOESM1_ESM.xls
+    url: https://example.com/12967_2024_5077_MOESM1_ESM.xls
+    sheet: "Sheet1"
+    row_slice: [1, auto]
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+        - Protein
+      taxon: 9606
+    predicate: related_to
+    object:
+      method: column
+      encoding: C
+      prioritize:
+        - SequenceVariant
+      taxon: 9606
+      explode_by: "|"
+  provenance:
+    repo: PMC
+    publication: PMC10936029
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "06 MAY 2026"
+        comment: Initial configuration from extractor summary
+  annotations:
+    - annotation: tissue
+      method: column
+      encoding: A
+    - annotation: chromosome
+      method: column
+      encoding: D
+    - annotation: position
+      method: column
+      encoding: E
+    - annotation: effect allele
+      method: column
+      encoding: F
+    - annotation: other allele
+      method: column
+      encoding: G
+    - annotation: maf
+      method: column
+      encoding: H
+    - annotation: beta
+      method: column
+      encoding: I
+    - annotation: se
+      method: column
+      encoding: J
+    - annotation: p value
+      method: column
+      encoding: K
+    - annotation: reference
+      method: column
+      encoding: L
+    - annotation: sample size
+      method: column
+      encoding: M
+    - annotation: f statistics
+      method: column
+      encoding: N

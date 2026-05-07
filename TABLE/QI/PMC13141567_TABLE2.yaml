@@ -1,202 +1,131 @@
-# Supplemental Table 2: Physician-initiated dose adjustments
-# Table captures dosage adjustment data and associated adverse events for RETRO and PROSPECT studies
+template:
+  name: "PMC13141567_TABLE2"
+  description: "Supplemental Table 2: Physician-initiated dose adjustments"
+  version: "1.0"
 
-table:
-  name: "Supplemental Table 2 - Physician-Initiated Dose Adjustments"
-  description: "Physician-initiated dose adjustments including dosage changes and associated adverse events"
-  source: "PMC13141567"
-  columns:
-    - name: "study"
-      type: "string"
-      description: "Study name (RETRO or PROSPECT)"
-      required: true
-    - name: "study_period"
-      type: "string"
-      description: "Study period (e.g., '12 months', 'up to 60 months')"
-      required: true
-    - name: "n_total"
-      type: "integer"
-      description: "Total number of participants in the study"
-      required: true
-    - name: "any_dosage_adjustment"
-      type: "integer"
-      description: "Number of participants with any dosage adjustment"
-      required: true
-    - name: "any_dosage_adjustment_percent"
-      type: "float"
-      description: "Percentage of participants with any dosage adjustment"
-      required: true
-    - name: "decrease_only"
-      type: "integer"
-      description: "Number of participants with dosage decrease only"
-      required: true
-    - name: "decrease_only_percent"
-      type: "float"
-      description: "Percentage of participants with dosage decrease only"
-      required: true
-    - name: "increase_only"
-      type: "integer"
-      description: "Number of participants with dosage increase only"
-      required: true
-    - name: "increase_only_percent"
-      type: "float"
-      description: "Percentage of participants with dosage increase only"
-      required: true
-    - name: "increase_and_decrease"
-      type: "integer"
-      description: "Number of participants with both increase and decrease"
-      required: true
-    - name: "increase_and_decrease_percent"
-      type: "float"
-      description: "Percentage of participants with both increase and decrease"
-      required: true
-    - name: "unknown_change"
-      type: "integer"
-      description: "Number of participants with unknown change"
-      required: true
-    - name: "unknown_change_percent"
-      type: "float"
-      description: "Percentage of participants with unknown change"
-      required: true
-    - name: "decrease_n"
-      type: "integer"
-      description: "Number of participants with dose decrease analyzed for AEs"
-      required: true
-    - name: "diarrhea_mild"
-      type: "integer"
-      description: "Number of participants with mild diarrhea leading to dose decrease"
-      required: true
-    - name: "headache_mild"
-      type: "integer"
-      description: "Number of participants with mild headache leading to dose decrease"
-      required: true
-    - name: "rash_mild"
-      type: "integer"
-      description: "Number of participants with mild rash leading to dose decrease"
-      required: true
-    - name: "stomach_pain_mild"
-      type: "integer"
-      description: "Number of participants with mild stomach pain leading to dose decrease"
-      required: true
-    - name: "nausea_mild"
-      type: "integer"
-      description: "Number of participants with mild nausea leading to dose decrease"
-      required: true
-    - name: "diarrhea_moderate"
-      type: "integer"
-      description: "Number of participants with moderate diarrhea leading to dose decrease"
-      required: true
-    - name: "headache_moderate"
-      type: "integer"
-      description: "Number of participants with moderate headache leading to dose decrease"
-      required: true
-    - name: "rash_moderate"
-      type: "integer"
-      description: "Number of participants with moderate rash leading to dose decrease"
-      required: true
-    - name: "stomach_pain_moderate"
-      type: "integer"
-      description: "Number of participants with moderate stomach pain leading to dose decrease"
-      required: true
-    - name: "nausea_moderate"
-      type: "integer"
-      description: "Number of participants with moderate nausea leading to dose decrease"
-      required: true
-    - name: "diarrhea_severe"
-      type: "integer"
-      description: "Number of participants with severe diarrhea leading to dose decrease"
-      required: true
-    - name: "headache_severe"
-      type: "integer"
-      description: "Number of participants with severe headache leading to dose decrease"
-      required: true
-    - name: "rash_severe"
-      type: "integer"
-      description: "Number of participants with severe rash leading to dose decrease"
-      required: true
-    - name: "abdominal_pain_severe"
-      type: "integer"
-      description: "Number of participants with severe abdominal pain leading to dose decrease"
-      required: true
+sections:
+  table:
+    name: "Supplemental Table 2 - Physician-Initiated Dose Adjustments"
+    description: "Physician-initiated dose adjustments including dosage changes and associated adverse events"
+    source: "PMC13141567"
+    columns:
+      - name: "study"
+        type: "string"
+        description: "Study name (RETRO or PROSPECT)"
+        required: true
+      - name: "study_period"
+        type: "string"
+        description: "Study period (e.g., '12 months', 'up to 60 months')"
+        required: true
+      - name: "n_total"
+        type: "integer"
+        description: "Total number of participants in the study"
+        required: true
+      - name: "any_dosage_adjustment"
+        type: "integer"
+        description: "Number of participants with any dosage adjustment"
+        required: true
+      - name: "decrease_only"
+        type: "integer"
+        description: "Number of participants with dosage decrease only"
+        required: true
+      - name: "increase_only"
+        type: "integer"
+        description: "Number of participants with dosage increase only"
+        required: true
+      - name: "increase_and_decrease"
+        type: "integer"
+        description: "Number of participants with both increase and decrease"
+        required: true
+      - name: "unknown_change"
+        type: "integer"
+        description: "Number of participants with unknown change"
+        required: true
+      - name: "decrease_n"
+        type: "integer"
+        description: "Number of participants with dose decrease analyzed for AEs"
+        required: true
+      - name: "diarrhea_mild"
+        type: "integer"
+        description: "Number of participants with mild diarrhea leading to dose decrease"
+        required: true
+      - name: "headache_mild"
+        type: "integer"
+        description: "Number of participants with mild headache leading to dose decrease"
+        required: true
+      - name: "rash_mild"
+        type: "integer"
+        description: "Number of participants with mild rash leading to dose decrease"
+        required: true
+      - name: "stomach_pain_mild"
+        type: "integer"
+        description: "Number of participants with mild stomach pain leading to dose decrease"
+        required: true
+      - name: "nausea_mild"
+        type: "integer"
+        description: "Number of participants with mild nausea leading to dose decrease"
+        required: true
 
-transforms:
-  # Calculate percentages for dosage adjustments
-  - column: "any_dosage_adjustment"
-    formula: "any_dosage_adjustment * 100.0 / n_total"
-    new_column: "any_dosage_adjustment_percent"
-  
-  - column: "decrease_only"
-    formula: "decrease_only * 100.0 / n_total"
-    new_column: "decrease_only_percent"
-  
-  - column: "increase_only"
-    formula: "increase_only * 100.0 / n_total"
-    new_column: "increase_only_percent"
-  
-  - column: "increase_and_decrease"
-    formula: "increase_and_decrease * 100.0 / n_total"
-    new_column: "increase_and_decrease_percent"
-  
-  - column: "unknown_change"
-    formula: "unknown_change * 100.0 / n_total"
-    new_column: "unknown_change_percent"
+  transforms:
+    # Calculate percentages for dosage adjustments
+    - column: "any_dosage_adjustment"
+      formula: "any_dosage_adjustment * 100.0 / n_total"
+      new_column: "any_dosage_adjustment_percent"
+    
+    - column: "decrease_only"
+      formula: "decrease_only * 100.0 / n_total"
+      new_column: "decrease_only_percent"
+    
+    - column: "increase_only"
+      formula: "increase_only * 100.0 / n_total"
+      new_column: "increase_only_percent"
+    
+    - column: "increase_and_decrease"
+      formula: "increase_and_decrease * 100.0 / n_total"
+      new_column: "increase_and_decrease_percent"
+    
+    - column: "unknown_change"
+      formula: "unknown_change * 100.0 / n_total"
+      new_column: "unknown_change_percent"
 
-# Data mapping for RETRO study
-data_map:
-  - row: 1
-    study: "RETRO"
-    study_period: "12 months"
-    n_total: 216
-    any_dosage_adjustment: 47
-    decrease_only: 36
-    increase_only: 5
-    increase_and_decrease: 5
-    unknown_change: 1
-    decrease_n: 41
-    diarrhea_mild: 15
-    headache_mild: 4
-    rash_mild: 3
-    stomach_pain_mild: 2
-    nausea_mild: 2
-    diarrhea_moderate: 4
-    headache_moderate: 3
-    rash_moderate: 2
-    stomach_pain_moderate: 0
-    nausea_moderate: 0
-    diarrhea_severe: 3
-    headache_severe: 3
-    rash_severe: 1
-    abdominal_pain_severe: 1
+  data_map:
+    # RETRO study data
+    - row: 1
+      study: "RETRO"
+      study_period: "12 months"
+      n_total: 216
+      any_dosage_adjustment: 47
+      decrease_only: 36
+      increase_only: 5
+      increase_and_decrease: 5
+      unknown_change: 1
+      decrease_n: 41
+      diarrhea_mild: 15
+      headache_mild: 4
+      rash_mild: 3
+      stomach_pain_mild: 2
+      nausea_mild: 2
 
-# Data mapping for PROSPECT study
-  - row: 2
-    study: "PROSPECT"
-    study_period: "up to 60 months"
-    n_total: 260
-    any_dosage_adjustment: 39
-    decrease_only: 19
-    increase_only: 7
-    increase_and_decrease: 12
-    unknown_change: 1
-    decrease_n: 31
-    diarrhea_mild: 16
-    headache_mild: 3
-    rash_mild: 0
-    stomach_pain_mild: 0
-    nausea_mild: 0
-    diarrhea_moderate: 8
-    headache_moderate: 1
-    rash_moderate: 0
-    stomach_pain_moderate: 0
-    nausea_moderate: 0
-    diarrhea_severe: 2
-    headache_severe: 1
-    rash_severe: 0
-    abdominal_pain_severe: 0
+    # PROSPECT study data
+    - row: 2
+      study: "PROSPECT"
+      study_period: "up to 60 months"
+      n_total: 260
+      any_dosage_adjustment: 39
+      decrease_only: 19
+      increase_only: 7
+      increase_and_decrease: 12
+      unknown_change: 1
+      decrease_n: 31
+      diarrhea_mild: 16
+      headache_mild: 3
+      rash_mild: 0
+      stomach_pain_mild: 0
+      nausea_mild: 0
 
-validation:
-  rules:
-    - "ensure n_total > 0"
-    - "ensure any_dosage_adjustment <= n_total"
-    - "ensure decrease_only + increase_only + increase_and_decrease + unknown_change <= any_dosage_adjustment"
-    - "ensure sum of decrease-related AEs matches decrease_n"
+  validation:
+    rules:
+      - "ensure n_total > 0"
+      - "ensure any_dosage_adjustment <= n_total"
+      - "ensure decrease_only + increase_only + increase_and_decrease + unknown_change <= any_dosage_adjustment"
+      - "ensure sum of decrease-related AEs matches decrease_n"

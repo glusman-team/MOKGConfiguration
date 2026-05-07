@@ -1,0 +1,347 @@
+template:
+  name: "PMC13141567_TABLE4"
+  description: "Supplemental Table 4: Any treatment-related AEs unrelated to SCD totaling ≥2.0% in each study"
+  version: "1.0"
+
+sections:
+  table:
+    name: "Supplemental Table 4 - Treatment-Related AEs Unrelated to SCD"
+    description: "Treatment-related adverse events (AEs) unrelated to sickle cell disease (SCD) occurring in ≥2.0% of participants in each study, categorized by severity"
+    source: "PMC13141567"
+    columns:
+      - name: "study"
+        type: "string"
+        description: "Study name (RETRO or PROSPECT)"
+        required: true
+      - name: "study_period"
+        type: "string"
+        description: "Study period (e.g., '12 months', 'up to 60 months')"
+        required: true
+      - name: "n_total"
+        type: "integer"
+        description: "Total number of participants in the study"
+        required: true
+      - name: "preferred_term"
+        type: "string"
+        description: "Preferred term for the adverse event"
+        required: true
+      - name: "severity"
+        type: "string"
+        description: "Severity level (Mild, Moderate, Severe)"
+        required: true
+      - name: "ae_count"
+        type: "integer"
+        description: "Number of participants with this adverse event"
+        required: true
+      - name: "diarrhea_mild"
+        type: "integer"
+        description: "Number of participants with mild diarrhea"
+        required: true
+      - name: "diarrhea_moderate"
+        type: "integer"
+        description: "Number of participants with moderate diarrhea"
+        required: true
+      - name: "diarrhea_severe"
+        type: "integer"
+        description: "Number of participants with severe diarrhea"
+        required: true
+      - name: "diarrhea_total"
+        type: "integer"
+        description: "Total number of participants with diarrhea (all severities)"
+        required: true
+      - name: "headache_mild"
+        type: "integer"
+        description: "Number of participants with mild headache"
+        required: true
+      - name: "headache_moderate"
+        type: "integer"
+        description: "Number of participants with moderate headache"
+        required: true
+      - name: "headache_severe"
+        type: "integer"
+        description: "Number of participants with severe headache"
+        required: true
+      - name: "headache_total"
+        type: "integer"
+        description: "Total number of participants with headache (all severities)"
+        required: true
+      - name: "nausea_mild"
+        type: "integer"
+        description: "Number of participants with mild nausea"
+        required: true
+      - name: "nausea_moderate"
+        type: "integer"
+        description: "Number of participants with moderate nausea"
+        required: true
+      - name: "nausea_severe"
+        type: "integer"
+        description: "Number of participants with severe nausea"
+        required: true
+      - name: "nausea_total"
+        type: "integer"
+        description: "Total number of participants with nausea (all severities)"
+        required: true
+
+  transforms:
+    # Calculate percentages for all adverse event counts
+    - column: "ae_count"
+      formula: "ae_count * 100.0 / n_total"
+      new_column: "ae_percent"
+    
+    # Calculate totals and percentages for each adverse event type
+    - column: "diarrhea_mild"
+      formula: "diarrhea_mild * 100.0 / n_total"
+      new_column: "diarrhea_mild_percent"
+    
+    - column: "diarrhea_moderate"
+      formula: "diarrhea_moderate * 100.0 / n_total"
+      new_column: "diarrhea_moderate_percent"
+    
+    - column: "diarrhea_severe"
+      formula: "diarrhea_severe * 100.0 / n_total"
+      new_column: "diarrhea_severe_percent"
+    
+    - column: "diarrhea_total"
+      formula: "diarrhea_mild + diarrhea_moderate + diarrhea_severe"
+      new_column: "diarrhea_total"
+    
+    - column: "diarrhea_total_percent"
+      formula: "diarrhea_total * 100.0 / n_total"
+      new_column: "diarrhea_total_percent"
+    
+    - column: "headache_mild"
+      formula: "headache_mild * 100.0 / n_total"
+      new_column: "headache_mild_percent"
+    
+    - column: "headache_moderate"
+      formula: "headache_moderate * 100.0 / n_total"
+      new_column: "headache_moderate_percent"
+    
+    - column: "headache_severe"
+      formula: "headache_severe * 100.0 / n_total"
+      new_column: "headache_severe_percent"
+    
+    - column: "headache_total"
+      formula: "headache_mild + headache_moderate + headache_severe"
+      new_column: "headache_total"
+    
+    - column: "headache_total_percent"
+      formula: "headache_total * 100.0 / n_total"
+      new_column: "headache_total_percent"
+    
+    - column: "nausea_mild"
+      formula: "nausea_mild * 100.0 / n_total"
+      new_column: "nausea_mild_percent"
+    
+    - column: "nausea_moderate"
+      formula: "nausea_moderate * 100.0 / n_total"
+      new_column: "nausea_moderate_percent"
+    
+    - column: "nausea_severe"
+      formula: "nausea_severe * 100.0 / n_total"
+      new_column: "nausea_severe_percent"
+    
+    - column: "nausea_total"
+      formula: "nausea_mild + nausea_moderate + nausea_severe"
+      new_column: "nausea_total"
+    
+    - column: "nausea_total_percent"
+      formula: "nausea_total * 100.0 / n_total"
+      new_column: "nausea_total_percent"
+
+  data_map:
+    # RETRO study data
+    - row: 1
+      study: "RETRO"
+      study_period: "12 months"
+      n_total: 216
+      preferred_term: "Any AE"
+      severity: "All"
+      ae_count: 54
+      diarrhea_mild: 21
+      diarrhea_moderate: 4
+      diarrhea_severe: 3
+      headache_mild: 7
+      headache_moderate: 5
+      headache_severe: 3
+      nausea_mild: 0
+      nausea_moderate: 0
+      nausea_severe: 0
+
+    - row: 2
+      study: "RETRO"
+      study_period: "12 months"
+      preferred_term: "Diarrhea"
+      severity: "Mild"
+      ae_count: 21
+      diarrhea_mild: 21
+      diarrhea_moderate: 0
+      diarrhea_severe: 0
+
+    - row: 3
+      study: "RETRO"
+      study_period: "12 months"
+      preferred_term: "Diarrhea"
+      severity: "Moderate"
+      ae_count: 4
+      diarrhea_mild: 0
+      diarrhea_moderate: 4
+      diarrhea_severe: 0
+
+    - row: 4
+      study: "RETRO"
+      study_period: "12 months"
+      preferred_term: "Diarrhea"
+      severity: "Severe"
+      ae_count: 3
+      diarrhea_mild: 0
+      diarrhea_moderate: 0
+      diarrhea_severe: 3
+
+    - row: 5
+      study: "RETRO"
+      study_period: "12 months"
+      preferred_term: "Headache"
+      severity: "Mild"
+      ae_count: 7
+      headache_mild: 7
+      headache_moderate: 0
+      headache_severe: 0
+
+    - row: 6
+      study: "RETRO"
+      study_period: "12 months"
+      preferred_term: "Headache"
+      severity: "Moderate"
+      ae_count: 5
+      headache_mild: 0
+      headache_moderate: 5
+      headache_severe: 0
+
+    - row: 7
+      study: "RETRO"
+      study_period: "12 months"
+      preferred_term: "Headache"
+      severity: "Severe"
+      ae_count: 3
+      headache_mild: 0
+      headache_moderate: 0
+      headache_severe: 3
+
+    # PROSPECT study data
+    - row: 8
+      study: "PROSPECT"
+      study_period: "up to 60 months"
+      n_total: 260
+      preferred_term: "Any AE"
+      severity: "All"
+      ae_count: 41
+      diarrhea_mild: 19
+      diarrhea_moderate: 8
+      diarrhea_severe: 2
+      headache_mild: 4
+      headache_moderate: 2
+      headache_severe: 2
+      nausea_mild: 7
+      nausea_moderate: 1
+      nausea_severe: 1
+
+    - row: 9
+      study: "PROSPECT"
+      study_period: "up to 60 months"
+      preferred_term: "Diarrhea"
+      severity: "Mild"
+      ae_count: 19
+      diarrhea_mild: 19
+      diarrhea_moderate: 0
+      diarrhea_severe: 0
+
+    - row: 10
+      study: "PROSPECT"
+      study_period: "up to 60 months"
+      preferred_term: "Diarrhea"
+      severity: "Moderate"
+      ae_count: 8
+      diarrhea_mild: 0
+      diarrhea_moderate: 8
+      diarrhea_severe: 0
+
+    - row: 11
+      study: "PROSPECT"
+      study_period: "up to 60 months"
+      preferred_term: "Diarrhea"
+      severity: "Severe"
+      ae_count: 2
+      diarrhea_mild: 0
+      diarrhea_moderate: 0
+      diarrhea_severe: 2
+
+    - row: 12
+      study: "PROSPECT"
+      study_period: "up to 60 months"
+      preferred_term: "Headache"
+      severity: "Mild"
+      ae_count: 4
+      headache_mild: 4
+      headache_moderate: 0
+      headache_severe: 0
+
+    - row: 13
+      study: "PROSPECT"
+      study_period: "up to 60 months"
+      preferred_term: "Headache"
+      severity: "Moderate"
+      ae_count: 2
+      headache_mild: 0
+      headache_moderate: 2
+      headache_severe: 0
+
+    - row: 14
+      study: "PROSPECT"
+      study_period: "up to 60 months"
+      preferred_term: "Headache"
+      severity: "Severe"
+      ae_count: 2
+      headache_mild: 0
+      headache_moderate: 0
+      headache_severe: 2
+
+    - row: 15
+      study: "PROSPECT"
+      study_period: "up to 60 months"
+      preferred_term: "Nausea"
+      severity: "Mild"
+      ae_count: 7
+      nausea_mild: 7
+      nausea_moderate: 0
+      nausea_severe: 0
+
+    - row: 16
+      study: "PROSPECT"
+      study_period: "up to 60 months"
+      preferred_term: "Nausea"
+      severity: "Moderate"
+      ae_count: 1
+      nausea_mild: 0
+      nausea_moderate: 1
+      nausea_severe: 0
+
+    - row: 17
+      study: "PROSPECT"
+      study_period: "up to 60 months"
+      preferred_term: "Nausea"
+      severity: "Severe"
+      ae_count: 1
+      nausea_mild: 0
+      nausea_moderate: 0
+      nausea_severe: 1
+
+  validation:
+    rules:
+      - "ensure n_total > 0"
+      - "ensure all count values are non-negative"
+      - "ensure percentages are between 0 and 100"
+      - "ensure study is either 'RETRO' or 'PROSPECT'"
+      - "validate that severity values are 'Mild', 'Moderate', or 'Severe'"
+      - "ensure that severity-specific counts sum to total counts"
+      - "validate that events ≥2.0% are captured correctly"

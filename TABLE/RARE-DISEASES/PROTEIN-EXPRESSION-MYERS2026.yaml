@@ -1,0 +1,279 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: excel
+    local: .ledger/rett-syndrome-mecp2/data/PMC13133546/source/PMC13133546.1/DNEU-86-0-s003.xlsx
+    url: file:///home/skyeav/Code/ISB/TableConfigs/TABLE/RARE-DISEASES/.ledger/rett-syndrome-mecp2/data/PMC13133546/source/PMC13133546.1/DNEU-86-0-s003.xlsx
+    row_slice: [1, auto]
+  
+  provenance:
+    repo: PMC
+    publication: 13133546
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+          - CalPoly SLO
+        comment: Created for protein expression analysis from rett syndrome Mecp2 study
+  
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Protein]
+      regex:
+        - pattern: "'"
+          replacement: ""
+      fill: forward
+    
+    object:
+      method: value
+      encoding: "differential_expression_in"
+      prioritize: [DiseaseOrPhenotypicFeature]
+    
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:10090
+      
+      - qualifier: experimental_condition_qualifier
+        method: value
+        encoding: "Mecp2 knockout rat model"
+      
+      - qualifier: treatment_context_qualifier
+        method: value
+        encoding: "wild-type control"
+  
+  annotations:
+    - annotation: fold_change
+      method: column
+      encoding: B
+      transform:
+        - name: float
+          arguments: []
+    
+    - annotation: p_adj
+      method: column
+      encoding: C
+      transform:
+        - name: float
+          arguments: []
+
+sections:
+  # AllData sheet - Mecp2 vs WT comparison
+  - statement:
+      predicate: differential_expression_in
+      qualifiers:
+        - qualifier: species_context_qualifier
+          method: value
+          encoding: NCBITaxon:10090
+        - qualifier: experimental_condition_qualifier
+          method: value
+          encoding: "Mecp2 knockout"
+        - qualifier: treatment_context_qualifier
+          method: value
+          encoding: "wild-type control"
+    
+    annotations:
+      - annotation: fold_change
+        method: column
+        encoding: B
+      - annotation: p_adj
+        method: column
+        encoding: C
+
+  # AllData sheet - VNS treatment in Mecp2 rats
+  - statement:
+      subject:
+        method: column
+        encoding: D
+        prioritize: [Protein]
+        regex:
+          - pattern: "'"
+            replacement: ""
+        fill: forward
+      
+      predicate: treatment_response_to
+      
+      object:
+        method: value
+        encoding: "VNS treatment"
+        prioritize: [Treatment]
+      
+      qualifiers:
+        - qualifier: species_context_qualifier
+          method: value
+          encoding: NCBITaxon:10090
+        - qualifier: experimental_condition_qualifier
+          method: value
+          encoding: "Mecp2 knockout"
+        - qualifier: treatment_context_qualifier
+          method: value
+          encoding: "untreated Mecp2"
+    
+    annotations:
+      - annotation: fold_change
+        method: column
+        encoding: E
+      - annotation: p_adj
+        method: column
+        encoding: F
+
+  # AllData sheet - VNS-treated Mecp2 vs WT (rescue effect)
+  - statement:
+      subject:
+        method: column
+        encoding: G
+        prioritize: [Protein]
+        regex:
+          - pattern: "'"
+            replacement: ""
+        fill: forward
+      
+      predicate: rescue_effect_in
+      
+      object:
+        method: value
+        encoding: "wild-type phenotype"
+        prioritize: [DiseaseOrPhenotypicFeature]
+      
+      qualifiers:
+        - qualifier: species_context_qualifier
+          method: value
+          encoding: NCBITaxon:10090
+        - qualifier: experimental_condition_qualifier
+          method: value
+          encoding: "VNS-treated Mecp2"
+        - qualifier: treatment_context_qualifier
+          method: value
+          encoding: "wild-type control"
+    
+    annotations:
+      - annotation: fold_change
+        method: column
+        encoding: H
+      - annotation: p_adj
+        method: column
+        encoding: I
+
+  # DiffExp sheet - Mecp2 vs WT comparison (differentially expressed)
+  - source:
+      sheet: DiffExp
+    
+    statement:
+      predicate: differential_expression_in
+      
+      qualifiers:
+        - qualifier: species_context_qualifier
+          method: value
+          encoding: NCBITaxon:10090
+        - qualifier: experimental_condition_qualifier
+          method: value
+          encoding: "Mecp2 knockout"
+        - qualifier: treatment_context_qualifier
+          method: value
+          encoding: "wild-type control"
+        - qualifier: statistical_significance_qualifier
+          method: value
+          encoding: "differentially expressed"
+    
+    annotations:
+      - annotation: fold_change
+        method: column
+        encoding: B
+      - annotation: p_adj
+        method: column
+        encoding: C
+
+  # DiffExp sheet - VNS treatment in Mecp2 rats (differentially expressed)
+  - source:
+      sheet: DiffExp
+    
+    statement:
+      subject:
+        method: column
+        encoding: D
+        prioritize: [Protein]
+        regex:
+          - pattern: "'"
+            replacement: ""
+        fill: forward
+      
+      predicate: treatment_response_to
+      
+      object:
+        method: value
+        encoding: "VNS treatment"
+        prioritize: [Treatment]
+      
+      qualifiers:
+        - qualifier: species_context_qualifier
+          method: value
+          encoding: NCBITaxon:10090
+        - qualifier: experimental_condition_qualifier
+          method: value
+          encoding: "Mecp2 knockout"
+        - qualifier: treatment_context_qualifier
+          method: value
+          encoding: "untreated Mecp2"
+        - qualifier: statistical_significance_qualifier
+          method: value
+          encoding: "differentially expressed"
+    
+    annotations:
+      - annotation: fold_change
+        method: column
+        encoding: E
+      - annotation: p_adj
+        method: column
+        encoding: F
+
+  # DiffExp sheet - VNS-treated Mecp2 vs WT (rescue effect, differentially expressed)
+  - source:
+      sheet: DiffExp
+    
+    statement:
+      subject:
+        method: column
+        encoding: G
+        prioritize: [Protein]
+        regex:
+          - pattern: "'"
+            replacement: ""
+        fill: forward
+      
+      predicate: rescue_effect_in
+      
+      object:
+        method: value
+        encoding: "wild-type phenotype"
+        prioritize: [DiseaseOrPhenotypicFeature]
+      
+      qualifiers:
+        - qualifier: species_context_qualifier
+          method: value
+          encoding: NCBITaxon:10090
+        - qualifier: experimental_condition_qualifier
+          method: value
+          encoding: "VNS-treated Mecp2"
+        - qualifier: treatment_context_qualifier
+          method: value
+          encoding: "wild-type control"
+        - qualifier: statistical_significance_qualifier
+          method: value
+          encoding: "differentially expressed"
+    
+    annotations:
+      - annotation: fold_change
+        method: column
+        encoding: H
+      - annotation: p_adj
+        method: column
+        encoding: I

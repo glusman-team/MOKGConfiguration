@@ -1,0 +1,122 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: text
+    local: ./PMC10875510_TABLE_S2.csv
+    url: https://example.com/PMC10875510_TABLE_S2.csv
+    row_slice: [1, auto]
+    delimiter: ","
+    reindex:
+      - column: C
+        comparison: ne
+        comparator: "NA"
+  
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [ClinicalAttribute]
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      prioritize: [StudyPopulation]
+      taxon: 9606
+  
+  provenance:
+    repo: PMC
+    publication: "10875510"
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+        comment: Baseline characteristics comparison from Chinese national psoriasis registry
+  
+  annotations:
+    - annotation: characteristic_description
+      method: column
+      encoding: A
+      fill: forward
+    - annotation: full_population_value
+      method: column
+      encoding: C
+      fill: forward
+    - annotation: study_population_value
+      method: column
+      encoding: D
+      fill: forward
+    - annotation: statistical_difference
+      method: column
+      encoding: E
+      fill: forward
+    - annotation: p_value
+      method: column
+      encoding: F
+      fill: forward
+    - annotation: sample_size_full
+      method: column
+      encoding: G
+      fill: forward
+    - annotation: sample_size_study
+      method: column
+      encoding: H
+      fill: forward
+    - annotation: data_source
+      method: value
+      encoding: "Chinese National Psoriasis Registry"
+    - annotation: study_period
+      method: value
+      encoding: "August 2020 - September 2021"
+    - annotation: population_size
+      method: value
+      encoding: "22,425 patients"
+    - annotation: geographic_scope
+      method: value
+      encoding: "National (China)"
+
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [SocioeconomicAttribute]
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: value
+        encoding: "NCBITaxon:9606"
+        prioritize: [OrganismTaxon]
+    annotations:
+      - annotation: demographic_category
+        method: value
+        encoding: "Chinese population"
+      - annotation: characteristic_type
+        method: value
+        encoding: "demographic"
+  
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [DiseaseOrPhenotypicFeature]
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: value
+        encoding: "MONDO:0005083"
+        prioritize: [Disease]
+    annotations:
+      - annotation: disease_category
+        method: value
+        encoding: "psoriasis"
+      - annotation: characteristic_type
+        method: value
+        encoding: "disease phenotype"

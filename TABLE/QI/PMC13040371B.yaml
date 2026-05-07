@@ -1,0 +1,80 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./PMC13040371_gene_expression_datasets.xlsx
+    url: https://example.com/PMC13040371_gene_expression_datasets.xlsx
+    sheet: "Sheet1"
+    row_slice: [1, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Dataset]
+    predicate: has_accession
+    object:
+      method: column
+      encoding: B
+      regex:
+        - pattern: "^([A-Za-z0-9]+)$"
+          replacement: "GSE:$1"
+
+  provenance:
+    repo: PMC
+    publication: "PMC13040371"
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: dataset_id
+      method: column
+      encoding: B
+    - annotation: platform
+      method: column
+      encoding: C
+    - annotation: organism
+      method: column
+      encoding: D
+    - annotation: sample_size
+      method: column
+      encoding: E
+    - annotation: study_type
+      method: column
+      encoding: F
+
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [Dataset]
+      predicate: related_to
+      object:
+        method: column
+        encoding: G
+        prioritize: [Study]
+    annotations:
+      - annotation: publication_year
+        method: column
+        encoding: H
+
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [Dataset]
+      predicate: associated_with
+      object:
+        method: column
+        encoding: I
+        prioritize: [Gene]
+    annotations:
+      - annotation: expression_level
+        method: column
+        encoding: J
+        fill: forward

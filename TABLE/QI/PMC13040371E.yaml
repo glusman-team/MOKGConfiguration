@@ -1,0 +1,94 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./PMC13040371_pid_snps.xlsx
+    url: https://example.com/PMC13040371_pid_snps.xlsx
+    sheet: "Sheet1"
+    row_slice: [1, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [SequenceVariant]
+      regex:
+        - pattern: "^([a-zA-Z0-9_:-]+)$"
+          replacement: "dbSNP:$1"
+    predicate: is_variant_of
+    object:
+      method: column
+      encoding: B
+      prioritize: [Gene]
+
+  provenance:
+    repo: PMC
+    publication: "PMC13040371"
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: snp_id
+      method: column
+      encoding: A
+      regex:
+        - pattern: "^([a-zA-Z0-9_:-]+)$"
+          replacement: "dbSNP:$1"
+    - annotation: gene_symbol
+      method: column
+      encoding: B
+    - annotation: p_value
+      method: column
+      encoding: C
+      regex:
+        - pattern: "^([0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)$"
+          replacement: "$1"
+
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [SequenceVariant]
+        regex:
+          - pattern: "^([a-zA-Z0-9_:-]+)$"
+            replacement: "dbSNP:$1"
+      predicate: associated_with
+      object:
+        method: column
+        encoding: B
+        prioritize: [Disease]
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: PID
+    annotations:
+      - annotation: odds_ratio
+        method: column
+        encoding: D
+      - annotation: confidence_interval
+        method: column
+        encoding: E
+
+  - statement:
+      subject:
+        method: column
+        encoding: B
+        prioritize: [Gene]
+      predicate: associated_with
+      object:
+        method: column
+        encoding: D
+        prioritize: [Disease]
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: PID
+    annotations:
+      - annotation: risk_allele
+        method: column
+        encoding: F

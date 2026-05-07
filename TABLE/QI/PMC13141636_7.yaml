@@ -1,0 +1,286 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ".ledger/tnf-alpha-inhibitors-covid-19-risk/data/PMC13141636/source/PMC13141636.1/mmc8.xlsx"
+    url: "https://www.sciencedirect.com/cms/attachment/pmc13141636/mmc8.xlsx"
+
+  provenance:
+    repo: PMC
+    publication: PMC13141636
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "06 MAY 2026"
+      - kind: curation
+        name: "Tablassert pipeline"
+        date: "06 MAY 2026"
+
+sections:
+  # S9A: Th2 and Tfh cells DEGs (285 rows)
+  - source:
+      sheet: "S9A"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: affected_by
+      object:
+        method: value
+        encoding: UMLS:C5400806
+    annotations:
+      - annotation: scores
+        method: column
+        encoding: B
+      - annotation: logfoldchanges
+        method: column
+        encoding: C
+      - annotation: pvals
+        method: column
+        encoding: D
+      - annotation: pvals_adj
+        method: column
+        encoding: E
+
+  # S9B: Th2 and Tfh cells DEGs (246 rows)
+  - source:
+      sheet: "S9B"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: affected_by
+      object:
+        method: value
+        encoding: UMLS:C5400806
+    annotations:
+      - annotation: scores
+        method: column
+        encoding: B
+      - annotation: logfoldchanges
+        method: column
+        encoding: C
+      - annotation: pvals
+        method: column
+        encoding: D
+      - annotation: pvals_adj
+        method: column
+        encoding: E
+
+  # S9C: GO enrichment - Gene -> participates_in -> GO term
+  - source:
+      sheet: "S9C"
+    statement:
+      subject:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"
+      predicate: participates_in
+      object:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+
+  # S9C: GO enrichment - GO term -> related_to -> Gene
+  - source:
+      sheet: "S9C"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+      predicate: related_to
+      object:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"
+
+  # S9D: Th2 and Tfh cells DEGs (212 rows)
+  - source:
+      sheet: "S9D"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: affected_by
+      object:
+        method: value
+        encoding: UMLS:C5400806
+    annotations:
+      - annotation: scores
+        method: column
+        encoding: B
+      - annotation: logfoldchanges
+        method: column
+        encoding: C
+      - annotation: pvals
+        method: column
+        encoding: D
+      - annotation: pvals_adj
+        method: column
+        encoding: E
+
+  # S9E: Th2 and Tfh cells DEGs (311 rows)
+  - source:
+      sheet: "S9E"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: affected_by
+      object:
+        method: value
+        encoding: UMLS:C5400806
+    annotations:
+      - annotation: scores
+        method: column
+        encoding: B
+      - annotation: logfoldchanges
+        method: column
+        encoding: C
+      - annotation: pvals
+        method: column
+        encoding: D
+      - annotation: pvals_adj
+        method: column
+        encoding: E
+
+  # S9F: Th2 and Tfh cells DEGs (246 rows)
+  - source:
+      sheet: "S9F"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: affected_by
+      object:
+        method: value
+        encoding: UMLS:C5400806
+    annotations:
+      - annotation: scores
+        method: column
+        encoding: B
+      - annotation: logfoldchanges
+        method: column
+        encoding: C
+      - annotation: pvals
+        method: column
+        encoding: D
+      - annotation: pvals_adj
+        method: column
+        encoding: E
+
+  # S9G: GO enrichment - Gene -> participates_in -> GO term
+  - source:
+      sheet: "S9G"
+    statement:
+      subject:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"
+      predicate: participates_in
+      object:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+
+  # S9G: GO enrichment - GO term -> related_to -> Gene
+  - source:
+      sheet: "S9G"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+      predicate: related_to
+      object:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"
+
+  # S9H: GO enrichment - Gene -> participates_in -> GO term
+  - source:
+      sheet: "S9H"
+    statement:
+      subject:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"
+      predicate: participates_in
+      object:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+
+  # S9H: GO enrichment - GO term -> related_to -> Gene
+  - source:
+      sheet: "S9H"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+      predicate: related_to
+      object:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"

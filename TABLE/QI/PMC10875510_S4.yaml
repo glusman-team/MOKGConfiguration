@@ -1,0 +1,172 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: text
+    local: ./PMC10875510_TABLE_S4.csv
+    url: https://example.com/PMC10875510_TABLE_S4.csv
+    row_slice: [1, auto]
+    delimiter: ","
+    reindex:
+      - column: E
+        comparison: ne
+        comparator: "NA"
+  
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [PhenotypicFeature]
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      prioritize: [Treatment]
+      taxon: 9606
+  
+  provenance:
+    repo: PMC
+    publication: "10875510"
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+        comment: PASI regression models from Chinese national psoriasis registry, stratified by COVID-19 lockdown periods
+  
+  annotations:
+    - annotation: predictor_variable
+      method: column
+      encoding: A
+      fill: forward
+    - annotation: outcome_variable
+      method: column
+      encoding: B
+      fill: forward
+    - annotation: lockdown_period_non_lockdown
+      method: column
+      encoding: C
+      fill: forward
+    - annotation: lockdown_period_lockdown
+      method: column
+      encoding: D
+      fill: forward
+    - annotation: odds_ratio_non_lockdown
+      method: column
+      encoding: C
+      fill: forward
+    - annotation: confidence_interval_lower_non_lockdown
+      method: column
+      encoding: E
+      fill: forward
+    - annotation: confidence_interval_upper_non_lockdown
+      method: column
+      encoding: F
+      fill: forward
+    - annotation: p_value_non_lockdown
+      method: column
+      encoding: G
+      fill: forward
+    - annotation: odds_ratio_lockdown
+      method: column
+      encoding: D
+      fill: forward
+    - annotation: confidence_interval_lower_lockdown
+      method: column
+      encoding: H
+      fill: forward
+    - annotation: confidence_interval_upper_lockdown
+      method: column
+      encoding: I
+      fill: forward
+    - annotation: p_value_lockdown
+      method: column
+      encoding: J
+      fill: forward
+    - annotation: sample_size_non_lockdown
+      method: column
+      encoding: K
+      fill: forward
+    - annotation: sample_size_lockdown
+      method: column
+      encoding: L
+      fill: forward
+    - annotation: data_source
+      method: value
+      encoding: "Chinese National Psoriasis Registry"
+    - annotation: study_period
+      method: value
+      encoding: "August 2020 - September 2021"
+    - annotation: population_size
+      method: value
+      encoding: "22,425 patients"
+    - annotation: pandemic_stratification
+      method: value
+      encoding: "COVID-19 lockdown vs non-lockdown periods"
+    - annotation: statistical_model
+      method: value
+      encoding: "multivariable logistic regression"
+
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [PhenotypicFeature]
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: value
+        encoding: "EFO:0022382"
+        prioritize: [PhenotypicFeature]
+    annotations:
+      - annotation: predictor_type
+        method: value
+        encoding: "PASI score"
+      - annotation: pandemic_context
+        method: value
+        encoding: "COVID-19 stratified analysis"
+  
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [PhenotypicFeature]
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: value
+        encoding: "NCBITaxon:9606"
+        prioritize: [OrganismTaxon]
+    annotations:
+      - annotation: study_population
+        method: value
+        encoding: "Chinese psoriasis patients"
+      - annotation: pandemic_stratification
+        method: value
+        encoding: "COVID-19 lockdown periods"
+  
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [PhenotypicFeature]
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: value
+        encoding: "MONDO:0005083"
+        prioritize: [Disease]
+    annotations:
+      - annotation: disease_phenotype
+        method: value
+        encoding: "psoriasis"
+      - annotation: analysis_type
+        method: value
+        encoding: "regression modeling"

@@ -1,0 +1,29 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: raw/raw/12876_2026_4732_MOESM2_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13037037/
+    sheet: Sheet1
+    row_slice: [1, auto]
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - DiseaseOrPhenotypicFeature
+    predicate: related_to
+    object:
+      method: column
+      encoding: B
+      prioritize:
+        - DiseaseOrPhenotypicFeature
+  provenance:
+    repo: PMC
+    publication: PMC13037037
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+        comment: Created from delegated summary for All of Us IBD comorbidity study

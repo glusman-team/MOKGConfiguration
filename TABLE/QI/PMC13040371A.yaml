@@ -1,0 +1,98 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./PMC13040371_gene_database.xlsx
+    url: https://example.com/PMC13040371_gene_database.xlsx
+    sheet: "Sheet1"
+    row_slice: [1, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Gene]
+    predicate: related_to
+    object:
+      method: column
+      encoding: B
+      prioritize: [Disease]
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: SLE
+
+  provenance:
+    repo: PMC
+    publication: "PMC13040371"
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: gene_symbol
+      method: column
+      encoding: A
+    - annotation: entrez_id
+      method: column
+      encoding: C
+      regex:
+        - pattern: "^(\\d+)$"
+          replacement: "NCBIGene:$1"
+    - annotation: ensembl_id
+      method: column
+      encoding: D
+      regex:
+        - pattern: "^([A-Za-z0-9_.:-]+)$"
+          replacement: "Ensembl:$1"
+    - annotation: omim_id
+      method: column
+      encoding: E
+      regex:
+        - pattern: "^(\\d+)$"
+          replacement: "MIM:$1"
+
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [Gene]
+      predicate: associated_with
+      object:
+        method: column
+        encoding: B
+        prioritize: [Disease]
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: MS
+    annotations:
+      - annotation: study_id
+        method: column
+        encoding: H
+
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [Gene]
+      predicate: associated_with
+      object:
+        method: column
+        encoding: B
+        prioritize: [Disease]
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: RA
+    annotations:
+      - annotation: fold_change
+        method: column
+        encoding: K
+        regex:
+          - pattern: "^(\\d+\\.?\\d*)$"
+            replacement: "$1"

@@ -1,0 +1,49 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./12967_2024_5077_MOESM2_ESM.xls
+    url: https://example.com/12967_2024_5077_MOESM2_ESM.xls
+    sheet: "Sheet1"
+    row_slice: [1, auto]
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - Disease
+    predicate: related_to
+    object:
+      method: column
+      encoding: C
+      prioritize:
+        - Protein
+      taxon: 9606
+  provenance:
+    repo: PMC
+    publication: PMC10936029
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "06 MAY 2026"
+        comment: Initial configuration from extractor summary
+  annotations:
+    - annotation: disease reference
+      method: column
+      encoding: B
+    - annotation: method
+      method: column
+      encoding: D
+    - annotation: nsnp
+      method: column
+      encoding: E
+    - annotation: beta
+      method: column
+      encoding: F
+    - annotation: se
+      method: column
+      encoding: G
+    - annotation: p value
+      method: column
+      encoding: H

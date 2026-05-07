@@ -1,0 +1,38 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./.ledger/finngen-autoimmune-gwas-summary/data/PMC12323946/source/PMC12323946.1/medi-104-e43461-s002.xlsx
+    url: https://links.lww.com/MD/P448
+    sheet: Sheet1
+    row_slice:
+      - 2
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - Disease
+      taxon: 9606
+      regex:
+        - pattern: \s+
+          replacement: ' '
+    predicate: causes
+    object:
+      method: column
+      encoding: B
+      prioritize:
+        - Protein
+      taxon: 9606
+
+  provenance:
+    repo: PMC
+    publication: PMC12323946
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026

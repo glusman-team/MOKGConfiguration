@@ -1,0 +1,143 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./PMC13040371_classifier_performance.xlsx
+    url: https://example.com/PMC13040371_classifier_performance.xlsx
+    sheet: "Sheet1"
+    row_slice: [1, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Treatment]
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      prioritize: [Disease]
+
+  provenance:
+    repo: PMC
+    publication: "PMC13040371"
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: classifier_name
+      method: column
+      encoding: A
+    - annotation: disease_target
+      method: column
+      encoding: B
+    - annotation: accuracy
+      method: column
+      encoding: C
+      regex:
+        - pattern: "^([0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)$"
+          replacement: "$1"
+    - annotation: precision
+      method: column
+      encoding: D
+      regex:
+        - pattern: "^([0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)$"
+          replacement: "$1"
+    - annotation: recall
+      method: column
+      encoding: E
+      regex:
+        - pattern: "^([0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)$"
+          replacement: "$1"
+    - annotation: f1_score
+      method: column
+      encoding: F
+      regex:
+        - pattern: "^([0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)$"
+          replacement: "$1"
+    - annotation: auc
+      method: column
+      encoding: G
+      regex:
+        - pattern: "^([0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)$"
+          replacement: "$1"
+
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: C
+        prioritize: [QuantityValue]
+      predicate: associated_with
+      object:
+        method: column
+        encoding: A
+        prioritize: [Treatment]
+    annotations:
+      - annotation: metric_type
+        method: value
+        encoding: "accuracy"
+
+  - statement:
+      subject:
+        method: column
+        encoding: D
+        prioritize: [QuantityValue]
+      predicate: associated_with
+      object:
+        method: column
+        encoding: A
+        prioritize: [Treatment]
+    annotations:
+      - annotation: metric_type
+        method: value
+        encoding: "precision"
+
+  - statement:
+      subject:
+        method: column
+        encoding: E
+        prioritize: [QuantityValue]
+      predicate: associated_with
+      object:
+        method: column
+        encoding: A
+        prioritize: [Treatment]
+    annotations:
+      - annotation: metric_type
+        method: value
+        encoding: "recall"
+
+  - statement:
+      subject:
+        method: column
+        encoding: F
+        prioritize: [QuantityValue]
+      predicate: associated_with
+      object:
+        method: column
+        encoding: A
+        prioritize: [Treatment]
+    annotations:
+      - annotation: metric_type
+        method: value
+        encoding: "f1_score"
+
+  - statement:
+      subject:
+        method: column
+        encoding: G
+        prioritize: [QuantityValue]
+      predicate: associated_with
+      object:
+        method: column
+        encoding: A
+        prioritize: [Treatment]
+    annotations:
+      - annotation: metric_type
+        method: value
+        encoding: "auc"

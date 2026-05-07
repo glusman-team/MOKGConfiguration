@@ -1,0 +1,67 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: excel
+    local: ./data/PMC13143281/source/PMC13143281.1/elife-98768-fig2-data1.xlsx
+    url: https://pubmed.ncbi.nlm.nih.gov/13143281/
+    sheet: PromethION_10R_DEG_DET_HEK_HeLa
+    row_slice: [3, auto]
+  
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Gene]
+      regex:
+        - pattern: ".*"
+          replacement: ""
+    predicate: differentially_expressed_in
+    object:
+      method: value
+      encoding: "HEK293 vs HeLa"
+    qualifiers:
+      - qualifier: time_point
+        method: column
+        encoding: C
+        regex:
+          - pattern: "hour.*"
+            replacement: ""
+          - pattern: "24"
+            replacement: "24hr"
+  
+  provenance:
+    repo: PMC
+    publication: 13143281
+    contributors:
+      - kind: curation
+        name: Tablassist Discovery Pipeline
+        date: 06 MAY 2026
+        comment: Extracted from differential gene expression data in real-time transcriptomic profiling paper
+  
+  annotations:
+    - annotation: log2_fold_change
+      method: column
+      encoding: B
+      fill: zero
+    - annotation: p_value
+      method: column
+      encoding: F
+      fill: zero
+    - annotation: adjusted_p_value
+      method: column
+      encoding: G
+      fill: zero
+    - annotation: significance
+      method: column
+      encoding: H
+      fill: false
+    - annotation: regulation_direction
+      method: column
+      encoding: I
+      regex:
+        - pattern: "UP"
+          replacement: "upregulated"
+        - pattern: "DOWN"
+          replacement: "downregulated"

@@ -1,0 +1,59 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: excel
+    local: ./data/PMC13143281/source/PMC13143281.1/elife-98768-fig3-data1.xlsx
+    url: https://pubmed.ncbi.nlm.nih.gov/13143281/
+    sheet: General_Sequencing_RiboP_RiboM
+    row_slice: [2, auto]
+  
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [RNA]
+    predicate: has_sequencing_count
+    object:
+      method: column
+      encoding: C
+      transform:
+        function: float
+        arguments: [values]
+  
+  provenance:
+    repo: PMC
+    publication: 13143281
+    contributors:
+      - kind: curation
+        name: Tablassist Discovery Pipeline
+        date: 06 MAY 2026
+        comment: Extracted from ribosome profiling sequencing data
+  
+  annotations:
+    - annotation: sequencing_type
+      method: column
+      encoding: A
+      regex:
+        - pattern: "TotalR"
+          replacement: "total_rna"
+        - pattern: "RiboP"
+          replacement: "ribo_plus"
+        - pattern: "RiboM"
+          replacement: "ribo_minus"
+    - annotation: time_point
+      method: column
+      encoding: C
+      regex:
+        - pattern: "hr"
+          replacement: "hour"
+    - annotation: replicate
+      method: column
+      encoding: B
+    - annotation: mapped_reads
+      method: column
+      encoding: H
+      transform:
+        function: float
+        arguments: [values]

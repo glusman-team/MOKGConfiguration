@@ -1,0 +1,46 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: PMC13018755.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13018755/
+    sheet: ST5
+    row_slice: [1, auto]
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [SequenceVariant]
+    predicate: has_sequence_variant
+    object:
+      method: value
+      encoding: "idiopathic achalasia"
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: "immune-mediated"
+      - qualifier: population_context_qualifier
+        method: value
+        encoding: "European"
+  provenance:
+    repo: PMC
+    publication: PMC13018755
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "2026-05-06"
+        comment: "Created from PMC13018755 ST5 sheet - SNP Associations"
+  annotations:
+    - annotation: p_value
+      method: column
+      encoding: B
+    - annotation: odds_ratio
+      method: column
+      encoding: C
+    - annotation: beta_coefficient
+      method: column
+      encoding: D
+    - annotation: allele_frequency
+      method: column
+      encoding: E

@@ -1,0 +1,43 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: PMC13018755.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13018755/
+    sheet: ST4
+    row_slice: [1, auto]
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Publication]
+    predicate: mentions
+    object:
+      method: value
+      encoding: "idiopathic achalasia"
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: "immune-mediated"
+      - qualifier: population_context_qualifier
+        method: value
+        encoding: "European"
+  provenance:
+    repo: PMC
+    publication: PMC13018755
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "2026-05-06"
+        comment: "Created from PMC13018755 ST4 sheet - Phenotype Correlation"
+  annotations:
+    - annotation: correlation_coefficient
+      method: column
+      encoding: B
+    - annotation: p_value
+      method: column
+      encoding: C
+    - annotation: phenotype_description
+      method: column
+      encoding: D

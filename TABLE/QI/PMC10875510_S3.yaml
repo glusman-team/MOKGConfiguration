@@ -1,0 +1,160 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: text
+    local: ./PMC10875510_TABLE_S3.csv
+    url: https://example.com/PMC10875510_TABLE_S3.csv
+    row_slice: [1, auto]
+    delimiter: ","
+    reindex:
+      - column: D
+        comparison: ne
+        comparator: "NA"
+  
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [ClinicalAttribute]
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      prioritize: [Treatment]
+      taxon: 9606
+  
+  provenance:
+    repo: PMC
+    publication: "10875510"
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+        comment: Baseline characteristics stratified by treatment demands from Chinese national psoriasis registry
+  
+  annotations:
+    - annotation: characteristic_description
+      method: column
+      encoding: A
+      fill: forward
+    - annotation: treatment_category
+      method: column
+      encoding: B
+      fill: forward
+    - annotation: low_demand_value
+      method: column
+      encoding: C
+      fill: forward
+    - annotation: moderate_demand_value
+      method: column
+      encoding: D
+      fill: forward
+    - annotation: high_demand_value
+      method: column
+      encoding: E
+      fill: forward
+    - annotation: statistical_difference_low_vs_moderate
+      method: column
+      encoding: F
+      fill: forward
+    - annotation: statistical_difference_low_vs_high
+      method: column
+      encoding: G
+      fill: forward
+    - annotation: statistical_difference_moderate_vs_high
+      method: column
+      encoding: H
+      fill: forward
+    - annotation: sample_size_low_demand
+      method: column
+      encoding: I
+      fill: forward
+    - annotation: sample_size_moderate_demand
+      method: column
+      encoding: J
+      fill: forward
+    - annotation: sample_size_high_demand
+      method: column
+      encoding: K
+      fill: forward
+    - annotation: data_source
+      method: value
+      encoding: "Chinese National Psoriasis Registry"
+    - annotation: study_period
+      method: value
+      encoding: "August 2020 - September 2021"
+    - annotation: population_size
+      method: value
+      encoding: "22,425 patients"
+    - annotation: geographic_scope
+      method: value
+      encoding: "National (China)"
+
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [DiseaseOrPhenotypicFeature]
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: value
+        encoding: "MONDO:0005083"
+        prioritize: [Disease]
+    annotations:
+      - annotation: disease_category
+        method: value
+        encoding: "psoriasis"
+      - annotation: characteristic_type
+        method: value
+        encoding: "disease phenotype"
+      - annotation: treatment_stratification
+        method: value
+        encoding: "severity-based treatment demands"
+  
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [PhenotypicFeature]
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: value
+        encoding: "EFO:0022382"
+        prioritize: [PhenotypicFeature]
+    annotations:
+      - annotation: measurement_type
+        method: value
+        encoding: "PASI score"
+      - annotation: demand_level_context
+        method: value
+        encoding: "treatment demand stratification"
+  
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [PhenotypicFeature]
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: value
+        encoding: "UMLS:C0005902"
+        prioritize: [PhenotypicFeature]
+    annotations:
+      - annotation: measurement_type
+        method: value
+        encoding: "Body Surface Area"
+      - annotation: demand_level_context
+        method: value
+        encoding: "treatment demand stratification"

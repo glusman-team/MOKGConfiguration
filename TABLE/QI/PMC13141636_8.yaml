@@ -1,0 +1,202 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ".ledger/tnf-alpha-inhibitors-covid-19-risk/data/PMC13141636/source/PMC13141636.1/mmc9.xlsx"
+    url: "https://www.sciencedirect.com/cms/attachment/pmc13141636/mmc9.xlsx"
+
+  provenance:
+    repo: PMC
+    publication: PMC13141636
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "06 MAY 2026"
+      - kind: curation
+        name: "Tablassert pipeline"
+        date: "06 MAY 2026"
+
+sections:
+  # S10A: Effector Memory CD4+ T cells DEGs (392 rows)
+  - source:
+      sheet: "S10A"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: affected_by
+      object:
+        method: value
+        encoding: UMLS:C5400806
+    annotations:
+      - annotation: scores
+        method: column
+        encoding: B
+      - annotation: logfoldchanges
+        method: column
+        encoding: C
+      - annotation: pvals
+        method: column
+        encoding: D
+      - annotation: pvals_adj
+        method: column
+        encoding: E
+
+  # S10B: Effector Memory CD4+ T cells DEGs (362 rows)
+  - source:
+      sheet: "S10B"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: affected_by
+      object:
+        method: value
+        encoding: UMLS:C5400806
+    annotations:
+      - annotation: scores
+        method: column
+        encoding: B
+      - annotation: logfoldchanges
+        method: column
+        encoding: C
+      - annotation: pvals
+        method: column
+        encoding: D
+      - annotation: pvals_adj
+        method: column
+        encoding: E
+
+  # S10C: GO enrichment - Gene -> participates_in -> GO term
+  - source:
+      sheet: "S10C"
+    statement:
+      subject:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"
+      predicate: participates_in
+      object:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+
+  # S10C: GO enrichment - GO term -> related_to -> Gene
+  - source:
+      sheet: "S10C"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+      predicate: related_to
+      object:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"
+
+  # S10D: GO enrichment - Gene -> participates_in -> GO term
+  - source:
+      sheet: "S10D"
+    statement:
+      subject:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"
+      predicate: participates_in
+      object:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+
+  # S10D: GO enrichment - GO term -> related_to -> Gene
+  - source:
+      sheet: "S10D"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+      predicate: related_to
+      object:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"
+
+  # S10E: GO enrichment - Gene -> participates_in -> GO term
+  - source:
+      sheet: "S10E"
+    statement:
+      subject:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"
+      predicate: participates_in
+      object:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+
+  # S10E: GO enrichment - GO term -> related_to -> Gene
+  - source:
+      sheet: "S10E"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+      predicate: related_to
+      object:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"

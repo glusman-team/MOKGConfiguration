@@ -1,0 +1,61 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: text
+    local: ./data/PMC12419445_Sheet2.csv
+    url: https://placeholder-url-for-supplementary-table/PMC12419445_S2.csv
+    delimiter: ","
+    row_slice:
+      - 1
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      remove:
+        - "^rs"
+      prefix: "dbSNP:"
+      taxon: 9606
+      prioritize:
+        - SequenceVariant
+      avoid:
+        - Gene
+    predicate: has_variant_part
+    object:
+      method: column
+      encoding: F
+      regex:
+        - pattern: " levels$"
+          replacement: ""
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+  provenance:
+    repo: PMC
+    publication: PMC12419445
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "06 MAY 2026"
+        comment: Initial configuration from supplementary table analysis - reverse MR direction
+  annotations:
+    - annotation: exposure
+      method: column
+      encoding: D
+    - annotation: beta
+      method: column
+      encoding: J
+    - annotation: effect allele frequency
+      method: column
+      encoding: K
+    - annotation: p value
+      method: column
+      encoding: M
+    - annotation: F statistic
+      method: column
+      encoding: O
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "Genetic instruments for autoimmune diseases tested against sex hormone outcomes in reverse Mendelian randomization. Data from European-ancestry populations (UK Biobank, FinnGen). F-statistic indicates instrument strength; values > 10 suggest strong instruments."

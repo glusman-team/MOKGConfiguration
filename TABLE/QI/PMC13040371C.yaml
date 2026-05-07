@@ -1,0 +1,92 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./PMC13040371_disease_specific_analysis.xlsx
+    url: https://example.com/PMC13040371_disease_specific_analysis.xlsx
+    sheet: "Sheet1"
+    row_slice: [1, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Gene]
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      prioritize: [DiseaseOrPhenotypicFeature]
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: PID
+
+  provenance:
+    repo: PMC
+    publication: "PMC13040371"
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: gene_symbol
+      method: column
+      encoding: A
+    - annotation: entrez_id
+      method: column
+      encoding: C
+      regex:
+        - pattern: "^(\\d+)$"
+          replacement: "NCBIGene:$1"
+    - annotation: p_value
+      method: column
+      encoding: D
+      regex:
+        - pattern: "^([0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)$"
+          replacement: "$1"
+    - annotation: fold_change
+      method: column
+      encoding: E
+
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [Gene]
+      predicate: associated_with
+      object:
+        method: column
+        encoding: B
+        prioritize: [DiseaseOrPhenotypicFeature]
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: MS
+    annotations:
+      - annotation: study_id
+        method: column
+        encoding: F
+
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [Gene]
+      predicate: associated_with
+      object:
+        method: column
+        encoding: B
+        prioritize: [DiseaseOrPhenotypicFeature]
+      qualifiers:
+        - qualifier: disease_context_qualifier
+          method: value
+          encoding: RA
+    annotations:
+      - annotation: effect_size
+        method: column
+        encoding: G

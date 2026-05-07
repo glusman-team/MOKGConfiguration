@@ -1,151 +1,154 @@
-# Supplemental Table 1: Summary of PGIC and CGIC scores from the pre-voxelotor treatment period
-# Table captures patient-reported outcomes (PGIC) and clinician assessments (CGIC) for RETRO and PROSPECT studies
+template:
+  name: "PMC13141567_TABLE1"
+  description: "Supplemental Table 1: Summary of PGIC and CGIC scores from the pre-voxelotor treatment period"
+  version: "1.0"
 
-table:
-  name: "Supplemental Table 1 - PGIC and CGIC Scores"
-  description: "Summary of Patient Global Impression of Change (PGIC) and Clinical Global Impression of Change (CGIC) scores from the pre-voxelotor treatment period"
-  source: "PMC13141567"
-  columns:
-    - name: "study"
-      type: "string"
-      description: "Study name (RETRO or PROSPECT)"
-      required: true
-    - name: "timepoint"
-      type: "string"
-      description: "Study timepoint (e.g., '12 months', 'month 9', 'month 48')"
-      required: true
-    - name: "measure"
-      type: "string"
-      description: "Type of measure (PGIC score or CGIC score)"
-      required: true
-    - name: "participants_count"
-      type: "integer"
-      description: "Number of participants at visit"
-      required: true
-    - name: "very_much_improved"
-      type: "integer"
-      description: "Number of participants with 'very much improved' rating"
-      required: true
-    - name: "much_improved"
-      type: "integer"
-      description: "Number of participants with 'much improved' rating"
-      required: true
-    - name: "minimally_improved"
-      type: "integer"
-      description: "Number of participants with 'minimally improved' rating"
-      required: true
-    - name: "no_change"
-      type: "integer"
-      description: "Number of participants with 'no change' rating"
-      required: true
-    - name: "minimally_worse"
-      type: "integer"
-      description: "Number of participants with 'minimally worse' rating"
-      required: true
-    - name: "much_worse"
-      type: "integer"
-      description: "Number of participants with 'much worse' rating"
-      required: true
-    - name: "very_much_worse"
-      type: "integer"
-      description: "Number of participants with 'very much worse' rating"
-      required: true
+sections:
+  table:
+    name: "Supplemental Table 1 - PGIC and CGIC Scores"
+    description: "Summary of Patient Global Impression of Change (PGIC) and Clinical Global Impression of Change (CGIC) scores from the pre-voxelotor treatment period"
+    source: "PMC13141567"
+    columns:
+      - name: "study"
+        type: "string"
+        description: "Study name (RETRO or PROSPECT)"
+        required: true
+      - name: "timepoint"
+        type: "string"
+        description: "Study timepoint (e.g., '12 months', 'month 9', 'month 48')"
+        required: true
+      - name: "measure"
+        type: "string"
+        description: "Type of measure (PGIC score or CGIC score)"
+        required: true
+      - name: "participants_count"
+        type: "integer"
+        description: "Number of participants at visit"
+        required: true
+      - name: "very_much_improved"
+        type: "integer"
+        description: "Number of participants with 'very much improved' rating"
+        required: true
+      - name: "much_improved"
+        type: "integer"
+        description: "Number of participants with 'much improved' rating"
+        required: true
+      - name: "minimally_improved"
+        type: "integer"
+        description: "Number of participants with 'minimally improved' rating"
+        required: true
+      - name: "no_change"
+        type: "integer"
+        description: "Number of participants with 'no change' rating"
+        required: true
+      - name: "minimally_worse"
+        type: "integer"
+        description: "Number of participants with 'minimally worse' rating"
+        required: true
+      - name: "much_worse"
+        type: "integer"
+        description: "Number of participants with 'much worse' rating"
+        required: true
+      - name: "very_much_worse"
+        type: "integer"
+        description: "Number of participants with 'very much worse' rating"
+        required: true
 
-transforms:
-  # Clean participant counts and percentages
-  - column: "participants_count"
-    regex: "\\((.*?)\\)"
-    extract: "percentage"
-    new_column: "percentage_participants"
-  
-  # Handle cases where only counts are provided
-  - column: "very_much_improved"
-    if_empty: 0
+  transforms:
+    # Clean participant counts and percentages
+    - column: "participants_count"
+      regex: "\\((.*?)\\)"
+      extract: "percentage"
+      new_column: "percentage_participants"
+    
+    # Handle cases where only counts are provided
+    - column: "very_much_improved"
+      if_empty: 0
 
-# Data mapping for RETRO study
-data_map:
-  - row: 1
-    study: "RETRO"
-    timepoint: "12 months"
-    measure: "PGIC score"
-    participants_count: 216
-    very_much_improved: 4
-    much_improved: 0
-    minimally_improved: 0
-    no_change: 0
-    minimally_worse: 0
-    much_worse: 0
-    very_much_worse: 0
-  
-  - row: 2
-    study: "RETRO"
-    timepoint: "12 months"
-    measure: "CGIC score"
-    participants_count: 4
-    very_much_improved: 0
-    much_improved: 0
-    minimally_improved: 0
-    no_change: 0
-    minimally_worse: 0
-    much_worse: 0
-    very_much_worse: 0
+  data_map:
+    # RETRO study data
+    - row: 1
+      study: "RETRO"
+      timepoint: "12 months"
+      measure: "PGIC score"
+      participants_count: 216
+      very_much_improved: 4
+      much_improved: 0
+      minimally_improved: 0
+      no_change: 0
+      minimally_worse: 0
+      much_worse: 0
+      very_much_worse: 0
+    
+    - row: 2
+      study: "RETRO"
+      timepoint: "12 months"
+      measure: "CGIC score"
+      participants_count: 4
+      very_much_improved: 0
+      much_improved: 0
+      minimally_improved: 0
+      no_change: 0
+      minimally_worse: 0
+      much_worse: 0
+      very_much_worse: 0
 
-# Data mapping for PROSPECT study
-  - row: 3
-    study: "PROSPECT"
-    timepoint: "month 9"
-    measure: "PGIC score"
-    participants_count: 4
-    very_much_improved: 1
-    much_improved: 2
-    minimally_improved: 1
-    no_change: 0
-    minimally_worse: 0
-    much_worse: 0
-    very_much_worse: 0
-  
-  - row: 4
-    study: "PROSPECT"
-    timepoint: "month 9"
-    measure: "CGIC score"
-    participants_count: 3
-    very_much_improved: 0
-    much_improved: 0
-    minimally_improved: 0
-    no_change: 0
-    minimally_worse: 0
-    much_worse: 0
-    very_much_worse: 0
-  
-  - row: 5
-    study: "PROSPECT"
-    timepoint: "month 48"
-    measure: "PGIC score"
-    participants_count: 36
-    very_much_improved: 1
-    much_improved: 17
-    minimally_improved: 9
-    no_change: 7
-    minimally_worse: 1
-    much_worse: 2
-    very_much_worse: 1
-  
-  - row: 6
-    study: "PROSPECT"
-    timepoint: "month 48"
-    measure: "CGIC score"
-    participants_count: 21
-    very_much_improved: 10
-    much_improved: 6
-    minimally_improved: 1
-    no_change: 0
-    minimally_worse: 0
-    much_worse: 0
-    very_much_worse: 0
+    # PROSPECT study data
+    - row: 3
+      study: "PROSPECT"
+      timepoint: "month 9"
+      measure: "PGIC score"
+      participants_count: 4
+      very_much_improved: 1
+      much_improved: 2
+      minimally_improved: 1
+      no_change: 0
+      minimally_worse: 0
+      much_worse: 0
+      very_much_worse: 0
+    
+    - row: 4
+      study: "PROSPECT"
+      timepoint: "month 9"
+      measure: "CGIC score"
+      participants_count: 3
+      very_much_improved: 0
+      much_improved: 0
+      minimally_improved: 0
+      no_change: 0
+      minimally_worse: 0
+      much_worse: 0
+      very_much_worse: 0
+    
+    - row: 5
+      study: "PROSPECT"
+      timepoint: "month 48"
+      measure: "PGIC score"
+      participants_count: 36
+      very_much_improved: 1
+      much_improved: 17
+      minimally_improved: 9
+      no_change: 7
+      minimally_worse: 1
+      much_worse: 2
+      very_much_worse: 1
+    
+    - row: 6
+      study: "PROSPECT"
+      timepoint: "month 48"
+      measure: "CGIC score"
+      participants_count: 21
+      very_much_improved: 10
+      much_improved: 6
+      minimally_improved: 1
+      no_change: 0
+      minimally_worse: 0
+      much_worse: 0
+      very_much_worse: 0
 
-validation:
-  rules:
-    - "ensure participants_count > 0"
-    - "ensure sum of rating columns equals participants_count"
-    - "validate measure is either 'PGIC score' or 'CGIC score'"
-    - "validate study is either 'RETRO' or 'PROSPECT'"
+  validation:
+    rules:
+      - "ensure participants_count > 0"
+      - "ensure sum of rating columns equals participants_count"
+      - "validate measure is either 'PGIC score' or 'CGIC score'"
+      - "validate study is either 'RETRO' or 'PROSPECT'"
