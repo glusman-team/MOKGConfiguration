@@ -77,10 +77,10 @@ sections:
         transformations:
           - function: copysign
             arguments: [values, 1]
-    qualifiers:
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: "Korean population"
+      qualifiers:
+        - qualifier: population_context_qualifier
+          method: value
+          encoding: "Korean population"
 
   - # Categorical variables and percentages
     statement:
@@ -99,10 +99,10 @@ sections:
         transformations:
           - function: copysign
             arguments: [values, 1]
-    qualifiers:
-      - qualifier: population_context_qualifier
-        method: value
-        encoding: "Korean population"
+      qualifiers:
+        - qualifier: population_context_qualifier
+          method: value
+          encoding: "Korean population"
 
   - # Statistical significance
     statement:
@@ -118,7 +118,7 @@ sections:
             replacement: "less_than_"
           - pattern: "≥"
             replacement: "greater_than_or_equal_to_"
-    qualifiers:
-      - qualifier: severity_qualifier
-        method: value
-        encoding: "statistical_significance"
+      qualifiers:
+        - qualifier: severity_qualifier
+          method: value
+          encoding: "statistical_significance"
