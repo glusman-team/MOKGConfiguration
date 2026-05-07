@@ -48,77 +48,77 @@ template:
       method: value
       encoding: "P < 0.05 considered statistically significant"
 
-  sections:
-    - # Continuous variables (Age, BMI, Insurance level, Follow-up days)
-      statement:
-        subject:
-          method: column
-          encoding: A
-          regex:
-            - pattern: " \\(years\\)"
-              replacement: ""
-            - pattern: " level"
-              replacement: ""
-            - pattern: " mass index"
-              replacement: ""
-            - pattern: " \\(days\\)"
-              replacement: ""
-          prioritize: [PhenotypicFeature, ClinicalMeasurement]
-          taxon: 9606
-        predicate: associated_with
-        object:
-          method: column
-          encoding: B
-          regex:
-            - pattern: " ± "
-              replacement: ","
-          explode_by: ","
-          fill: forward
-          transformations:
-            - function: copysign
-              arguments: [values, 1]
-      qualifiers:
-        - qualifier: population_context_qualifier
-          method: value
-          encoding: "Korean population"
+sections:
+  - # Continuous variables (Age, BMI, Insurance level, Follow-up days)
+    statement:
+      subject:
+        method: column
+        encoding: A
+        regex:
+          - pattern: " \\(years\\)"
+            replacement: ""
+          - pattern: " level"
+            replacement: ""
+          - pattern: " mass index"
+            replacement: ""
+          - pattern: " \\(days\\)"
+            replacement: ""
+        prioritize: [PhenotypicFeature, ClinicalMeasurement]
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: column
+        encoding: B
+        regex:
+          - pattern: " ± "
+            replacement: ","
+        explode_by: ","
+        fill: forward
+        transformations:
+          - function: copysign
+            arguments: [values, 1]
+    qualifiers:
+      - qualifier: population_context_qualifier
+        method: value
+        encoding: "Korean population"
 
-    - # Categorical variables and percentages
-      statement:
-        subject:
-          method: column
-          encoding: A
-          prioritize: [PhenotypicFeature, ClinicalAttribute]
-          taxon: 9606
-        predicate: associated_with
-        object:
-          method: column
-          encoding: C
-          regex:
-            - pattern: "%"
-              replacement: ""
-          transformations:
-            - function: copysign
-              arguments: [values, 1]
-      qualifiers:
-        - qualifier: population_context_qualifier
-          method: value
-          encoding: "Korean population"
+  - # Categorical variables and percentages
+    statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize: [PhenotypicFeature, ClinicalAttribute]
+        taxon: 9606
+      predicate: associated_with
+      object:
+        method: column
+        encoding: C
+        regex:
+          - pattern: "%"
+            replacement: ""
+        transformations:
+          - function: copysign
+            arguments: [values, 1]
+    qualifiers:
+      - qualifier: population_context_qualifier
+        method: value
+        encoding: "Korean population"
 
-    - # Statistical significance
-      statement:
-        subject:
-          method: column
-          encoding: A
-        predicate: associated_with
-        object:
-          method: column
-          encoding: D
-          regex:
-            - pattern: "<"
-              replacement: "less_than_"
-            - pattern: "≥"
-              replacement: "greater_than_or_equal_to_"
-      qualifiers:
-        - qualifier: severity_qualifier
-          method: value
-          encoding: "statistical_significance"
+  - # Statistical significance
+    statement:
+      subject:
+        method: column
+        encoding: A
+      predicate: associated_with
+      object:
+        method: column
+        encoding: D
+        regex:
+          - pattern: "<"
+            replacement: "less_than_"
+          - pattern: "≥"
+            replacement: "greater_than_or_equal_to_"
+    qualifiers:
+      - qualifier: severity_qualifier
+        method: value
+        encoding: "statistical_significance"
