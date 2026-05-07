@@ -1,0 +1,32 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: text
+    local: 13148_2026_2120_MOESM3_ESM.docx
+    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs13053-026-02120-7/MediaObjects/13148_2026_2120_MOESM3_ESM.docx
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      explode_by: ", "
+      taxon: 9606
+      prioritize:
+        - Gene
+
+  provenance:
+    repo: PMC
+    publication: PMC13088768
+    contributors:
+      - kind: curation
+        name: Pioneer Agent
+        date: 07 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026

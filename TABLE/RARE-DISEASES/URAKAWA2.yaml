@@ -1,0 +1,53 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: text
+    local: ./.ledger/imprinting-disorder-methylomics/data/PMC11452994/source/derived/urakawa_variants.csv
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11452994/
+    delimiter: ","
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: UMLS:C5816793
+      prioritize:
+        - Disease
+
+  annotations:
+    - annotation: total_variants
+      method: column
+      encoding: B
+    - annotation: lp_count
+      method: column
+      encoding: C
+    - annotation: vus_count
+      method: column
+      encoding: D
+    - annotation: maternal_effect
+      method: column
+      encoding: E
+
+  provenance:
+    repo: PMC
+    publication: PMC11452994
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026

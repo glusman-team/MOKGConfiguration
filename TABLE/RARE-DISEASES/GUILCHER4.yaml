@@ -1,0 +1,53 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: text
+    local: ./suppl_table_s6_cam_context.csv
+    url: https://doi.org/10.1136/jpn-2022-000015
+    row_slice: [1, auto]
+    delimiter: ","
+    
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [IndividualOrganism, Human]
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      prioritize: [InformationContentEntity, Study]
+      regex:
+        - pattern: ".*%.*"
+          replacement: ""
+        - pattern: ".*\\(.*\\).*"
+          replacement: ""
+      
+  provenance:
+    repo: PMC
+    publication: "12780483"
+    contributors:
+      - kind: curation
+        name: Tablassist Discovery Pipeline
+        date: 06 MAY 2026
+        comment: Extracted from supplementary table S6 of pediatric IBD CAM study
+
+  annotations:
+    - annotation: survey_question
+      method: column
+      encoding: A
+    - annotation: response_option
+      method: column
+      encoding: B
+    - annotation: response_count
+      method: column
+      encoding: C
+      fill: zero
+    - annotation: response_percentage
+      method: value
+      encoding: "percentage of respondents"
+    - annotation: survey_context
+      method: value
+      encoding: "CAM usage patterns, payment, information sources in pediatric IBD patients"

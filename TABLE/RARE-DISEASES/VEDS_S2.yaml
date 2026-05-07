@@ -1,0 +1,80 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: text
+    local: ./source/PMC13134318.1/supplement_table_S2.csv
+    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs13023-026-04327-0/MediaObjects/13023_2026_4327_MOESM1_ESM.pdf
+    delimiter: "\t"
+    row_slice: [1, auto]
+  
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Gene]
+    predicate: has_sequence_variant
+    object:
+      method: column
+      encoding: B
+      regex:
+        - pattern: "c\\."
+          replacement: ""
+        - pattern: "p\\."
+          replacement: ""
+        - pattern: "EX\\d+-EX\\d+"
+          replacement: ""
+        - pattern: "Del"
+          replacement: "deletion"
+        - pattern: "Splicing"
+          replacement: "splicing_variant"
+      explode_by: ";"
+  
+  provenance:
+    repo: PMC
+    publication: PMC13134318
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+        comment: Config for genetic mutation table S2
+  
+  annotations:
+    - annotation: nucleotide_change
+      method: column
+      encoding: B
+      fill: forward
+    - annotation: amino_acid_change
+      method: column
+      encoding: C
+      regex:
+        - pattern: "p\\."
+          replacement: ""
+      fill: forward
+    - annotation: pathogenicity_class
+      method: column
+      encoding: D
+      fill: forward
+    - annotation: acmg_evidence
+      method: column
+      encoding: E
+      fill: forward
+    - annotation: patient_id
+      method: column
+      encoding: A
+      fill: forward
+
+sections:
+  - statement:
+      predicate: associated_with
+      object:
+        method: column
+        encoding: D
+        prioritize: [DiseaseOrPhenotypicFeature]
+  - statement:
+      predicate: has_molecular_consequence
+      object:
+        method: column
+        encoding: C
+        prioritize: [SequenceVariant]

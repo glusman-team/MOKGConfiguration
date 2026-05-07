@@ -1,0 +1,86 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./.ledger/pediatric-acute-care-multi-omics/data/PMC13141636/source/mmc8.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13141636/bin/mmc8.xlsx
+    row_slice: [1, "auto"]
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Gene]
+      taxon: 9606
+    predicate: expressed_in
+
+  provenance:
+    repo: PMC
+    publication: "PMC13141636"
+    contributors:
+      - kind: curation
+        name: Tablassist Discovery Pipeline
+        date: 06 MAY 2026
+        comment: Th2 & Tfh cell DEGs from pediatric COVID-19 vaccination scRNA-seq study
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: log2_fold_change
+      method: column
+      encoding: C
+    - annotation: adjusted_p_value
+      method: column
+      encoding: E
+
+sections:
+  - source:
+      sheet: "Table S9A"
+    statement:
+      object:
+        method: value
+        encoding: CL:0000546
+        prioritize: [Cell]
+    annotations:
+      - annotation: condition
+        method: value
+        encoding: "FJ vs NJ"
+
+  - source:
+      sheet: "Table S9B"
+    statement:
+      object:
+        method: value
+        encoding: CL:0000546
+        prioritize: [Cell]
+    annotations:
+      - annotation: condition
+        method: value
+        encoding: "SJ vs NJ"
+
+  - source:
+      sheet: "Table S9E"
+    statement:
+      object:
+        method: value
+        encoding: CL:0002038
+        prioritize: [Cell]
+    annotations:
+      - annotation: condition
+        method: value
+        encoding: "FJ vs NJ"
+
+  - source:
+      sheet: "Table S9F"
+    statement:
+      object:
+        method: value
+        encoding: CL:0002038
+        prioritize: [Cell]
+    annotations:
+      - annotation: condition
+        method: value
+        encoding: "SJ vs NJ"

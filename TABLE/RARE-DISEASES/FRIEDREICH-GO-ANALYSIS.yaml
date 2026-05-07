@@ -1,0 +1,64 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: excel
+    local: .ledger/friedreich-ataxia-fxn/data/PMC13015369/source/PMC13015369.1/media-2.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13015369/
+    sheet: cardiomyocyte_GO
+    row_slice: [1, auto]
+  
+  statement:
+    subject:
+      method: column
+      encoding: term
+      prioritize: [BiologicalProcess]
+      regex:
+        - pattern: "BP: "
+          replacement: ""
+        - pattern: "CC: "
+          replacement: ""
+        - pattern: "MF: "
+          replacement: ""
+    predicate: contributes_to
+    object:
+      method: column
+      encoding: consensus
+      regex:
+        - pattern: "up"
+          replacement: "increased_enrichment"
+        - pattern: "down"
+          replacement: "decreased_enrichment"
+  
+  provenance:
+    repo: PMC
+    publication: PMC13015369
+    contributors:
+      - kind: curation
+        name: Tablassist Autonomous Discovery
+        date: 07 MAY 2026
+        comment: Gene ontology enrichment analysis in cardiomyocytes for Friedreich ataxia
+  
+  annotations:
+    - annotation: gene_ontology_ID
+      method: column
+      encoding: ID
+    - annotation: ontology_domain
+      method: column
+      encoding: ontology
+    - annotation: study_count
+      method: column
+      encoding: n_datasets
+    - annotation: direction_score
+      method: column
+      encoding: direction_score
+    - annotation: normalized_enrichment_score
+      method: column
+      encoding: median_NES_sig
+    - annotation: consistent_studies_count
+      method: column
+      encoding: n_consistent
+    - annotation: conflicting_studies_count
+      method: column
+      encoding: n_conflict

@@ -1,0 +1,86 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: text
+    local: ./source/PMC13134318.1/supplement_table_S4.csv
+    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs13023-026-04327-0/MediaObjects/13023_2026_4327_MOESM1_ESM.pdf
+    delimiter: "\t"
+    row_slice: [1, auto]
+  
+  statement:
+    subject:
+      method: column
+      encoding: A
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      prioritize: [Cohort]
+  
+  provenance:
+    repo: PMC
+    publication: PMC13134318
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+        comment: Config for demographics comparison table S4
+  
+  annotations:
+    - annotation: cohort_period
+      method: column
+      encoding: A
+      regex:
+        - pattern: "before 2022"
+          replacement: "before_2022"
+        - pattern: "after 2022"
+          replacement: "after_2022"
+    - annotation: sample_size
+      method: column
+      encoding: C
+    - annotation: age_mean_sd
+      method: column
+      encoding: D
+    - annotation: male_percentage
+      method: column
+      encoding: E
+    - annotation: wbc_median_iqr
+      method: column
+      encoding: F
+    - annotation: neutrophil_count_median_iqr
+      method: column
+      encoding: G
+    - annotation: neutrophil_percentage_median_iqr
+      method: column
+      encoding: H
+    - annotation: crp_median_iqr
+      method: column
+      encoding: I
+    - annotation: esr_median_iqr
+      method: column
+      encoding: J
+    - annotation: ana_positive_percentage
+      method: column
+      encoding: K
+    - annotation: p_value
+      method: column
+      encoding: L
+    - annotation: miscellaneous_notes
+      method: value
+      encoding: "Demographics and clinical features comparison for vEDS patients before vs after 2022; values are mean ± SD for continuous variables and median [IQR] for laboratory tests"
+
+sections:
+  - statement:
+      predicate: associated_with
+      object:
+        method: column
+        encoding: D
+        prioritize: [ClinicalMeasurement]
+  - statement:
+      predicate: associated_with
+      object:
+        method: column
+        encoding: E
+        prioritize: [AdministrativeEntity]

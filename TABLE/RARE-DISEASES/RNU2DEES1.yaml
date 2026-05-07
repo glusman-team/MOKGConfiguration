@@ -1,0 +1,35 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: .ledger/mendelian-neurodevelopmental-episignatures/data/PMC13083260/raw/41588_2026_2547_MOESM4_ESM.xlsx
+    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-026-02547-9/MediaObjects/41588_2026_2547_MOESM4_ESM.xlsx
+    sheet: Supp. Table 1
+    row_slice: [0, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: G
+      taxon: 9606
+      prioritize:
+        - Gene
+    predicate: has_gene_product
+    object:
+      method: value
+      encoding: snRNA
+      prioritize:
+        - NoncodingRnaProduct
+
+  provenance:
+    repo: PMC
+    publication: PMC13083260
+    contributors:
+      - kind: curation
+        name: Pioneer Agent
+        date: 07 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 07 MAY 2026

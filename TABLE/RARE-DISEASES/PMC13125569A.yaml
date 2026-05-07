@@ -1,0 +1,85 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ".ledger/systemic-sclerosis-scleroderma/data/PMC13125569/raw/raw/41467_2026_70395_MOESM4_ESM.xlsx"
+    url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13125569/"
+    sheet: "Figure 4A"
+    row_slice: [2, auto]
+
+  statement:
+    subject:
+      method: value
+      encoding: COL1A1
+      taxon: 9606
+      prioritize: [Gene]
+    predicate: related_to
+    object:
+      method: value
+      encoding: "condition"
+
+  provenance:
+    repo: PMC
+    publication: PMC13125569
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+        comment: Created from merged-header human gene-expression sheet
+
+sections:
+  - statement:
+      object:
+        encoding: "Healthy (Hamstring)"
+    annotations:
+      - annotation: expression_level
+        method: column
+        encoding: A
+
+  - statement:
+      object:
+        encoding: Diseased
+    annotations:
+      - annotation: expression_level
+        method: column
+        encoding: B
+
+  - statement:
+      object:
+        encoding: "Systemic Sclerosis"
+    annotations:
+      - annotation: expression_level
+        method: column
+        encoding: C
+
+  - statement:
+      subject:
+        encoding: COL3A1
+      object:
+        encoding: "Healthy (Hamstring)"
+    annotations:
+      - annotation: expression_level
+        method: column
+        encoding: E
+
+  - statement:
+      subject:
+        encoding: COL3A1
+      object:
+        encoding: Diseased
+    annotations:
+      - annotation: expression_level
+        method: column
+        encoding: F
+
+  - statement:
+      subject:
+        encoding: COL3A1
+      object:
+        encoding: "Systemic Sclerosis"
+    annotations:
+      - annotation: expression_level
+        method: column
+        encoding: G
