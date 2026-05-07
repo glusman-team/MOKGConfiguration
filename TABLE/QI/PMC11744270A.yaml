@@ -1,0 +1,37 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: Table14.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11744270/bin/Table14.xlsx
+    sheet: Sheet1
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Polypeptide]
+      taxon: 9606
+    predicate: physically_interacts_with
+    object:
+      method: column
+      encoding: B
+      prioritize: [Gene]
+      taxon: 9606
+    qualifiers:
+      - qualifier: context_qualifier
+        method: column
+        encoding: D
+        prioritize: [Gene]
+        taxon: 9606
+        explode_by: ", "
+  provenance:
+    repo: PMC
+    publication: PMC11744270
+    contributors:
+      - kind: curation
+        name: Antigravity
+        date: "2026-05-06"
+      - kind: tool
+        name: tablassist
+        date: "2026-05-06"

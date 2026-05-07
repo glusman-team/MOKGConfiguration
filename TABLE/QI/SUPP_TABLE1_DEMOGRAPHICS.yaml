@@ -1,0 +1,98 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./.ledger/il-17-pathway-respiratory-infections/data/PMC12847772/source/PMC12847772.1/41467_2025_67769_MOESM4_ESM.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12847772/
+    sheet: Supplementary Table 1
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: B
+      fill: forward
+      regex:
+        - pattern: "^Brochiectasis$"
+          replacement: "Bronchiectasis"
+      prioritize:
+        - Disease
+    predicate: has_phenotype
+
+  provenance:
+    repo: PMC
+    publication: PMC12847772
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+      - kind: curation
+        name: Tablassist-pioneer
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+
+sections:
+  - statement:
+      object:
+        method: column
+        encoding: D
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: "Age"
+
+  - statement:
+      object:
+        method: column
+        encoding: E
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: "Sex (0=female, 1=male)"
+
+  - statement:
+      object:
+        method: column
+        encoding: F
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: "Smoking status"
+
+  - statement:
+      object:
+        method: column
+        encoding: G
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: "Duration of symptom (y)"
+
+  - statement:
+      object:
+        method: column
+        encoding: H
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: "P. aeruginosa isolation"

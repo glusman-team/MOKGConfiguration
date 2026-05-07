@@ -1,0 +1,50 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./PMC12131765_autoimmune_data.xlsx
+    url: https://example.com/PMC12131765_autoimmune_data.xlsx
+    sheet: "Psoriasis"
+    row_slice: [1, auto]
+  statement:
+    subject:
+      method: column
+      encoding: A
+      regex:
+        - pattern: "-"
+          replacement: ""
+      prioritize: [SequenceVariant]
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: value
+      encoding: "Psoriasis"
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: "Psoriasis"
+  annotations:
+    - annotation: PIP
+      method: column
+      encoding: B
+    - annotation: CS1_PP
+      method: column
+      encoding: C
+    - annotation: CS2_PP
+      method: column
+      encoding: D
+    - annotation: CS3_PP
+      method: column
+      encoding: E
+    - annotation: CS4_PP
+      method: column
+      encoding: F
+  provenance:
+    repo: PMC
+    publication: PMC12131765
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "2026-05-06"
+        comment: "Created from delegated summary for MDA5 autoimmune disease study"

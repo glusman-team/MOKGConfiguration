@@ -1,0 +1,39 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: text
+    local: MOESM3_ESM.csv
+    url: https://example.com/MOESM3_ESM.csv
+    delimiter: ","
+    row_slice:
+      - 1
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+        - Polypeptide
+      taxon: 9606
+    predicate: physically_interacts_with
+    object:
+      method: column
+      encoding: A
+      prioritize:
+        - Protein
+      taxon: 9606
+      explode_by: ":"
+      regex:
+        - pattern: "\\|.*"
+          replacement: ""
+  provenance:
+    repo: PMC
+    publication: PMC12357944
+    contributors:
+      - kind: curation
+        name: Antigravity
+        date: "2026-05-06"
+      - kind: tool
+        name: tablassist
+        date: "2026-05-06"

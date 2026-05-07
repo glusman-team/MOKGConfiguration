@@ -1,0 +1,52 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./source/PMC13067946/csbj.0002.f1.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13067946/bin/csbj.0002.f1.xlsx
+    sheet: supp_data
+    row_slice: [1, auto]
+  statement:
+    subject:
+      method: column
+      encoding: F
+      prioritize: [Polypeptide]
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0017853
+      prioritize: [Disease]
+  provenance:
+    repo: PMC
+    publication: PMC13067946
+    contributors:
+      - kind: curation
+        name: Antigravity
+        date: "2026-05-06"
+      - kind: tool
+        name: tablassist
+        date: "2026-05-06"
+  annotations:
+    - annotation: v_gene
+      method: column
+      encoding: B
+      regex:
+        - pattern: "\\*.*"
+          replacement: ""
+    - annotation: d_gene
+      method: column
+      encoding: C
+      regex:
+        - pattern: "\\*.*"
+          replacement: ""
+    - annotation: j_gene
+      method: column
+      encoding: D
+      regex:
+        - pattern: "\\*.*"
+          replacement: ""
+    - annotation: participant_id
+      method: column
+      encoding: A

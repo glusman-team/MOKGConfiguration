@@ -1,0 +1,110 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: .ledger/source/PMC13134772.1/TableS5.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13134772/bin/TableS5.xlsx
+    sheet: Table S5
+    row_slice:
+      - 94
+      - 112
+
+  statement:
+    subject:
+      method: column
+      encoding: __UNNAMED__1
+      regex:
+        - pattern: "^(CD4|CD8)\\+ T cells$"
+          replacement: "$1"
+      fill: forward
+      prioritize:
+        - Cell
+      taxon: 9606
+    predicate: produces
+    object:
+      method: column
+      encoding: __UNNAMED__2
+      regex:
+        - pattern: ".*(IFN|TNF).*"
+          replacement: "$1"
+      prioritize:
+        - Protein
+      taxon: 9606
+
+  provenance:
+    repo: PMC
+    publication: PMC13134772
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+      - kind: curation
+        name: Tablassert pipeline
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: timepoint
+      method: value
+      encoding: ∆
+    - annotation: p_value_AGE
+      method: column
+      encoding: __UNNAMED__3
+    - annotation: p_value_SEX
+      method: column
+      encoding: __UNNAMED__4
+    - annotation: p_value_CMV
+      method: column
+      encoding: __UNNAMED__5
+    - annotation: p_value_COVID
+      method: column
+      encoding: __UNNAMED__6
+    - annotation: iMFI_under_50
+      method: column
+      encoding: __UNNAMED__7
+    - annotation: iMFI_over_60
+      method: column
+      encoding: __UNNAMED__8
+    - annotation: iMFI_female
+      method: column
+      encoding: __UNNAMED__9
+    - annotation: iMFI_male
+      method: column
+      encoding: __UNNAMED__10
+    - annotation: iMFI_CMV_negative
+      method: column
+      encoding: __UNNAMED__11
+    - annotation: iMFI_CMV_positive
+      method: column
+      encoding: __UNNAMED__12
+    - annotation: iMFI_COVID_negative
+      method: column
+      encoding: __UNNAMED__13
+    - annotation: iMFI_COVID_positive
+      method: column
+      encoding: __UNNAMED__14
+    - annotation: CI_95_lower_upper_under_50
+      method: column
+      encoding: __UNNAMED__15
+    - annotation: CI_95_lower_upper_over_60
+      method: column
+      encoding: __UNNAMED__16
+    - annotation: CI_95_lower_upper_female
+      method: column
+      encoding: __UNNAMED__17
+    - annotation: CI_95_lower_upper_male
+      method: column
+      encoding: __UNNAMED__18
+    - annotation: CI_95_lower_upper_CMV_negative
+      method: column
+      encoding: __UNNAMED__19
+    - annotation: CI_95_lower_upper_CMV_positive
+      method: column
+      encoding: __UNNAMED__20
+    - annotation: CI_95_lower_upper_COVID_negative
+      method: column
+      encoding: __UNNAMED__21
+    - annotation: CI_95_lower_upper_COVID_positive
+      method: column
+      encoding: __UNNAMED__22

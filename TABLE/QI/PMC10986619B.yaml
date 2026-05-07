@@ -1,0 +1,93 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./source/PMC10986619/spectrum.02981-23-s0001.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10986619/bin/spectrum.02981-23-s0001.xlsx
+    sheet: Patienter
+    row_slice:
+      - 0
+      - auto
+  provenance:
+    repo: PMC
+    publication: PMC10986619
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "2026-05-06"
+        comment: "Drug affects vaccine immunogenicity (MFI values as annotations); verified CURIEs only"
+  statement:
+    predicate: affects
+    subject:
+      taxon: 9606
+      prioritize:
+        - ChemicalEntity
+        - SmallMolecule
+    object:
+      method: value
+      encoding: "SARS-CoV-2 spike protein antibody response"
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: AA
+        regex:
+          - pattern: "Orencia"
+            replacement: "abatacept"
+          - pattern: "Humira"
+            replacement: "adalimumab"
+          - pattern: "Mabthera"
+            replacement: "rituximab"
+          - pattern: "mabthera"
+            replacement: "rituximab"
+          - pattern: "Enbrel"
+            replacement: "etanercept"
+          - pattern: "Remicade"
+            replacement: "infliximab"
+    annotations:
+      - annotation: Spike WT MFI 5000
+        method: column
+        encoding: GZ
+      - annotation: Spike S1 MFI 5000
+        method: column
+        encoding: HA
+      - annotation: Nucleocapsid C MFI 5000
+        method: column
+        encoding: HB
+
+  - statement:
+      subject:
+        method: column
+        encoding: X
+        explode_by: ", "
+        regex:
+          - pattern: "Orencia"
+            replacement: "abatacept"
+          - pattern: "Humira"
+            replacement: "adalimumab"
+          - pattern: "Mabthera"
+            replacement: "rituximab"
+          - pattern: "mabthera"
+            replacement: "rituximab"
+          - pattern: "Enbrel"
+            replacement: "etanercept"
+          - pattern: "Remicade"
+            replacement: "infliximab"
+          - pattern: "Infliximab"
+            replacement: "infliximab"
+    annotations:
+      - annotation: Spike WT MFI 5000
+        method: column
+        encoding: GZ
+      - annotation: Spike S1 MFI 5000
+        method: column
+        encoding: HA
+      - annotation: Nucleocapsid C MFI 5000
+        method: column
+        encoding: HB

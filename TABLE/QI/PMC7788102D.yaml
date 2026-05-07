@@ -1,0 +1,61 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./.ledger/il-23-il-17-axis-sars-cov-2/data/PMC7788102/source/PMC7788102.2/mmc1.xlsx
+    url: https://ftp.ncbi.nlm.nih.gov/pub/pmc/supplemental/PMC7788102/mmc1.xlsx
+    sheet: Sup_Table 4 HLA
+    row_slice: [3, auto]
+    reindex:
+      - column: B
+        comparison: ne
+        comparator: ""
+      - column: B
+        comparison: ne
+        comparator: "ID"
+      - column: D
+        comparison: lt
+        comparator: 0.05
+
+  statement:
+    subject:
+      method: column
+      encoding: B
+      taxon: 9606
+      prioritize:
+        - Gene
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0100096
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: MONDO:0100096
+
+  annotations:
+    - annotation: fold regulation Group 1
+      method: column
+      encoding: C
+    - annotation: FDR Group 1
+      method: column
+      encoding: D
+    - annotation: fold regulation Group X
+      method: column
+      encoding: O
+    - annotation: FDR Group X
+      method: column
+      encoding: P
+
+  provenance:
+    repo: PMC
+    publication: PMC7788102
+    contributors:
+      - kind: curation
+        name: Tablassist Pioneer
+        date: 06 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026

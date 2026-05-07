@@ -1,0 +1,176 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: .ledger/il-17-pathway-respiratory-infections/data/PMC13043089/source/PMC13043089.1/jciinsight-11-202134-s319.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13043089/
+    sheet: Figure 1A
+    row_slice:
+      - 1
+      - auto
+
+  provenance:
+    repo: PMC
+    publication: PMC13043089
+    contributors:
+      - kind: curation
+        name: Tablassist-pioneer
+        date: 06 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  statement:
+    object:
+      method: value
+      encoding: MONDO:0018076
+      prioritize:
+        - Disease
+    predicate: gene_associated_with_condition
+
+sections:
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:886073
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: "IFN-\u03B3"
+      - annotation: value_pg_ml
+        method: column
+        encoding: W
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "IFN-\u03B3 ELISA (pg/mL) from Figure 1A, PMC13043089. Antigen: PPE18."
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:888940
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: "IFN-\u03B3"
+      - annotation: value_pg_ml
+        method: column
+        encoding: AV
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "IFN-\u03B3 ELISA (pg/mL) from Figure 1A, PMC13043089. Antigen: PPE46."
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:886209
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: "IFN-\u03B3"
+      - annotation: value_pg_ml
+        method: column
+        encoding: BI
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "IFN-\u03B3 ELISA (pg/mL) from Figure 1A, PMC13043089. Antigen: ESAT-6 (EsxA)."
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:886206
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: "IFN-\u03B3"
+      - annotation: value_pg_ml
+        method: column
+        encoding: BJ
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "IFN-\u03B3 ELISA (pg/mL) from Figure 1A, PMC13043089. Antigen: EspI."
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:887082
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: "IFN-\u03B3"
+      - annotation: value_pg_ml
+        method: column
+        encoding: C
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "IFN-\u03B3 ELISA (pg/mL) from Figure 1A, PMC13043089. Antigen: Rv0010c."
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:887083
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: "IFN-\u03B3"
+      - annotation: value_pg_ml
+        method: column
+        encoding: D
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "IFN-\u03B3 ELISA (pg/mL) from Figure 1A, PMC13043089. Antigen: Rv0012."
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:885399
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: "IFN-\u03B3"
+      - annotation: value_pg_ml
+        method: column
+        encoding: T
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "IFN-\u03B3 ELISA (pg/mL) from Figure 1A, PMC13043089. Antigen: RimJ."
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:885754
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: "IFN-\u03B3"
+      - annotation: value_pg_ml
+        method: column
+        encoding: AD
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "IFN-\u03B3 ELISA (pg/mL) from Figure 1A, PMC13043089. Antigen: LldD2."

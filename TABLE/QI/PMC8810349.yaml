@@ -1,0 +1,36 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: mmc2.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8810349/bin/mmc2.xlsx
+    sheet: "FINAL TABLE"
+    row_slice: [1, auto]
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize: [Polypeptide]
+      taxon: 2697049
+    predicate: physically_interacts_with
+    object:
+      method: column
+      encoding: E
+      prioritize: [Protein]
+      taxon: 9606
+      explode_by: ", "
+  provenance:
+    repo: PMC
+    publication: PMC8810349
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "2026-05-06"
+  annotations:
+    - annotation: residue_range
+      method: column
+      encoding: D
+    - annotation: binding_score
+      method: column
+      encoding: F

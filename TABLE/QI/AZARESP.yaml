@@ -1,0 +1,49 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./pone.0273612.s002.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9439210/bin/pone.0273612.s002.xlsx
+    sheet: AZA
+    row_slice:
+      - 1
+      - auto
+  statement:
+    subject:
+      method: value
+      encoding: CHEBI:2948
+      prioritize:
+        - SmallMolecule
+      taxon: 9606
+    predicate: affects
+    object:
+      method: value
+      encoding: UMLS:C5400806
+      prioritize:
+        - ChemicalEntity
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
+  provenance:
+    repo: PMC
+    publication: PMC9439210
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+  annotations:
+    - annotation: after 2nd dose IgG
+      method: column
+      encoding: I
+      remove:
+        - "^>"
+      transformations:
+        - function: copysign
+          arguments:
+            - "values"
+            - 1
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "IgG values represent SARS-CoV-2 vaccine antibody response; >1000 values truncated; azathioprine monotherapy"

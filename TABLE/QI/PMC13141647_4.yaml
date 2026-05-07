@@ -1,0 +1,44 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: /home/skyeav/Code/ISB/TableConfigs/.ledger/tnf-alpha-inhibitors-covid-19-risk/data/PMC13141647/source/PMC13141647.1/mmc5.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13141647/bin/mmc5.xlsx
+    sheet: "Sheet 1 - Table S6"
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - Gene
+      taxon: 9606
+    predicate: expressed_in
+    object:
+      method: column
+      encoding: G
+      prefix: "PMC13141647:cluster:"
+
+  provenance:
+    repo: PMC
+    publication: PMC13141647
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "06 MAY 2026"
+      - kind: curation
+        name: Tablassert pipeline
+        date: "06 MAY 2026"
+
+  annotations:
+    - annotation: avg_log2FC
+      method: column
+      encoding: C
+    - annotation: p_val_adj
+      method: column
+      encoding: F

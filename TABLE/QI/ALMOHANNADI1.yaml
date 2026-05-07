@@ -1,0 +1,40 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: .ledger/ace2-expression-spondyloarthritis-patients/data/PMC13112774/raw/12863_2026_1414_MOESM2_ESM.xlsx
+    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs12863-026-01414-w/MediaObjects/12863_2026_1414_MOESM2_ESM.xlsx
+    sheet: Sheet1
+    row_slice:
+      - 3
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      fill: forward
+      prioritize:
+        - Disease
+    predicate: gene_associated_with_condition
+    object:
+      method: column
+      encoding: C
+      prioritize:
+        - Gene
+      taxon: 9606
+
+  provenance:
+    repo: PMC
+    publication: PMC13112774
+    contributors:
+      - kind: curation
+        name: Discovery Pipeline
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026

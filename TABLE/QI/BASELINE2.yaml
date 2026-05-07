@@ -1,0 +1,124 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: text
+    local: ./BASELINE_TABLE_S2.csv
+    url: https://raw.githubusercontent.com/skyeav/TableConfigs/main/TABLE/QI/BASELINE_TABLE_S2.csv
+    delimiter: ","
+    row_slice: [1, auto]
+
+  provenance:
+    repo: PMC
+    publication: "PMC12263980"
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+        comment: Created from COVID-19 psoriasis study supplementary tables
+
+  annotations:
+    - annotation: table_source
+      method: value
+      encoding: "Table S2. Baseline characteristics of individuals who experienced COVID-19 infection"
+
+    - annotation: study_population
+      method: value
+      encoding: "Korean National Health Insurance Service claims data (2018-2021)"
+
+    - annotation: sample_size
+      method: value
+      encoding: "167,746 psoriasis patients, 866,582 controls"
+
+    - annotation: data_type
+      method: value
+      encoding: "Baseline characteristics comparative analysis"
+
+    - annotation: statistical_test
+      method: value
+      encoding: "Chi-squared test for categorical variables, t-test for continuous variables"
+
+    - annotation: significance_level
+      method: value
+      encoding: "P < 0.05 considered statistically significant"
+
+  sections:
+    - # Continuous variables (Age, BMI, Insurance level, Follow-up days)
+      statement:
+        subject:
+          method: column
+          encoding: A
+          regex:
+            - pattern: " \\(years\\)"
+              replacement: ""
+            - pattern: " level"
+              replacement: ""
+            - pattern: " mass index"
+              replacement: ""
+            - pattern: " \\(days\\)"
+              replacement: ""
+          prioritize: [PhenotypicFeature, ClinicalMeasurement]
+          taxon: 9606
+        predicate: associated_with
+        object:
+          method: column
+          encoding: B
+          regex:
+            - pattern: " ± "
+              replacement: ","
+          explode_by: ","
+          fill: forward
+          transformations:
+            - function: copysign
+              arguments: [values, 1]
+      qualifiers:
+        - qualifier: population_context_qualifier
+          method: value
+          encoding: "Korean population"
+
+    - # Categorical variables and percentages
+      statement:
+        subject:
+          method: column
+          encoding: A
+          prioritize: [PhenotypicFeature, ClinicalAttribute]
+          taxon: 9606
+        predicate: associated_with
+        object:
+          method: column
+          encoding: C
+          regex:
+            - pattern: "%"
+              replacement: ""
+          transformations:
+            - function: copysign
+              arguments: [values, 1]
+      qualifiers:
+        - qualifier: population_context_qualifier
+          method: value
+          encoding: "Korean population"
+
+    - # Statistical significance
+      statement:
+        subject:
+          method: column
+          encoding: A
+        predicate: associated_with
+        object:
+          method: column
+          encoding: D
+          regex:
+            - pattern: "<"
+              replacement: "less_than_"
+            - pattern: "≥"
+              replacement: "greater_than_or_equal_to_"
+      qualifiers:
+        - qualifier: severity_qualifier
+          method: value
+          encoding: "statistical_significance"

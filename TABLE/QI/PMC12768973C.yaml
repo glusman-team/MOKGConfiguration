@@ -1,0 +1,34 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./source/PMC12768973/source/PMC12768973.1/41564_2025_2200_MOESM4_ESM.xlsx
+    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41564-025-2200-x/MediaObjects/41564_2025_2200_MOESM4_ESM.xlsx
+    sheet: "Figure 1e-f"
+    row_slice: [1, auto]
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Snv]
+    predicate: associated_with
+    object:
+      method: value
+      encoding: "COVID-19"
+      prioritize: [Disease]
+  provenance:
+    repo: PMC
+    publication: PMC12768973
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+  annotations:
+    - annotation: p_value
+      method: column
+      encoding: B
+    - annotation: odds_ratio
+      method: column
+      encoding: C
+filePath: /home/skyeav/Code/ISB/TableConfigs/TABLE/QI/PMC12768973C.yaml

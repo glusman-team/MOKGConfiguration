@@ -1,0 +1,156 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: Table2.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13079709/bin/Table2.xlsx
+    sheet: 'NEW EXTRACTION'
+    row_slice: [1, auto]
+  
+  statement:
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0100096 # COVID-19
+    qualifiers:
+      - qualifier: population_context_qualifier
+        method: column
+        encoding: C # COUNTRY
+        regex:
+          - pattern: "^\\s+"
+            replacement: ""
+          - pattern: "\\s+\\(.*\\)$"
+            replacement: ""
+          - pattern: ";.*$"
+            replacement: ""
+  
+  provenance:
+    repo: PMC
+    publication: PMC13079709
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "2026-05-06"
+      - kind: curation
+        name: Antigravity
+        date: "2026-05-06"
+
+  annotations:
+    - annotation: miscellaneous notes
+      method: column
+      encoding: T # KEY FINDING
+
+sections:
+  # Row 2: HLA-B41, HLA-B42, HLA-C16, HLA-C17 associated with severe COVID-19
+  - source:
+      reindex:
+        - column: A
+          comparator: 2
+          comparison: eq
+    statement:
+      subject:
+        method: value
+        encoding: "HLA-B41;HLA-B42"
+        explode_by: ";"
+        prioritize: [Gene]
+        taxon: 9606
+      qualifiers:
+        - qualifier: severity_qualifier
+          method: value
+          encoding: severe
+
+  - source:
+      reindex:
+        - column: A
+          comparator: 2
+          comparison: eq
+    statement:
+      subject:
+        method: value
+        encoding: "HLA-C16;HLA-C17"
+        explode_by: ";"
+        prioritize: [Gene]
+        taxon: 9606
+      qualifiers:
+        - qualifier: severity_qualifier
+          method: value
+          encoding: severe
+
+  # Row 2: HLA-B*15 associated with survival
+  - source:
+      reindex:
+        - column: A
+          comparator: 2
+          comparison: eq
+    statement:
+      subject:
+        method: value
+        encoding: "HLA-B*15"
+        prioritize: [Gene]
+        taxon: 9606
+      qualifiers:
+        - qualifier: severity_qualifier
+          method: value
+          encoding: survival
+
+  # Row 5: TMPRSS2 rs12329760 T allele protective
+  - source:
+      reindex:
+        - column: A
+          comparator: 5
+          comparison: eq
+    statement:
+      subject:
+        method: value
+        encoding: dbSNP:rs12329760
+      qualifiers:
+        - qualifier: severity_qualifier
+          method: value
+          encoding: protective
+
+  # Row 9: ACE2 rs73635825 associated with increased severity
+  - source:
+      reindex:
+        - column: A
+          comparator: 9
+          comparison: eq
+    statement:
+      subject:
+        method: value
+        encoding: dbSNP:rs73635825
+      qualifiers:
+        - qualifier: severity_qualifier
+          method: value
+          encoding: severe
+
+  # Row 22: ACE2 rs2285666 and TMPRSS2 rs12329760 associated with severity
+  - source:
+      reindex:
+        - column: A
+          comparator: 22
+          comparison: eq
+    statement:
+      subject:
+        method: value
+        encoding: "dbSNP:rs2285666;dbSNP:rs12329760"
+        explode_by: ";"
+      qualifiers:
+        - qualifier: severity_qualifier
+          method: value
+          encoding: severe
+
+  # Row 23: ACE2 rs2106809 relevant to susceptibility
+  - source:
+      reindex:
+        - column: A
+          comparator: 23
+          comparison: eq
+    statement:
+      subject:
+        method: value
+        encoding: dbSNP:rs2106809
+      qualifiers:
+        - qualifier: severity_qualifier
+          method: value
+          encoding: susceptibility

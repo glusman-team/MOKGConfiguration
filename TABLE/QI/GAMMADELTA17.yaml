@@ -1,0 +1,66 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: .ledger/il-17-pathway-respiratory-infections/data/PMC12800128/source/source/PMC12800128.1/41467_2025_67120_MOESM4_ESM.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12800128/bin/41467_2025_67120_MOESM4_ESM.xlsx
+    sheet: "Fig. 4f-g & Suppl. Fig. 5b-c"
+    row_slice:
+      - 22
+      - auto
+    rows:
+      - 3   # Airway Il17a+ (absolute row 25)
+      - 6   # Air-par Il17a+ (absolute row 28)
+      - 9   # Parenchyma Il17a+ (absolute row 31)
+      - 12  # Spleen Il17a+ (absolute row 34)
+
+  statement:
+    subject:
+      method: value
+      encoding: NCBIGene:16171
+      prioritize:
+        - Gene
+      taxon: 10090
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0005002
+      prioritize:
+        - Disease
+
+  provenance:
+    repo: PMC
+    publication: PMC12800128
+    contributors:
+      - kind: curation
+        name: Tablassist-pioneer
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: tissue
+      method: column
+      encoding: A
+      fill: forward
+
+    - annotation: con_il17a_percentage
+      method: column
+      encoding: D
+
+    - annotation: 2m_il17a_percentage
+      method: column
+      encoding: F
+
+    - annotation: 6m_il17a_percentage
+      method: column
+      encoding: H
+
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "Percentage of γδT cells expressing Il17a (Il17a+) across airway tissues in a mouse COPD model (PMC12800128). Exposure groups: CON (control), 2M (2-month smoke), 6M (6-month smoke). Data from Fig. 4f-g & Suppl. Fig. 5b-c."
