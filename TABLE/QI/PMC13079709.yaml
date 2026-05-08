@@ -5,9 +5,9 @@ template:
     kind: excel
     local: ./DATALAKE/Table2.xlsx
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13079709/bin/Table2.xlsx
-    sheet: 'NEW EXTRACTION'
+    sheet: "NEW EXTRACTION"
     row_slice: [1, auto]
-  
+
   statement:
     predicate: associated_with
     object:
@@ -24,7 +24,7 @@ template:
             replacement: ""
           - pattern: ";.*$"
             replacement: ""
-  
+
   provenance:
     repo: PMC
     publication: PMC13079709
@@ -46,7 +46,7 @@ sections:
   - source:
       reindex:
         - column: A
-          comparator: 2
+          comparator: "2"
           comparison: eq
     statement:
       subject:
@@ -63,7 +63,7 @@ sections:
   - source:
       reindex:
         - column: A
-          comparator: 2
+          comparator: "2"
           comparison: eq
     statement:
       subject:
@@ -81,7 +81,7 @@ sections:
   - source:
       reindex:
         - column: A
-          comparator: 2
+          comparator: "2"
           comparison: eq
     statement:
       subject:
@@ -98,7 +98,7 @@ sections:
   - source:
       reindex:
         - column: A
-          comparator: 5
+          comparator: "5"
           comparison: eq
     statement:
       subject:
@@ -113,7 +113,7 @@ sections:
   - source:
       reindex:
         - column: A
-          comparator: 9
+          comparator: "9"
           comparison: eq
     statement:
       subject:
@@ -128,7 +128,7 @@ sections:
   - source:
       reindex:
         - column: A
-          comparator: 22
+          comparator: "22"
           comparison: eq
     statement:
       subject:
@@ -144,7 +144,7 @@ sections:
   - source:
       reindex:
         - column: A
-          comparator: 23
+          comparator: "23"
           comparison: eq
     statement:
       subject:
