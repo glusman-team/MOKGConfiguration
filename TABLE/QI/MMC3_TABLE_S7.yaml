@@ -21,7 +21,6 @@ template:
     object:
       method: column
       encoding: H
-
       prioritize:
         - Gene
       taxon: 9606
