@@ -31,4 +31,3 @@ template:
     - annotation: odds_ratio
       method: column
       encoding: C
-filePath: /home/skyeav/Code/ISB/TableConfigs/TABLE/QI/PMC12768973C.yaml

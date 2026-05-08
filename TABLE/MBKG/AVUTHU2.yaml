@@ -13,6 +13,9 @@ template:
     subject:
       method: column
       encoding: A
+      regex:
+        - pattern: ' unclassified$'
+          replacement: ' sp.'
       prioritize:
         - OrganismTaxon
     predicate: associated_with
@@ -39,6 +42,9 @@ template:
           - Institute for Systems Biology
           - CalPoly SLO
         comment: Migratassert (TC2-TC3)
+      - kind: tool
+        name: tablassist
+        date: 07 MAY 2026
   annotations:
     - annotation: multiple testing correction method
       method: value

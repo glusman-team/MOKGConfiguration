@@ -12,6 +12,11 @@ template:
     subject:
       method: column
       encoding: A
+      regex:
+        - pattern: _
+          replacement: ' '
+        - pattern: '-'
+          replacement: ' '
       prioritize:
         - OrganismTaxon
     predicate: associated_with
@@ -21,7 +26,7 @@ template:
     qualifiers:
       - qualifier: anatomical_context_qualifier
         method: value
-        encoding: UMLS:C0458578
+        encoding: UBERON:0001557
   provenance:
     repo: PMC
     publication: PMC11040984
@@ -31,6 +36,9 @@ template:
         date: 17 FEB 2026
         organizations:
           - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 07 MAY 2026
   annotations:
     - annotation: sample size
       method: value

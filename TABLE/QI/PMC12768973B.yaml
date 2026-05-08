@@ -34,4 +34,3 @@ template:
     - annotation: GALNT2_expression
       method: column
       encoding: E
-filePath: /home/skyeav/Code/ISB/TableConfigs/TABLE/QI/PMC12768973B.yaml

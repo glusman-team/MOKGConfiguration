@@ -13,6 +13,8 @@ template:
         - OrganismTaxon
       remove:
         - NONE
+        - ^correlation coefficient values$
+        - ^\(c\) liver and gastrocnemius organic acids\.$
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier
@@ -33,6 +35,9 @@ template:
         date: 17 FEB 2026
         organizations:
           - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 07 MAY 2026
   annotations:
     - annotation: sample size
       method: value
@@ -46,7 +51,7 @@ template:
 sections:
   - source:
       row_slice:
-        - 42
+        - 44
         - 72
     statement:
       object:
@@ -68,7 +73,7 @@ sections:
         encoding: B
   - source:
       row_slice:
-        - 42
+        - 44
         - 72
     statement:
       object:
@@ -90,7 +95,7 @@ sections:
         encoding: C
   - source:
       row_slice:
-        - 42
+        - 44
         - 72
     statement:
       object:
@@ -112,7 +117,7 @@ sections:
         encoding: F
   - source:
       row_slice:
-        - 42
+        - 44
         - 72
     statement:
       object:
@@ -134,7 +139,7 @@ sections:
         encoding: L
   - source:
       row_slice:
-        - 42
+        - 44
         - 72
     statement:
       object:
@@ -156,7 +161,7 @@ sections:
         encoding: M
   - source:
       row_slice:
-        - 42
+        - 44
         - 72
     statement:
       object:
@@ -178,7 +183,7 @@ sections:
         encoding: S
   - source:
       row_slice:
-        - 42
+        - 44
         - 72
     statement:
       object:
@@ -200,7 +205,7 @@ sections:
         encoding: V
   - source:
       row_slice:
-        - 42
+        - 44
         - 72
     statement:
       object:
@@ -222,7 +227,7 @@ sections:
         encoding: V
   - source:
       row_slice:
-        - 42
+        - 44
         - 72
     statement:
       object:
@@ -244,7 +249,7 @@ sections:
         encoding: W
   - source:
       row_slice:
-        - 42
+        - 44
         - 72
     statement:
       object:
@@ -266,7 +271,7 @@ sections:
         encoding: X
   - source:
       row_slice:
-        - 42
+        - 44
         - 72
     statement:
       object:
@@ -288,7 +293,7 @@ sections:
         encoding: Y
   - source:
       row_slice:
-        - 42
+        - 44
         - 72
     statement:
       object:
