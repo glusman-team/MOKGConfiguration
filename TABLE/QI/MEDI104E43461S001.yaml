@@ -27,7 +27,7 @@ template:
       taxon: 9606
       regex:
         - pattern: \s+
-          replacement: ' '
+          replacement: " "
 
   provenance:
     repo: PMC
