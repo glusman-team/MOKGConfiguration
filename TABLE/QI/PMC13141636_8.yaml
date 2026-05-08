@@ -21,7 +21,7 @@ template:
 sections:
   # S10A: Effector Memory CD4+ T cells DEGs (392 rows)
   - source:
-      sheet: "S10A"
+      sheet: "Table S10A"
     statement:
       subject:
         method: column

@@ -21,7 +21,7 @@ template:
 sections:
   # S7A: Non-Classical Monocytes DEGs (176 rows)
   - source:
-      sheet: "S7A"
+      sheet: "Table S7A"
     statement:
       subject:
         method: column

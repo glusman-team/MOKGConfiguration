@@ -21,7 +21,7 @@ template:
 sections:
   # S4A: Memory B cells DEGs (173 rows)
   - source:
-      sheet: "S4A"
+      sheet: "Table S4A"
     statement:
       subject:
         method: column

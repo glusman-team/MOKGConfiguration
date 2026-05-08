@@ -21,7 +21,7 @@ template:
 sections:
   # S8A: Effector CD8+ T cells DEGs (378 rows)
   - source:
-      sheet: "S8A"
+      sheet: "Table S8A"
     statement:
       subject:
         method: column

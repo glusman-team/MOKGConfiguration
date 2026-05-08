@@ -6,7 +6,7 @@ template:
     kind: excel
     local: ./DATALAKE/PMC13141636.1__mmc2.xlsx
     url: "https://www.sciencedirect.com/cms/attachment/pmc13141636/mmc2.xlsx"
-    sheet: "S2"
+    sheet: "Table S2"
 
   provenance:
     repo: PMC

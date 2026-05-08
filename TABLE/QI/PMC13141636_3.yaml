@@ -21,7 +21,7 @@ template:
 sections:
   # S5A: Memory B cells DEGs (397 rows)
   - source:
-      sheet: "S5A"
+      sheet: "Table S5A"
     statement:
       subject:
         method: column

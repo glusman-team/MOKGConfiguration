@@ -21,7 +21,7 @@ template:
 sections:
   # S9A: Th2 and Tfh cells DEGs (285 rows)
   - source:
-      sheet: "S9A"
+      sheet: "Table S9A"
     statement:
       subject:
         method: column

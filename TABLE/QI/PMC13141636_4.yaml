@@ -21,7 +21,7 @@ template:
 sections:
   # S6A: Classical Monocytes DEGs (433 rows)
   - source:
-      sheet: "S6A"
+      sheet: "Table S6A"
     statement:
       subject:
         method: column
