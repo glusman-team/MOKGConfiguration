@@ -8,7 +8,7 @@ template:
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12847772/
     sheet: Supplementary Table 1
     row_slice:
-      - 1
+      - 2
       - auto
 
   statement:
