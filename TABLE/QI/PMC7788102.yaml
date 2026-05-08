@@ -17,8 +17,20 @@ template:
     subject:
       method: column
       encoding: A
+      regex:
+        - pattern: "-mRNA$"
+          replacement: ""
+        - pattern: "_all$"
+          replacement: ""
+        - pattern: "^FCGR1A/B$"
+          replacement: "FCGR1A,FCGR1B"
+        - pattern: "^FCGR2A/C$"
+          replacement: "FCGR2A,FCGR2C"
+        - pattern: "^FCGR3A/B$"
+          replacement: "FCGR3A,FCGR3B"
       remove:
-        - -mRNA$
+        - "^KIR_Activating_Subgroup_.*$"
+      explode_by: ","
       taxon: 9606
       prioritize:
         - Gene
@@ -51,4 +63,4 @@ template:
         date: 06 MAY 2026
       - kind: tool
         name: tablassist
-        date: 06 MAY 2026
+        date: 07 MAY 2026

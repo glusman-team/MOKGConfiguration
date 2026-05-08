@@ -7,17 +7,28 @@ template:
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8810349/bin/mmc2.xlsx
     sheet: "FINAL TABLE"
     row_slice: [1, auto]
+    reindex:
+      - column: B
+        comparison: ne
+        comparator: "WT PEPTIDE"
   statement:
     subject:
-      method: column
-      encoding: B
-      prioritize: [Polypeptide]
+      method: value
+      encoding: UniProtKB:P0DTC2
+      prioritize: [Protein]
       taxon: 2697049
     predicate: physically_interacts_with
     object:
       method: column
       encoding: E
-      prioritize: [Protein]
+      regex:
+        - pattern: "HLA-A[*]?[0-9:]+"
+          replacement: "HLA-A"
+        - pattern: "HLA-B[*]?[0-9:]+"
+          replacement: "HLA-B"
+        - pattern: "HLA-C[*]?[0-9:]+"
+          replacement: "HLA-C"
+      prioritize: [Gene]
       taxon: 9606
       explode_by: ", "
   provenance:
@@ -26,8 +37,14 @@ template:
     contributors:
       - kind: tool
         name: tablassist
-        date: "2026-05-06"
+        date: "2026-05-07"
   annotations:
+    - annotation: WT peptide
+      method: column
+      encoding: B
+    - annotation: Omicron peptide
+      method: column
+      encoding: C
     - annotation: residue_range
       method: column
       encoding: D

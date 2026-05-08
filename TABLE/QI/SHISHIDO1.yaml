@@ -31,6 +31,15 @@ template:
     object:
       method: column
       encoding: A
+      regex:
+        - pattern: "^IL-17 Signaling$"
+          replacement: "UMLS:C1512589"
+        - pattern: "^JAK/STAT Signaling$"
+          replacement: "UMLS:C2984327"
+        - pattern: "^TGF-β Signaling$"
+          replacement: "PANTHER.PATHWAY:P00052"
+        - pattern: "^Leukocyte Extravasation Signaling$"
+          replacement: "GO:0050900"
       remove:
         - "^\\s*Ingenuity Canonical Pathways$"
 
@@ -44,8 +53,8 @@ template:
         organizations:
           - Institute for Systems Biology
       - kind: tool
-        name: Tablassert Builder
-        date: 06 MAY 2026
+        name: tablassist
+        date: 07 MAY 2026
 
   annotations:
     - annotation: Pathway -log(p-value)

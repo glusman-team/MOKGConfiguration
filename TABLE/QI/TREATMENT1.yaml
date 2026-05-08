@@ -13,22 +13,14 @@ template:
     subject:
       method: column
       encoding: A
-      prioritize: [ChemicalEntity, Treatment]
-      taxon: 9606
-    predicate: has_part
-    object:
-      method: column
-      encoding: B
       regex:
-        - pattern: "At least "
-          replacement: ""
-        - pattern: " times of prescription"
-          replacement: ""
-        - pattern: " days of prescription"
-          replacement: ""
-        - pattern: " injections"
-          replacement: ""
-      fill: forward
+        - pattern: "^Biologics$"
+          replacement: "Biological Response Modifier Therapy"
+      prioritize: [Drug, ChemicalEntity, Procedure, Treatment]
+    predicate: treats
+    object:
+      method: value
+      encoding: MONDO:0005083
 
   provenance:
     repo: PMC
@@ -36,10 +28,10 @@ template:
     contributors:
       - kind: tool
         name: tablassist
-        date: 06 MAY 2026
+        date: 07 MAY 2026
       - kind: curation
         name: Skye Lane Goetz
-        date: 06 MAY 2026
+        date: 07 MAY 2026
         organizations:
           - Institute for Systems Biology
         comment: Created from COVID-19 psoriasis study supplementary tables
@@ -60,3 +52,35 @@ template:
     - annotation: data_type
       method: value
       encoding: "Treatment classification criteria"
+
+    - annotation: raw criterion text
+      method: column
+      encoding: B
+
+    - annotation: minimum value
+      method: column
+      encoding: B
+      regex:
+        - pattern: "^At least "
+          replacement: ""
+        - pattern: " times$"
+          replacement: ""
+        - pattern: " times of prescription$"
+          replacement: ""
+        - pattern: " days of prescription$"
+          replacement: ""
+        - pattern: " injections$"
+          replacement: ""
+
+    - annotation: criterion_type
+      method: column
+      encoding: B
+      regex:
+        - pattern: "^At least [0-9]+ times$"
+          replacement: "prescription_count"
+        - pattern: "^At least [0-9]+ times of prescription$"
+          replacement: "prescription_count"
+        - pattern: "^At least [0-9]+ days of prescription$"
+          replacement: "prescription_days"
+        - pattern: "^At least [0-9]+ injections$"
+          replacement: "injection_count"

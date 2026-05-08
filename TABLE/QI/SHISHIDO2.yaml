@@ -14,14 +14,15 @@ template:
   statement:
     subject:
       method: column
-      encoding: B
+      encoding: A
+      prefix: "ENSEMBL:"
       prioritize:
         - Gene
       fill: forward
     predicate: gene_associated_with_condition
     object:
       method: value
-      encoding: Psoriasis
+      encoding: MONDO:0005083
       prioritize:
         - Disease
 
@@ -35,8 +36,8 @@ template:
         organizations:
           - Institute for Systems Biology
       - kind: tool
-        name: Tablassert Builder
-        date: 06 MAY 2026
+        name: tablassist
+        date: 07 MAY 2026
 
   annotations:
     - annotation: log2 fold change (NL vs Control)
@@ -66,6 +67,6 @@ template:
     - annotation: miscellaneous notes
       method: value
       encoding: Psoriasis lesional skin (LS) and non-lesional skin (NL) adipose tissue RNA-seq vs healthy control
-    - annotation: Ensembl ID
+    - annotation: gene symbol
       method: column
-      encoding: A
+      encoding: B

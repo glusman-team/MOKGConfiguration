@@ -17,11 +17,18 @@ template:
       encoding: B
       fill: forward
       regex:
+        - pattern: "^Healthy controls$"
+          replacement: "Healthy Volunteers"
         - pattern: "^Brochiectasis$"
           replacement: "Bronchiectasis"
+        - pattern: "^Bronchiectasis-asthma overlap$"
+          replacement: "Bronchiectasis,Asthma"
+      explode_by: ","
       prioritize:
         - Disease
-    predicate: has_phenotype
+        - PopulationOfIndividualOrganisms
+        - Cohort
+    predicate: related_to
 
   provenance:
     repo: PMC
@@ -29,70 +36,161 @@ template:
     contributors:
       - kind: tool
         name: tablassist
-        date: 06 MAY 2026
+        date: 07 MAY 2026
       - kind: curation
         name: Tablassist-pioneer
-        date: 06 MAY 2026
+        date: 07 MAY 2026
         organizations:
           - Institute for Systems Biology
 
 sections:
-  - statement:
+  - source:
+      reindex:
+        - column: D
+          comparison: ne
+          comparator: "NA"
+        - column: D
+          comparison: ne
+          comparator: ""
+        - column: D
+          comparison: ne
+          comparator: "Age"
+    statement:
       object:
-        method: column
-        encoding: D
+        method: value
+        encoding: EFO:0000246
     annotations:
       - annotation: patient_id
         method: column
         encoding: C
       - annotation: measurement_type
         method: value
-        encoding: "Age"
+        encoding: Age
+      - annotation: age_value
+        method: column
+        encoding: D
+      - annotation: unit
+        method: value
+        encoding: years
 
-  - statement:
+  - source:
+      reindex:
+        - column: E
+          comparison: ne
+          comparator: ""
+        - column: E
+          comparison: ne
+          comparator: "Sex"
+    statement:
       object:
         method: column
         encoding: E
+        regex:
+          - pattern: "^0$"
+            replacement: "Female sex"
+          - pattern: "^1$"
+            replacement: "Male sex"
+        prioritize:
+          - BiologicalSex
+          - PhenotypicSex
     annotations:
       - annotation: patient_id
         method: column
         encoding: C
       - annotation: measurement_type
         method: value
-        encoding: "Sex (0=female, 1=male)"
+        encoding: Sex (0=female, 1=male)
+      - annotation: raw_code
+        method: column
+        encoding: E
 
-  - statement:
+  - source:
+      reindex:
+        - column: F
+          comparison: ne
+          comparator: ""
+        - column: F
+          comparison: ne
+          comparator: "smoking status"
+    statement:
       object:
         method: column
         encoding: F
+        regex:
+          - pattern: "^0$"
+            replacement: "Never smoker"
+          - pattern: "^1$"
+            replacement: "Current smoker"
+          - pattern: "^2$"
+            replacement: "Former smoker"
+        prioritize:
+          - ClinicalAttribute
     annotations:
       - annotation: patient_id
         method: column
         encoding: C
       - annotation: measurement_type
         method: value
-        encoding: "Smoking status"
+        encoding: Smoking status
+      - annotation: raw_code
+        method: column
+        encoding: F
 
-  - statement:
+  - source:
+      reindex:
+        - column: G
+          comparison: ne
+          comparator: "NA"
+        - column: G
+          comparison: ne
+          comparator: ""
+        - column: G
+          comparison: ne
+          comparator: "Duration of symptom"
+    statement:
       object:
+        method: value
+        encoding: UMLS:C0436359
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: Duration of symptom (y)
+      - annotation: duration_value
         method: column
         encoding: G
+      - annotation: unit
+        method: value
+        encoding: years
+
+  - source:
+      reindex:
+        - column: H
+          comparison: ne
+          comparator: ""
+        - column: H
+          comparison: ne
+          comparator: "P. aeruginosa isolation"
+        - column: H
+          comparison: eq
+          comparator: 0
+    statement:
+      predicate: related_to
+      object:
+        method: value
+        encoding: UMLS:C0854135
     annotations:
       - annotation: patient_id
         method: column
         encoding: C
       - annotation: measurement_type
         method: value
-        encoding: "Duration of symptom (y)"
-
-  - statement:
-      object:
+        encoding: P. aeruginosa isolation
+      - annotation: isolation_status
+        method: value
+        encoding: positive
+      - annotation: raw_code
         method: column
         encoding: H
-    annotations:
-      - annotation: patient_id
-        method: column
-        encoding: C
-      - annotation: measurement_type
-        method: value
-        encoding: "P. aeruginosa isolation"
