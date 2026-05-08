@@ -175,7 +175,7 @@ sections:
           comparator: "P. aeruginosa isolation"
         - column: H
           comparison: eq
-          comparator: 0
+          comparator: "0"
     statement:
       predicate: related_to
       object:
