@@ -7,7 +7,7 @@ template:
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10986619/bin/spectrum.02981-23-s0001.xlsx
     sheet: Patienter
     row_slice:
-      - 0
+      - 1
       - auto
   provenance:
     repo: PMC

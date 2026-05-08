@@ -7,7 +7,7 @@ template:
     local: ./DATALAKE/mmc1.xlsx
     url: https://ftp.ncbi.nlm.nih.gov/pub/pmc/supplemental/PMC7788102/mmc1.xlsx
     sheet: Sup_Table 4 HLA
-    row_slice: [3, auto]
+    row_slice: [5, auto]
     reindex:
       - column: B
         comparison: ne
