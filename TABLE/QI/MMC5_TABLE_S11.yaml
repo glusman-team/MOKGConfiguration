@@ -15,6 +15,7 @@ template:
     subject:
       method: column
       encoding: A
+      prefix: "ENSEMBL:"
       prioritize:
         - Gene
     predicate: associated_with
