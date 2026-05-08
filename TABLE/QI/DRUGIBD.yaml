@@ -12,7 +12,7 @@ template:
   statement:
     subject:
       method: column
-      encoding: BT
+      encoding: D
       prioritize:
         - ChemicalEntity
       taxon: 9606
@@ -23,10 +23,10 @@ template:
       prioritize:
         - Disease
       regex:
-        - pattern: '^CD$'
-          replacement: 'MONDO:0005011'
-        - pattern: '^UC$'
-          replacement: 'MONDO:0005101'
+        - pattern: "^CD$"
+          replacement: "MONDO:0005011"
+        - pattern: "^UC$"
+          replacement: "MONDO:0005101"
   provenance:
     repo: PMC
     publication: PMC9439210

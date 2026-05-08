@@ -12,7 +12,7 @@ template:
   statement:
     subject:
       method: column
-      encoding: BT
+      encoding: D
       prioritize:
         - ChemicalEntity
       taxon: 9606
