@@ -15,7 +15,6 @@ template:
     object:
       method: column
       encoding: B
-      prefix: "ENSEMBL:"
       prioritize:
         - Gene
         - Protein
