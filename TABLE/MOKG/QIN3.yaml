@@ -13,7 +13,7 @@ template:
       encoding: A
       taxon: 9606
       prefix: "ENSEMBL:"
-      prioritize: [Gene]
+      prioritize: [Gene, Protein]
       remove:
         - "_RSS$"
         - "_intercept_$"
