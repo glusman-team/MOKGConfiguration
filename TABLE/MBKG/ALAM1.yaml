@@ -29,7 +29,7 @@ template:
         - pattern: ";s__([A-Za-z][A-Za-z0-9]*)(-[A-Za-z0-9]+)+$"
           replacement: ""
         - pattern: ";s__([A-Za-z][A-Za-z0-9]*)$"
-          replacement: " \\1"
+          replacement: " ${1}"
     predicate: correlated_with
     object:
       method: value
