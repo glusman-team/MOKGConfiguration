@@ -26,7 +26,7 @@ template:
 
   provenance:
     repo: PMC
-    publication: "11530135"
+    publication: "PMC11530135"
     contributors:
       - kind: curation
         name: JC Roach
