@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9691620/bin/NIHMS1845232-supplement-1845232_Sup_Tab_1-5.xlsx
     local: ./DATALAKE/DIENER1.xlsx

@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10945560/bin/DataSheet10.XLSX
     local: ./DATALAKE/FORSYTH10.xlsx
@@ -20,7 +21,7 @@ template:
         - unc
       regex:
         - pattern: _
-          replacement: ' '
+          replacement: " "
     predicate: correlated_with
     object:
       method: column
@@ -34,7 +35,7 @@ template:
         - unc
       regex:
         - pattern: _
-          replacement: ' '
+          replacement: " "
     qualifiers:
       - qualifier: species_context_qualifier
         method: value

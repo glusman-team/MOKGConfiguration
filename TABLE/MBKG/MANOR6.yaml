@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/7562722/bin/41467_2020_18871_MOESM4_ESM.xlsx
     local: ./DATALAKE/MANOR6.xlsx
@@ -58,7 +59,7 @@ template:
       transformations:
         - function: copysign
           arguments:
-            - 'values'
+            - "values"
             - -1
     - annotation: assertion method
       method: value

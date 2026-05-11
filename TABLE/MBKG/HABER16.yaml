@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/4109533/bin/JCI75436sd16.xlsx
     local: ./DATALAKE/HABER16.xlsx
@@ -14,12 +15,12 @@ template:
       prioritize:
         - OrganismTaxon
       regex:
-        - pattern: '.*;'
-          replacement: ''
-        - pattern: '^[a-z]__'
-          replacement: ''
+        - pattern: ".*;"
+          replacement: ""
+        - pattern: "^[a-z]__"
+          replacement: ""
         - pattern: _
-          replacement: ' '
+          replacement: " "
     predicate: associated_with
     object:
       method: column

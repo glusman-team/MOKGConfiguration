@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41564-024-01870-z/MediaObjects/41564_2024_1870_MOESM4_ESM.xlsx
     local: ./DATALAKE/FACKLE13.xlsx
@@ -17,11 +18,11 @@ template:
       remove:
         - \..*
         - s__
-        - '_unclassified.*'
+        - "_unclassified.*"
         - "s  "
       regex:
         - pattern: _
-          replacement: ' '
+          replacement: " "
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier
@@ -34,7 +35,7 @@ template:
         - OrganismTaxon
       regex:
         - pattern: _
-          replacement: ' '
+          replacement: " "
         - pattern: ^veg$
           replacement: vegetables
   provenance:

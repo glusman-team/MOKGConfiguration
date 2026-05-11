@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/8980904/bin/PHY2-10-e15254-s002.xlsx
     local: ./DATALAKE/BOMBIN1.xlsx

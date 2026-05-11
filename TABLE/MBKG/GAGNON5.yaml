@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://static-content.springer.com/esm/art%3A10.1186%2Fs12967-022-03799-5/MediaObjects/12967_2022_3799_MOESM1_ESM.xlsx
     local: ./DATALAKE/GAGNON5.xlsx
@@ -33,7 +34,7 @@ template:
       taxon: 9606
       regex:
         - pattern: _
-          replacement: ' '
+          replacement: " "
     qualifiers:
       - qualifier: anatomical_context_qualifier
         method: value

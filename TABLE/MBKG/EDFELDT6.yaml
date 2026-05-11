@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10064689/bin/40168_2023_1502_MOESM2_ESM.zip
     local: ./DATALAKE/EDFELDT6.xlsx

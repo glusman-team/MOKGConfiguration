@@ -1,6 +1,6 @@
 template:
   syntax: TC3
-  status: alpha
+  status: primetime
   source:
     kind: excel
     local: ./DATALAKE/ALAM.xlsx

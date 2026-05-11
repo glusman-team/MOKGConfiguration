@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-52097-9/MediaObjects/41467_2024_52097_MOESM9_ESM.xlsx
     local: ./DATALAKE/RAVIK9.xlsx
@@ -15,7 +16,7 @@ template:
         - OrganismTaxon
       regex:
         - pattern: '(.+?)\s*unclassified$'
-          replacement: 'unclassified ${1}'
+          replacement: "unclassified ${1}"
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier

@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10269647/bin/spectrum.03662-22-s0002.xlsx
     local: ./DATALAKE/JIN1.xlsx
@@ -16,7 +17,7 @@ template:
         - OrganismTaxon
       regex:
         - pattern: _
-          replacement: ' '
+          replacement: " "
     predicate: associated_with
     object:
       method: value

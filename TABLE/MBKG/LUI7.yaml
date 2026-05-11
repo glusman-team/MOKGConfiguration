@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-023-31115-8/MediaObjects/41598_2023_31115_MOESM7_ESM.xlsx
     local: ./DATALAKE/LUI7.xlsx
@@ -43,8 +44,8 @@ sections:
         avoid:
           - Gene
         regex:
-          - pattern: '_'
-            replacement: ' '
+          - pattern: "_"
+            replacement: " "
       qualifiers:
         - qualifier: subject_aspect_qualifier
           method: value
@@ -92,8 +93,8 @@ sections:
         avoid:
           - Gene
         regex:
-          - pattern: '_'
-            replacement: ' '
+          - pattern: "_"
+            replacement: " "
     annotations:
       - annotation: instrument count
         method: column

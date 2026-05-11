@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://ndownloader.figstatic.com/collections/7296079/versions/1
     local: ./DATALAKE/WU19.xlsx
@@ -17,8 +18,8 @@ template:
       avoid:
         - Gene
       regex:
-        - pattern: '_.+$'
-          replacement: ''
+        - pattern: "_.+$"
+          replacement: ""
     predicate: associated_with
     object:
       method: value

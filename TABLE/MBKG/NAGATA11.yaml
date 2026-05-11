@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9499989/bin/mmc2.xlsx
     local: ./DATALAKE/NAGATA11.xlsx
@@ -15,14 +16,14 @@ template:
       prioritize:
         - OrganismTaxon
       remove:
-        - ' species.*'
+        - " species.*"
         - ' \(id.*'
         - ' \(.*'
       regex:
         - pattern: '\['
-          replacement: ''
+          replacement: ""
         - pattern: '\]'
-          replacement: ''
+          replacement: ""
     predicate: associated_with
     object:
       method: value

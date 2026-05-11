@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://static-content.springer.com/esm/art%3A10.1186%2Fs12967-022-03799-5/MediaObjects/12967_2022_3799_MOESM1_ESM.xlsx
     local: ./DATALAKE/GAGNON6.xlsx
@@ -34,23 +35,23 @@ template:
       taxon: 9606
       regex:
         - pattern: _
-          replacement: ' '
+          replacement: " "
         - pattern: Jansen
-          replacement: ''
-        - pattern: 'Jansen '
-          replacement: ''
-        - pattern: 'van der Harst '
-          replacement: ''
-        - pattern: 'Malik '
-          replacement: ''
-        - pattern: 'Howard '
-          replacement: ''
+          replacement: ""
+        - pattern: "Jansen "
+          replacement: ""
+        - pattern: "van der Harst "
+          replacement: ""
+        - pattern: "Malik "
+          replacement: ""
+        - pattern: "Howard "
+          replacement: ""
         - pattern: Stanzick eGFR
           replacement: Estimated glomerular filtration rate
-        - pattern: 'Deelen '
-          replacement: ''
-        - pattern: 'Mahajan '
-          replacement: ''
+        - pattern: "Deelen "
+          replacement: ""
+        - pattern: "Mahajan "
+          replacement: ""
     qualifiers:
       - qualifier: anatomical_context_qualifier
         method: value

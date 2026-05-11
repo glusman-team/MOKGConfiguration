@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11089315/bin/Table_2.XLSX
     local: ./DATALAKE/WANG4.xlsx

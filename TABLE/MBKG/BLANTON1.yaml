@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/4787260/bin/NIHMS762705-supplement-Supplementary_Tables_1-17.xlsx
     local: ./DATALAKE/BLANTON1.xlsx

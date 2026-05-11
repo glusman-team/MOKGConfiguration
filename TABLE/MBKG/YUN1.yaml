@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     kind: excel
     sheet: 시트1

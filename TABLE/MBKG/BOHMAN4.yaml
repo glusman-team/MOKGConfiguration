@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://static-content.springer.com/esm/art%3A10.1186%2Fs12915-024-01887-0/MediaObjects/12915_2024_1887_MOESM1_ESM.xlsx
     local: ./DATALAKE/BOHMAN4.xlsx

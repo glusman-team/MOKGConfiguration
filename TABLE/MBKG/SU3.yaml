@@ -1,5 +1,6 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11705818/bin/spectrum.02182-24-s0003.xlsx
     local: ./DATALAKE/SU3.xlsx

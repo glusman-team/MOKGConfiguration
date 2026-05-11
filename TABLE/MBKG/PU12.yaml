@@ -1,10 +1,11 @@
 template:
   syntax: TC3
+  status: primetime
   source:
     url: https://static-content.springer.com/esm/art%3A10.1038%2Fs43587-024-00678-0/MediaObjects/43587_2024_678_MOESM12_ESM.csv
     local: ./DATALAKE/PU12.csv
     kind: text
-    delimiter: ','
+    delimiter: ","
     row_slice:
       - 1
       - auto
@@ -16,7 +17,7 @@ template:
         - OrganismTaxon
       regex:
         - pattern: _
-          replacement: ' '
+          replacement: " "
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier
@@ -37,9 +38,9 @@ template:
         - Gene
       regex:
         - pattern: _
-          replacement: ' '
-        - pattern: ' num'
-          replacement: ''
+          replacement: " "
+        - pattern: " num"
+          replacement: ""
         - pattern: Folatesting glucose
           replacement: Fasting glucose
         - pattern: B2M
@@ -48,7 +49,7 @@ template:
           replacement: Leukocyte count
         - pattern: HDLC
           replacement: HDL Cholesterol
-        - pattern: '^Platelet$'
+        - pattern: "^Platelet$"
           replacement: Platelet count
         - pattern: eGFR
           replacement: Estimated glomerular filtration rate
@@ -56,11 +57,11 @@ template:
           replacement: Hemoglobin A1c
         - pattern: hsCRP
           replacement: High-sensitivity C-reactive protein
-        - pattern: '^Pulse$'
+        - pattern: "^Pulse$"
           replacement: Pulse rate
   provenance:
     repo: PMID
-    publication: '39054372'
+    publication: "39054372"
     contributors:
       - kind: curation
         name: Skye Lane Goetz
