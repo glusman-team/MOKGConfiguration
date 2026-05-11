@@ -14,7 +14,7 @@ template:
     predicate: correlated_with
     object:
       method: column
-      encoding: B
+      encoding: C
       prioritize:
         - Gene
         - Protein
