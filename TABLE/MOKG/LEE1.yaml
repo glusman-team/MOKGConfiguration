@@ -1,6 +1,7 @@
 template:
   syntax: TC3
-  status: alpha
+  status: beta
+
   source:
     kind: excel
     local: ./DATALAKE/LEE1.xlsx

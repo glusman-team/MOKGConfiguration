@@ -1,6 +1,6 @@
 template:
   syntax: TC3
-  status: alpha
+  status: beta
   source:
     kind: excel
     url: https://ars.els-cdn.com/content/image/1-s2.0-S0092867424012686-mmc7.xlsx

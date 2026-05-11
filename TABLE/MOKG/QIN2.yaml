@@ -1,6 +1,6 @@
 template:
   syntax: TC3
-  status: alpha
+  status: beta
   source:
     kind: excel
     local: ./DATALAKE/QIN2.xlsx
