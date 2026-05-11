@@ -79,7 +79,7 @@ sections:
   - statement:
       subject:
         method: value
-        encoding: Clostridiaceae 1
+        encoding: Clostridiaceae
     source:
       sheet: Clostridiaceae 1
   - statement:
