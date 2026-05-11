@@ -155,6 +155,7 @@ sections:
         encoding: A
         prioritize:
           - Pathway
+          - MolecularActivity
         taxon: 9606
         regex:
           - pattern: "^WP"
@@ -185,6 +186,7 @@ sections:
         encoding: A
         prioritize:
           - Pathway
+          - MolecularActivity
         taxon: 9606
         regex:
           - pattern: "^WP"
