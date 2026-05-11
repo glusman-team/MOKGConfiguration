@@ -1,0 +1,37 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/pone.0273612.s002.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9439210/bin/pone.0273612.s002.xlsx
+    sheet: SAFETY
+    row_slice:
+      - 1
+      - auto
+  statement:
+    subject:
+      method: value
+      encoding: UMLS:C5400806
+      prioritize:
+        - ChemicalEntity
+    predicate: causes
+    object:
+      method: value
+      encoding: HP:0002315
+      prioritize:
+        - PhenotypicFeature
+  provenance:
+    repo: PMC
+    publication: PMC9439210
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+  annotations:
+    - annotation: cephalgia count
+      method: column
+      encoding: G
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "CEFALGIA (headache) adverse events after SARS-CoV-2 vaccination; CR - CEFALGIA column"

@@ -1,0 +1,59 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13141636.1__mmc2.xlsx
+    url: "https://www.sciencedirect.com/cms/attachment/pmc13141636/mmc2.xlsx"
+    sheet: "Table S2"
+
+  provenance:
+    repo: PMC
+    publication: PMC13141636
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "06 MAY 2026"
+      - kind: curation
+        name: "Tablassert pipeline"
+        date: "06 MAY 2026"
+
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: C
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ", "
+      predicate: expressed_in
+      object:
+        method: column
+        encoding: A
+        prioritize:
+          - Cell
+    annotations:
+      - annotation: gene_list_type
+        method: value
+        encoding: signature_genes
+
+  - statement:
+      subject:
+        method: column
+        encoding: D
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ", "
+      predicate: expressed_in
+      object:
+        method: column
+        encoding: A
+        prioritize:
+          - Cell
+    annotations:
+      - annotation: gene_list_type
+        method: value
+        encoding: DEGs

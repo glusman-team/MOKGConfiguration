@@ -1,0 +1,63 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: text
+    local: ./DATALAKE/suppl_table_s2_crohns_disease.csv
+    url: https://doi.org/10.1136/jpn-2022-000015
+    row_slice: [1, auto]
+    delimiter: ","
+    
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [IndividualOrganism, Human]
+      regex:
+        - pattern: ".*\\(.*\\).*"
+          replacement: ""
+    predicate: has_phenotype
+    object:
+      method: column
+      encoding: B
+      prioritize: [ClinicalAttribute, ClinicalFinding]
+      regex:
+        - pattern: ".*\\(.*\\).*"
+          replacement: ""
+        - pattern: "^\\d+\\.\\d+$"
+          replacement: ""
+        - pattern: "^\\d+$"
+          replacement: ""
+      
+  provenance:
+    repo: PMC
+    publication: "12780483"
+    contributors:
+      - kind: curation
+        name: Tablassist Discovery Pipeline
+        date: 06 MAY 2026
+        comment: Extracted from supplementary table S2 of pediatric Crohn's disease CAM study
+
+  annotations:
+    - annotation: clinical_parameter
+      method: column
+      encoding: B
+    - annotation: cam_users_count
+      method: column
+      encoding: C
+      fill: zero
+    - annotation: non_cam_users_count
+      method: column
+      encoding: D
+      fill: zero
+    - annotation: statistical_significance
+      method: column
+      encoding: E
+      fill: zero
+    - annotation: disease_subtype
+      method: value
+      encoding: "Crohn's disease"
+    - annotation: cohort_description
+      method: value
+      encoding: "Pediatric Crohn's disease patients with and without CAM usage"

@@ -1,0 +1,87 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/Table3.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13095569/
+    sheet: lightgbm
+    row_slice: [1, auto]
+    reindex:
+      - column: A
+        comparison: ne
+        comparator: "N79601_GPL570"
+      - column: A
+        comparison: ne
+        comparator: "AI741365_GPL570"
+      - column: A
+        comparison: ne
+        comparator: "BF197118_GPL570"
+      - column: A
+        comparison: ne
+        comparator: "AI080614_GPL570"
+      - column: A
+        comparison: ne
+        comparator: "N95430_GPL570"
+      - column: A
+        comparison: ne
+        comparator: "AI798769_GPL570"
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+        - Gene
+    predicate: biomarker_for
+    object:
+      method: value
+      encoding: UMLS:C0243026
+      prioritize:
+        - Disease
+
+  provenance:
+    repo: PMC
+    publication: PMC13095569
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+      - kind: curation
+        name: Tablassist Pipeline
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: importance_score
+      method: column
+      encoding: B
+
+sections:
+  - source:
+      sheet: adaboost
+  - source:
+      sheet: xgboost
+  - source:
+      sheet: random_forest
+  - source:
+      sheet: svm_rfe
+  - source:
+      sheet: catboost
+  - source:
+      sheet: decision_tree
+  - source:
+      sheet: lasso
+  - source:
+      sheet: elastic_net
+  - source:
+      sheet: ridge
+  - source:
+      sheet: glm
+  - source:
+      sheet: pls
+  - source:
+      sheet: nnet
+  - source:
+      sheet: superpc

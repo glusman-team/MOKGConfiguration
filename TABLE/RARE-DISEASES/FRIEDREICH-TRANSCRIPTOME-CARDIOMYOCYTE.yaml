@@ -1,0 +1,52 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13015369.1__media-1.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13015369/
+    sheet: cardiomyocyte_only
+    row_slice: [1, auto]
+  
+  statement:
+    subject:
+      method: column
+      encoding: Gene
+      prioritize: [Gene]
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: column
+      encoding: Direction in FRDA vs Ctrl (majority)
+      regex:
+        - pattern: "up"
+          replacement: "increased_expression_in_cardiomyocyte"
+        - pattern: "down"
+          replacement: "decreased_expression_in_cardiomyocyte"
+  
+  provenance:
+    repo: PMC
+    publication: PMC13015369
+    contributors:
+      - kind: curation
+        name: Tablassist Autonomous Discovery
+        date: 07 MAY 2026
+        comment: Cardiomyocyte-specific transcriptomic changes in Friedreich ataxia
+  
+  annotations:
+    - annotation: log2_fold_change
+      method: column
+      encoding: Median log2FC (across studies)
+    - annotation: direction_score
+      method: column
+      encoding: Direction Score
+    - annotation: study_count
+      method: column
+      encoding: n_studies
+    - annotation: significant_genes_count
+      method: column
+      encoding: n_sig
+    - annotation: gene_description
+      method: column
+      encoding: description

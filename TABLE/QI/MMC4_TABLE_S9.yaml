@@ -1,0 +1,43 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/mmc4.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12790996/bin/mmc4.xlsx
+    sheet: "Table S9"
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prefix: "ENSEMBL:"
+      prioritize:
+        - Gene
+    predicate: associated_with
+    object:
+      method: value
+      encoding: "MONDO:0005083"
+      prioritize:
+        - Disease
+
+  provenance:
+    repo: PMC
+    publication: PMC12790996
+    contributors:
+      - kind: curation
+        name: Tablassist Discovery Pipeline
+        date: 06 MAY 2026
+        comment: Auto-extracted from supplementary tables
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: Pburden
+      method: column
+      encoding: B

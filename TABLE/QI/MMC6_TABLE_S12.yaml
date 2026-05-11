@@ -1,0 +1,82 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/mmc6.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12790996/bin/mmc6.xlsx
+    sheet: "Table S12"
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+        - Gene
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: value
+      encoding: "MONDO:0005083"
+      prioritize:
+        - Disease
+
+  provenance:
+    repo: PMC
+    publication: PMC12790996
+    contributors:
+      - kind: curation
+        name: Tablassist Discovery Pipeline
+        date: 06 MAY 2026
+        comment: Auto-extracted from supplementary tables
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: CHROM
+      method: column
+      encoding: D
+    - annotation: POS
+      method: column
+      encoding: E
+    - annotation: REF
+      method: column
+      encoding: F
+    - annotation: ALT
+      method: column
+      encoding: G
+    - annotation: CASE_FREQ
+      method: column
+      encoding: H
+    - annotation: CTRL_FREQ
+      method: column
+      encoding: I
+    - annotation: consequence
+      method: column
+      encoding: J
+    - annotation: IMPACT
+      method: column
+      encoding: K
+    - annotation: HGVSc
+      method: column
+      encoding: L
+    - annotation: HGVSp
+      method: column
+      encoding: M
+    - annotation: LoF
+      method: column
+      encoding: N
+    - annotation: SpliceAI_cutoff
+      method: column
+      encoding: O
+    - annotation: gnomADg_AF_popmax
+      method: column
+      encoding: P
+    - annotation: AF_ToMMo
+      method: column
+      encoding: Q

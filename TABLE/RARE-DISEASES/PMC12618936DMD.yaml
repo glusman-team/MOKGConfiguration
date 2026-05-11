@@ -1,0 +1,97 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/41598_2025_23758_MOESM1_ESM.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12618936/
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: H
+      taxon: 9606
+      prioritize:
+        - Gene
+    predicate: biomarker_for
+    object:
+      method: value
+      encoding: "MONDO:0010679"
+      prioritize:
+        - Disease
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: "NCBITaxon:9606"
+
+  provenance:
+    repo: PMC
+    publication: PMC12618936
+    contributors:
+      - kind: curation
+        name: Tablassist Pipeline
+        date: 06 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: seq_id
+      method: column
+      encoding: A
+    - annotation: target
+      method: column
+      encoding: B
+    - annotation: uniprot
+      method: column
+      encoding: C
+    - annotation: soma_id
+      method: column
+      encoding: D
+    - annotation: entrez_gene_symbol
+      method: column
+      encoding: E
+    - annotation: gene_names
+      method: column
+      encoding: F
+    - annotation: gene_id
+      method: column
+      encoding: G
+    - annotation: string
+      method: column
+      encoding: I
+    - annotation: kegg
+      method: column
+      encoding: J
+    - annotation: reactome
+      method: column
+      encoding: K
+    - annotation: interacts_with_raw
+      method: column
+      encoding: L
+
+sections:
+  - source:
+      sheet: All
+
+  - source:
+      sheet: Significant
+
+  - source:
+      sheet: New vs. Somascan 1300 assay
+
+  - source:
+      sheet: Skeletal muscle
+
+  - source:
+      sheet: ECM
+
+  - source:
+      sheet: Growth factors
+
+  - source:
+      sheet: pro-inflammatory and immun

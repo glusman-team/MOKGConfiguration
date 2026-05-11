@@ -1,0 +1,42 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/mmc14.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8242265/
+    sheet: Table S8
+    row_slice:
+      - 2
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+        - Gene
+    predicate: expressed_in
+    object:
+      method: value
+      encoding: "UBERON:0001134"
+      prioritize:
+        - GrossAnatomicalStructure
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: "NCBITaxon:9606"
+
+  provenance:
+    repo: PMC
+    publication: PMC8242265
+    contributors:
+      - kind: curation
+        name: Tablassist Pioneer
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026

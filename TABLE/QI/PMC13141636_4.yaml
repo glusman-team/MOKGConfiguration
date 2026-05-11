@@ -1,0 +1,118 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13141636.1__mmc5.xlsx
+    url: "https://www.sciencedirect.com/cms/attachment/pmc13141636/mmc5.xlsx"
+
+  provenance:
+    repo: PMC
+    publication: PMC13141636
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "06 MAY 2026"
+      - kind: curation
+        name: "Tablassert pipeline"
+        date: "06 MAY 2026"
+
+sections:
+  # S6A: Classical Monocytes DEGs (433 rows)
+  - source:
+      sheet: "Table S6A"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: affected_by
+      object:
+        method: value
+        encoding: UMLS:C5400806
+    annotations:
+      - annotation: scores
+        method: column
+        encoding: B
+      - annotation: logfoldchanges
+        method: column
+        encoding: C
+      - annotation: pvals
+        method: column
+        encoding: D
+      - annotation: pvals_adj
+        method: column
+        encoding: E
+
+  # S6B: Classical Monocytes DEGs (372 rows)
+  - source:
+      sheet: "Table S6B"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: affected_by
+      object:
+        method: value
+        encoding: UMLS:C5400806
+    annotations:
+      - annotation: scores
+        method: column
+        encoding: B
+      - annotation: logfoldchanges
+        method: column
+        encoding: C
+      - annotation: pvals
+        method: column
+        encoding: D
+      - annotation: pvals_adj
+        method: column
+        encoding: E
+
+  # S6C: GO enrichment - Gene -> participates_in -> GO term
+  - source:
+      sheet: "Table S6C"
+    statement:
+      subject:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"
+      predicate: participates_in
+      object:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+
+  # S6C: GO enrichment - GO term -> related_to -> Gene
+  - source:
+      sheet: "Table S6C"
+    statement:
+      subject:
+        method: column
+        encoding: A
+        regex:
+          - pattern: ".*\\(GO:(\\d+)\\)"
+            replacement: "GO:$1"
+        prioritize:
+          - BiologicalProcess
+      predicate: related_to
+      object:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+        explode_by: ";"

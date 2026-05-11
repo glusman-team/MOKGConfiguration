@@ -1,0 +1,71 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/163442_0_supp_594814_qgmj1m.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7710136/
+    sheet: "Statistical Analysis"
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - Gene
+      taxon: 10090
+    predicate: correlated_with
+    object:
+      method: value
+      encoding: "MONDO:0010679"
+      prioritize:
+        - Disease
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: "NCBITaxon:10090"
+
+  provenance:
+    repo: PMC
+    publication: PMC7710136
+    contributors:
+      - kind: curation
+        name: Tablassist Pioneer
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+sections:
+  - statement: {}
+    annotations:
+      - annotation: DystrophicVsWT_8wk_Log2Ratio
+        method: column
+        encoding: AX
+      - annotation: DystrophicVsWT_8wk_negLogP
+        method: column
+        encoding: AY
+
+  - statement: {}
+    annotations:
+      - annotation: DystrophicVsWT_16wk_Log2Ratio
+        method: column
+        encoding: AZ
+      - annotation: DystrophicVsWT_16wk_negLogP
+        method: column
+        encoding: BA
+
+  - statement: {}
+    annotations:
+      - annotation: DystrophicVsWT_80wk_Log2Ratio
+        method: column
+        encoding: BB
+      - annotation: DystrophicVsWT_80wk_negLogP
+        method: column
+        encoding: BC

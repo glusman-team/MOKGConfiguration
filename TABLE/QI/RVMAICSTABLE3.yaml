@@ -1,0 +1,173 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/jciinsight-11-202134-s319.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13043089/
+    sheet: Table 3
+
+  provenance:
+    repo: PMC
+    publication: PMC13043089
+    contributors:
+      - kind: curation
+        name: Tablassist-pioneer
+        date: 06 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  statement:
+    object:
+      method: value
+      encoding: MONDO:0018076
+      prioritize:
+        - Disease
+    predicate: gene_associated_with_condition
+
+sections:
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:886073
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: IL-17
+      - annotation: response_magnitude_pct
+        method: column
+        encoding: Q
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "ICS % of CD4+ T cells producing IL-17 in response to PPE18 antigen (Table 3, PMC13043089)"
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:888940
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: IL-17
+      - annotation: response_magnitude_pct
+        method: column
+        encoding: R
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "ICS % of CD4+ T cells producing IL-17 in response to PPE46 antigen (Table 3, PMC13043089)"
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:886209
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: IL-17
+      - annotation: response_magnitude_pct
+        method: column
+        encoding: S
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "ICS % of CD4+ T cells producing IL-17 in response to ESAT-6 (EsxA) antigen (Table 3, PMC13043089)"
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:886206
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: IL-17
+      - annotation: response_magnitude_pct
+        method: column
+        encoding: T
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "ICS % of CD4+ T cells producing IL-17 in response to EspI antigen (Table 3, PMC13043089)"
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:887082
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: IL-17
+      - annotation: response_magnitude_pct
+        method: column
+        encoding: U
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "ICS % of CD4+ T cells producing IL-17 in response to Rv0010c antigen (Table 3, PMC13043089)"
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:887083
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: IL-17
+      - annotation: response_magnitude_pct
+        method: column
+        encoding: V
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "ICS % of CD4+ T cells producing IL-17 in response to Rv0012 antigen (Table 3, PMC13043089)"
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:885399
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: IL-17
+      - annotation: response_magnitude_pct
+        method: column
+        encoding: W
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "ICS % of CD4+ T cells producing IL-17 in response to RimJ antigen (Table 3, PMC13043089)"
+
+  - statement:
+      subject:
+        method: value
+        encoding: NCBIGene:885754
+        taxon: 83332
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: cytokine
+        method: value
+        encoding: IL-17
+      - annotation: response_magnitude_pct
+        method: column
+        encoding: X
+      - annotation: miscellaneous notes
+        method: value
+        encoding: "ICS % of CD4+ T cells producing IL-17 in response to LldD2 antigen (Table 3, PMC13043089)"

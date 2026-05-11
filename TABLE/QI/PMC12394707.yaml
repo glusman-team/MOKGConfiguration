@@ -1,0 +1,55 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/41467_2025_63288_MOESM3_ESM.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12394707/bin/41467_2025_63288_MOESM3_ESM.xlsx
+    sheet: "Table 3 "
+    row_slice: [2, auto]
+  statement:
+    subject:
+      method: column
+      encoding: G
+      prioritize:
+        - Protein
+      taxon: 9606
+    predicate: physically_interacts_with
+    object:
+      method: value
+      encoding: KPRQKRTAT
+      prioritize:
+        - Polypeptide
+      taxon: 2697049
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: "NCBITaxon:9606"
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: "MONDO:0100096"
+      - qualifier: context_qualifier
+        method: value
+        encoding: "HLA-C*12:02"
+  provenance:
+    publication: PMC12394707
+    contributors:
+      - name: Antigravity
+        date: "2026-05-06"
+        kind: curation
+      - name: tablassist
+        date: "2026-05-06"
+        kind: tool
+  annotations:
+    - annotation: TRAV
+      method: column
+      encoding: A
+    - annotation: TRAJ
+      method: column
+      encoding: B
+    - annotation: TRBV
+      method: column
+      encoding: D
+    - annotation: TRBJ
+      method: column
+      encoding: F

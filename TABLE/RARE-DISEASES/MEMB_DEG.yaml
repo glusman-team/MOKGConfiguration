@@ -1,0 +1,62 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/source__mmc4.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13141636/bin/mmc4.xlsx
+    row_slice: [1, "auto"]
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Gene]
+      taxon: 9606
+    predicate: expressed_in
+
+  provenance:
+    repo: PMC
+    publication: "PMC13141636"
+    contributors:
+      - kind: curation
+        name: Tablassist Discovery Pipeline
+        date: 06 MAY 2026
+        comment: Memory B cell DEGs from pediatric COVID-19 vaccination scRNA-seq study
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: log2_fold_change
+      method: column
+      encoding: C
+    - annotation: adjusted_p_value
+      method: column
+      encoding: E
+
+sections:
+  - source:
+      sheet: "Table S5A"
+    statement:
+      object:
+        method: value
+        encoding: CL:0000970
+        prioritize: [Cell]
+    annotations:
+      - annotation: condition
+        method: value
+        encoding: "FJ vs NJ"
+
+  - source:
+      sheet: "Table S5B"
+    statement:
+      object:
+        method: value
+        encoding: CL:0000970
+        prioritize: [Cell]
+    annotations:
+      - annotation: condition
+        method: value
+        encoding: "SJ vs NJ"

@@ -1,0 +1,43 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/13148_2024_1744_MOESM2_ESM.xlsx
+    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs13148-024-01744-5/MediaObjects/13148_2024_1744_MOESM2_ESM.xlsx
+    sheet: B.Controls
+    row_slice:
+      - 1
+      - auto
+    reindex:
+      - column: G
+        comparator: "protein-coding"
+        comparison: eq
+
+  statement:
+    subject:
+      method: column
+      encoding: E
+      prioritize:
+        - Gene
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: value
+      encoding: GO:0071514
+      prioritize:
+        - BiologicalProcess
+
+  provenance:
+    repo: PMC
+    publication: PMC11452994
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026

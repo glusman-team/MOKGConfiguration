@@ -1,0 +1,66 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/mmc1.xlsx
+    url: https://ftp.ncbi.nlm.nih.gov/pub/pmc/supplemental/PMC7788102/mmc1.xlsx
+    sheet: Sup_Table 6 Group 1 vs ALL
+    row_slice: [1, auto]
+    reindex:
+      - column: C
+        comparison: lt
+        comparator: 0.05
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      regex:
+        - pattern: "-mRNA$"
+          replacement: ""
+        - pattern: "_all$"
+          replacement: ""
+        - pattern: "^FCGR1A/B$"
+          replacement: "FCGR1A,FCGR1B"
+        - pattern: "^FCGR2A/C$"
+          replacement: "FCGR2A,FCGR2C"
+        - pattern: "^FCGR3A/B$"
+          replacement: "FCGR3A,FCGR3B"
+      remove:
+        - "^KIR_Activating_Subgroup_.*$"
+      explode_by: ","
+      taxon: 9606
+      prioritize:
+        - Gene
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0100096
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: MONDO:0100096
+
+  annotations:
+    - annotation: log2 fold change
+      method: column
+      encoding: B
+    - annotation: p value
+      method: column
+      encoding: C
+    - annotation: FDR
+      method: column
+      encoding: D
+
+  provenance:
+    repo: PMC
+    publication: PMC7788102
+    contributors:
+      - kind: curation
+        name: Tablassist Pioneer
+        date: 06 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 07 MAY 2026

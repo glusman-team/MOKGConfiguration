@@ -13,7 +13,7 @@ template:
       encoding: A
       taxon: 9606
       prefix: "ENSEMBL:"
-      prioritize: [Gene]
+      prioritize: [Gene, Protein]
       remove:
         - "_RSS$"
         - "_intercept_$"
@@ -24,6 +24,13 @@ template:
       encoding: B
       taxon: 9606
       prioritize: [Gene, Protein]
+      remove:
+        - "_RSS$"
+        - "_intercept_$"
+        - "_R2$"
+      regex:
+        - pattern: "ensg"
+          replacement: "ENSEBL:ensg"
     qualifiers:
       - qualifier: species_context_qualifier
         method: value

@@ -1,0 +1,365 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/41467_2025_67769_MOESM4_ESM.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12847772/
+    sheet: Supplementary Table 2
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: B
+      fill: forward
+      regex:
+        - pattern: "^Healthy controls$"
+          replacement: "Healthy Volunteers"
+        - pattern: "^Brochiectasis$"
+          replacement: "Bronchiectasis"
+        - pattern: "^Bronchiectasis-asthma overlap$"
+          replacement: "Bronchiectasis,Asthma"
+      explode_by: ","
+      prioritize:
+        - Disease
+        - PopulationOfIndividualOrganisms
+        - Cohort
+    predicate: related_to
+
+  provenance:
+    repo: PMC
+    publication: PMC12847772
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 07 MAY 2026
+      - kind: curation
+        name: Tablassist-pioneer
+        date: 07 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+
+sections:
+  - source:
+      reindex:
+        - column: D
+          comparison: ne
+          comparator: "NA"
+        - column: D
+          comparison: ne
+          comparator: ""
+        - column: D
+          comparison: ne
+          comparator: "/"
+        - column: D
+          comparison: ne
+          comparator: "FEV1 (L)"
+    statement:
+      object:
+        method: value
+        encoding: UMLS:C0802965
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: FEV1 (L)
+      - annotation: measurement_value
+        method: column
+        encoding: D
+      - annotation: unit
+        method: value
+        encoding: L
+
+  - source:
+      reindex:
+        - column: E
+          comparison: ne
+          comparator: "NA"
+        - column: E
+          comparison: ne
+          comparator: ""
+        - column: E
+          comparison: ne
+          comparator: "/"
+        - column: E
+          comparison: ne
+          comparator: "FEV1% pred"
+    statement:
+      object:
+        method: value
+        encoding: UMLS:C0730561
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: FEV1% pred
+      - annotation: measurement_value
+        method: column
+        encoding: E
+      - annotation: unit
+        method: value
+        encoding: "% predicted"
+
+  - source:
+      reindex:
+        - column: F
+          comparison: ne
+          comparator: "NA"
+        - column: F
+          comparison: ne
+          comparator: ""
+        - column: F
+          comparison: ne
+          comparator: "/"
+        - column: F
+          comparison: ne
+          comparator: "FVC (L)"
+    statement:
+      object:
+        method: value
+        encoding: UMLS:C3714541
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: FVC (L)
+      - annotation: measurement_value
+        method: column
+        encoding: F
+      - annotation: unit
+        method: value
+        encoding: L
+
+  - source:
+      reindex:
+        - column: G
+          comparison: ne
+          comparator: "NA"
+        - column: G
+          comparison: ne
+          comparator: ""
+        - column: G
+          comparison: ne
+          comparator: "/"
+        - column: G
+          comparison: ne
+          comparator: "FVC% pred"
+    statement:
+      object:
+        method: value
+        encoding: UMLS:C3828596
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: FVC% pred
+      - annotation: measurement_value
+        method: column
+        encoding: G
+      - annotation: unit
+        method: value
+        encoding: "% predicted"
+
+  - source:
+      reindex:
+        - column: H
+          comparison: ne
+          comparator: "NA"
+        - column: H
+          comparison: ne
+          comparator: ""
+        - column: H
+          comparison: ne
+          comparator: "/"
+        - column: H
+          comparison: ne
+          comparator: "FEV1/FVC, %"
+    statement:
+      object:
+        method: value
+        encoding: UMLS:C0429745
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: "FEV1/FVC, %"
+      - annotation: measurement_value
+        method: column
+        encoding: H
+      - annotation: unit
+        method: value
+        encoding: "%"
+
+  - source:
+      reindex:
+        - column: I
+          comparison: ne
+          comparator: "NA"
+        - column: I
+          comparison: ne
+          comparator: ""
+        - column: I
+          comparison: ne
+          comparator: "/"
+        - column: I
+          comparison: ne
+          comparator: "FENO"
+    statement:
+      object:
+        method: value
+        encoding: UMLS:C5445160
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: FENO
+      - annotation: measurement_value
+        method: column
+        encoding: I
+      - annotation: unit
+        method: value
+        encoding: ppb
+
+  - source:
+      reindex:
+        - column: J
+          comparison: ne
+          comparator: "NA"
+        - column: J
+          comparison: ne
+          comparator: ""
+        - column: J
+          comparison: ne
+          comparator: "/"
+        - column: J
+          comparison: ne
+          comparator: "ACT scores"
+    statement:
+      object:
+        method: value
+        encoding: UMLS:C2733224
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: ACT scores
+      - annotation: measurement_value
+        method: column
+        encoding: J
+      - annotation: unit
+        method: value
+        encoding: score
+
+  - source:
+      reindex:
+        - column: K
+          comparison: ne
+          comparator: "NA"
+        - column: K
+          comparison: ne
+          comparator: ""
+        - column: K
+          comparison: ne
+          comparator: "/"
+        - column: K
+          comparison: ne
+          comparator: "Peripheral blood eosinophils, %"
+    statement:
+      object:
+        method: value
+        encoding: UMLS:C0200638
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: "Peripheral blood eosinophils, %"
+      - annotation: measurement_value
+        method: column
+        encoding: K
+      - annotation: unit
+        method: value
+        encoding: "%"
+
+  - source:
+      reindex:
+        - column: L
+          comparison: ne
+          comparator: "NA"
+        - column: L
+          comparison: ne
+          comparator: ""
+        - column: L
+          comparison: ne
+          comparator: "/"
+        - column: L
+          comparison: ne
+          comparator: "Peripheral blood eosinophils x10^9/L"
+    statement:
+      object:
+        method: value
+        encoding: UMLS:C0200638
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: Peripheral blood eosinophils x10^9/L
+      - annotation: measurement_value
+        method: column
+        encoding: L
+      - annotation: unit
+        method: value
+        encoding: x10^9/L
+
+  - source:
+      reindex:
+        - column: M
+          comparison: ne
+          comparator: "NA"
+        - column: M
+          comparison: ne
+          comparator: ""
+        - column: M
+          comparison: ne
+          comparator: "/"
+        - column: M
+          comparison: ne
+          comparator: "Serum IgE category"
+    statement:
+      object:
+        method: value
+        encoding: UMLS:C0202086
+    annotations:
+      - annotation: patient_id
+        method: column
+        encoding: C
+      - annotation: measurement_type
+        method: value
+        encoding: Serum IgE category
+      - annotation: measurement_value
+        method: column
+        encoding: M
+      - annotation: unit
+        method: value
+        encoding: category

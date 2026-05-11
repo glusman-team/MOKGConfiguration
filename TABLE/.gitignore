@@ -1,1 +1,11 @@
 *.ledger/
+*source/
+*.xlsx
+*.pdf
+*.xml
+*.xlsx
+*derived/
+*raw/
+*scratch/
+*.tmp/
+*stricterValidation.txt

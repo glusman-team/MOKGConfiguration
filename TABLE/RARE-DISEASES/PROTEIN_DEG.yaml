@@ -1,0 +1,45 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: text
+    local: ./DATALAKE/43856_2026_1489_MOESM5_ESM.csv
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13125234/
+    row_slice: [1, "auto"]
+    delimiter: ","
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [Gene]
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0012727
+      prioritize: [Disease]
+
+  provenance:
+    repo: PMC
+    publication: PMC13125234
+    contributors:
+      - kind: curation
+        name: Tablassist Discovery Pipeline
+        date: 06 MAY 2026
+        comment: Protein DEGs from KD vs MIS-C comparison in pediatric multi-omics study
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: logFC
+      method: column
+      encoding: B
+    - annotation: adjusted_p_value
+      method: column
+      encoding: F
+    - annotation: comparison
+      method: value
+      encoding: "KD vs MIS-C"

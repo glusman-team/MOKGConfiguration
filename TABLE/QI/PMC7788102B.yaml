@@ -1,0 +1,63 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/mmc1.xlsx
+    url: https://ftp.ncbi.nlm.nih.gov/pub/pmc/supplemental/PMC7788102/mmc1.xlsx
+    sheet: Sup_Table 7 PC-loadings
+    row_slice: [1, auto]
+    reindex:
+      - column: B
+        comparison: lt
+        comparator: -0.1
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      remove:
+        - " - mRNA$"
+      taxon: 9606
+      prioritize:
+        - Gene
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0100096
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: MONDO:0100096
+
+  annotations:
+    - annotation: PC1 loading
+      method: column
+      encoding: B
+    - annotation: PC2 loading
+      method: column
+      encoding: C
+    - annotation: PC3 loading
+      method: column
+      encoding: D
+    - annotation: PC4 loading
+      method: column
+      encoding: E
+    - annotation: PC5 loading
+      method: column
+      encoding: F
+    - annotation: PC6 loading
+      method: column
+      encoding: G
+
+  provenance:
+    repo: PMC
+    publication: PMC7788102
+    contributors:
+      - kind: curation
+        name: Tablassist Pioneer
+        date: 06 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026

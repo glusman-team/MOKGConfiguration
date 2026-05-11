@@ -10,37 +10,24 @@ template:
   statement:
     subject:
       method: column
-      encoding: C
-      prioritize:
-        - MolecularActivity
-        - GeneFamily
-        - Pathway
-      remove:
-        - .*Plasma_
-        - .*Stool_
-        - ' \(.*'
-        - ' \[.*'
-        - \.*
-        - uncharacterized protein
-        - ;.*
-        - /.*
-      explode_by: ','
+      encoding: B
     predicate: correlated_with
     object:
       method: column
-      encoding: F
+      encoding: C
       prioritize:
         - ChemicalEntity
+      regex:
+        - pattern: ^Plasma_
+          replacement: ''
+        - pattern: ^Stool_
+          replacement: ''
       remove:
-        - .*Plasma_
-        - .*Stool_
-        - ' \(.*'
-        - ' \[.*'
-        - \.*
-        - uncharacterized protein
-        - ;.*
-        - /.*
-      explode_by: ','
+        - \*+$
+        - ' \[[^\[\]]*\]$'
+        - ' \([^()]*\)$'
+        - /.*$
+        - ;.*$
     qualifiers:
       - qualifier: disease_context_qualifier
         method: value
@@ -57,10 +44,16 @@ template:
         date: 17 FEB 2026
         organizations:
           - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 07 MAY 2026
   annotations:
     - annotation: p value
       method: column
       encoding: G
+    - annotation: source label
+      method: column
+      encoding: F
     - annotation: multiple testing correction method
       method: value
       encoding: Benjamini Hochberg
@@ -79,6 +72,9 @@ sections:
         method: value
         encoding: 49
     statement:
+      subject:
+        prioritize:
+          - MolecularActivity
       qualifiers:
         - qualifier: subject_part_qualifier
           method: value
@@ -96,6 +92,9 @@ sections:
         method: value
         encoding: 49
     statement:
+      subject:
+        prioritize:
+          - MolecularActivity
       qualifiers:
         - qualifier: object_part_qualifier
           method: value
@@ -114,6 +113,9 @@ sections:
         method: value
         encoding: 74
     statement:
+      subject:
+        prioritize:
+          - MolecularActivity
       qualifiers:
         - qualifier: subject_part_qualifier
           method: value
@@ -131,6 +133,9 @@ sections:
         method: value
         encoding: 74
     statement:
+      subject:
+        prioritize:
+          - MolecularActivity
       qualifiers:
         - qualifier: part_qualifier
           method: value
@@ -145,6 +150,9 @@ sections:
         method: value
         encoding: 49
     statement:
+      subject:
+        prioritize:
+          - Gene
       qualifiers:
         - qualifier: object_part_qualifier
           method: value
@@ -162,6 +170,9 @@ sections:
         method: value
         encoding: 49
     statement:
+      subject:
+        prioritize:
+          - Gene
       qualifiers:
         - qualifier: subject_part_qualifier
           method: value
@@ -179,6 +190,9 @@ sections:
         method: value
         encoding: 74
     statement:
+      subject:
+        prioritize:
+          - Gene
       qualifiers:
         - qualifier: subject_part_qualifier
           method: value
@@ -196,6 +210,9 @@ sections:
         method: value
         encoding: 74
     statement:
+      subject:
+        prioritize:
+          - Gene
       qualifiers:
         - qualifier: part_qualifier
           method: value
@@ -210,6 +227,9 @@ sections:
         method: value
         encoding: 49
     statement:
+      subject:
+        prioritize:
+          - Pathway
       qualifiers:
         - qualifier: object_part_qualifier
           method: value
@@ -227,6 +247,9 @@ sections:
         method: value
         encoding: 49
     statement:
+      subject:
+        prioritize:
+          - Pathway
       qualifiers:
         - qualifier: subject_part_qualifier
           method: value
@@ -244,6 +267,9 @@ sections:
         method: value
         encoding: 74
     statement:
+      subject:
+        prioritize:
+          - Pathway
       qualifiers:
         - qualifier: subject_part_qualifier
           method: value
@@ -261,6 +287,9 @@ sections:
         method: value
         encoding: 74
     statement:
+      subject:
+        prioritize:
+          - Pathway
       qualifiers:
         - qualifier: part_qualifier
           method: value

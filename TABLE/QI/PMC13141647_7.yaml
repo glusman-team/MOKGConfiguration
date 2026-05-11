@@ -1,0 +1,48 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13141647.1__mmc8.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13141647/bin/mmc8.xlsx
+    sheet: "Sheet 1 - Table S9"
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - Gene
+      taxon: 9606
+    predicate: expressed_in
+    object:
+      method: column
+      encoding: G
+      prefix: "PMC13141647:cluster:"
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: column
+        encoding: G
+
+  provenance:
+    repo: PMC
+    publication: PMC13141647
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "06 MAY 2026"
+      - kind: curation
+        name: Tablassert pipeline
+        date: "06 MAY 2026"
+
+  annotations:
+    - annotation: avg_log2FC
+      method: column
+      encoding: C
+    - annotation: p_val_adj
+      method: column
+      encoding: F

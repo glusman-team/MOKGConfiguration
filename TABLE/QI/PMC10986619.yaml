@@ -1,0 +1,84 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/spectrum.02981-23-s0001.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10986619/bin/spectrum.02981-23-s0001.xlsx
+    sheet: Patienter
+    row_slice:
+      - 1
+      - auto
+  provenance:
+    repo: PMC
+    publication: PMC10986619
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "2026-05-06"
+        comment: "Generated from delegated summary; verified CURIEs only: adalimumab (UNII:FYS6T7F842), abatacept (UNII:7D0YB67S97), rituximab (UNII:4F4X42SYQ6), infliximab (UNII:B72HH48FLU), methotrexate (CHEBI:44185), hydroxychloroquine (CHEBI:5801), RA (MONDO:0008383), JIA (MONDO:0011429)"
+  statement:
+    predicate: treats
+    subject:
+      taxon: 9606
+      prioritize:
+        - ChemicalEntity
+        - SmallMolecule
+    object:
+      prioritize:
+        - Disease
+
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: AA
+        regex:
+          - pattern: "Orencia"
+            replacement: "abatacept"
+          - pattern: "Humira"
+            replacement: "adalimumab"
+          - pattern: "Mabthera"
+            replacement: "rituximab"
+          - pattern: "mabthera"
+            replacement: "rituximab"
+          - pattern: "Enbrel"
+            replacement: "etanercept"
+          - pattern: "Remicade"
+            replacement: "infliximab"
+      object:
+        method: column
+        encoding: E
+        regex:
+          - pattern: "RA"
+            replacement: "rheumatoid arthritis"
+          - pattern: "JIA"
+            replacement: "juvenile idiopathic arthritis"
+  - statement:
+      subject:
+        method: column
+        encoding: X
+        explode_by: ", "
+        regex:
+          - pattern: "Orencia"
+            replacement: "abatacept"
+          - pattern: "Humira"
+            replacement: "adalimumab"
+          - pattern: "Mabthera"
+            replacement: "rituximab"
+          - pattern: "mabthera"
+            replacement: "rituximab"
+          - pattern: "Enbrel"
+            replacement: "etanercept"
+          - pattern: "Remicade"
+            replacement: "infliximab"
+          - pattern: "Infliximab"
+            replacement: "infliximab"
+      object:
+        method: column
+        encoding: E
+        regex:
+          - pattern: "RA"
+            replacement: "rheumatoid arthritis"
+          - pattern: "JIA"
+            replacement: "juvenile idiopathic arthritis"

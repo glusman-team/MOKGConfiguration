@@ -43,25 +43,25 @@ template:
       encoding: C
       regex:
         - pattern: '^([^\s]+).*$'
-          replacement: '\1'
+          replacement: "${1}"
     - annotation: 95% confidence interval
       method: column
       encoding: C
       regex:
         - pattern: '^[^\[]*\[([^\]]+)\]$'
-          replacement: '\1'
+          replacement: "${1}"
     - annotation: 95% confidence interval lower bound
       method: column
       encoding: C
       regex:
         - pattern: '^.*\[([^\]-]+)-[^\]]+\]$'
-          replacement: '\1'
+          replacement: "${1}"
     - annotation: 95% confidence interval upper bound
       method: column
       encoding: C
       regex:
         - pattern: '^.*\[[^\]-]+-([^\]]+)\]$'
-          replacement: '\1'
+          replacement: "${1}"
     - annotation: raw p value
       method: column
       encoding: D

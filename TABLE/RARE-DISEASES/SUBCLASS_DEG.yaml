@@ -1,0 +1,84 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: text
+    delimiter: ","
+    row_slice:
+      - 1
+      - auto
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10709863/
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - Gene
+      taxon: 9606
+      regex:
+        - pattern: "\\."
+          replacement: "-"
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0001881
+      prioritize:
+        - Disease
+
+  provenance:
+    repo: PMC
+    publication: PMC10709863
+    contributors:
+      - kind: curation
+        name: Tablassist Pipeline
+        date: 06 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+sections:
+  - source:
+      local: ./DATALAKE/13054_2023_4689_MOESM5_ESM.csv
+    annotations:
+      - annotation: log2_fold_change
+        method: column
+        encoding: B
+      - annotation: average_expression
+        method: column
+        encoding: C
+      - annotation: p_value
+        method: column
+        encoding: E
+      - annotation: fdr
+        method: column
+        encoding: F
+      - annotation: direction
+        method: value
+        encoding: increased
+      - annotation: comparison
+        method: value
+        encoding: subclass1_vs_subclass2
+
+  - source:
+      local: ./DATALAKE/13054_2023_4689_MOESM6_ESM.csv
+    annotations:
+      - annotation: log2_fold_change
+        method: column
+        encoding: B
+      - annotation: average_expression
+        method: column
+        encoding: C
+      - annotation: p_value
+        method: column
+        encoding: E
+      - annotation: fdr
+        method: column
+        encoding: F
+      - annotation: direction
+        method: value
+        encoding: decreased
+      - annotation: comparison
+        method: value
+        encoding: subclass1_vs_subclass2

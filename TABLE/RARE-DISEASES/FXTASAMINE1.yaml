@@ -1,0 +1,69 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/Table_1.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13132834/bin/Table_1.xlsx
+    sheet: "SupTable-3"
+    row_slice: [1, "auto"]
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [SmallMolecule]
+      regex:
+        - pattern: "\\s+"
+          replacement: ""
+        - pattern: "AMINE:"
+          replacement: ""
+      taxon: 9606
+    predicate: biomarker_for
+    object:
+      method: value
+      encoding: "FXTAS"
+      avoid: [SmallMolecule, Gene, Protein]
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: "FXTAS"
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: "NCBITaxon:9606"
+
+  provenance:
+    repo: PMC
+    publication: "13132834"
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+          - CalPoly SLO
+        comment: Created for Fragile X-associated tremor/ataxia syndrome amine biomarkers
+
+  annotations:
+    - annotation: data_type
+      method: value
+      encoding: "amine"
+    - annotation: sample_type
+      method: column
+      encoding: B
+      fill: forward
+    - annotation: abundance_change
+      method: column
+      encoding: C
+      regex:
+        - pattern: "[\\+\\-]"
+          replacement: ""
+        - pattern: "\\."
+          replacement: "."
+      transformations:
+        - function: copysign
+          arguments: ["values", 1]

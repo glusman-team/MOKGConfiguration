@@ -1,0 +1,48 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/JCMM-30-e71102-s004.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13140575/
+    sheet: Table S13
+    row_slice: [1, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: J
+      taxon: 9606
+      prioritize: [Gene]
+      explode_by: /
+    predicate: participates_in
+    object:
+      method: column
+      encoding: C
+      prioritize: [Pathway]
+
+  provenance:
+    repo: PMC
+    publication: PMC13140575
+    contributors:
+      - kind: curation
+        name: Tablassist Pipeline
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: category
+      method: column
+      encoding: A
+    - annotation: subcategory
+      method: column
+      encoding: B
+    - annotation: KEGG_description
+      method: column
+      encoding: D
+    - annotation: pvalue
+      method: column
+      encoding: F
+    - annotation: p_adjust
+      method: column
+      encoding: G

@@ -1,0 +1,49 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/mmc3.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12790996/bin/mmc3.xlsx
+    sheet: "Table S7"
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+        - SequenceVariant
+    predicate: associated_with
+    object:
+      method: column
+      encoding: H
+      prioritize:
+        - Gene
+      taxon: 9606
+
+  provenance:
+    repo: PMC
+    publication: PMC12790996
+    contributors:
+      - kind: curation
+        name: Tablassist Discovery Pipeline
+        date: 06 MAY 2026
+        comment: Auto-extracted from supplementary tables
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: PIP
+      method: column
+      encoding: G
+    - annotation: CADD
+      method: column
+      encoding: K
+    - annotation: Consequence
+      method: column
+      encoding: J

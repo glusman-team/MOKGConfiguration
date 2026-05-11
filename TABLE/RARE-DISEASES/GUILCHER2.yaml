@@ -1,0 +1,51 @@
+template:
+  syntax: TC3
+  status: alpha
+  
+  source:
+    kind: text
+    local: ./DATALAKE/suppl_table_s4_cam_usage.csv
+    url: https://doi.org/10.1136/jpn-2022-000015
+    row_slice: [1, auto]
+    delimiter: ","
+    
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize: [IndividualOrganism, Human]
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      prioritize: [Treatment, Procedure]
+      regex:
+        - pattern: ".*therapy.*"
+          replacement: ""
+        - pattern: ".*therapies.*"
+          replacement: ""
+      
+  provenance:
+    repo: PMC
+    publication: "12780483"
+    contributors:
+      - kind: curation
+        name: Tablassist Discovery Pipeline
+        date: 06 MAY 2026
+        comment: Extracted from supplementary table S4 of pediatric IBD CAM study
+
+  annotations:
+    - annotation: therapy_category
+      method: column
+      encoding: A
+    - annotation: current_usage
+      method: column
+      encoding: C
+      fill: zero
+    - annotation: previous_usage
+      method: column
+      encoding: D
+      fill: zero
+    - annotation: total_usage
+      method: value
+      encoding: "total calculated usage"

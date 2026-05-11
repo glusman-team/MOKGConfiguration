@@ -14,11 +14,11 @@ template:
       regex:
         # Replaced look-ahead with a capture group
         - pattern: '\bsp ([A-Z0-9])'
-          replacement: 'sp. \1'
-        - pattern: '\b(CAG) (\d+)\b'
-          replacement: '\1:\2'
+          replacement: "sp. ${1}"
+        - pattern: '\bCAG (\d+)\b'
+          replacement: "CAG:${1}"
         - pattern: '\b(T\d+) (\d+)\b'
-          replacement: '\1-\2'
+          replacement: "${1}-${2}"
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier

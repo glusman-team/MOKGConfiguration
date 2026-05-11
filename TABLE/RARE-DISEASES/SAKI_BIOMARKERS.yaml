@@ -1,0 +1,39 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: text
+    local: ./DATALAKE/biomarkers.csv
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13103982/
+    delimiter: ","
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+        - SmallMolecule
+    predicate: biomarker_for
+    object:
+      method: value
+      encoding: MONDO:0002492
+      prioritize:
+        - Disease
+      taxon: 9606
+
+  provenance:
+    repo: PMC
+    publication: PMC13103982
+    contributors:
+      - kind: curation
+        name: Tablassist Pipeline
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: metabolite_name
+      method: column
+      encoding: B

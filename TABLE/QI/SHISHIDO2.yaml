@@ -1,0 +1,72 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/jciinsight-11-194171-s296.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13134718/bin/jciinsight-11-194171-s296.xlsx
+    sheet: "Fig. 1A, 1B"
+    row_slice:
+      - 1
+      - auto
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prefix: "ENSEMBL:"
+      prioritize:
+        - Gene
+      fill: forward
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0005083
+      prioritize:
+        - Disease
+
+  provenance:
+    repo: PMC
+    publication: PMC13134718
+    contributors:
+      - kind: curation
+        name: Discovery Pipeline (tablassist)
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 07 MAY 2026
+
+  annotations:
+    - annotation: log2 fold change (NL vs Control)
+      method: column
+      encoding: C
+    - annotation: fold change (NL vs Control)
+      method: column
+      encoding: D
+    - annotation: p-value (NL vs Control)
+      method: column
+      encoding: E
+    - annotation: FDR (NL vs Control)
+      method: column
+      encoding: F
+    - annotation: log2 fold change (LS vs Control)
+      method: column
+      encoding: G
+    - annotation: fold change (LS vs Control)
+      method: column
+      encoding: H
+    - annotation: p-value (LS vs Control)
+      method: column
+      encoding: I
+    - annotation: FDR (LS vs Control)
+      method: column
+      encoding: J
+    - annotation: miscellaneous notes
+      method: value
+      encoding: Psoriasis lesional skin (LS) and non-lesional skin (NL) adipose tissue RNA-seq vs healthy control
+    - annotation: gene symbol
+      method: column
+      encoding: B

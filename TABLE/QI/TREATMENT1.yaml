@@ -1,0 +1,86 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: text
+    local: ./DATALAKE/TREATMENT_TABLE_S1.csv
+    url: https://raw.githubusercontent.com/skyeav/TableConfigs/main/TABLE/QI/TREATMENT_TABLE_S1.csv
+    delimiter: ","
+    row_slice: [1, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: A
+      regex:
+        - pattern: "^Biologics$"
+          replacement: "Biological Response Modifier Therapy"
+      prioritize: [Drug, ChemicalEntity, Procedure, Treatment]
+    predicate: treats
+    object:
+      method: value
+      encoding: MONDO:0005083
+
+  provenance:
+    repo: PMC
+    publication: "PMC12263980"
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 07 MAY 2026
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 07 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+        comment: Created from COVID-19 psoriasis study supplementary tables
+
+  annotations:
+    - annotation: table_source
+      method: value
+      encoding: "Table S1. Criteria for classifying each treatment 6 months prior to the index date"
+
+    - annotation: study_population
+      method: value
+      encoding: "Korean National Health Insurance Service claims data (2018-2021)"
+
+    - annotation: sample_size
+      method: value
+      encoding: "167,746 psoriasis patients, 866,582 controls"
+
+    - annotation: data_type
+      method: value
+      encoding: "Treatment classification criteria"
+
+    - annotation: raw criterion text
+      method: column
+      encoding: B
+
+    - annotation: minimum value
+      method: column
+      encoding: B
+      regex:
+        - pattern: "^At least "
+          replacement: ""
+        - pattern: " times$"
+          replacement: ""
+        - pattern: " times of prescription$"
+          replacement: ""
+        - pattern: " days of prescription$"
+          replacement: ""
+        - pattern: " injections$"
+          replacement: ""
+
+    - annotation: criterion_type
+      method: column
+      encoding: B
+      regex:
+        - pattern: "^At least [0-9]+ times$"
+          replacement: "prescription_count"
+        - pattern: "^At least [0-9]+ times of prescription$"
+          replacement: "prescription_count"
+        - pattern: "^At least [0-9]+ days of prescription$"
+          replacement: "prescription_days"
+        - pattern: "^At least [0-9]+ injections$"
+          replacement: "injection_count"

@@ -1,0 +1,46 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12618936.1__41598_2025_23758_MOESM1_ESM.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12618936/
+    sheet: All
+
+  statement:
+    subject:
+      method: column
+      encoding: D
+      prefix: "UniProtKB:"
+      prioritize: [Protein]
+    predicate: biomarker_for
+    object:
+      method: value
+      encoding: "MONDO:0010679"
+      prioritize: [Disease]
+    qualifiers:
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: "NCBITaxon:9606"
+
+  provenance:
+    repo: PMC
+    publication: PMC12618936
+    contributors:
+      - kind: curation
+        name: Tablassist Pioneer
+        date: 06 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 06 MAY 2026
+
+  annotations:
+    - annotation: VBP15cohort_FoldChange
+      method: column
+      encoding: I
+    - annotation: VBP15cohort_adj.P.Val
+      method: column
+      encoding: H

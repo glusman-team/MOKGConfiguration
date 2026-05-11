@@ -14,8 +14,10 @@ template:
     predicate: correlated_with
     object:
       method: column
-      encoding: A
-      taxon: 69293
+      encoding: C
+      prioritize:
+        - Gene
+        - Protein
     qualifiers:
       - qualifier: species_context_qualifier
         method: value
@@ -29,6 +31,9 @@ template:
         date: 17 FEB 2026
         organizations:
           - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 07 MAY 2026
   annotations:
     - annotation: relationship strength
       method: column
@@ -39,7 +44,7 @@ template:
     - annotation: protein names
       method: column
       encoding: C
-    - annotation: sequence ontology id
+    - annotation: protein accession
       method: column
       encoding: B
     - annotation: miscellaneous notes
@@ -50,7 +55,7 @@ sections:
   - statement:
       subject:
         method: value
-        encoding: Betaproteobacteria (unclassified)
+        encoding: Betaproteobacteria
     source:
       sheet: Betaproteobacteria
   - statement:
@@ -68,13 +73,13 @@ sections:
   - statement:
       subject:
         method: value
-        encoding: Chlamydiales (unclassified)
+        encoding: Chlamydiales
     source:
       sheet: Chlamydiales
   - statement:
       subject:
         method: value
-        encoding: Clostridiaceae 1
+        encoding: Clostridiaceae
     source:
       sheet: Clostridiaceae 1
   - statement:
@@ -86,7 +91,7 @@ sections:
   - statement:
       subject:
         method: value
-        encoding: Gp10 (unclassified)
+        encoding: Gp10
     source:
       sheet: Gp10
   - statement:
@@ -134,6 +139,6 @@ sections:
   - statement:
       subject:
         method: value
-        encoding: Spartobacteria (unclassified)
+        encoding: Spartobacteria
     source:
       sheet: "Spartobacteria "
