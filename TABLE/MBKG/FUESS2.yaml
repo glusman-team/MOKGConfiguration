@@ -15,7 +15,9 @@ template:
     object:
       method: column
       encoding: B
+      prefix: "ENSEMBL:"
       prioritize:
+        - Gene
         - Protein
     qualifiers:
       - qualifier: species_context_qualifier
