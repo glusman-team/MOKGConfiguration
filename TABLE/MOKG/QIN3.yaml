@@ -29,7 +29,7 @@ template:
         - "_intercept_$"
         - "_R2$"
       regex:
-        - pattern: "^ensg"
+        - pattern: "ensg"
           replacement: "ENSEBL:ensg"
     qualifiers:
       - qualifier: species_context_qualifier
