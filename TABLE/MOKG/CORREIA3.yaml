@@ -48,6 +48,7 @@ sections:
         prefix: "UniProtKB:"
         prioritize:
           - Protein
+          - Gene
         taxon: 9606
       object:
         method: value
@@ -74,6 +75,7 @@ sections:
         prefix: "UniProtKB:"
         prioritize:
           - Protein
+          - Gene
         taxon: 9606
       object:
         method: value
@@ -100,6 +102,7 @@ sections:
         prefix: "UniProtKB:"
         prioritize:
           - Protein
+          - Gene
         taxon: 9606
       object:
         method: value
@@ -125,6 +128,7 @@ sections:
         encoding: A
         prioritize:
           - Pathway
+          - MolecularActivity
         taxon: 9606
         regex:
           - pattern: "^WP"
