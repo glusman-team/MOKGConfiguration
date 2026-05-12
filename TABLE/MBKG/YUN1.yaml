@@ -26,6 +26,7 @@ template:
         - "^Phylum level"
         - "\\).*$"
         - "^\\s*$"
+        - "(?:^|[^a-zA-Z])([a-z]  )"
     predicate: correlated_with
     qualifiers:
       - qualifier: species_context_qualifier

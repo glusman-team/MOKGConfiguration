@@ -21,6 +21,8 @@ template:
           replacement: " sp."
       remove:
         - "^bacterium sp "
+        - "[0-9]"
+        - "sp"
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier

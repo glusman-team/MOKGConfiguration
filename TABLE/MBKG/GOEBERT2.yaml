@@ -32,6 +32,8 @@ template:
           replacement: ""
         - pattern: " unclassified"
           replacement: ""
+      remove:
+        - "(?:^|[^a-zA-Z])([a-z]  )"
     predicate: associated_with
     object:
       method: value
