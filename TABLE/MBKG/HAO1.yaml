@@ -206,7 +206,7 @@ sections:
   - statement:
       object:
         method: value
-        encoding: Additional items_SCL90
+        encoding: SCL90
     annotations:
       - annotation: VIP score
         method: column
