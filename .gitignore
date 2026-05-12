@@ -16,3 +16,4 @@
 *.worktrees/
 *.ledger
 *datalake-migration/
+*.cachassert/
