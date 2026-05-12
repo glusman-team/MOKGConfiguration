@@ -22,22 +22,22 @@ template:
       remove:
         - _.*$
       regex:
+        - pattern: ^MS$
+          replacement: MONDO:0005301
+        - pattern: ^ALS$
+          replacement: MONDO:0004976
         - pattern: ^CD$
-          replacement: Crohn disease
+          replacement: MONDO:0005011
         - pattern: ^UC$
-          replacement: ulcerative colitis
+          replacement: MONDO:0005101
         - pattern: ^PD$
-          replacement: Parkinson disease
+          replacement: MONDO:0005180
         - pattern: ^SCZ$
           replacement: schizophrenia
-        - pattern: ^MS$
-          replacement: multiple sclerosis
         - pattern: ^AD$
           replacement: Alzheimer disease
         - pattern: ^LBD$
           replacement: Lewy body dementia
-        - pattern: ^ALS$
-          replacement: amyotrophic lateral sclerosis
     qualifiers:
       - qualifier: species_context_qualifier
         method: value

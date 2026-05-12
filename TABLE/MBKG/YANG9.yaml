@@ -43,6 +43,9 @@ sections:
         encoding: B
         prioritize:
           - OrganismTaxon
+        regex:
+          - pattern: " sp\\. .+$"
+            replacement: " sp."
       object:
         method: value
         encoding: 7alpha-hydroxysteroid dehydrogenase
@@ -62,6 +65,9 @@ sections:
         encoding: G
         prioritize:
           - OrganismTaxon
+        regex:
+          - pattern: " sp\\. .+$"
+            replacement: " sp."
       object:
         method: value
         encoding: bile salt hydrolase
@@ -81,6 +87,9 @@ sections:
         encoding: L
         prioritize:
           - OrganismTaxon
+        regex:
+          - pattern: " sp\\. .+$"
+            replacement: " sp."
       object:
         method: value
         encoding: GO:0030573
@@ -100,6 +109,9 @@ sections:
         encoding: Q
         prioritize:
           - OrganismTaxon
+        regex:
+          - pattern: " sp\\. .+$"
+            replacement: " sp."
       object:
         method: value
         encoding: 12alpha-hydroxysteroid dehydrogenase
@@ -119,6 +131,9 @@ sections:
         encoding: V
         prioritize:
           - OrganismTaxon
+        regex:
+          - pattern: " sp\\. .+$"
+            replacement: " sp."
       object:
         method: value
         encoding: bile salt hydrolase
@@ -138,6 +153,9 @@ sections:
         encoding: AA
         prioritize:
           - OrganismTaxon
+        regex:
+          - pattern: " sp\\. .+$"
+            replacement: " sp."
       object:
         method: value
         encoding: 7alpha-hydroxysteroid dehydrogenase
@@ -157,6 +175,9 @@ sections:
         encoding: AF
         prioritize:
           - OrganismTaxon
+        regex:
+          - pattern: " sp\\. .+$"
+            replacement: " sp."
       object:
         method: value
         encoding: GO:0030573
@@ -176,6 +197,9 @@ sections:
         encoding: AK
         prioritize:
           - OrganismTaxon
+        regex:
+          - pattern: " sp\\. .+$"
+            replacement: " sp."
       object:
         method: value
         encoding: 3alpha-hydroxysteroid dehydrogenase

@@ -16,7 +16,11 @@ template:
       prioritize:
         - OrganismTaxon
       regex:
-        - pattern: .*__
+        - pattern: "^.*g__"
+          replacement: ""
+        - pattern: "\\.s__"
+          replacement: " "
+        - pattern: "_OTU.*$"
           replacement: ""
         - pattern: \.
           replacement: " "
@@ -47,6 +51,9 @@ template:
         date: 17 FEB 2026
         organizations:
           - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 11 MAY 2026
   annotations:
     - annotation: sample size
       method: value

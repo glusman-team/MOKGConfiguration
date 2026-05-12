@@ -13,6 +13,9 @@ template:
     subject:
       method: column
       encoding: F
+      prioritize:
+        - BiologicalProcess
+        - Pathway
       remove:
         - \(.*
     predicate: correlated_with

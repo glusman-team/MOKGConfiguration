@@ -28,6 +28,8 @@ template:
           replacement: ""
         - pattern: " unclassified"
           replacement: ""
+      remove:
+        - "^(r445b|p253418b5|tm73|s247|bs11|rs045|ys2|tg5|smb53|gmd14h09|cf231|02d06|cw040|vadinca11|blvii28)$"
     predicate: associated_with
     object:
       method: value
@@ -47,6 +49,9 @@ template:
         date: 17 FEB 2026
         organizations:
           - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 11 MAY 2026
   annotations:
     - annotation: sample size
       method: value

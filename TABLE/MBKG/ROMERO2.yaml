@@ -19,6 +19,11 @@ template:
       encoding: I
       prioritize:
         - OrganismTaxon
+      regex:
+        - pattern: " unclassified$"
+          replacement: ""
+        - pattern: "^Ca\\. "
+          replacement: "Candidatus "
       remove:
         - ^NA$
         - _1

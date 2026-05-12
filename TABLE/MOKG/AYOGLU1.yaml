@@ -22,8 +22,11 @@ template:
       prioritize:
         - Gene
       taxon: 9606
+      regex:
+        - pattern: "^\\s+|\\s+$"
+          replacement: ""
       remove:
-        - '-Ab\d*'
+        - '-Ab#?\\d+$'
   provenance:
     repo: PMC
     publication: PMC4119355

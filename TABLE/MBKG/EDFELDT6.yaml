@@ -14,11 +14,13 @@ template:
       encoding: A
       remove:
         - "GO "
-        - GO_
-        - GO
+        - "^GO_"
       regex:
         - pattern: _
           replacement: " "
+      prioritize:
+        - BiologicalProcess
+        - Pathway
     predicate: associated_with
     object:
       method: column

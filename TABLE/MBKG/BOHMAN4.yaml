@@ -14,6 +14,16 @@ template:
       method: column
       encoding: A
       regex:
+        - pattern: "^Methylobacterium Methylorubrum$"
+          replacement: "Methylorubrum"
+        - pattern: "^Escherichia Shigella$"
+          replacement: "Escherichia"
+        - pattern: "^Defluviitaleaceae UCG 011$"
+          replacement: "Defluviitaleaceae"
+        - pattern: "^subgroup 7$"
+          replacement: ""
+        - pattern: "^Absconditabacteriales \\(SR1\\)$"
+          replacement: "Absconditabacteriales"
         - pattern: _
           replacement: " "
         - pattern: "-"
@@ -39,7 +49,7 @@ template:
           - Institute for Systems Biology
       - kind: tool
         name: tablassist
-        date: 07 MAY 2026
+        date: 11 MAY 2026
   annotations:
     - annotation: sample size
       method: value

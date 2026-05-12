@@ -29,6 +29,10 @@ template:
           replacement: _sp.
         - pattern: _sp_
           replacement: _sp._
+        - pattern: _sp_.*$
+          replacement: " sp."
+        - pattern: _bacterium_.*$
+          replacement: ""
         - pattern: _
           replacement: " "
     qualifiers:

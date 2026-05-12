@@ -8,7 +8,7 @@ template:
     sheet: table5
     row_slice:
       - 4
-      - auto
+      - 31
   statement:
     subject:
       method: column

@@ -15,6 +15,9 @@ template:
     subject:
       method: column
       encoding: C
+      regex:
+        - pattern: "^CHEMBL"
+          replacement: "CHEMBL.COMPOUND:CHEMBL"
       prioritize:
         - Drug
         - SmallMolecule
@@ -47,7 +50,7 @@ template:
         comment: Migrated from TC2 to TC3; added species_context_qualifier and interaction type annotation
       - kind: tool
         name: tablassist
-        date: 29 APR 2026
+        date: 11 MAY 2026
 
   annotations:
     - annotation: relationship strength

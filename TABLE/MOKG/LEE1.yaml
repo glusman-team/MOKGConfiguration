@@ -38,6 +38,9 @@ template:
       prioritize:
         - Gene
       explode_by: ";"
+      remove:
+        - "^\\d{4}-\\d{2}-\\d{2}"
+        - "^LOC\\d+"
   annotations:
     - annotation: p value
       method: column

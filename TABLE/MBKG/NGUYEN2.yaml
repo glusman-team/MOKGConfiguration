@@ -17,6 +17,12 @@ template:
       regex:
         - pattern: "_"
           replacement: " "
+        - pattern: "^Escherichia/Shigella$"
+          replacement: "Escherichia"
+        - pattern: "^Clostridium sensu stricto$"
+          replacement: "Clostridium"
+        - pattern: " [A-Z0-9][A-Za-z0-9-]* group$"
+          replacement: ""
         - pattern: "\\s+\\d+$"
           replacement: ""
     predicate: correlated_with
@@ -41,6 +47,9 @@ template:
         date: 17 FEB 2026
         organizations:
           - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 11 MAY 2026
   annotations:
     - annotation: p value
       method: column

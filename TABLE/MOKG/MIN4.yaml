@@ -22,6 +22,9 @@ template:
       taxon: 9606
       prioritize:
         - Gene
+      remove:
+        - "^AC\\d+\\.\\d+$"
+        - "^AL\\d+\\.\\d+$"
 
     predicate: expressed_in
 

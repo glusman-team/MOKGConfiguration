@@ -16,6 +16,8 @@ template:
       regex:
         - pattern: " unclassified$"
           replacement: " sp."
+        - pattern: " sp .*?$"
+          replacement: " sp."
       prioritize:
         - OrganismTaxon
     predicate: associated_with
@@ -44,7 +46,7 @@ template:
         comment: Migratassert (TC2-TC3)
       - kind: tool
         name: tablassist
-        date: 07 MAY 2026
+        date: 11 MAY 2026
   annotations:
     - annotation: multiple testing correction method
       method: value

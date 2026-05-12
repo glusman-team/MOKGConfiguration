@@ -7,7 +7,7 @@ template:
     kind: excel
     sheet: Supplementary Table 18
     row_slice:
-      - 3
+      - 4
       - auto
   statement:
     subject:
@@ -23,6 +23,11 @@ template:
       encoding: A
       prioritize:
         - OrganismTaxon
+      regex:
+        - pattern: "^Escherichia/Shigella$"
+          replacement: "Escherichia"
+        - pattern: "^Clostridium sensu stricto$"
+          replacement: "Clostridium"
       remove:
         - ".* - "
     qualifiers:
@@ -41,6 +46,9 @@ template:
         date: 17 FEB 2026
         organizations:
           - Institute for Systems Biology
+      - kind: tool
+        name: tablassist
+        date: 11 MAY 2026
   annotations:
     - annotation: sample size
       method: value

@@ -16,8 +16,14 @@ template:
       prioritize:
         - OrganismTaxon
       regex:
-        - pattern: '([^\s])group$'
-          replacement: "${1} group"
+        - pattern: "^eubacteriumcoprostanoligenes group$"
+          replacement: "Eubacterium coprostanoligenes group"
+        - pattern: "^clostridiuminnocuum group$"
+          replacement: "Clostridium innocuum group"
+        - pattern: "^eubacteriumruminantium group$"
+          replacement: "Eubacterium ruminantium group"
+        - pattern: "^clostridiumsensustricto"
+          replacement: "Clostridium sensu stricto"
     predicate: affects
     qualifiers:
       - qualifier: species_context_qualifier

@@ -13,11 +13,14 @@ template:
   statement:
     subject:
       method: column
-      encoding: A
+      encoding: B
       prefix: "UniProtKB:"
       prioritize:
         - Protein
       taxon: 9606
+      regex:
+        - pattern: "-[0-9]+$"
+          replacement: ""
     predicate: correlated_with
     qualifiers:
       - qualifier: species_context_qualifier
