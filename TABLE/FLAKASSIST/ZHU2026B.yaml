@@ -1,0 +1,101 @@
+template:
+  source:
+    local: ./DATALAKE/PMC13160723_Table_1.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13160723.1/Table_1.xlsx
+    row_slice:
+    - 1
+    - auto
+sections:
+- source:
+    sheet: Table S3
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: related_to
+    object:
+      method: column
+      encoding: B
+      prioritize:
+      - Disease
+  annotations:
+  - annotation: ivw_or
+    method: column
+    encoding: C
+  - annotation: ivw_b
+    method: column
+    encoding: D
+  - annotation: ivw_se
+    method: column
+    encoding: E
+  - annotation: ivw_ci
+    method: column
+    encoding: F
+  - annotation: ivw_pval
+    method: column
+    encoding: G
+  - annotation: ivw_qval
+    method: column
+    encoding: H
+  - annotation: ivw_qstat
+    method: column
+    encoding: I
+  - annotation: egger_intercept
+    method: column
+    encoding: J
+  - annotation: mregger_or
+    method: column
+    encoding: K
+  - annotation: mregger_b
+    method: column
+    encoding: L
+  - annotation: mregger_se
+    method: column
+    encoding: M
+  - annotation: mregger_ci
+    method: column
+    encoding: N
+  - annotation: mregger_pval
+    method: column
+    encoding: O
+  - annotation: mregger_qval
+    method: column
+    encoding: P
+  - annotation: mregger_intercept
+    method: column
+    encoding: Q
+  - annotation: mregger_pval_intercept
+    method: column
+    encoding: R
+  - annotation: wmedian_or
+    method: column
+    encoding: S
+  - annotation: wmedian_b
+    method: column
+    encoding: T
+  - annotation: wmedian_se
+    method: column
+    encoding: U
+  - annotation: wmedian_ci
+    method: column
+    encoding: V
+  - annotation: wmedian_pval
+    method: column
+    encoding: W
+  - annotation: wmedian_qval
+    method: column
+    encoding: X
+  provenance:
+    repo: PMC
+    publication: PMC13160723
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+      comment: Config auto-generated for Table S3 (DNMT3A-CHIP vs 20 CVD outcomes)

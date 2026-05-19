@@ -1,0 +1,66 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC10499811_41467_2023_41122_MOESM4_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10499811/
+    sheet: Supplementary Dataset 1
+    row_slice:
+    - 3
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      regex:
+      - pattern: ^\s*(.*?)\s*$
+        replacement: $1
+      prefix: 'UniProtKB:'
+      taxon: 9606
+      prioritize:
+      - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0004975
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC10499811
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: Name
+    method: column
+    encoding: B
+  - annotation: DLB vs CON effect
+    method: column
+    encoding: C
+  - annotation: DLB vs CON p-value
+    method: column
+    encoding: D
+  - annotation: DLB vs CON q-value
+    method: column
+    encoding: E
+  - annotation: DLB vs AD effect
+    method: column
+    encoding: F
+  - annotation: DLB vs AD p-value
+    method: column
+    encoding: G
+  - annotation: DLB vs AD q-value
+    method: column
+    encoding: H
+  - annotation: AD vs CON effect
+    method: column
+    encoding: I
+  - annotation: AD vs CON p-value
+    method: column
+    encoding: J
+  - annotation: AD vs CON q-value
+    method: column
+    encoding: K

@@ -1,0 +1,44 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC11061114_41431_2024_1581_MOESM2_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11061114.1/41431_2024_1581_MOESM2_ESM.xlsx
+    sheet: DECIPHER genes
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: column
+      encoding: D
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC11061114
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: Gene MIM
+    method: column
+    encoding: C
+  - annotation: Mutation Consequence
+    method: column
+    encoding: E
+  - annotation: Allelic Requirement
+    method: column
+    encoding: F
+  - annotation: Organ Specificity List
+    method: column
+    encoding: G

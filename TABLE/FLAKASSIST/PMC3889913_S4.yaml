@@ -1,0 +1,34 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC3889913_11357_2013_9562_MOESM1_ESM.xls
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3889913/
+    sheet: Table S4
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prefix: 'UniProtKB:'
+      taxon: 9606
+      prioritize:
+      - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: aging
+    qualifiers: []
+  provenance:
+    repo: PMC
+    publication: PMC3889913
+    contributors:
+    - kind: curation
+      name: OpenCode
+      date: 13 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026

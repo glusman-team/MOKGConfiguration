@@ -1,0 +1,48 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13035836_41467_2026_69711_MOESM7_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13035836.1/41467_2026_69711_MOESM7_ESM.xlsx
+    sheet: Sheet1
+    row_slice:
+      - 2
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      regex:
+        - pattern: "^s__"
+          replacement: ""
+        - pattern: "_"
+          replacement: " "
+      prioritize:
+        - OrganismTaxon
+    predicate: associated_with
+    object:
+      method: value
+      encoding: colorectal cancer
+      prioritize:
+        - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13035836
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
+  annotations:
+    - annotation: combined p value
+      method: column
+      encoding: B
+    - annotation: combined adjusted p value
+      method: column
+      encoding: D
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "Bacterial species differential abundance in CRC vs controls across multiple studies (Combined analysis). Species names from MetaPhlAn format."

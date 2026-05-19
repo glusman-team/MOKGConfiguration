@@ -1,0 +1,69 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13166711_medi-105-e48634-s011.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166711.1/medi-105-e48634-s011.xlsx
+    sheet: Table S8
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: related_to
+    object:
+      method: value
+      encoding: stroke
+  provenance:
+    repo: PMC
+    publication: PMC13166711
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 13 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      - CalPoly SLO
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: mr method
+    method: column
+    encoding: B
+  - annotation: number of snps
+    method: column
+    encoding: C
+  - annotation: beta
+    method: column
+    encoding: D
+  - annotation: standard error
+    method: column
+    encoding: E
+  - annotation: p value
+    method: column
+    encoding: F
+  - annotation: lower ci
+    method: column
+    encoding: G
+  - annotation: upper ci
+    method: column
+    encoding: H
+  - annotation: heterogeneity statistic
+    method: column
+    encoding: I
+  - annotation: heterogeneity degrees of freedom
+    method: column
+    encoding: J
+  - annotation: heterogeneity p value
+    method: column
+    encoding: K
+  - annotation: i squared
+    method: column
+    encoding: L

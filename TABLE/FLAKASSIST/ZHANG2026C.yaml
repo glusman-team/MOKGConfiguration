@@ -1,0 +1,107 @@
+template:
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13140796_CDR-2026-4594769-s008.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13140796.1/CDR-2026-4594769-s008.xlsx
+    sheet: Sheet1
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: related_to
+    object:
+      method: value
+      encoding: Coronary artery disease
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13140796
+    contributors:
+    - name: Skye Lane Goetz
+      kind: curation
+      date: 14 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      - CalPoly SLO
+      comment: "Configured for SMR protein abundance results of oxidative stress-related\
+        \ proteins \u2192 CAD (discovery cohort GCST003116, n=60,801)"
+    - name: tablassist
+      kind: tool
+      date: 14 MAY 2026
+  annotations:
+  - annotation: probe_chr
+    method: column
+    encoding: B
+  - annotation: gene
+    method: column
+    encoding: C
+  - annotation: probe_bp
+    method: column
+    encoding: D
+  - annotation: topSNP
+    method: column
+    encoding: E
+  - annotation: topsnp_chr
+    method: column
+    encoding: F
+  - annotation: topsnp_bp
+    method: column
+    encoding: G
+  - annotation: A1
+    method: column
+    encoding: H
+  - annotation: A2
+    method: column
+    encoding: I
+  - annotation: freq
+    method: column
+    encoding: J
+  - annotation: b_GWAS
+    method: column
+    encoding: K
+  - annotation: se_GWAS
+    method: column
+    encoding: L
+  - annotation: p_GWAS
+    method: column
+    encoding: M
+  - annotation: b_eQTL
+    method: column
+    encoding: N
+  - annotation: se_eQTL
+    method: column
+    encoding: O
+  - annotation: p_eQTL
+    method: column
+    encoding: P
+  - annotation: b_SMR
+    method: column
+    encoding: Q
+  - annotation: se_SMR
+    method: column
+    encoding: R
+  - annotation: p_SMR
+    method: column
+    encoding: S
+  - annotation: p_HEIDI
+    method: column
+    encoding: T
+  - annotation: nsnp_HEIDI
+    method: column
+    encoding: U
+  - annotation: fdr_SMR
+    method: column
+    encoding: V
+  - annotation: odds_ratio
+    method: column
+    encoding: W
+  - annotation: CI_SMR
+    method: column
+    encoding: X

@@ -1,0 +1,71 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12346698_cells-3752185-Supplementary Material.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12346698/
+    sheet: Table S13
+    row_slice:
+    - 3
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: related_to
+    object:
+      method: value
+      encoding: MONDO:0007739
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC12346698
+    contributors:
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+  annotations:
+  - annotation: gene name
+    method: column
+    encoding: B
+  - annotation: location
+    method: column
+    encoding: C
+  - annotation: family
+    method: column
+    encoding: D
+  - annotation: uniprot
+    method: column
+    encoding: E
+  - annotation: symbol
+    method: column
+    encoding: G
+  - annotation: gene name
+    method: column
+    encoding: H
+  - annotation: location
+    method: column
+    encoding: I
+  - annotation: family
+    method: column
+    encoding: J
+  - annotation: uniprot
+    method: column
+    encoding: K
+  - annotation: symbol
+    method: column
+    encoding: M
+  - annotation: gene name
+    method: column
+    encoding: N
+  - annotation: location
+    method: column
+    encoding: O
+  - annotation: uniprot
+    method: column
+    encoding: P

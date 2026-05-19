@@ -1,0 +1,82 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC9187732_41467_2022_30968_MOESM10_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9187732.1/41467_2022_30968_MOESM10_ESM.xlsx
+    sheet: Cell type specific genes
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: expressed_in
+    object:
+      method: value
+      encoding: brain organoid
+  provenance:
+    repo: PMC
+    publication: PMC9187732
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 12 MAY 2026
+sections:
+- statement:
+    subject:
+      encoding: C
+    object:
+      method: value
+      encoding: dopaminergic neuron
+    qualifiers:
+    - qualifier: subject_context_qualifier
+      method: value
+      encoding: organoid-derived
+- statement:
+    subject:
+      encoding: D
+    object:
+      method: value
+      encoding: forebrain neuron
+    qualifiers:
+    - qualifier: subject_context_qualifier
+      method: value
+      encoding: organoid-derived
+- statement:
+    subject:
+      encoding: I
+    object:
+      method: value
+      encoding: neuroepithelial cell
+    qualifiers:
+    - qualifier: subject_context_qualifier
+      method: value
+      encoding: organoid-derived
+- statement:
+    subject:
+      encoding: N
+    object:
+      method: value
+      encoding: cortical excitatory neuron
+    qualifiers:
+    - qualifier: subject_context_qualifier
+      method: value
+      encoding: organoid-derived
+- statement:
+    subject:
+      encoding: P
+    object:
+      method: value
+      encoding: interneuron
+    qualifiers:
+    - qualifier: subject_context_qualifier
+      method: value
+      encoding: organoid-derived

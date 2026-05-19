@@ -1,0 +1,154 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC11326326_media-4.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11326326.1/media-4.xlsx
+    row_slice:
+    - 1
+    - auto
+  provenance:
+    repo: PMC
+    publication: PMC11326326
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+sections:
+- source:
+    sheet: SDT6-PrevDiseasePheWAS
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Disease
+    predicate: related_to
+    object:
+      method: value
+      encoding: UK Biobank
+  annotations:
+  - annotation: N
+    method: column
+    encoding: B
+  - annotation: Beta
+    method: column
+    encoding: C
+  - annotation: SE
+    method: column
+    encoding: D
+  - annotation: P
+    method: column
+    encoding: E
+  - annotation: fdr
+    method: column
+    encoding: F
+- source:
+    sheet: SDT7-IncidentDiseasePheWAS
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Disease
+    predicate: related_to
+    object:
+      method: column
+      encoding: B
+      prioritize:
+      - Disease
+      suffix: _incident
+  annotations:
+  - annotation: N
+    method: column
+    encoding: C
+  - annotation: N_Event
+    method: column
+    encoding: D
+  - annotation: Beta
+    method: column
+    encoding: E
+  - annotation: HR
+    method: column
+    encoding: F
+  - annotation: SE
+    method: column
+    encoding: G
+  - annotation: P
+    method: column
+    encoding: H
+  - annotation: fdr
+    method: column
+    encoding: H
+- source:
+    sheet: SDT9-MRTraits
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prefix: UKB_
+      prioritize:
+      - EnvironmentalExposure
+    predicate: related_to
+    object:
+      method: value
+      encoding: UK Biobank
+  annotations:
+  - annotation: method
+    method: column
+    encoding: B
+  - annotation: nsnp
+    method: column
+    encoding: C
+  - annotation: b
+    method: column
+    encoding: D
+  - annotation: se
+    method: column
+    encoding: E
+  - annotation: pval
+    method: column
+    encoding: F
+  - annotation: pval_adj
+    method: column
+    encoding: G
+- source:
+    sheet: SDT10-PositivePRSC
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Disease
+    predicate: related_to
+    object:
+      method: column
+      encoding: B
+      prioritize:
+      - Disease
+  annotations:
+  - annotation: N
+    method: column
+    encoding: C
+  - annotation: N_Event
+    method: column
+    encoding: D
+  - annotation: Coef
+    method: column
+    encoding: E
+  - annotation: HR
+    method: column
+    encoding: F
+  - annotation: SE
+    method: column
+    encoding: G
+  - annotation: P
+    method: column
+    encoding: H
+  - annotation: P FDR
+    method: column
+    encoding: H

@@ -1,0 +1,56 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC11326326_media-4.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11326326.1/media-4.xlsx
+    sheet: SDT8-SpecificityGWAS
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - SequenceVariant
+    predicate: related_to
+    object:
+      method: value
+      encoding: UK Biobank
+  provenance:
+    repo: PMC
+    publication: PMC11326326
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+  annotations:
+  - annotation: CHR
+    method: column
+    encoding: C
+  - annotation: BP
+    method: column
+    encoding: D
+  - annotation: ALLELE1
+    method: column
+    encoding: E
+  - annotation: ALLELE0
+    method: column
+    encoding: F
+  - annotation: BETA
+    method: column
+    encoding: G
+  - annotation: SE
+    method: column
+    encoding: H
+  - annotation: Chromosome
+    method: column
+    encoding: I
+  - annotation: Position
+    method: column
+    encoding: J

@@ -1,0 +1,71 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC5558185_12864_2017_3910_MOESM2_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5558185.1/12864_2017_3910_MOESM2_ESM.xlsx
+    sheet: Sheet1
+    row_slice:
+    - 1
+    - 28
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0003847
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC5558185
+    contributors:
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      comment: PDR network analytics for rare disease causal gene identification
+  annotations:
+  - annotation: case number
+    method: column
+    encoding: B
+  - annotation: observed phenotypes
+    method: column
+    encoding: C
+  - annotation: inferred disease
+    method: column
+    encoding: D
+  - annotation: is causal
+    method: column
+    encoding: E
+  - annotation: mode of inheritance
+    method: column
+    encoding: F
+  - annotation: pdr rank
+    method: column
+    encoding: G
+  - annotation: pdr rank gene only
+    method: column
+    encoding: H
+  - annotation: phenolizer rank
+    method: column
+    encoding: I
+  - annotation: filter cascade gene count
+    method: column
+    encoding: J
+  - annotation: acmg classification
+    method: column
+    encoding: K
+  - annotation: zygosity
+    method: column
+    encoding: L
+  - annotation: predicted functional effect
+    method: column
+    encoding: M

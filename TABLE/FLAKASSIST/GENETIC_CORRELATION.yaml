@@ -1,0 +1,49 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12339386_41588_2025_2260_MOESM3_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12339386/bin/41588_2025_2260_MOESM3_ESM.xlsx
+    sheet: Supplementary Table 19
+  provenance:
+    repo: PMC
+    publication: PMC12339386
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - PhenotypicFeature
+    predicate: related_to
+    object:
+      method: column
+      encoding: A
+      prioritize:
+      - PhenotypicFeature
+  annotations:
+  - annotation: rg
+    method: column
+    encoding: B
+  - annotation: se
+    method: column
+    encoding: C
+  - annotation: z
+    method: column
+    encoding: D
+  - annotation: p value
+    method: column
+    encoding: E
+  - annotation: rank
+    method: column
+    encoding: F
+  - annotation: FDR-adjusted p-value
+    method: column
+    encoding: G

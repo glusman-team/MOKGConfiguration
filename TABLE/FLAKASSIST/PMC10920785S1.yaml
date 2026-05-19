@@ -1,0 +1,50 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC10920785_41467_2024_46358_MOESM4_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10920785/
+    sheet: Supplementary Data 1
+  statement:
+    subject:
+      method: column
+      encoding: A
+      regex:
+      - pattern: ^\s*(.*?)\s*$
+        replacement: $1
+      taxon: 9606
+      prioritize:
+      - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0010735
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC10920785
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: baseMean
+    method: column
+    encoding: B
+  - annotation: log2FoldChange
+    method: column
+    encoding: C
+  - annotation: lfcSE
+    method: column
+    encoding: D
+  - annotation: stat
+    method: column
+    encoding: E
+  - annotation: pvalue
+    method: column
+    encoding: F
+  - annotation: padj
+    method: column
+    encoding: G

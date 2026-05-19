@@ -1,0 +1,42 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC9239184_mbio.00567-22-s0009.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9239184/
+    sheet: Sheet1
+    row_slice:
+    - 3
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prefix: 'NCBIGene:'
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0005737
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC9239184
+    contributors:
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+  annotations:
+  - annotation: fatalities missing value
+    method: column
+    encoding: B
+  - annotation: survivors missing value
+    method: column
+    encoding: C
+  - annotation: p-value
+    method: column
+    encoding: D

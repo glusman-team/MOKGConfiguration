@@ -1,0 +1,53 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12548217_13073_2025_1536_MOESM2_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12548217.1/13073_2025_1536_MOESM2_ESM.xlsx
+    sheet: Table S2
+    row_slice:
+    - 3
+    - auto
+  statement:
+    subject:
+      method: value
+      encoding: NCBIGene:7157
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0018875
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC12548217
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+  annotations:
+  - annotation: transcript change
+    method: column
+    encoding: A
+  - annotation: protein change
+    method: column
+    encoding: B
+  - annotation: align gvgd
+    method: column
+    encoding: C
+  - annotation: bayesdel
+    method: column
+    encoding: D
+  - annotation: preliminary bioinformatic code
+    method: column
+    encoding: E
+  - annotation: max spliceai delta
+    method: column
+    encoding: F

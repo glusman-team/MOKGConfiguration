@@ -1,0 +1,57 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC10920785_41467_2024_46358_MOESM6_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10920785/
+    sheet: Supplementary Data 3
+  statement:
+    subject:
+      method: column
+      encoding: B
+      regex:
+      - pattern: ^\s*(.*?)\s*$
+        replacement: $1
+      prefix: 'UniProtKB:'
+      taxon: 9606
+      prioritize:
+      - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0010735
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC10920785
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: Phosphosite
+    method: column
+    encoding: A
+  - annotation: Gene symbol
+    method: column
+    encoding: C
+  - annotation: logFC
+    method: column
+    encoding: D
+  - annotation: AveExpr
+    method: column
+    encoding: E
+  - annotation: t
+    method: column
+    encoding: F
+  - annotation: P.Value
+    method: column
+    encoding: G
+  - annotation: adj.P.Val
+    method: column
+    encoding: H
+  - annotation: B
+    method: column
+    encoding: I

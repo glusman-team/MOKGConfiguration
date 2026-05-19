@@ -1,0 +1,70 @@
+template:
+  syntax: TC3
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13060440_media-3.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13060440.1/media-3.xlsx
+    sheet: ST16
+    row_slice: [1, auto]
+  provenance:
+    repo: PMC
+    publication: PMC13060440
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prefix: "RS:"
+      remove:
+        - "^NA$"
+      prioritize:
+        - SequenceVariant
+    predicate: related_to
+    object:
+      method: value
+      encoding: insulin resistance locus
+      prioritize:
+        - PhenotypicFeature
+  annotations:
+    - annotation: proxy_snp
+      method: column
+      encoding: B
+    - annotation: r2_with_lead
+      method: column
+      encoding: C
+    - annotation: chromosome
+      method: column
+      encoding: D
+    - annotation: position
+      method: column
+      encoding: E
+    - annotation: effect_allele
+      method: column
+      encoding: F
+    - annotation: other_allele
+      method: column
+      encoding: G
+    - annotation: beta
+      method: column
+      encoding: H
+    - annotation: se
+      method: column
+      encoding: I
+    - annotation: pval
+      method: column
+      encoding: J
+    - annotation: pip
+      method: column
+      encoding: K
+    - annotation: vep_annotation
+      method: column
+      encoding: L
+    - annotation: idg_drug_target
+      method: column
+      encoding: M

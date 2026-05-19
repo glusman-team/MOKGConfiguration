@@ -1,0 +1,135 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13161747_Supplementary_Data1.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13161747.1/Supplementary_Data1.xlsx
+    sheet: Table SI
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: value
+      encoding: NCBIGene:3480
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0012964
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13161747
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+  annotations:
+  - annotation: patient no
+    method: column
+    encoding: A
+  - annotation: sex
+    method: column
+    encoding: B
+  - annotation: del dup
+    method: column
+    encoding: D
+  - annotation: band
+    method: column
+    encoding: E
+  - annotation: location
+    method: column
+    encoding: F
+  - annotation: r15
+    method: column
+    encoding: L
+  - annotation: size mb
+    method: column
+    encoding: M
+  - annotation: sga
+    method: column
+    encoding: N
+  - annotation: lga
+    method: column
+    encoding: O
+  - annotation: short stature
+    method: column
+    encoding: P
+  - annotation: tall stature
+    method: column
+    encoding: Q
+  - annotation: cardiac malformation
+    method: column
+    encoding: R
+  - annotation: developmental delay
+    method: column
+    encoding: S
+  - annotation: microcephaly
+    method: column
+    encoding: T
+  - annotation: macrocephaly
+    method: column
+    encoding: U
+  - annotation: facial abnormality
+    method: column
+    encoding: V
+  - annotation: speech delay
+    method: column
+    encoding: W
+  - annotation: hand foot skeleton
+    method: column
+    encoding: X
+  - annotation: other features
+    method: column
+    encoding: Y
+  - annotation: first author
+    method: column
+    encoding: Z
+  - annotation: year
+    method: column
+    encoding: AA
+sections:
+- statement:
+    subject:
+      method: value
+      encoding: NCBIGene:3480
+  source:
+    reindex:
+    - column: H
+      comparison: eq
+      comparator: 'YES'
+- statement:
+    subject:
+      method: value
+      encoding: NCBIGene:7026
+  source:
+    reindex:
+    - column: I
+      comparison: eq
+      comparator: 'YES'
+- statement:
+    subject:
+      method: value
+      encoding: NCBIGene:4205
+  source:
+    reindex:
+    - column: J
+      comparison: eq
+      comparator: 'YES'
+- statement:
+    subject:
+      method: value
+      encoding: NCBIGene:79705
+  source:
+    reindex:
+    - column: K
+      comparison: eq
+      comparator: 'YES'

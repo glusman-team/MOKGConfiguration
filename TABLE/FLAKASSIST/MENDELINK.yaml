@@ -1,0 +1,74 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: text
+    local: ./DATALAKE/PMC9842386_elife-74970-fig3-data1.txt
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9842386.1/elife-74970-fig3-data1.txt
+    delimiter: ' '
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: column
+      encoding: A
+  provenance:
+    repo: PMC
+    publication: PMC9842386
+    contributors:
+    - kind: curation
+      name: Tablassert Pipeline
+      date: 12 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+  annotations:
+  - annotation: mendelian gene
+    method: column
+    encoding: C
+  - annotation: backman burden
+    method: column
+    encoding: D
+  - annotation: gwas proximity
+    method: column
+    encoding: J
+  - annotation: eqtl evidence
+    method: column
+    encoding: O
+  - annotation: jlim colocalization
+    method: column
+    encoding: E
+  - annotation: coloc colocalization
+    method: column
+    encoding: F
+  - annotation: ecaviar colocalization
+    method: column
+    encoding: G
+  - annotation: twas evidence
+    method: column
+    encoding: H
+  - annotation: chromatin evidence
+    method: column
+    encoding: I
+  - annotation: gwas eqtl q value
+    method: column
+    encoding: K
+  - annotation: eqtl p value
+    method: column
+    encoding: L
+  - annotation: eqtl q value
+    method: column
+    encoding: N
+  - annotation: miscellaneous notes
+    method: value
+    encoding: 'Pheno abbreviations: BC=breast carcinoma, CD=Crohn disease, Height=body
+      height, HDL=high-density lipoprotein, LDL=low-density lipoprotein, T2D=type
+      2 diabetes mellitus, UC=ulcerative colitis. Mend=1 indicates gene has known
+      coding variants causing a Mendelian form of the trait or cognate disorder.'

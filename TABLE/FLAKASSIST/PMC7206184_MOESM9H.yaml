@@ -1,0 +1,57 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC7206184_41467_2020_15823_MOESM9_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7206184.1/41467_2020_15823_MOESM9_ESM.xlsx
+    sheet: phecode-over-200
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prefix: 'Phecode:'
+    predicate: related_to
+    object:
+      method: column
+      encoding: B
+      suffix: .results
+      prioritize:
+      - PhenotypicFeature
+    qualifiers:
+    - qualifier: object_aspect_qualifier
+      method: column
+      encoding: B
+      suffix: .results
+  annotations:
+  - annotation: number of people
+    method: column
+    encoding: C
+  - annotation: number with phecode
+    method: column
+    encoding: D
+  - annotation: beta
+    method: column
+    encoding: E
+  - annotation: standard error
+    method: column
+    encoding: F
+  - annotation: p value
+    method: column
+    encoding: G
+  - annotation: meaning
+    method: column
+    encoding: H
+  provenance:
+    repo: PMC
+    publication: PMC7206184
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026

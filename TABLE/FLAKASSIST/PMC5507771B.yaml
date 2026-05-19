@@ -1,0 +1,38 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC5507771_mmc4.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5507771.1/mmc4.xlsx
+    sheet: BiNGO Biological Process TMAO
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: value
+      encoding: CHEBI:15676
+      prioritize:
+      - ChemicalEntity
+    predicate: affects
+    object:
+      method: column
+      encoding: A
+      prefix: 'GO:'
+      prioritize:
+      - BiologicalProcess
+  provenance:
+    repo: PMC
+    publication: PMC5507771
+    contributors:
+    - kind: curation
+      name: tablassist
+      date: 12 MAY 2026
+  annotations:
+  - annotation: p value
+    method: column
+    encoding: C
+  - annotation: adj p value
+    method: column
+    encoding: D

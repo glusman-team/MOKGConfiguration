@@ -1,0 +1,53 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13166552_medi-105-e48681-s001.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166552.1/medi-105-e48681-s001.xlsx
+    sheet: MD-D-26-01270_SUP1
+    row_slice: [1, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: C
+      taxon: 9606
+      prioritize:
+        - Attribute
+    predicate: related_to
+    object:
+      method: value
+      encoding: Parkinson disease
+      prioritize:
+        - Disease
+
+  provenance:
+    repo: PMC
+    publication: PMC13166552
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        comment: MR Egger intercept heterogeneity test for microbiota-immune-PD traits
+        date: 14 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 14 MAY 2026
+
+  annotations:
+    - annotation: GWAS study ID
+      method: column
+      encoding: A
+    - annotation: outcome
+      method: column
+      encoding: B
+    - annotation: Egger intercept
+      method: column
+      encoding: D
+    - annotation: standard error
+      method: column
+      encoding: E
+    - annotation: p value
+      method: column
+      encoding: F

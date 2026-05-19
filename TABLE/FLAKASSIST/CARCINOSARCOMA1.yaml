@@ -1,0 +1,56 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC6823358_41467_2019_12985_MOESM8_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC6823358.1/41467_2019_12985_MOESM8_ESM.xlsx
+    sheet: Suppl_Data_5
+    row_slice:
+    - 6
+    - auto
+  provenance:
+    repo: PMC
+    publication: PMC6823358
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 13 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+sections:
+- statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0002928
+      prioritize:
+      - Disease
+    qualifiers:
+    - qualifier: subject_form_or_variant_qualifier
+      method: value
+      encoding: somatic
+  annotations:
+  - annotation: mutation_type
+    method: column
+    encoding: B
+  - annotation: HGVS_coding
+    method: column
+    encoding: D
+  - annotation: HGVS_protein
+    method: column
+    encoding: E
+  - annotation: miscellaneous notes
+    method: value
+    encoding: Somatic mutations from targeted sequencing of 596 genes in 109 gynecologic
+      carcinosarcoma samples (uterine and ovarian). Multi-regional sampling of 14
+      cases.

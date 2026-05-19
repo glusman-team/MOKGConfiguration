@@ -1,0 +1,74 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC10620213_41598_2023_46258_MOESM1_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC10620213.1/41598_2023_46258_MOESM1_ESM.xlsx
+    sheet: Table S2
+    row_slice:
+    - 2
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: E
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0005258
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC10620213
+    contributors:
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 12 MAY 2026
+  annotations:
+  - annotation: chromosome
+    method: column
+    encoding: A
+  - annotation: position hg38
+    method: column
+    encoding: B
+  - annotation: reference allele
+    method: column
+    encoding: C
+  - annotation: alternate allele
+    method: column
+    encoding: D
+  - annotation: sfari score
+    method: column
+    encoding: F
+  - annotation: snp id
+    method: column
+    encoding: G
+  - annotation: allele frequency
+    method: column
+    encoding: H
+  - annotation: consequence
+    method: column
+    encoding: I
+  - annotation: proband genotype
+    method: column
+    encoding: J
+  - annotation: father genotype
+    method: column
+    encoding: K
+  - annotation: mother genotype
+    method: column
+    encoding: L
+  - annotation: inheritance pattern
+    method: column
+    encoding: M
+  - annotation: acmg classification
+    method: column
+    encoding: N
+  - annotation: detected by
+    method: column
+    encoding: O

@@ -1,0 +1,67 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13166756_medi-105-e48406-s002.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166756.1/medi-105-e48406-s002.xlsx
+    sheet: Sheet1
+    row_slice:
+    - 2
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: K
+      prioritize:
+      - PhenotypicFeature
+    predicate: related_to
+    object:
+      method: value
+      encoding: Parkinson's disease
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13166756
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 13 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      - CalPoly SLO
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: mr method
+    method: column
+    encoding: A
+  - annotation: number of snps
+    method: column
+    encoding: B
+  - annotation: beta
+    method: column
+    encoding: C
+  - annotation: standard error
+    method: column
+    encoding: D
+  - annotation: p value
+    method: column
+    encoding: E
+  - annotation: lower ci
+    method: column
+    encoding: F
+  - annotation: upper ci
+    method: column
+    encoding: G
+  - annotation: odds ratio
+    method: column
+    encoding: H
+  - annotation: or lower ci 95
+    method: column
+    encoding: I
+  - annotation: or upper ci 95
+    method: column
+    encoding: J

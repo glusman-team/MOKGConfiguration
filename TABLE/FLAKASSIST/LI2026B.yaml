@@ -1,0 +1,63 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13167369_sj-xlsx-1-tct-10.1177_15330338261449014.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13167369.1/sj-xlsx-1-tct-10.1177_15330338261449014.xlsx
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: related_to
+    object:
+      method: column
+      encoding: G
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13167369
+    contributors:
+    - name: Skye Lane Goetz
+      kind: curation
+      date: 14 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      - CalPoly SLO
+    - name: tablassist
+      kind: tool
+      date: 14 MAY 2026
+  annotations:
+  - annotation: pp_h0
+    method: column
+    encoding: B
+  - annotation: pp_h1
+    method: column
+    encoding: C
+  - annotation: pp_h2
+    method: column
+    encoding: D
+  - annotation: pp_h3
+    method: column
+    encoding: E
+  - annotation: pp_h4
+    method: column
+    encoding: F
+  - annotation: cancer_type
+    method: column
+    encoding: G
+sections:
+- source:
+    sheet: Table S33
+  statement:
+    subject:
+      encoding: A
+    object:
+      encoding: G

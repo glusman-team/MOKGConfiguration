@@ -1,0 +1,66 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13149156_Table1.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13149156.1/Table1.xlsx
+    sheet: ST 1. The result of FUMA
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prefix: 'rsid:'
+      prioritize:
+      - SequenceVariant
+    predicate: related_to
+    object:
+      method: column
+      encoding: B
+      prioritize:
+      - Gene
+      taxon: 9606
+  provenance:
+    repo: PMC
+    publication: PMC13149156
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+  annotations:
+  - annotation: chromosome
+    method: column
+    encoding: C
+  - annotation: genomic position
+    method: column
+    encoding: D
+  - annotation: effect allele
+    method: column
+    encoding: E
+  - annotation: other allele
+    method: column
+    encoding: F
+  - annotation: minor allele frequency
+    method: column
+    encoding: G
+  - annotation: p value
+    method: column
+    encoding: H
+  - annotation: functional category
+    method: column
+    encoding: I
+  - annotation: cadd score
+    method: column
+    encoding: J
+  - annotation: regulomedb score
+    method: column
+    encoding: K
+  - annotation: eqtl evidence
+    method: column
+    encoding: L

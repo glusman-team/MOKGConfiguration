@@ -1,0 +1,74 @@
+template:
+  syntax: TC3
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13060440_media-3.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13060440.1/media-3.xlsx
+    sheet: ST2
+    row_slice: [2, auto]
+  provenance:
+    repo: PMC
+    publication: PMC13060440
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prefix: "RS:"
+      prioritize:
+        - SequenceVariant
+    predicate: related_to
+    object:
+      method: value
+      encoding: insulin resistance
+      prioritize:
+        - PhenotypicFeature
+  annotations:
+    - annotation: chromosome
+      method: column
+      encoding: B
+    - annotation: position
+      method: column
+      encoding: C
+    - annotation: maf
+      method: column
+      encoding: D
+    - annotation: effect_allele
+      method: column
+      encoding: E
+    - annotation: is_allele
+      method: column
+      encoding: F
+    - annotation: novel_reported
+      method: column
+      encoding: G
+    - annotation: bmi_subgroup
+      method: column
+      encoding: H
+    - annotation: vep_annotation
+      method: column
+      encoding: I
+    - annotation: gsem_beta
+      method: column
+      encoding: J
+    - annotation: gsem_pval
+      method: column
+      encoding: K
+    - annotation: fiadj_bmi_beta
+      method: column
+      encoding: S
+    - annotation: hdl_beta
+      method: column
+      encoding: W
+    - annotation: tg_beta
+      method: column
+      encoding: AA
+    - annotation: tghdl_beta
+      method: column
+      encoding: AE

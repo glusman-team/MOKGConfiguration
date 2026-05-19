@@ -1,0 +1,84 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13167369_sj-xlsx-1-tct-10.1177_15330338261449014.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13167369.1/sj-xlsx-1-tct-10.1177_15330338261449014.xlsx
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: related_to
+    object:
+      method: column
+      encoding: C
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13167369
+    contributors:
+    - name: Skye Lane Goetz
+      kind: curation
+      date: 14 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      - CalPoly SLO
+    - name: tablassist
+      kind: tool
+      date: 14 MAY 2026
+  annotations:
+  - annotation: id_exposure
+    method: column
+    encoding: A
+  - annotation: snp
+    method: column
+    encoding: C
+  - annotation: chr
+    method: column
+    encoding: D
+  - annotation: position
+    method: column
+    encoding: E
+  - annotation: effect_allele
+    method: column
+    encoding: F
+  - annotation: other_allele
+    method: column
+    encoding: G
+  - annotation: beta
+    method: column
+    encoding: H
+  - annotation: se
+    method: column
+    encoding: I
+  - annotation: eaf
+    method: column
+    encoding: J
+  - annotation: pval
+    method: column
+    encoding: K
+  - annotation: sample_size
+    method: column
+    encoding: L
+  - annotation: R_squared
+    method: column
+    encoding: P
+  - annotation: f_statistic
+    method: column
+    encoding: Q
+sections:
+- source:
+    sheet: Table S4
+  statement:
+    subject:
+      encoding: B
+    object:
+      encoding: C

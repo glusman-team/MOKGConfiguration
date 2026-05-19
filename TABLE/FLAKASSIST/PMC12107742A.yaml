@@ -1,0 +1,105 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: text
+    local: ./DATALAKE/PMC12107742_13195_2025_1767_MOESM2_ESM.csv
+    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs13195-025-01767-x/MediaObjects/13195_2025_1767_MOESM2_ESM.csv
+    delimiter: ','
+    row_slice:
+    - 2
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: W
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: associated_with
+    object:
+      method: value
+      encoding: rapidly progressive Alzheimer's disease
+      prioritize:
+      - Disease
+    qualifiers:
+    - qualifier: species_context_qualifier
+      method: value
+      encoding: NCBITaxon:9606
+  provenance:
+    repo: PMC
+    publication: PMC12107742
+    contributors:
+    - kind: curation
+      name: OpenCode
+      date: 13 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: log2 LFQ intensity RES 01
+    method: column
+    encoding: A
+  - annotation: log2 LFQ intensity RES 02
+    method: column
+    encoding: B
+  - annotation: log2 LFQ intensity RES 03
+    method: column
+    encoding: C
+  - annotation: log2 LFQ intensity RES 04
+    method: column
+    encoding: D
+  - annotation: log2 LFQ intensity RES 08
+    method: column
+    encoding: E
+  - annotation: log2 LFQ intensity RES 09
+    method: column
+    encoding: F
+  - annotation: log2 LFQ intensity RES 10
+    method: column
+    encoding: G
+  - annotation: log2 LFQ intensity RES 11
+    method: column
+    encoding: H
+  - annotation: Peptides
+    method: column
+    encoding: I
+  - annotation: Razor + unique peptides
+    method: column
+    encoding: J
+  - annotation: Unique peptides
+    method: column
+    encoding: K
+  - annotation: Sequence coverage [%]
+    method: column
+    encoding: L
+  - annotation: Unique + razor sequence coverage [%]
+    method: column
+    encoding: M
+  - annotation: Unique sequence coverage [%]
+    method: column
+    encoding: N
+  - annotation: Mol. weight [kDa]
+    method: column
+    encoding: O
+  - annotation: Q-value
+    method: column
+    encoding: P
+  - annotation: Score
+    method: column
+    encoding: Q
+  - annotation: Intensity
+    method: column
+    encoding: R
+  - annotation: MS/MS count
+    method: column
+    encoding: S
+  - annotation: Protein IDs
+    method: column
+    encoding: T
+  - annotation: Majority protein IDs
+    method: column
+    encoding: U
+  - annotation: Protein names
+    method: column
+    encoding: V

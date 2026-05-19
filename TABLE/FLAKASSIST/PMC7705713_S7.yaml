@@ -1,0 +1,40 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC7705713_41598_2020_77914_MOESM2_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7705713/
+    sheet: Table S7
+    row_slice:
+    - 4
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: K
+      taxon: 10090
+      prioritize:
+      - Gene
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: HP:0000855
+    qualifiers: []
+  provenance:
+    repo: PMC
+    publication: PMC7705713
+    contributors:
+    - kind: curation
+      name: OpenCode
+      date: 13 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: "\u0394Log"
+    method: column
+    encoding: R
+  - annotation: T Test
+    method: column
+    encoding: S

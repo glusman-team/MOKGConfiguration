@@ -1,0 +1,66 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC10435378_mmc3.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10435378/
+    sheet: Sheet1
+    row_slice:
+    - 2
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0011122
+      prioritize:
+      - Disease
+    qualifiers:
+    - qualifier: species_context_qualifier
+      method: value
+      encoding: NCBITaxon:9606
+  provenance:
+    repo: PMC
+    publication: PMC10435378
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 12 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+  annotations:
+  - annotation: mask
+    method: column
+    encoding: E
+  - annotation: phenotype
+    method: column
+    encoding: G
+  - annotation: p_value_bmi
+    method: column
+    encoding: J
+  - annotation: p_value_bmi_female
+    method: column
+    encoding: P
+  - annotation: p_value_bmi_male
+    method: column
+    encoding: V
+  - annotation: p_value_sac10
+    method: column
+    encoding: AB
+  - annotation: p_value_heterogeneity
+    method: column
+    encoding: AG
+  - annotation: miscellaneous notes
+    method: value
+    encoding: ExWAS burden test results from UK Biobank exome sequencing; sex-stratified
+      BMI and sex-combined SAC10 analyses.

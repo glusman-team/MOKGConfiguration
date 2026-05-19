@@ -1,0 +1,84 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13167090_Table2.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13167090.1/Table2.xlsx
+    sheet: Sheet1
+    row_slice:
+    - 1
+    - 9
+  statement:
+    subject:
+      method: column
+      encoding: A
+      fill: forward
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0019019
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13167090
+    contributors:
+    - kind: curation
+      name: Tablassist
+      date: 13 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: variant number
+    method: column
+    encoding: B
+  - annotation: patient number
+    method: column
+    encoding: C
+  - annotation: zygote type
+    method: column
+    encoding: D
+  - annotation: position
+    method: column
+    encoding: E
+  - annotation: nucleic acid change
+    method: column
+    encoding: F
+  - annotation: amino acid change
+    method: column
+    encoding: G
+  - annotation: variant type
+    method: column
+    encoding: H
+  - annotation: affected domain
+    method: column
+    encoding: I
+  - annotation: phylop
+    method: column
+    encoding: J
+  - annotation: phastcons
+    method: column
+    encoding: K
+  - annotation: sift
+    method: column
+    encoding: L
+  - annotation: polyphen-2
+    method: column
+    encoding: M
+  - annotation: cadd
+    method: column
+    encoding: N
+  - annotation: mutationtaster
+    method: column
+    encoding: O
+  - annotation: family co-segregation
+    method: column
+    encoding: P
+  - annotation: acmg
+    method: column
+    encoding: Q

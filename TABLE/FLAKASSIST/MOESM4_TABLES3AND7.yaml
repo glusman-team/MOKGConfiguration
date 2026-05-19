@@ -1,0 +1,75 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12900646_41588_2025_2486_MOESM4_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12900646.1/41588_2025_2486_MOESM4_ESM.xlsx
+  statement:
+    predicate: related_to
+  provenance:
+    repo: PMC
+    publication: PMC12900646
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+sections:
+- source:
+    sheet: Supp. Table 3
+    row_slice:
+    - 2
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+      - PhenotypicFeature
+    object:
+      method: column
+      encoding: B
+      prefix: 'UKBB:'
+      taxon: 9606
+      prioritize:
+      - PhenotypicFeature
+  annotations:
+  - annotation: cell type
+    method: column
+    encoding: C
+  - annotation: description
+    method: column
+    encoding: D
+  - annotation: unit
+    method: column
+    encoding: E
+- source:
+    sheet: Supp. Table 7
+    row_slice:
+    - 6
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      taxon: 9606
+      prioritize:
+      - Cell
+    predicate: related_to
+    object:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+      - PhenotypicFeature
+  annotations:
+  - annotation: z-score
+    method: column
+    encoding: C
+  - annotation: minus log10 lfsr
+    method: column
+    encoding: D

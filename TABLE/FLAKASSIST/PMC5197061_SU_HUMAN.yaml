@@ -1,0 +1,60 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC5197061_thnov07p0238s3.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/5197061/bin/thnov07p0238s3.xlsx
+    sheet: SU_all Human proteins
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      regex:
+      - pattern: ^([A-Z0-9]+(?:-[0-9]+)?)$
+        replacement: UniProtKB:$1
+      taxon: 9606
+      prioritize:
+      - Protein
+    predicate: expressed_in
+    object:
+      method: value
+      encoding: UBERON:0001088
+      prioritize:
+      - AnatomicalEntity
+    qualifiers: []
+  provenance:
+    repo: PMC
+    publication: PMC5197061
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: Description
+    method: column
+    encoding: B
+  - annotation: Sigma coverage
+    method: column
+    encoding: C
+  - annotation: Sigma protein count
+    method: column
+    encoding: D
+  - annotation: Sigma unique peptides
+    method: column
+    encoding: E
+  - annotation: Sigma peptides
+    method: column
+    encoding: F
+  - annotation: Sigma PSMs
+    method: column
+    encoding: G
+  - annotation: molecular weight kDa
+    method: column
+    encoding: H
+  - annotation: isoelectric point
+    method: column
+    encoding: I

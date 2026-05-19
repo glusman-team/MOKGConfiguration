@@ -1,0 +1,71 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC11993224_mmc4.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11993224.1/mmc4.xlsx
+    sheet: Table S3
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: C
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0008642
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC11993224
+    contributors:
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+  annotations:
+  - annotation: study id
+    method: column
+    encoding: A
+  - annotation: transcript
+    method: column
+    encoding: D
+  - annotation: nucleotide change
+    method: column
+    encoding: E
+  - annotation: amino acid change
+    method: column
+    encoding: F
+  - annotation: zygosity
+    method: column
+    encoding: G
+  - annotation: variant type
+    method: column
+    encoding: H
+  - annotation: inheritance
+    method: column
+    encoding: J
+  - annotation: omim gene number
+    method: column
+    encoding: K
+  - annotation: pli
+    method: column
+    encoding: L
+  - annotation: z score
+    method: column
+    encoding: M
+  - annotation: gnomad
+    method: column
+    encoding: N
+  - annotation: cadd
+    method: column
+    encoding: O
+  - annotation: miscellaneous notes
+    method: value
+    encoding: VACTERL trio exome de novo variant analysis

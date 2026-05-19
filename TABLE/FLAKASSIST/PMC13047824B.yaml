@@ -1,0 +1,51 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/12933_2026_3128_MOESM1_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/13047824/bin/12933_2026_3128_MOESM1_ESM.xlsx
+    sheet: Table S2
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      taxon: 9606
+      prioritize:
+      - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: prediabetes
+  provenance:
+    repo: PMC
+    publication: PMC13047824
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026
+  annotations:
+  - annotation: component
+    method: column
+    encoding: A
+  - annotation: network cluster
+    method: column
+    encoding: C
+  - annotation: string edges partners
+    method: column
+    encoding: D
+  - annotation: enrichment go term
+    method: column
+    encoding: E
+  - annotation: fdr
+    method: column
+    encoding: F
+  - annotation: contributing genes
+    method: column
+    encoding: G
+  - annotation: notes
+    method: column
+    encoding: H

@@ -1,0 +1,38 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12698088_elife-106231-supp1.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12698088.1/elife-106231-supp1.xlsx
+    sheet: Sheet1
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0004933
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC12698088
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: normalized percent edu cm
+    method: column
+    encoding: B
+  - annotation: normalized tot cell num
+    method: column
+    encoding: C

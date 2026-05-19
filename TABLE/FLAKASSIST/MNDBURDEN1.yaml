@@ -1,0 +1,70 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12827591_Supplementary_file_1.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12827591.1/Supplementary_file_1.xlsx
+    sheet: Sheet1
+    row_slice:
+    - 4
+    - auto
+    reindex:
+    - column: A
+      comparison: ne
+      comparator: Primary analysis
+    - column: A
+      comparison: ne
+      comparator: Sensitivity analysis
+  statement:
+    subject:
+      method: column
+      encoding: A
+      fill: forward
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0004976
+      prioritize:
+      - Disease
+    qualifiers:
+    - qualifier: species_context_qualifier
+      method: value
+      encoding: NCBITaxon:9606
+  provenance:
+    repo: PMC
+    publication: PMC12827591
+    contributors:
+    - kind: curation
+      name: Tablassist Pioneer
+      date: 12 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026
+  annotations:
+  - annotation: variant mask
+    method: column
+    encoding: B
+  - annotation: p value SKAT-O
+    method: column
+    encoding: H
+  - annotation: odds ratio
+    method: column
+    encoding: E
+  - annotation: carrier count cases
+    method: column
+    encoding: D
+  - annotation: carrier count controls
+    method: column
+    encoding: C
+  - annotation: miscellaneous notes
+    method: value
+    encoding: 'Rare variant burden testing (gene-level collapsing) comparing 663 ALS
+      cases to ~393K UK Biobank controls. Table reports results for 7 variant masks
+      per gene (from High confidence PTV to non-synonymous variants). Two analysis
+      sections: Primary analysis (18 genes) and Sensitivity analysis (24 genes, 6
+      overlap). Gene symbols are forward-filled across mask rows. Known ALS gene NEK1
+      (NCBIGene:4750) confirmed; BLVRB is a novel candidate.'

@@ -1,0 +1,48 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: text
+    local: ./derived/PMC13149156_S2_SUSIE.csv
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13149156.1/Table1.xlsx
+    delimiter: ','
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      explode_by: ','
+      prefix: 'rsid:'
+      prioritize:
+      - SequenceVariant
+    predicate: related_to
+    object:
+      method: column
+      encoding: B
+      prioritize:
+      - SequenceVariant
+  provenance:
+    repo: PMC
+    publication: PMC13149156
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+  annotations:
+  - annotation: cs purity
+    method: column
+    encoding: C
+  - annotation: max pip
+    method: column
+    encoding: D
+  - annotation: post_hoc_prob_pop1_eur
+    method: column
+    encoding: E
+  - annotation: post_hoc_prob_pop2_eas
+    method: column
+    encoding: F

@@ -1,0 +1,52 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC8509809_ijms-1413383-st_1-23-proof.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8509809/
+    sheet: Identified proteins
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      explode_by: ;
+      regex:
+      - pattern: ^([A-Z0-9]+(?:-[0-9]+)?)$
+        replacement: UniProtKB:$1
+      taxon: 9606
+      prioritize:
+      - Protein
+    predicate: expressed_in
+    object:
+      method: value
+      encoding: UBERON:0001089
+      prioritize:
+      - AnatomicalEntity
+    qualifiers: []
+  provenance:
+    repo: PMC
+    publication: PMC8509809
+    contributors:
+    - kind: tool
+      name: OpenCode
+      date: 13 MAY 2026
+  annotations:
+  - annotation: Majority protein IDs
+    method: column
+    encoding: B
+  - annotation: Protein names
+    method: column
+    encoding: F
+  - annotation: Gene names
+    method: column
+    encoding: G
+  - annotation: Fasta headers
+    method: column
+    encoding: H
+  - annotation: Peptide counts (unique)
+    method: column
+    encoding: E

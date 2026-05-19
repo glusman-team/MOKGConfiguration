@@ -1,0 +1,32 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC4360911_NIHMS535524-supplement-1_si_001.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4360911/
+    sheet: Final_analysis_TB_BCG
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 83332
+      prioritize:
+      - Protein
+    predicate: in_taxon
+    object:
+      method: value
+      encoding: NCBITaxon:83332
+      prioritize:
+      - OrganismTaxon
+    qualifiers: []
+  provenance:
+    repo: PMC
+    publication: PMC4360911
+    contributors:
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026

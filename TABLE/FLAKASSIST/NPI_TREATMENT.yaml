@@ -1,0 +1,44 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: text
+    local: ./DATALAKE/PMC11865420/table_clinical_gene_miglustat.csv
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11865420/
+    delimiter: ','
+    reindex:
+    - column: C
+      comparison: eq
+      comparator: Y
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Case
+    predicate: treated_by
+    object:
+      method: value
+      encoding: CHEBI:50381
+      prioritize:
+      - SmallMolecule
+    qualifiers:
+    - qualifier: species_context_qualifier
+      method: value
+      encoding: NCBITaxon:9606
+  provenance:
+    repo: PMC
+    publication: PMC11865420
+    contributors:
+    - kind: curation
+      name: Tablassist Pioneer
+      date: 12 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026
+  annotations:
+  - annotation: miscellaneous notes
+    method: value
+    encoding: 'Miglustat-treated patients only (miglustat=Y). 12 of 22 patients received
+      miglustat treatment. Source: Supplementary Table 3 clinical assessment and NPC1
+      gene variants.'

@@ -1,0 +1,45 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13156037_41593_2026_2247_MOESM4_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13156037.1/41593_2026_2247_MOESM4_ESM.xlsx
+    sheet: SI_DATA1-D
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: C
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0005258
+      prioritize:
+      - Disease
+    qualifiers:
+    - qualifier: subject_context_qualifier
+      method: column
+      encoding: A
+  provenance:
+    repo: PMC
+    publication: PMC13156037
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+  annotations:
+  - annotation: Z_score
+    method: column
+    encoding: D
+  - annotation: p.adj
+    method: column
+    encoding: E

@@ -1,0 +1,59 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13156099_10875_2026_2012_MOESM3_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13156099.1/10875_2026_2012_MOESM3_ESM.xlsx
+    sheet: HPO Terms
+    row_slice:
+    - 2
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0014353
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13156099
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: PHENOTYPE
+    method: column
+    encoding: A
+  - annotation: Chr
+    method: column
+    encoding: C
+  - annotation: Start
+    method: column
+    encoding: D
+  - annotation: End
+    method: column
+    encoding: E
+  - annotation: rsID
+    method: column
+    encoding: R
+  - annotation: AAChange.refGene
+    method: column
+    encoding: T
+  - annotation: RefSeqSelect
+    method: column
+    encoding: U
+  - annotation: CLNSIG
+    method: column
+    encoding: AL
+  - annotation: InterVar_automated
+    method: column
+    encoding: AU

@@ -1,0 +1,61 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12158776_41586_2025_8885_MOESM3_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12158776/
+    sheet: up, late
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: J
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0013282
+    qualifiers: []
+  provenance:
+    repo: PMC
+    publication: PMC12158776
+    contributors:
+    - kind: curation
+      name: OpenCode
+      date: 13 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: Protein.Group
+    method: column
+    encoding: A
+  - annotation: low_moderate_fc
+    method: column
+    encoding: B
+  - annotation: low_moderate_p
+    method: column
+    encoding: C
+  - annotation: low_moderate_B
+    method: column
+    encoding: D
+  - annotation: moderate_high_fc
+    method: column
+    encoding: E
+  - annotation: moderate_high_p
+    method: column
+    encoding: F
+  - annotation: moderate_high_B
+    method: column
+    encoding: G
+  - annotation: diff_fc
+    method: column
+    encoding: H
+  - annotation: diff_B
+    method: column
+    encoding: I

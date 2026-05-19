@@ -1,0 +1,64 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12346698_cells-3752185-Supplementary Material.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12346698/
+    sheet: Table S4
+    row_slice:
+    - 3
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      explode_by: ;
+      regex:
+      - pattern: -[0-9]+$
+        replacement: ''
+      prefix: 'UniProtKB:'
+      prioritize:
+      - Protein
+      taxon: 9606
+    predicate: related_to
+    object:
+      method: value
+      encoding: MONDO:0007739
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC12346698
+    contributors:
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+  annotations:
+  - annotation: protein names
+    method: column
+    encoding: B
+  - annotation: fold change
+    method: column
+    encoding: C
+  - annotation: p value
+    method: column
+    encoding: D
+  - annotation: adj p value
+    method: column
+    encoding: E
+  - annotation: protein ids
+    method: column
+    encoding: G
+  - annotation: protein names
+    method: column
+    encoding: H
+  - annotation: fold change
+    method: column
+    encoding: I
+  - annotation: p value
+    method: column
+    encoding: J
+  - annotation: adj p value
+    method: column
+    encoding: K

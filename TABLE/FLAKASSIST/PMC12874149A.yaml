@@ -1,0 +1,29 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./.ledger/disease-proteomics/data/PMC12874149/raw/mmc7.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12874149/
+    sheet: Sheet1
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+      - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: baseline feature list
+  provenance:
+    repo: PMC
+    publication: PMC12874149
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026

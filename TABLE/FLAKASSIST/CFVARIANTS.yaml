@@ -1,0 +1,65 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12903406_mmc3.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12903406.1/mmc3.xlsx
+    sheet: Sheet1
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: value
+      encoding: NCBIGene:1080
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0009061
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC12903406
+    contributors:
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+  annotations:
+  - annotation: variant id hg38
+    method: column
+    encoding: A
+  - annotation: a1freq cd
+    method: column
+    encoding: B
+  - annotation: a1freq uc
+    method: column
+    encoding: C
+  - annotation: a1freq ibd
+    method: column
+    encoding: D
+  - annotation: a1freq control
+    method: column
+    encoding: E
+  - annotation: most severe consequence
+    method: column
+    encoding: J
+  - annotation: clinical annotation cftr2
+    method: column
+    encoding: K
+  - annotation: amino acid change
+    method: column
+    encoding: L
+  - annotation: p value ibd
+    method: column
+    encoding: S
+  - annotation: beta ibd
+    method: column
+    encoding: T
+  - annotation: or 95 ci ibd
+    method: column
+    encoding: X

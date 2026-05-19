@@ -1,0 +1,47 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12661719_13048_2025_1874_MOESM4_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12661719/
+    sheet: Regulated Pathway2Protein
+    row_slice:
+    - 2
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: F
+      taxon: 10090
+      prioritize:
+      - Gene
+    predicate: participates_in
+    object:
+      method: column
+      encoding: A
+      prioritize:
+      - Pathway
+  annotations:
+  - annotation: protein accession
+    method: column
+    encoding: D
+  - annotation: protein description
+    method: column
+    encoding: E
+  - annotation: ratio
+    method: column
+    encoding: G
+  - annotation: p value
+    method: column
+    encoding: H
+  - annotation: regulated type
+    method: column
+    encoding: I
+  provenance:
+    repo: PMC
+    publication: PMC12661719
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026

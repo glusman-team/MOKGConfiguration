@@ -1,0 +1,80 @@
+template:
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13140796_CDR-2026-4594769-s013.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13140796.1/CDR-2026-4594769-s013.xlsx
+    sheet: Sheet1
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: related_to
+    object:
+      method: value
+      encoding: Coronary artery disease
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13140796
+    contributors:
+    - name: Skye Lane Goetz
+      kind: curation
+      date: 14 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      - CalPoly SLO
+      comment: "Configured for MR results of 5 key genes \u2192 CAD across 5 methods\
+        \ (IVW, MR-Egger, MR-PRESSO, Weighted Median, Weighted Mode)"
+    - name: tablassist
+      kind: tool
+      date: 14 MAY 2026
+  annotations:
+  - annotation: mr_method
+    method: column
+    encoding: B
+  - annotation: beta_IVW
+    method: column
+    encoding: C
+  - annotation: pval_IVW
+    method: column
+    encoding: D
+  - annotation: beta_Egger
+    method: column
+    encoding: E
+  - annotation: pval_Egger
+    method: column
+    encoding: F
+  - annotation: heterogeneity_p
+    method: column
+    encoding: G
+  - annotation: pleiotropy_p
+    method: column
+    encoding: H
+  - annotation: beta_PRESSO
+    method: column
+    encoding: I
+  - annotation: pval_PRESSO
+    method: column
+    encoding: J
+  - annotation: PRESSO_outlier_count
+    method: column
+    encoding: K
+  - annotation: beta_median
+    method: column
+    encoding: L
+  - annotation: pval_median
+    method: column
+    encoding: M
+  - annotation: beta_mode
+    method: column
+    encoding: N
+  - annotation: pval_mode
+    method: column
+    encoding: O

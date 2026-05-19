@@ -1,0 +1,30 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12521215_Table5.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12521215/
+    sheet: lasso_select
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: associated_with
+    object:
+      method: value
+      encoding: Wilson's disease
+  provenance:
+    repo: PMC
+    publication: PMC12521215
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026
+  annotations:
+  - annotation: lasso coefficient
+    method: column
+    encoding: B

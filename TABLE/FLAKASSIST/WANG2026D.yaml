@@ -1,0 +1,63 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13166846_medi-105-e48581-s010.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166846.1/medi-105-e48581-s010.xlsx
+    sheet: Supplementary Table S7
+    row_slice:
+    - 2
+    - 3
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: related_to
+    object:
+      method: value
+      encoding: Diabetic foot ulcer
+  provenance:
+    repo: PMC
+    publication: PMC13166846
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 13 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      - CalPoly SLO
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: mediator
+    method: column
+    encoding: B
+  - annotation: beta 1
+    method: column
+    encoding: D
+  - annotation: beta 2
+    method: column
+    encoding: E
+  - annotation: mediation effect
+    method: column
+    encoding: F
+  - annotation: lower ci
+    method: column
+    encoding: G
+  - annotation: upper ci
+    method: column
+    encoding: H
+  - annotation: total effect
+    method: column
+    encoding: I
+  - annotation: standard error
+    method: column
+    encoding: J
+  - annotation: mediation ratio percent
+    method: column
+    encoding: K

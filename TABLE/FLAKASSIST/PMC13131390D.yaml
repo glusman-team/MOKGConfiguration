@@ -1,0 +1,31 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13131390_mmc2.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13131390/
+    sheet: eTable13
+    row_slice: [1, auto]
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+        - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: WGCNA functional models
+  provenance:
+    repo: PMC
+    publication: PMC13131390
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
+  annotations:
+    - annotation: Module
+      method: column
+      encoding: B

@@ -1,0 +1,74 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12450773_EHF2-12-3296-s001.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12450773/
+    sheet: Sheet1
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+      - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: all-cause mortality
+      prioritize:
+      - PhenotypicFeature
+  annotations:
+  - annotation: OlinkID
+    method: column
+    encoding: B
+  - annotation: UniProt
+    method: column
+    encoding: C
+  - annotation: unadjusted HR
+    method: column
+    encoding: D
+  - annotation: unadjusted FDR p-value
+    method: column
+    encoding: E
+  - annotation: model 1 HR
+    method: column
+    encoding: F
+  - annotation: model 1 FDR p-value
+    method: column
+    encoding: G
+  - annotation: model 2 HR
+    method: column
+    encoding: H
+  - annotation: model 2 FDR p-value
+    method: column
+    encoding: I
+  - annotation: model 3 HR
+    method: column
+    encoding: J
+  - annotation: model 3 FDR p-value
+    method: column
+    encoding: K
+  - annotation: model 4 HR
+    method: column
+    encoding: L
+  - annotation: model 4 FDR p-value
+    method: column
+    encoding: M
+  - annotation: fully adjusted HR
+    method: column
+    encoding: N
+  - annotation: fully adjusted FDR p-value
+    method: column
+    encoding: O
+  provenance:
+    repo: PMC
+    publication: PMC12450773
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026

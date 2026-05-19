@@ -1,0 +1,101 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13159318_13023_2026_4339_MOESM1_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13159318.1/13023_2026_4339_MOESM1_ESM.xlsx
+    sheet: e-supplement
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: value
+      encoding: NCBIGene:6261
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0018493
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13159318
+    contributors:
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 12 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      comment: RYR1 variant catalog in Malignant Hyperthermia Slavonic cohort
+  annotations:
+  - annotation: ryr1 variant
+    method: column
+    encoding: A
+  - annotation: rs number
+    method: column
+    encoding: B
+  - annotation: gnomad nfe frequency
+    method: column
+    encoding: C
+  - annotation: emhg classification
+    method: column
+    encoding: D
+  - annotation: emhg scoring matrix
+    method: column
+    encoding: E
+  - annotation: clinvar number
+    method: column
+    encoding: F
+  - annotation: clinvar classification
+    method: column
+    encoding: G
+  - annotation: acmg classification
+    method: column
+    encoding: H
+  - annotation: acmg criteria
+    method: column
+    encoding: I
+  - annotation: metarnn
+    method: column
+    encoding: J
+  - annotation: revel
+    method: column
+    encoding: K
+  - annotation: h g m d
+    method: column
+    encoding: L
+  - annotation: number of probands
+    method: column
+    encoding: M
+  - annotation: proband id
+    method: column
+    encoding: N
+  - annotation: sex
+    method: column
+    encoding: O
+  - annotation: age at referral
+    method: column
+    encoding: P
+  - annotation: reason of referral
+    method: column
+    encoding: Q
+  - annotation: adverse anaesthesia history
+    method: column
+    encoding: R
+  - annotation: administration of dantrolene
+    method: column
+    encoding: S
+  - annotation: ivct result
+    method: column
+    encoding: T
+  - annotation: relatives with positive ivct
+    method: column
+    encoding: U
+  - annotation: relatives with same variant
+    method: column
+    encoding: V

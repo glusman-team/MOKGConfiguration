@@ -1,0 +1,59 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC5795274_12915_2017_469_MOESM3_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5795274/
+    sheet: TF annotations
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+  provenance:
+    repo: PMC
+    publication: PMC5795274
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026
+sections:
+- statement:
+    object:
+      method: column
+      encoding: B
+      explode_by: ;
+      regex:
+      - pattern: \s*\([^)]*\)$
+        replacement: ''
+      - pattern: ^Pheno_
+        replacement: ''
+      prioritize:
+      - PhenotypicFeature
+    qualifiers:
+    - qualifier: subject_aspect_qualifier
+      method: value
+      encoding: enriched
+- statement:
+    object:
+      method: column
+      encoding: C
+      explode_by: ;
+      regex:
+      - pattern: \s*\([^)]*\)$
+        replacement: ''
+      - pattern: ^Pheno_
+        replacement: ''
+      prioritize:
+      - PhenotypicFeature
+    qualifiers:
+    - qualifier: subject_aspect_qualifier
+      method: value
+      encoding: depleted

@@ -1,0 +1,87 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC9915838_media-1.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9915838.1/media-1.xlsx
+    sheet: Table 2
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: F
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0003847
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC9915838
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+  annotations:
+  - annotation: search model
+    method: column
+    encoding: A
+  - annotation: chromosome
+    method: column
+    encoding: B
+  - annotation: position
+    method: column
+    encoding: C
+  - annotation: ref
+    method: column
+    encoding: D
+  - annotation: alt
+    method: column
+    encoding: E
+  - annotation: worst consequence
+    method: column
+    encoding: G
+  - annotation: hgvsc
+    method: column
+    encoding: S
+  - annotation: hgvsp
+    method: column
+    encoding: T
+  - annotation: clinvar clinical significance
+    method: column
+    encoding: U
+  - annotation: clinvar gold stars
+    method: column
+    encoding: V
+  - annotation: family id
+    method: column
+    encoding: X
+  - annotation: gnomad genomes freq
+    method: column
+    encoding: H
+  - annotation: gnomad exomes freq
+    method: column
+    encoding: I
+  - annotation: topmed freq
+    method: column
+    encoding: J
+  - annotation: cadd phred
+    method: column
+    encoding: K
+  - annotation: revel score
+    method: column
+    encoding: L
+  - annotation: miscellaneous notes
+    method: value
+    encoding: HiPPo panel-agnostic diagnostic strategy for rare disease; UK Genome
+      Medicine Service

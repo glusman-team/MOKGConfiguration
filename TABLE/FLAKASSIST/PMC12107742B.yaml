@@ -1,0 +1,130 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12107742_13195_2025_1767_MOESM3_ESM.xlsx
+    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs13195-025-01767-x/MediaObjects/13195_2025_1767_MOESM3_ESM.xlsx
+    sheet: spAD and rpAD
+    row_slice:
+    - 1
+    - auto
+    reindex:
+    - column: Y
+      comparison: lt
+      comparator: 0.05
+  statement:
+    subject:
+      method: column
+      encoding: AC
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: associated_with
+    object:
+      method: value
+      encoding: rapidly progressive Alzheimer's disease
+      prioritize:
+      - Disease
+    qualifiers:
+    - qualifier: species_context_qualifier
+      method: value
+      encoding: NCBITaxon:9606
+  provenance:
+    repo: PMC
+    publication: PMC12107742
+    contributors:
+    - kind: curation
+      name: OpenCode
+      date: 13 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: Log2 tAD1
+    method: column
+    encoding: A
+  - annotation: Log2 tAD3
+    method: column
+    encoding: B
+  - annotation: Log2 tAD4
+    method: column
+    encoding: C
+  - annotation: Log2 rAD1
+    method: column
+    encoding: D
+  - annotation: Log2 rAD2
+    method: column
+    encoding: E
+  - annotation: Log2 rAD3
+    method: column
+    encoding: F
+  - annotation: Log2 rAD4
+    method: column
+    encoding: G
+  - annotation: Log2 rAD5
+    method: column
+    encoding: H
+  - annotation: Log2 rAD6
+    method: column
+    encoding: I
+  - annotation: Log2 rAD7
+    method: column
+    encoding: J
+  - annotation: Log2 rAD8
+    method: column
+    encoding: K
+  - annotation: Student's T-test Significant rAD_tAD
+    method: column
+    encoding: L
+  - annotation: Peptides
+    method: column
+    encoding: M
+  - annotation: Razor + unique peptides
+    method: column
+    encoding: N
+  - annotation: Unique peptides
+    method: column
+    encoding: O
+  - annotation: Sequence coverage [%]
+    method: column
+    encoding: P
+  - annotation: Unique + razor sequence coverage [%]
+    method: column
+    encoding: Q
+  - annotation: Unique sequence coverage [%]
+    method: column
+    encoding: R
+  - annotation: Mol. weight [kDa]
+    method: column
+    encoding: S
+  - annotation: Score
+    method: column
+    encoding: T
+  - annotation: MS/MS count
+    method: column
+    encoding: U
+  - annotation: Mean Log2_tAD
+    method: column
+    encoding: V
+  - annotation: Mean Log2_rAD
+    method: column
+    encoding: W
+  - annotation: (-)Log p-value
+    method: column
+    encoding: X
+  - annotation: q-value
+    method: column
+    encoding: Y
+  - annotation: Log2 fold change (rAD/tAD)
+    method: column
+    encoding: Z
+  - annotation: Protein IDs
+    method: column
+    encoding: AA
+  - annotation: Majority protein IDs
+    method: column
+    encoding: AB
+  - annotation: Protein names
+    method: column
+    encoding: AC

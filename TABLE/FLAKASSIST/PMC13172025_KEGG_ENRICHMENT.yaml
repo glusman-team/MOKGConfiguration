@@ -1,0 +1,68 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13172025_42003_2026_10045_MOESM3_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13172025.1/42003_2026_10045_MOESM3_ESM.xlsx
+    sheet: SD15
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+    predicate: participates_in
+    object:
+      method: column
+      encoding: E
+      prefix: 'KEGG:'
+  provenance:
+    repo: PMC
+    publication: PMC13172025
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+  annotations:
+  - annotation: category
+    method: column
+    encoding: C
+  - annotation: subcategory
+    method: column
+    encoding: D
+  - annotation: gene_ratio
+    method: column
+    encoding: G
+  - annotation: background_ratio
+    method: column
+    encoding: H
+  - annotation: p value
+    method: column
+    encoding: I
+    fill: zero
+  - annotation: p.adjust
+    method: column
+    encoding: J
+    fill: zero
+  - annotation: q value
+    method: column
+    encoding: K
+    fill: zero
+  - annotation: geneID
+    method: column
+    encoding: L
+    regex:
+    - pattern: /
+      replacement: ;
+  - annotation: count
+    method: column
+    encoding: M
+  - annotation: log_qvalue
+    method: column
+    encoding: N
+  - annotation: miscellaneous notes
+    method: value
+    encoding: KEGG pathway enrichment of 16 top WGCNA co-expression modules from brain
+      tissue; hypergeometric enrichment test; genes are Entrez IDs

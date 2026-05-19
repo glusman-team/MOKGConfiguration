@@ -1,0 +1,65 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC9481236_DataSheet1.XLSX
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9481236.1/DataSheet1.XLSX
+    sheet: TableS2
+    row_slice:
+    - 1
+    - auto
+    reindex:
+    - column: B
+      comparison: ne
+      comparator: Non-syndromic
+    - column: B
+      comparison: ne
+      comparator: Syndromic
+  statement:
+    subject:
+      method: column
+      encoding: F
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: column
+      encoding: B
+      prioritize:
+      - Disease
+      regex:
+      - pattern: Muenken
+        replacement: Muenke
+      - pattern: Loyes-Dietz
+        replacement: Loeys-Dietz
+      - pattern: "\_"
+        replacement: ' '
+  provenance:
+    repo: PMC
+    publication: PMC9481236
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 13 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      - CalPoly SLO
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: zygosity / inheritance mode
+    method: column
+    encoding: L
+  - annotation: ACMG classification
+    method: column
+    encoding: M
+    regex:
+    - pattern: "\_"
+      replacement: ' '
+  - annotation: miscellaneous notes
+    method: value
+    encoding: Panel-positive probands with pathogenic/likely pathogenic variants from
+      Chinese craniosynostosis cohort. 139 patients across 10 genes.

@@ -1,0 +1,62 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC11061114_41431_2024_1581_MOESM3_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11061114.1/41431_2024_1581_MOESM3_ESM.xlsx
+    sheet: Rare, damaging variants
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: D
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0001071
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC11061114
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: Variant
+    method: column
+    encoding: A
+  - annotation: Consequence
+    method: column
+    encoding: B
+  - annotation: Variant Score
+    method: column
+    encoding: C
+  - annotation: Gene ID
+    method: column
+    encoding: E
+  - annotation: Simplified Inheritance
+    method: column
+    encoding: F
+  - annotation: Inheritance Assoc. to ID
+    method: column
+    encoding: G
+  - annotation: Gnomad Finn AF
+    method: column
+    encoding: H
+  - annotation: Gnomad non-Finn max AF
+    method: column
+    encoding: I
+  - annotation: No. Carriers
+    method: column
+    encoding: K
+  - annotation: Carriers
+    method: column
+    encoding: L

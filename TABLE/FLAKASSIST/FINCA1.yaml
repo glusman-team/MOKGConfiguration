@@ -1,0 +1,53 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC10400545_41431_2023_1382_MOESM9_ESM.xlsx
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10400545/
+    sheet: Sheet1
+    row_slice:
+    - 1
+    - 9
+  statement:
+    subject:
+      method: value
+      encoding: NHLRC2
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: FINCA syndrome
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC10400545
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 13 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: HGVS_cDNA
+    method: column
+    encoding: B
+    prefix: 'NM_198514.4:'
+  - annotation: HGVS_protein
+    method: column
+    encoding: C
+    prefix: 'NP_940916.2:'
+  - annotation: ACMG_classification
+    method: column
+    encoding: D
+  - annotation: miscellaneous notes
+    method: value
+    encoding: Variants in NHLRC2 (NM_198514.4) associated with FINCA syndrome (MONDO:0032651,
+      MIM:618278); cohort of 15 novel individuals from 12 families; autosomal recessive
+      inheritance

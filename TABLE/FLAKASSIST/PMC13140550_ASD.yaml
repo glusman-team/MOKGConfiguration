@@ -1,0 +1,31 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13140550_MGG3-14-e70209-s001.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13140550.1/MGG3-14-e70209-s001.xlsx
+    sheet: Gene_panel_ASD
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0005258
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13140550
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026

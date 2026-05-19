@@ -1,0 +1,78 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13172311_41467_2026_73121_MOESM3_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13172311.1/41467_2026_73121_MOESM3_ESM.xlsx
+    sheet: Sheet1
+  statement:
+    subject:
+      method: value
+      encoding: vU1.3KO
+    predicate: decreases_amount_or_activity_of
+    object:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+  provenance:
+    repo: PMC
+    publication: PMC13172311
+    contributors:
+    - kind: curation
+      name: Tablassist
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+sections:
+- source:
+    reindex:
+    - column: B
+      comparator: ''
+      comparison: ne
+  statement:
+    subject:
+      method: value
+      encoding: vU1.3KO
+    predicate: increases_amount_or_activity_of
+    object:
+      method: column
+      encoding: B
+      prioritize:
+      - Gene
+      taxon: 9606
+- source:
+    reindex:
+    - column: C
+      comparator: ''
+      comparison: ne
+  statement:
+    subject:
+      method: value
+      encoding: vU1.8KO
+    predicate: decreases_amount_or_activity_of
+    object:
+      method: column
+      encoding: C
+      prioritize:
+      - Gene
+      taxon: 9606
+- source:
+    reindex:
+    - column: D
+      comparator: ''
+      comparison: ne
+  statement:
+    subject:
+      method: value
+      encoding: vU1.8KO
+    predicate: increases_amount_or_activity_of
+    object:
+      method: column
+      encoding: D
+      prioritize:
+      - Gene
+      taxon: 9606

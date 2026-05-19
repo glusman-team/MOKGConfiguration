@@ -1,0 +1,108 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13155964_BLOOD_BLD-2025-031287-mmc2.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13155964.1/BLOOD_BLD-2025-031287-mmc2.xlsx
+  provenance:
+    repo: PMC
+    publication: PMC13155964
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+  statement:
+    predicate: gene_associated_with_condition
+sections:
+- source:
+    sheet: S6. POT1 variants
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: value
+      encoding: NCBIGene:25913
+      prioritize:
+      - Gene
+      taxon: 9606
+    object:
+      method: value
+      encoding: MONDO:0004952
+      prioritize:
+      - Disease
+  annotations:
+  - annotation: chr
+    method: column
+    encoding: A
+  - annotation: start
+    method: column
+    encoding: B
+  - annotation: end
+    method: column
+    encoding: C
+  - annotation: ref
+    method: column
+    encoding: D
+  - annotation: alt
+    method: column
+    encoding: E
+  - annotation: func refgene
+    method: column
+    encoding: F
+  - annotation: exonic func refgene
+    method: column
+    encoding: H
+  - annotation: refseq transcript
+    method: column
+    encoding: I
+  - annotation: coding change
+    method: column
+    encoding: K
+  - annotation: amino acid change
+    method: column
+    encoding: L
+  - annotation: cadd phred
+    method: column
+    encoding: M
+  - annotation: count
+    method: column
+    encoding: N
+  - annotation: variant type
+    method: column
+    encoding: R
+  - annotation: miscellaneous notes
+    method: value
+    encoding: POT1 long telomere syndrome; rare truncating/splicing variants from
+      UK Biobank
+- source:
+    sheet: S7. POT1 Heme Malignancy ICD10
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: value
+      encoding: NCBIGene:25913
+      prioritize:
+      - Gene
+      taxon: 9606
+    object:
+      method: column
+      encoding: C
+      prioritize:
+      - Disease
+  annotations:
+  - annotation: age at diagnosis
+    method: column
+    encoding: A
+  - annotation: malignancy type
+    method: column
+    encoding: B
+  - annotation: notes
+    method: column
+    encoding: D

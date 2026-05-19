@@ -1,0 +1,128 @@
+template:
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13140796_CDR-2026-4594769-s011.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13140796.1/CDR-2026-4594769-s011.xlsx
+    sheet: Sheet1
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: AB
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: related_to
+    object:
+      method: value
+      encoding: Coronary artery disease
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13140796
+    contributors:
+    - name: Skye Lane Goetz
+      kind: curation
+      date: 14 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      - CalPoly SLO
+      comment: "Configured for multi-omics mQTL\u2192eQTL SMR analysis of oxidative\
+        \ stress-related genes \u2192 CAD (UK Biobank replication)"
+    - name: tablassist
+      kind: tool
+      date: 14 MAY 2026
+  annotations:
+  - annotation: outco_gene
+    method: column
+    encoding: A
+  - annotation: expo_probeID
+    method: column
+    encoding: B
+  - annotation: expo_chr
+    method: column
+    encoding: C
+  - annotation: expo_gene
+    method: column
+    encoding: D
+  - annotation: expo_bp
+    method: column
+    encoding: E
+  - annotation: outco_id
+    method: column
+    encoding: F
+  - annotation: outco_chr
+    method: column
+    encoding: G
+  - annotation: outco_bp
+    method: column
+    encoding: H
+  - annotation: topSNP
+    method: column
+    encoding: I
+  - annotation: topsnp_chr
+    method: column
+    encoding: J
+  - annotation: topsnp_bp
+    method: column
+    encoding: K
+  - annotation: A1
+    method: column
+    encoding: L
+  - annotation: A2
+    method: column
+    encoding: M
+  - annotation: freq
+    method: column
+    encoding: N
+  - annotation: b_outco
+    method: column
+    encoding: O
+  - annotation: se_outco
+    method: column
+    encoding: P
+  - annotation: p_outco
+    method: column
+    encoding: Q
+  - annotation: b_expo
+    method: column
+    encoding: R
+  - annotation: se_expo
+    method: column
+    encoding: S
+  - annotation: p_expo
+    method: column
+    encoding: T
+  - annotation: b_SMR
+    method: column
+    encoding: U
+  - annotation: se_SMR
+    method: column
+    encoding: V
+  - annotation: p_SMR
+    method: column
+    encoding: W
+  - annotation: p_SMR_multi
+    method: column
+    encoding: X
+  - annotation: p_HEIDI
+    method: column
+    encoding: Y
+  - annotation: nsnp_HEIDI
+    method: column
+    encoding: Z
+  - annotation: closest_tss_gene
+    method: column
+    encoding: AA
+  - annotation: fdr_SMR
+    method: column
+    encoding: AC
+  - annotation: odds_ratio
+    method: column
+    encoding: AD
+  - annotation: CI_SMR
+    method: column
+    encoding: AE

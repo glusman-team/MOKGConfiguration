@@ -1,0 +1,32 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./.ledger/disease-proteomics/data/PMC12903537/raw/12933_2025_3049_MOESM2_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/12903537/bin/12933_2025_3049_MOESM2_ESM.xlsx
+    sheet: ST1
+    row_slice:
+      - 1
+      - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+        - Gene
+    predicate: associated_with
+    object:
+      method: column
+      encoding: B
+      taxon: 9606
+      prioritize:
+        - Protein
+  provenance:
+    repo: PMC
+    publication: PMC12903537
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026

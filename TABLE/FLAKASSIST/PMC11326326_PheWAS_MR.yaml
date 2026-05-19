@@ -1,0 +1,220 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC11326326_media-5.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11326326.1/media-5.xlsx
+    row_slice:
+    - 1
+    - auto
+  provenance:
+    repo: PMC
+    publication: PMC11326326
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+sections:
+- source:
+    sheet: BDT1-ContinuousPheWAS
+  statement:
+    subject:
+      method: column
+      encoding: A
+      regex:
+      - pattern: ^\\d+___(.+?)__\\d+_\\d+$
+        replacement: ''
+      prefix: UKB_
+      prioritize:
+      - PhenotypicFeature
+    predicate: related_to
+    object:
+      method: value
+      encoding: UK Biobank
+  annotations:
+  - annotation: OutcomeTrait
+    method: column
+    encoding: B
+  - annotation: N_With_Variable
+    method: column
+    encoding: C
+  - annotation: N_With_Trait
+    method: column
+    encoding: D
+  - annotation: N_Modeled
+    method: column
+    encoding: E
+  - annotation: Beta
+    method: column
+    encoding: F
+  - annotation: SE
+    method: column
+    encoding: G
+  - annotation: P
+    method: column
+    encoding: H
+  - annotation: WholeModelAdjR2
+    method: column
+    encoding: I
+  - annotation: fdr_pvalue
+    method: column
+    encoding: J
+- source:
+    sheet: BDT2-PrevalentDiseasePheWAS
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Disease
+    predicate: related_to
+    object:
+      method: value
+      encoding: UK Biobank
+  annotations:
+  - annotation: N
+    method: column
+    encoding: B
+  - annotation: N_Disease
+    method: column
+    encoding: C
+  - annotation: Beta
+    method: column
+    encoding: D
+  - annotation: SE
+    method: column
+    encoding: E
+  - annotation: P
+    method: column
+    encoding: F
+  - annotation: P_mantissa
+    method: column
+    encoding: G
+  - annotation: P_exponent
+    method: column
+    encoding: H
+  - annotation: P_log10
+    method: column
+    encoding: I
+  - annotation: fdr_pvalue
+    method: column
+    encoding: J
+- source:
+    sheet: BDT3-IncidentDiseasePheWAS
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Disease
+    predicate: related_to
+    object:
+      method: column
+      encoding: B
+      prioritize:
+      - Disease
+      suffix: _incident
+  annotations:
+  - annotation: N
+    method: column
+    encoding: C
+  - annotation: N_Event
+    method: column
+    encoding: D
+  - annotation: MeanSurv
+    method: column
+    encoding: E
+  - annotation: Independent_Var
+    method: column
+    encoding: F
+  - annotation: Beta
+    method: column
+    encoding: G
+  - annotation: SE
+    method: column
+    encoding: H
+  - annotation: P
+    method: column
+    encoding: I
+  - annotation: HR
+    method: column
+    encoding: J
+  - annotation: fdr_pvalue
+    method: column
+    encoding: K
+- source:
+    sheet: BDT4-SerumProteinMR
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+    predicate: related_to
+    object:
+      method: value
+      encoding: UK Biobank
+  annotations:
+  - annotation: id.exposure
+    method: column
+    encoding: B
+  - annotation: id.outcome
+    method: column
+    encoding: C
+  - annotation: outcome
+    method: column
+    encoding: D
+  - annotation: method
+    method: column
+    encoding: E
+  - annotation: nsnp
+    method: column
+    encoding: F
+  - annotation: b
+    method: column
+    encoding: G
+  - annotation: se
+    method: column
+    encoding: H
+  - annotation: pval
+    method: column
+    encoding: I
+  - annotation: fdr_pvalue
+    method: column
+    encoding: J
+- source:
+    sheet: BDT5-MRnonProteome
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prefix: UKB_
+      prioritize:
+      - EnvironmentalExposure
+    predicate: related_to
+    object:
+      method: value
+      encoding: UK Biobank
+  annotations:
+  - annotation: method
+    method: column
+    encoding: B
+  - annotation: nsnp
+    method: column
+    encoding: C
+  - annotation: b
+    method: column
+    encoding: D
+  - annotation: se
+    method: column
+    encoding: E
+  - annotation: pval
+    method: column
+    encoding: F
+  - annotation: fdr_pvalue
+    method: column
+    encoding: G

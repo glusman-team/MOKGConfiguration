@@ -1,0 +1,72 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC10684593_41467_2023_43282_MOESM9_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10684593/
+    sheet: Sheet1
+    row_slice:
+    - 2
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      regex:
+      - pattern: ^\s*(.*?)\s*$
+        replacement: $1
+      taxon: 9606
+      prioritize:
+      - Gene
+      - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0005140
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC10684593
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: overall survival HR
+    method: column
+    encoding: B
+  - annotation: overall survival lower 95%CI
+    method: column
+    encoding: C
+  - annotation: overall survival upper 95%CI
+    method: column
+    encoding: D
+  - annotation: overall survival P-value
+    method: column
+    encoding: E
+  - annotation: overall survival adj.P-value
+    method: column
+    encoding: F
+  - annotation: overall survival P-value(adjusting for age and stage)
+    method: column
+    encoding: G
+  - annotation: relapse-free survival HR
+    method: column
+    encoding: I
+  - annotation: relapse-free survival lower 95%CI
+    method: column
+    encoding: J
+  - annotation: relapse-free survival upper 95%CI
+    method: column
+    encoding: K
+  - annotation: relapse-free survival P-value
+    method: column
+    encoding: L
+  - annotation: relapse-free survival adj.P-value
+    method: column
+    encoding: M
+  - annotation: relapse-free survival P-value(adjusting for age and stage)
+    method: column
+    encoding: N

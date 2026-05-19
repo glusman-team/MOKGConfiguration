@@ -1,0 +1,128 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13149156_Table1.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13149156.1/Table1.xlsx
+    row_slice:
+    - 1
+    - auto
+  statement:
+    predicate: related_to
+    object:
+      method: value
+      encoding: gestational diabetes mellitus
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC13149156
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+sections:
+- source:
+    sheet: ST 5.GDM_6methods
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+  annotations:
+  - annotation: gcta_gene
+    method: column
+    encoding: B
+  - annotation: fuma_gene
+    method: column
+    encoding: C
+  - annotation: pops_gene
+    method: column
+    encoding: D
+  - annotation: nearest_gene
+    method: column
+    encoding: E
+  - annotation: method
+    method: value
+    encoding: FUSION
+- source:
+    sheet: ST 5.GDM_6methods
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+      - Gene
+      taxon: 9606
+  annotations:
+  - annotation: fusion_gene
+    method: column
+    encoding: A
+  - annotation: fuma_gene
+    method: column
+    encoding: C
+  - annotation: pops_gene
+    method: column
+    encoding: D
+  - annotation: nearest_gene
+    method: column
+    encoding: E
+  - annotation: method
+    method: value
+    encoding: GCTA
+- source:
+    sheet: ST 5.GDM_6methods
+  statement:
+    subject:
+      method: column
+      encoding: C
+      prioritize:
+      - Gene
+      taxon: 9606
+  annotations:
+  - annotation: fusion_gene
+    method: column
+    encoding: A
+  - annotation: gcta_gene
+    method: column
+    encoding: B
+  - annotation: pops_gene
+    method: column
+    encoding: D
+  - annotation: nearest_gene
+    method: column
+    encoding: E
+  - annotation: method
+    method: value
+    encoding: FUMA
+- source:
+    sheet: ST 5.GDM_6methods
+  statement:
+    subject:
+      method: column
+      encoding: D
+      prioritize:
+      - Gene
+      taxon: 9606
+  annotations:
+  - annotation: fusion_gene
+    method: column
+    encoding: A
+  - annotation: gcta_gene
+    method: column
+    encoding: B
+  - annotation: fuma_gene
+    method: column
+    encoding: C
+  - annotation: nearest_gene
+    method: column
+    encoding: E
+  - annotation: method
+    method: value
+    encoding: POPS

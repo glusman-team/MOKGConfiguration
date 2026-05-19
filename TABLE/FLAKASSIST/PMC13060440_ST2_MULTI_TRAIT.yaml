@@ -1,0 +1,60 @@
+template:
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13060440_media-3.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13060440.1/media-3.xlsx
+    sheet: ST2
+    row_slice: [2, auto]
+  provenance:
+    repo: PMC
+    publication: PMC13060440
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
+
+sections:
+  - statement:
+      subject:
+        method: column
+        encoding: A
+        prefix: "RS:"
+      predicate: related_to
+      object:
+        method: value
+        encoding: insulin resistance
+      qualifiers:
+        - qualifier: context_qualifier
+          method: column
+          encoding: H
+    annotations:
+      - annotation: fiadj_bmi_beta
+        method: column
+        encoding: S
+      - annotation: fiadj_bmi_se
+        method: column
+        encoding: T
+      - annotation: fiadj_bmi_p_value
+        method: column
+        encoding: U
+      - annotation: hdl_beta
+        method: column
+        encoding: W
+      - annotation: hdl_p_value
+        method: column
+        encoding: Y
+      - annotation: tg_beta
+        method: column
+        encoding: AA
+      - annotation: tg_p_value
+        method: column
+        encoding: AC
+      - annotation: tghdl_beta
+        method: column
+        encoding: AE
+      - annotation: tghdl_p_value
+        method: column
+        encoding: AG

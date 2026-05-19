@@ -1,0 +1,60 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12970359_media-3.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12970359.1/media-3.xlsx
+    sheet: data
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0016033
+  provenance:
+    repo: PMC
+    publication: PMC12970359
+    contributors:
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      comment: WAPL/PDS5A/PDS5B rare variant association in neurodevelopmental cohorts
+  annotations:
+  - annotation: gene id
+    method: column
+    encoding: B
+  - annotation: cohort
+    method: column
+    encoding: C
+  - annotation: or
+    method: column
+    encoding: D
+  - annotation: p value
+    method: column
+    encoding: E
+  - annotation: fdr
+    method: column
+    encoding: F
+  - annotation: case count
+    method: column
+    encoding: G
+  - annotation: control count
+    method: column
+    encoding: H
+  - annotation: case variant count
+    method: column
+    encoding: I
+  - annotation: control variant count
+    method: column
+    encoding: J

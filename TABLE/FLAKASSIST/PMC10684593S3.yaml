@@ -1,0 +1,57 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC10684593_41467_2023_43282_MOESM6_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10684593/
+    sheet: Sheet1
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      regex:
+      - pattern: ^\s*(.*?)\s*$
+        replacement: $1
+      taxon: 9606
+      prioritize:
+      - Gene
+      - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0005140
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC10684593
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: Protein
+    method: column
+    encoding: B
+  - annotation: log2(FC)
+    method: column
+    encoding: C
+  - annotation: P-value
+    method: column
+    encoding: D
+  - annotation: adj.P-value(BH)
+    method: column
+    encoding: E
+  - annotation: P-value(adjusting for age)
+    method: column
+    encoding: F
+  - annotation: adj.P-value(adjusting for age and BH)
+    method: column
+    encoding: G
+  - annotation: Regulation
+    method: column
+    encoding: H

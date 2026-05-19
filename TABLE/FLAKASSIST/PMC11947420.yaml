@@ -1,0 +1,57 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC11947420_mmc2.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11947420.1/mmc2.xlsx
+    sheet: Table_S7
+    row_slice:
+    - 2
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: H
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0005258
+      prioritize:
+      - Disease
+  provenance:
+    repo: PMC
+    publication: PMC11947420
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+      comment: Tablassist Pipeline
+  annotations:
+  - annotation: Cohort
+    method: column
+    encoding: A
+  - annotation: Sample
+    method: column
+    encoding: B
+  - annotation: Chr
+    method: column
+    encoding: C
+  - annotation: Pos
+    method: column
+    encoding: D
+  - annotation: Ref
+    method: column
+    encoding: E
+  - annotation: Alt
+    method: column
+    encoding: F
+  - annotation: Gene
+    method: column
+    encoding: G
+  - annotation: CSQ
+    method: column
+    encoding: I

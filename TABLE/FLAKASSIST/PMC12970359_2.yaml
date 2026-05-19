@@ -1,0 +1,89 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12970359_media-5.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12970359.1/media-5.xlsx
+  statement:
+    subject:
+      method: value
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0016033
+  provenance:
+    repo: PMC
+    publication: PMC12970359
+    contributors:
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      comment: WAPL/PDS5A/PDS5B rare variant association in neurodevelopmental cohorts
+  annotations:
+  - annotation: case number
+    method: column
+    encoding: A
+  - annotation: variant hg38
+    method: column
+    encoding: B
+  - annotation: transcript effect
+    method: column
+    encoding: C
+  - annotation: protein effect
+    method: column
+    encoding: D
+  - annotation: exon
+    method: column
+    encoding: E
+  - annotation: variant category
+    method: column
+    encoding: F
+  - annotation: inheritance
+    method: column
+    encoding: G
+  - annotation: zygosity
+    method: column
+    encoding: H
+  - annotation: detection method
+    method: column
+    encoding: I
+  - annotation: in silico scores
+    method: column
+    encoding: J
+  - annotation: gnomad freq
+    method: column
+    encoding: K
+  - annotation: other variants
+    method: column
+    encoding: L
+sections:
+- source:
+    sheet: WAPL cases
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      encoding: WAPL
+- source:
+    sheet: PDS5A cases
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      encoding: PDS5A
+- source:
+    sheet: PDS5B cases
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      encoding: PDS5B

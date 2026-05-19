@@ -1,0 +1,45 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13124883_11306_2026_2440_MOESM2_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13124883.1/11306_2026_2440_MOESM2_ESM.xlsx
+    sheet: Table S1
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - SmallMolecule
+      - ChemicalEntity
+      taxon: 9606
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0015925
+  provenance:
+    repo: PMC
+    publication: PMC13124883
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+      comment: Initial config auto-generated from delegated summary for ILDMDB metabolite-disease
+        associations
+  annotations:
+  - annotation: matched_name
+    method: column
+    encoding: B
+  - annotation: HMDB_ID
+    method: column
+    encoding: C
+  - annotation: PubChem_ID
+    method: column
+    encoding: D
+  - annotation: KEGG_ID
+    method: column
+    encoding: E

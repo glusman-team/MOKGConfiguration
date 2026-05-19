@@ -1,0 +1,93 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13172311_41467_2026_73121_MOESM6_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13172311.1/41467_2026_73121_MOESM6_ESM.xlsx
+    sheet: vU1-3KO_vs_WT.dpsi0.1.sig
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: has_sequence_variant
+    object:
+      method: column
+      encoding: D
+      taxon: 9606
+      prioritize:
+      - SequenceVariant
+  annotations:
+  - annotation: strand
+    method: column
+    encoding: E
+  - annotation: psi condition A
+    method: column
+    encoding: G
+  - annotation: psi condition B
+    method: column
+    encoding: H
+  - annotation: delta psi
+    method: column
+    encoding: I
+  - annotation: event probability
+    method: column
+    encoding: J
+  - annotation: complexity
+    method: column
+    encoding: K
+  - annotation: entropy
+    method: column
+    encoding: L
+  provenance:
+    repo: PMC
+    publication: PMC13172311
+    contributors:
+    - kind: curation
+      name: Tablassist
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+sections:
+- source:
+    sheet: vU1-8KO_vs_WT.dpsi0.1.sig
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: has_sequence_variant
+    object:
+      method: column
+      encoding: D
+      taxon: 9606
+      prioritize:
+      - SequenceVariant
+  annotations:
+  - annotation: strand
+    method: column
+    encoding: E
+  - annotation: psi condition A
+    method: column
+    encoding: G
+  - annotation: psi condition B
+    method: column
+    encoding: H
+  - annotation: delta psi
+    method: column
+    encoding: I
+  - annotation: event probability
+    method: column
+    encoding: J
+  - annotation: complexity
+    method: column
+    encoding: K
+  - annotation: entropy
+    method: column
+    encoding: L

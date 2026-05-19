@@ -1,0 +1,50 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC9903693_mmc9.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9903693.1/mmc9.xlsx
+    sheet: Supplementary Table 8
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: column
+      encoding: A
+      prioritize:
+      - Disease
+    qualifiers:
+    - qualifier: species_context_qualifier
+      method: value
+      encoding: NCBITaxon:9606
+  provenance:
+    repo: PMC
+    publication: PMC9903693
+    contributors:
+    - kind: curation
+      name: Tablassist Pioneer
+      date: 12 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026
+  annotations:
+  - annotation: prioritization approaches
+    method: column
+    encoding: C
+  - annotation: colocalization
+    method: column
+    encoding: F
+  - annotation: miscellaneous notes
+    method: value
+    encoding: 'Disease-gene pairs prioritized by multiple approaches: Omnibus gene
+      prioritization, Mendelian randomization (MR), and negative correlation (NC)
+      tests. Colocalization evidence indicated where available.'

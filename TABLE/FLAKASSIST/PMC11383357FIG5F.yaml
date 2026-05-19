@@ -1,0 +1,54 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC11383357_jciinsight-9-176383-s090.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11383357/
+    sheet: Fig5 F
+    row_slice:
+    - 3
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      regex:
+      - pattern: ^\s*(.*?)\s*$
+        replacement: $1
+      taxon: 10090
+      prioritize:
+      - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: MONDO:0010735
+      prioritize:
+      - Disease
+    qualifiers: []
+  provenance:
+    repo: PMC
+    publication: PMC11383357
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 13 MAY 2026
+  annotations:
+  - annotation: Hazard.Ratio
+    method: column
+    encoding: B
+  - annotation: Beta
+    method: column
+    encoding: C
+  - annotation: se
+    method: column
+    encoding: D
+  - annotation: Z
+    method: column
+    encoding: E
+  - annotation: P
+    method: column
+    encoding: F
+  - annotation: P.model.violation
+    method: column
+    encoding: G

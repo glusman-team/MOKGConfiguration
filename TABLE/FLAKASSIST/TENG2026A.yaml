@@ -1,0 +1,51 @@
+template:
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12906585_122_2026_5178_MOESM1_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12906585.1/122_2026_5178_MOESM1_ESM.xlsx
+    sheet: Map
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      regex:
+      - pattern: ^Bin$
+        replacement: Bin
+      prioritize:
+      - Gene
+      taxon: 4530
+    predicate: located_in
+    object:
+      method: column
+      encoding: B
+      prioritize:
+      - PhysicalEntity
+      taxon: 4530
+  provenance:
+    repo: PMC
+    publication: PMC12906585
+    contributors:
+    - name: Skye Lane Goetz
+      kind: curation
+      date: 14 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      - CalPoly SLO
+      comment: Configured for rice chromosome map (1696 bins across 12 chromosomes)
+        from recombination fraction estimation study
+    - name: tablassist
+      kind: tool
+      date: 14 MAY 2026
+  annotations:
+  - annotation: start_bp
+    method: column
+    encoding: C
+  - annotation: end_bp
+    method: column
+    encoding: D
+  - annotation: length_bp
+    method: column
+    encoding: E

@@ -1,0 +1,51 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12465049_mmc5.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12465049/
+    sheet: Supplementary file 3
+  statement:
+    subject:
+      method: value
+      encoding: phosphoprotein feature
+      taxon: 9606
+      prioritize:
+      - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: OncoProExp phosphoproteome matrix
+  provenance:
+    repo: PMC
+    publication: PMC12465049
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026
+sections:
+- statement:
+    subject:
+      encoding: AK1
+- statement:
+    subject:
+      encoding: APOA2
+- statement:
+    subject:
+      encoding: CD34
+- statement:
+    subject:
+      encoding: EHD2
+- statement:
+    subject:
+      encoding: GPRC5A
+- statement:
+    subject:
+      encoding: KRT5
+- statement:
+    subject:
+      encoding: NCAM1
+- statement:
+    subject:
+      encoding: STOM

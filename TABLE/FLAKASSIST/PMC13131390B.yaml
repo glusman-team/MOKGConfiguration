@@ -1,0 +1,34 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13131390_mmc2.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13131390/
+    sheet: eTable4
+    row_slice: [1, auto]
+  statement:
+    subject:
+      method: column
+      encoding: A
+      taxon: 9606
+      prioritize:
+        - Protein
+    predicate: associated_with
+    object:
+      method: value
+      encoding: type 2 diabetes status
+  provenance:
+    repo: PMC
+    publication: PMC13131390
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
+  annotations:
+    - annotation: Wilcox.P
+      method: column
+      encoding: B
+    - annotation: Wilcox.Padj
+      method: column
+      encoding: C

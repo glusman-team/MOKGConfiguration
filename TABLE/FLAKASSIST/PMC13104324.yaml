@@ -1,0 +1,51 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13104324_40168_2026_2373_MOESM5_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13104324.1/40168_2026_2373_MOESM5_ESM.xlsx
+    sheet: "Data S1"
+    row_slice: [2, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: D
+      regex:
+        - pattern: "^[a-z]__"
+          replacement: ""
+      prioritize:
+        - OrganismTaxon
+    predicate: associated_with
+    object:
+      method: value
+      encoding: endometrial cancer
+      prioritize:
+        - Disease
+
+  provenance:
+    repo: PMC
+    publication: PMC13104324
+    contributors:
+      - kind: tool
+        name: tablassist
+        date: "2026-05-13"
+
+  annotations:
+    - annotation: p value
+      method: column
+      encoding: G
+    - annotation: adjusted p value
+      method: column
+      encoding: H
+    - annotation: effect size
+      method: column
+      encoding: F
+    - annotation: clinical context
+      method: column
+      encoding: E
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "MaAsLin2 differential abundance testing of 46 bacteria across clinical parameters in endometrial cancer patients"

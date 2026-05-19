@@ -1,0 +1,54 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12521215_Table4.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12521215/
+    sheet: DZ_GX_NX_MIX_diff
+  statement:
+    subject:
+      method: column
+      encoding: AN
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: associated_with
+    object:
+      method: value
+      encoding: Wilson's disease
+  provenance:
+    repo: PMC
+    publication: PMC12521215
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026
+  annotations:
+  - annotation: fold change DZ GX
+    method: column
+    encoding: AE
+  - annotation: p value DZ GX
+    method: column
+    encoding: AF
+  - annotation: regulated DZ GX
+    method: column
+    encoding: AG
+  - annotation: fold change DZ NX
+    method: column
+    encoding: AH
+  - annotation: p value DZ NX
+    method: column
+    encoding: AI
+  - annotation: regulated DZ NX
+    method: column
+    encoding: AJ
+  - annotation: fold change DZ MIX
+    method: column
+    encoding: AK
+  - annotation: p value DZ MIX
+    method: column
+    encoding: AL
+  - annotation: regulated DZ MIX
+    method: column
+    encoding: AM

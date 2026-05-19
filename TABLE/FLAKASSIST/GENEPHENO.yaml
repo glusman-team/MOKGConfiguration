@@ -1,0 +1,41 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13083238_41588_2026_2553_MOESM4_ESM.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13083238/
+    sheet: ST11
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: column
+      encoding: E
+      prioritize:
+      - PhenotypicFeature
+  provenance:
+    repo: PMC
+    publication: PMC13083238
+    contributors:
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026
+  annotations:
+  - annotation: novel narrow
+    method: column
+    encoding: AE
+  - annotation: novel broad
+    method: column
+    encoding: AF
+  - annotation: sv msc
+    method: column
+    encoding: N

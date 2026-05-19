@@ -1,0 +1,112 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13151332_13073_2026_1629_MOESM2_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13151332.1/13073_2026_1629_MOESM2_ESM.xlsx
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: related_to
+    object:
+      method: column
+      encoding: F
+      prioritize:
+      - DiseaseOrPhenotypicFeature
+  provenance:
+    repo: PMC
+    publication: PMC13151332
+    contributors:
+    - name: Skye Lane Goetz
+      kind: curation
+      date: 14 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+      - CalPoly SLO
+    - name: tablassist
+      kind: tool
+      date: 14 MAY 2026
+  annotations:
+  - annotation: trait_file
+    method: column
+    encoding: A
+  - annotation: ensembl_gene_id
+    method: column
+    encoding: B
+  - annotation: gene
+    method: column
+    encoding: C
+  - annotation: pval
+    method: column
+    encoding: D
+  - annotation: bonferroni_pval
+    method: column
+    encoding: E
+  - annotation: trait
+    method: column
+    encoding: F
+  - annotation: broad_category
+    method: column
+    encoding: G
+sections:
+- source:
+    sheet: Table S6.1 (AA)
+  statement:
+    subject:
+      encoding: B
+    object:
+      encoding: F
+- source:
+    sheet: Table S6.2 (EA)
+  statement:
+    subject:
+      encoding: B
+    object:
+      encoding: F
+- source:
+    sheet: Table S7
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    object:
+      method: column
+      encoding: G
+      prioritize:
+      - DiseaseOrPhenotypicFeature
+  annotations:
+  - annotation: ensembl_gene_id
+    method: column
+    encoding: A
+  - annotation: gene
+    method: column
+    encoding: B
+  - annotation: pval_aa
+    method: column
+    encoding: C
+  - annotation: bonferroni_pval_aa
+    method: column
+    encoding: D
+  - annotation: pval_ea
+    method: column
+    encoding: E
+  - annotation: bonferroni_pval_ea
+    method: column
+    encoding: F
+  - annotation: trait
+    method: column
+    encoding: G
+  - annotation: broad_category
+    method: column
+    encoding: H

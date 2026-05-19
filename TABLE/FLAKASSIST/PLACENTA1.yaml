@@ -1,0 +1,65 @@
+template:
+  syntax: TC3
+  status: alpha
+
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC13124936_Table1.xlsx
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13124936/
+    sheet: Sheet1
+    row_slice: [1, auto]
+
+  statement:
+    subject:
+      method: column
+      encoding: D
+      taxon: 9606
+      prioritize:
+        - Gene
+      explode_by: "\u2013"
+      remove:
+        - "^NA$"
+        - "^Intergenic"
+        - "^\\d+q\\d+"
+        - "^8p\\d+"
+      regex:
+        - pattern: "\\s*\\(.*\\)$"
+          replacement: ""
+    predicate: associated_with
+    object:
+      method: column
+      encoding: C
+      prioritize:
+        - DiseaseOrPhenotypicFeature
+
+  provenance:
+    repo: PMC
+    publication: PMC13124936
+    contributors:
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
+
+  annotations:
+    - annotation: p value
+      method: column
+      encoding: G
+
+    - annotation: lead variant
+      method: column
+      encoding: E
+
+    - annotation: effect size
+      method: column
+      encoding: F
+
+    - annotation: source publication
+      method: column
+      encoding: A
+
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "GWAS catalog of placental biology and pregnancy complications; gene symbols represent nearest gene to lead locus; entries with / delimiter (e.g. FGF9/MICU9, NAV2/E2F8) are not split by explode_by"

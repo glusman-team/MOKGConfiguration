@@ -1,0 +1,131 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC12570777_40035_2025_516_MOESM4_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12570777.1/40035_2025_516_MOESM4_ESM.xlsx
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: B
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+  provenance:
+    repo: PMC
+    publication: PMC12570777
+    contributors:
+    - kind: curation
+      name: Tablassert Pipeline
+      date: 12 MAY 2026
+      organizations:
+      - Institute for Systems Biology
+sections:
+- statement:
+    object:
+      encoding: MONDO:0004976
+  source:
+    sheet: S3a fALS
+  annotations:
+  - annotation: p value
+    method: column
+    encoding: C
+  - annotation: odds ratio
+    method: column
+    encoding: D
+- statement:
+    object:
+      encoding: MONDO:0004976
+  source:
+    sheet: S3b sALS
+  annotations:
+  - annotation: p value
+    method: column
+    encoding: C
+  - annotation: odds ratio
+    method: column
+    encoding: D
+- statement:
+    object:
+      encoding: MONDO:0019064
+  source:
+    sheet: S3c fHSP
+  annotations:
+  - annotation: p value
+    method: column
+    encoding: C
+  - annotation: odds ratio
+    method: column
+    encoding: D
+- statement:
+    object:
+      encoding: MONDO:0019064
+  source:
+    sheet: S3d sHSP
+  annotations:
+  - annotation: p value
+    method: column
+    encoding: C
+  - annotation: odds ratio
+    method: column
+    encoding: D
+- statement:
+    subject:
+      encoding: A
+    object:
+      encoding: MONDO:0004976
+  source:
+    sheet: S3e_AnswerALS
+  annotations:
+  - annotation: p value
+    method: column
+    encoding: B
+  - annotation: odds ratio
+    method: column
+    encoding: C
+- statement:
+    subject:
+      encoding: A
+    object:
+      encoding: MONDO:0004976
+  source:
+    sheet: S3f_PGB+AnswerALS
+  annotations:
+  - annotation: p value
+    method: column
+    encoding: B
+  - annotation: odds ratio
+    method: column
+    encoding: C
+- statement:
+    subject:
+      encoding: B
+    object:
+      encoding: MONDO:0004976
+  source:
+    sheet: S3g_ALSdb_NFE
+  annotations:
+  - annotation: p value
+    method: column
+    encoding: C
+  - annotation: odds ratio
+    method: column
+    encoding: D
+- statement:
+    subject:
+      encoding: A
+    object:
+      encoding: MONDO:0004976
+  source:
+    sheet: S3h_ALSdb+ProjectMine
+  annotations:
+  - annotation: p value
+    method: column
+    encoding: F

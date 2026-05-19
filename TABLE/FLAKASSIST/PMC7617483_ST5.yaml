@@ -1,0 +1,49 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC7617483_S0033291724003349sup001.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7617483.3/S0033291724003349sup001.xlsx
+    sheet: ST5
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - PhenotypicFeature
+      taxon: 9606
+    predicate: related_to
+    object:
+      method: value
+      encoding: Mendelian randomization study
+  provenance:
+    repo: PMC
+    publication: PMC7617483
+    contributors:
+    - kind: curation
+      name: Skye Lane Goetz
+      comment: GWAS overview - diet/physical activity/depression/anxiety (8 GWAS datasets)
+      date: 15 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 15 MAY 2026
+  annotations:
+  - annotation: author
+    method: column
+    encoding: B
+  - annotation: sample_source
+    method: column
+    encoding: C
+  - annotation: gwas_sample_size
+    method: column
+    encoding: D
+  - annotation: phenotype_definition
+    method: column
+    encoding: E
+  - annotation: data_access_url
+    method: column
+    encoding: F

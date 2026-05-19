@@ -1,0 +1,88 @@
+template:
+  syntax: TC3
+  status: alpha
+  source:
+    kind: excel
+    local: ./DATALAKE/PMC5502059_439_2017_1821_MOESM1_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5502059.1/439_2017_1821_MOESM1_ESM.xlsx
+    sheet: Sheet2
+    row_slice:
+    - 1
+    - auto
+  statement:
+    subject:
+      method: column
+      encoding: J
+      explode_by: ;
+      regex:
+      - pattern: :.*$
+        replacement: ''
+      taxon: 9606
+      prioritize:
+      - Gene
+    predicate: gene_associated_with_condition
+    object:
+      method: value
+      encoding: MONDO:0003847
+      prioritize:
+      - Disease
+    qualifiers:
+    - qualifier: species_context_qualifier
+      method: value
+      encoding: NCBITaxon:9606
+  provenance:
+    repo: PMC
+    publication: PMC5502059
+    contributors:
+    - kind: curation
+      name: Tablassist Pioneer
+      date: 12 MAY 2026
+    - kind: tool
+      name: tablassist
+      date: 12 MAY 2026
+  annotations:
+  - annotation: patient_id
+    method: column
+    encoding: A
+  - annotation: testing_strategy
+    method: column
+    encoding: B
+  - annotation: gender
+    method: column
+    encoding: C
+  - annotation: age
+    method: column
+    encoding: D
+  - annotation: consanguinity
+    method: column
+    encoding: E
+  - annotation: family_history
+    method: column
+    encoding: F
+  - annotation: phenotype
+    method: column
+    encoding: G
+  - annotation: test
+    method: column
+    encoding: H
+  - annotation: result
+    method: column
+    encoding: I
+  - annotation: variant_raw
+    method: column
+    encoding: J
+    explode_by: ;
+  - annotation: zygosity
+    method: column
+    encoding: L
+  - annotation: hgmd
+    method: column
+    encoding: M
+  - annotation: miscellaneous_notes
+    method: value
+    encoding: 'Gene-disease associations from the first 1000 diagnostic NGS tests
+      (672 panels + 347 WES) at the Saudi reference lab (King Faisal Specialist Hospital).
+      34% diagnostic yield across 279 genes, 165 novel variants. Highly consanguineous
+      population with predominantly recessive, homozygous mutations. Variant format:
+      GENE:NM_TRANSCRIPT:exon:cDNA:protein. Compound heterozygous variants separated
+      by semicolons in the source are exploded into individual gene-disease edges.'
