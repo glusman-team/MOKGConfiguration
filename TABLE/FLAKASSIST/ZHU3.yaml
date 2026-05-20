@@ -1,125 +1,93 @@
 template:
+  syntax: TC3
+  status: alpha
   source:
-    local: ./DATALAKE/PMC13160723_Table_1.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13160723.1/Table_1.xlsx
-    row_slice:
-    - 1
-    - auto
-sections:
-- source:
-    sheet: Table S4
+    kind: excel
+    local: ./DATALAKE/PMC13172311_41467_2026_73121_MOESM6_ESM.xlsx
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13172311.1/41467_2026_73121_MOESM6_ESM.xlsx
+    sheet: vU1-3KO_vs_WT.dpsi0.1.sig
   statement:
     subject:
       method: column
       encoding: A
-      taxon: 9606
       prioritize:
       - Gene
-    predicate: related_to
+      taxon: 9606
+    predicate: has_sequence_variant
     object:
       method: column
-      encoding: B
+      encoding: D
+      taxon: 9606
       prioritize:
-      - Disease
+      - SequenceVariant
   annotations:
-  - annotation: ivw_or
-    method: column
-    encoding: C
-  - annotation: ivw_b
-    method: column
-    encoding: D
-  - annotation: ivw_se
+  - annotation: strand
     method: column
     encoding: E
-  - annotation: ivw_ci
-    method: column
-    encoding: F
-  - annotation: ivw_pval
+  - annotation: psi condition A
     method: column
     encoding: G
-  - annotation: ivw_qval
+  - annotation: psi condition B
     method: column
     encoding: H
-  - annotation: ivw_qstat
+  - annotation: delta psi
     method: column
     encoding: I
-  - annotation: egger_intercept
+  - annotation: event probability
     method: column
     encoding: J
-  - annotation: mregger_or
+  - annotation: complexity
     method: column
     encoding: K
-  - annotation: mregger_b
+  - annotation: entropy
     method: column
     encoding: L
-  - annotation: mregger_se
-    method: column
-    encoding: M
-  - annotation: mregger_ci
-    method: column
-    encoding: N
-  - annotation: mregger_pval
-    method: column
-    encoding: O
-  - annotation: mregger_qval
-    method: column
-    encoding: P
-  - annotation: mregger_intercept
-    method: column
-    encoding: Q
-  - annotation: mregger_pval_intercept
-    method: column
-    encoding: R
-  - annotation: wmedian_or
-    method: column
-    encoding: S
-  - annotation: wmedian_b
-    method: column
-    encoding: T
-  - annotation: wmedian_se
-    method: column
-    encoding: U
-  - annotation: wmedian_ci
-    method: column
-    encoding: V
-  - annotation: wmedian_pval
-    method: column
-    encoding: W
-  - annotation: wmedian_qval
-    method: column
-    encoding: X
-  - annotation: wald_nsnp
-    method: column
-    encoding: Y
-  - annotation: wald_b
-    method: column
-    encoding: Z
-  - annotation: wald_se
-    method: column
-    encoding: AA
-  - annotation: wald_pval
-    method: column
-    encoding: AB
-  - annotation: wald_or
-    method: column
-    encoding: AC
-  - annotation: wald_or_lci95
-    method: column
-    encoding: AD
-  - annotation: wald_or_uci95
-    method: column
-    encoding: AE
-  - annotation: wald_qstat
-    method: column
-    encoding: AF
   provenance:
     repo: PMC
-    publication: PMC13160723
+    publication: PMC13172311
     contributors:
     - kind: curation
-      name: Skye Lane Goetz
+      name: Tablassist
       date: 15 MAY 2026
     - kind: tool
       name: tablassist
       date: 15 MAY 2026
-      comment: Config auto-generated for Table S4 (TET2-CHIP vs 20 CVD outcomes)
+sections:
+- source:
+    sheet: vU1-8KO_vs_WT.dpsi0.1.sig
+  statement:
+    subject:
+      method: column
+      encoding: A
+      prioritize:
+      - Gene
+      taxon: 9606
+    predicate: has_sequence_variant
+    object:
+      method: column
+      encoding: D
+      taxon: 9606
+      prioritize:
+      - SequenceVariant
+  annotations:
+  - annotation: strand
+    method: column
+    encoding: E
+  - annotation: psi condition A
+    method: column
+    encoding: G
+  - annotation: psi condition B
+    method: column
+    encoding: H
+  - annotation: delta psi
+    method: column
+    encoding: I
+  - annotation: event probability
+    method: column
+    encoding: J
+  - annotation: complexity
+    method: column
+    encoding: K
+  - annotation: entropy
+    method: column
+    encoding: L

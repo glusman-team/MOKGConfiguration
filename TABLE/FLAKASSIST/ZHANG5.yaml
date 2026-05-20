@@ -1,8 +1,10 @@
 template:
+  syntax: TC3
+  status: alpha
   source:
     kind: excel
-    local: ./DATALAKE/PMC13140796_CDR-2026-4594769-s012.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13140796.1/CDR-2026-4594769-s012.xlsx
+    local: ./DATALAKE/PMC9043847_Table3.XLSX
+    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9043847.1/Table3.XLSX
     sheet: Sheet1
     row_slice:
     - 1
@@ -14,97 +16,26 @@ template:
       prioritize:
       - Gene
       taxon: 9606
-    predicate: related_to
+    predicate: gene_associated_with_condition
     object:
       method: value
-      encoding: Coronary artery disease
+      encoding: MONDO:0004983
       prioritize:
       - Disease
   provenance:
     repo: PMC
-    publication: PMC13140796
+    publication: PMC9043847
     contributors:
-    - name: Skye Lane Goetz
-      kind: curation
-      date: 14 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      - CalPoly SLO
-      comment: "Configured for MR instrumental variable details for 5 key genes \u2192\
-        \ CAD meta-cohort (204 IVs)"
-    - name: tablassist
-      kind: tool
-      date: 14 MAY 2026
+    - kind: curation
+      name: Tablassist Pipeline
+      date: 13 MAY 2026
   annotations:
-  - annotation: sample_size_exposure
+  - annotation: p value
     method: column
     encoding: B
-  - annotation: outcome
+  - annotation: normalized expression testis
     method: column
     encoding: C
-  - annotation: sample_size_outcome
+  - annotation: odds ratio
     method: column
     encoding: D
-  - annotation: effect_allele
-    method: column
-    encoding: F
-  - annotation: other_allele
-    method: column
-    encoding: G
-  - annotation: effect_allele_freq
-    method: column
-    encoding: H
-  - annotation: beta_exposure
-    method: column
-    encoding: I
-  - annotation: se_exposure
-    method: column
-    encoding: J
-  - annotation: p_value_exposure
-    method: column
-    encoding: K
-  - annotation: R2
-    method: column
-    encoding: L
-  - annotation: F_statistic
-    method: column
-    encoding: M
-  - annotation: beta_outcome
-    method: column
-    encoding: N
-  - annotation: se_outcome
-    method: column
-    encoding: O
-  - annotation: steiger_R2_exposure
-    method: column
-    encoding: P
-  - annotation: steiger_R2_outcome
-    method: column
-    encoding: Q
-  - annotation: steiger_direction
-    method: column
-    encoding: R
-  - annotation: steiger_pval
-    method: column
-    encoding: S
-  - annotation: mr_keep
-    method: column
-    encoding: T
-  - annotation: final_outlier
-    method: column
-    encoding: U
-  - annotation: detection_level
-    method: column
-    encoding: V
-  - annotation: outliers_radial_IVW
-    method: column
-    encoding: W
-  - annotation: outliers_radial_egger
-    method: column
-    encoding: X
-  - annotation: outliers_PRESSO
-    method: column
-    encoding: Y
-  - annotation: outliers_LOO
-    method: column
-    encoding: Z
