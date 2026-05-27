@@ -20,7 +20,10 @@ template:
       method: value
       encoding: salt stress response
       prioritize:
+        - MolecularActivity
         - BiologicalProcess
+        - Pathway
+        - Gene
   provenance:
     repo: PMC
     publication: PMC12906803

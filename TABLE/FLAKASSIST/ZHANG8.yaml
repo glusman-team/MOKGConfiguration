@@ -15,6 +15,7 @@ template:
       prioritize:
         - Gene
       taxon: 9606
+      prefix: "ENSEMBL:"
     predicate: related_to
     object:
       method: column

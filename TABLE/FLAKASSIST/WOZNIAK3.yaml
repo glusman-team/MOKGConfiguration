@@ -17,6 +17,8 @@ template:
       prioritize:
         - Protein
       taxon: 10090
+      remove:
+        - _.*
     predicate: associated_with
     object:
       method: value

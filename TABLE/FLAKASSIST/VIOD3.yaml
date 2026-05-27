@@ -13,7 +13,6 @@ template:
     subject:
       method: column
       encoding: A
-      prefix: "NCBIGene:"
       prioritize:
         - Gene
       taxon: 9606

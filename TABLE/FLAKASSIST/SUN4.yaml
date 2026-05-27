@@ -18,7 +18,7 @@ template:
     predicate: related_to
     object:
       method: value
-      encoding: non-alcoholic fatty liver disease
+      encoding: NAFLD
   provenance:
     repo: PMC
     publication: PMC13168532

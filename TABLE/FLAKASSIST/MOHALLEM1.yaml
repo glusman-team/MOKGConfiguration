@@ -16,6 +16,8 @@ template:
       taxon: 10090
       prioritize:
         - Gene
+        - Protein
+      explode_by: ;
     predicate: gene_associated_with_condition
     object:
       method: value

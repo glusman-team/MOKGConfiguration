@@ -16,6 +16,8 @@ template:
       taxon: 9606
       prioritize:
         - Protein
+      prefix: "UniProtKB:"
+      explode_by: ","
     predicate: associated_with
     object:
       method: value

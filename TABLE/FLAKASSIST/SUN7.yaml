@@ -14,7 +14,11 @@ template:
       method: column
       encoding: B
       prioritize:
+        - MolecularActivity
+        - BiologicalProcess
         - Pathway
+      remove:
+        - "*.:"
     predicate: related_to
     object:
       method: column

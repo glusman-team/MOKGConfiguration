@@ -22,8 +22,9 @@ template:
       method: column
       encoding: A
       prioritize:
-        - Pathway
+        - MolecularActivity
         - BiologicalProcess
+        - Pathway
     qualifiers:
       - qualifier: species_context_qualifier
         method: value

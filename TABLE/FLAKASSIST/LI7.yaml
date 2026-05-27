@@ -35,7 +35,11 @@ sections:
             replacement: ""
           - pattern: ^Disease:\s*
             replacement: ""
+        remove:
+          - "*.:"
         prioritize:
+          - DiseaseOrPhenotypicFeature
+          - PhenotypicFeature
           - Disease
       qualifiers:
         - qualifier: subject_aspect_qualifier

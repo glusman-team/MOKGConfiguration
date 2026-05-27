@@ -16,6 +16,9 @@ template:
       encoding: A
       taxon: 3847
       prioritize:
+        - MolecularActivity
+        - BiologicalProcess
+        - Pathway
         - Gene
     predicate: related_to
     object:
