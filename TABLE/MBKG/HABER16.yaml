@@ -21,6 +21,13 @@ template:
           replacement: ""
         - pattern: _
           replacement: " "
+      remove:
+        - "|c "
+        - "|o "
+        - "|p "
+        - "|f "
+        - "|s "
+        - "|g "
     predicate: associated_with
     object:
       method: column

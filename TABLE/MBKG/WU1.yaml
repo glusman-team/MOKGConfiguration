@@ -38,6 +38,7 @@ template:
         - ^cellular organisms$
         - ^other sequences$
         - ^Bacteria$
+        - sp.*
     qualifiers:
       - qualifier: species_context_qualifier
         method: value

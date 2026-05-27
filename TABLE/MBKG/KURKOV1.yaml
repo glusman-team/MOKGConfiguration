@@ -19,17 +19,12 @@ template:
           replacement: ""
         - pattern: '\.id\.\d+$'
           replacement: ""
+      remove:
+        - group
     predicate: correlated_with
     object:
       method: column
       encoding: C
-      prioritize:
-        - PhenotypicFeature
-        - ClinicalAttribute
-        - ClinicalMeasurement
-      avoid:
-        - ChemicalEntity
-        - SmallMolecule
       regex:
         - pattern: "^BioMK_"
           replacement: ""

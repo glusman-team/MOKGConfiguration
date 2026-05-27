@@ -17,6 +17,14 @@ template:
         - OrganismTaxon
       remove:
         - .*__
+        - ucg.*
+        - "g  "
+        - "o  "
+        - "f  "
+        - "p  "
+        - "s  "
+        - group
+        - gut
       regex:
         - pattern: _
           replacement: " "
@@ -25,9 +33,9 @@ template:
       prioritize:
         - SmallMolecule
         - ChemicalEntity
+        - Drug
       avoid:
         - Protein
-        - Drug
     qualifiers:
       - qualifier: species_context_qualifier
         method: value

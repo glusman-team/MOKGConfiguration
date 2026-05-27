@@ -19,6 +19,7 @@ template:
         - Gp
         - uncultured
         - unc
+        - group
       regex:
         - pattern: _
           replacement: " "
@@ -33,6 +34,7 @@ template:
         - Gp
         - uncultured
         - unc
+        - group
       regex:
         - pattern: _
           replacement: " "

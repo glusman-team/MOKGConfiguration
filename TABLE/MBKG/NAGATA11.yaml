@@ -19,6 +19,7 @@ template:
         - " species.*"
         - ' \(id.*'
         - ' \(.*'
+        - sp.*
       regex:
         - pattern: '\['
           replacement: ""

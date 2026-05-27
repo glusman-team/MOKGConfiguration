@@ -25,6 +25,8 @@ template:
           replacement: ""
         - pattern: ^Stool_
           replacement: ""
+        - pattern: ^k
+          replacement: KEGG.PATHWAY:k
       remove:
         - \*+$
         - ' \[[^\[\]]*\]$'
@@ -77,6 +79,7 @@ sections:
     statement:
       subject:
         prioritize:
+          - BiologicalProcess
           - MolecularActivity
           - Pathway
       qualifiers:

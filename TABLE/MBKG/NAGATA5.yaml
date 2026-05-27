@@ -17,6 +17,7 @@ template:
         - OrganismTaxon
       remove:
         - species.*
+        - sp.*
         - ' \(.*'
       regex:
         - pattern: '\['

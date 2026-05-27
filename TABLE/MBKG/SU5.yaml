@@ -18,6 +18,9 @@ template:
       regex:
         - pattern: _
           replacement: " "
+      remove:
+        - sp.*
+        - cag.*
     predicate: associated_with
     object:
       method: value

@@ -18,6 +18,10 @@ template:
       remove:
         - '\['
         - '\]'
+        - cag.*
+        - gwf.*
+        - rgb.*
+        - sp.*
       regex:
         - pattern: ^.*?_
           replacement: ""

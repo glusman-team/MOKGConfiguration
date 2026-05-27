@@ -20,6 +20,7 @@ template:
           replacement: " "
       prioritize:
         - BiologicalProcess
+        - MolecularActivity
         - Pathway
     predicate: associated_with
     object:
@@ -27,6 +28,7 @@ template:
       encoding: K
       taxon: 9606
       prioritize:
+        - Protein
         - Gene
       explode_by: ;
     qualifiers:

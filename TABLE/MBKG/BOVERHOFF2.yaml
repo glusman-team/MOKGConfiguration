@@ -31,6 +31,9 @@ template:
         - \(.*$
         - "^[^:]*:"
         - _9
+        - "["
+        - "]"
+        - group
     qualifiers:
       - qualifier: anatomical_context_qualifier
         method: value

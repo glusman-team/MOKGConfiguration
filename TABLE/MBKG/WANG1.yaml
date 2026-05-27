@@ -18,6 +18,9 @@ template:
       regex:
         - pattern: _
           replacement: " "
+      remove:
+        - sp.*
+        - cag.*
     predicate: correlated_with
     qualifiers:
       - qualifier: species_context_qualifier

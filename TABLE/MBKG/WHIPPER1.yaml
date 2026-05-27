@@ -35,6 +35,7 @@ template:
       encoding: I
       prioritize:
         - BiologicalProcess
+        - MolecularActivity
         - Pathway
       avoid:
         - Gene

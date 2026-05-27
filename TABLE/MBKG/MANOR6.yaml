@@ -15,6 +15,7 @@ template:
       encoding: F
       prioritize:
         - BiologicalProcess
+        - Molecular Activity
         - Pathway
       remove:
         - \(.*

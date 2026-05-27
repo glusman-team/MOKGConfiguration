@@ -23,6 +23,13 @@ template:
         - "^bacterium sp "
         - "[0-9]"
         - "sp"
+        - ph
+        - ap
+        - kle
+        - pee
+        - art
+        - diar
+        -
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier

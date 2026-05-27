@@ -14,8 +14,10 @@ template:
       method: column
       encoding: A
       prioritize:
-        - GeneFamily
-      prefix: "KEGG.ORTHOLOGY:"
+        - MolecularActivity
+        - BiologicalProcess
+        - Pathway
+      prefix: "KEGG.PATHWAY:"
     predicate: associated_with
     object:
       method: value

@@ -46,6 +46,9 @@ sections:
         regex:
           - pattern: "_"
             replacement: " "
+        remove:
+          - cag.*
+          - sp.*
       qualifiers:
         - qualifier: subject_aspect_qualifier
           method: value
