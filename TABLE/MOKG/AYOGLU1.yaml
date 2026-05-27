@@ -33,12 +33,12 @@ template:
     contributors:
       - kind: curation
         name: JC Roach
-        date: Dec 3, 2025
+        date: 3 DEC 2025
         organizations:
           - Institute for Systems Biology
       - kind: curation
         name: SL Goetz
-        date: Dec 12, 2025
+        date: 12 DEC 2025
         organizations:
           - Institute for Systems Biology
   annotations:
