@@ -15,6 +15,8 @@ template:
       encoding: A
       prioritize:
         - BiologicalProcess
+        - Pathway
+        - MolecularActivity
     predicate: associated_with
     object:
       method: column

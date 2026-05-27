@@ -16,10 +16,11 @@ template:
       prioritize:
         - SmallMolecule
         - ChemicalEntity
+        - Drug
     predicate: associated_with_increased_likelihood_of
     object:
       method: value
-      encoding: All-cause dementia
+      encoding: dementia
       prioritize:
         - Disease
   provenance:

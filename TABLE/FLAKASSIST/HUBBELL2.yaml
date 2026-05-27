@@ -19,9 +19,7 @@ template:
     predicate: associated_with
     object:
       method: value
-      encoding: all-cause mortality
-      prioritize:
-        - PhenotypicFeature
+      encoding: mortality
   annotations:
     - annotation: OlinkID
       method: column

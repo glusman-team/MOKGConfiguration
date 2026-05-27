@@ -20,8 +20,6 @@ template:
     object:
       method: value
       encoding: ADHF rehospitalization
-      prioritize:
-        - PhenotypicFeature
   annotations:
     - annotation: OlinkID
       method: column

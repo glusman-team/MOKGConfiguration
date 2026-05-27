@@ -14,6 +14,7 @@ template:
       encoding: B
       prioritize:
         - Gene
+        - Protein
       taxon: 9606
     predicate: related_to
     object:

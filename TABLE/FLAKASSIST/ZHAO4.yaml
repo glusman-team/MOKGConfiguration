@@ -13,9 +13,6 @@ template:
     subject:
       method: column
       encoding: A
-      prefix: "rsid:"
-      prioritize:
-        - SequenceVariant
     predicate: related_to
     object:
       method: column

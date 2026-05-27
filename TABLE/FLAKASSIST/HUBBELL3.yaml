@@ -20,8 +20,6 @@ template:
     object:
       method: value
       encoding: diuretic response
-      prioritize:
-        - PhenotypicFeature
   annotations:
     - annotation: OlinkID
       method: column

@@ -20,6 +20,9 @@ template:
       prioritize:
         - Gene
         - Protein
+        - Pathway
+        - MolecularActivity
+        - BiologicalProcess
     predicate: associated_with
     object:
       method: value

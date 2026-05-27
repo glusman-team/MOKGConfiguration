@@ -12,9 +12,11 @@ template:
   statement:
     subject:
       method: column
-      encoding: C
+      encoding: AG
       prioritize:
-        - SequenceVariant
+        - Gene
+        - Protein
+      taxon: 9606
     predicate: associated_with
     object:
       method: column

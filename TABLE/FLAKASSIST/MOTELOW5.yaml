@@ -15,8 +15,6 @@ template:
       encoding: A
       remove:
         - "'"
-      prioritize:
-        - SequenceVariant
     predicate: associated_with
     object:
       method: value

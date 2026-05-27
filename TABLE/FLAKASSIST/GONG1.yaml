@@ -17,6 +17,7 @@ template:
         - pattern: ^\s*(.*?)\s*$
           replacement: $1
       taxon: 9606
+      explode_by: ;
       prioritize:
         - Gene
         - Protein

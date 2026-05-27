@@ -19,9 +19,13 @@ template:
     predicate: associated_with_increased_likelihood_of
     object:
       method: value
-      encoding: Dementia in other diseases
+      encoding: Dementia
       prioritize:
         - Disease
+    qualifiers:
+      - qualifier: disease_context_qualifier
+        method: value
+        encoding: diseases
   provenance:
     repo: PMC
     publication: PMC13169133

@@ -13,6 +13,7 @@ template:
       taxon: 9606
       prioritize:
         - Gene
+      prefix: "ENSEMBL:"
     predicate: associated_with
     object:
       method: value

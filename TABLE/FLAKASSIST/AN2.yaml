@@ -12,9 +12,11 @@ template:
   statement:
     subject:
       method: column
-      encoding: C
+      encoding: D
       prioritize:
+        - BiologicalProcess
         - Pathway
+        - MolecularActivity
     predicate: associated_with
     object:
       method: column

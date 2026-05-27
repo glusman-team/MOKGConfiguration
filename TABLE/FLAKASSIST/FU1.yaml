@@ -15,6 +15,8 @@ template:
       encoding: A
       prioritize:
         - SmallMolecule
+        - Drug
+        - ChemicalEntity
     predicate: associated_with
     object:
       method: value

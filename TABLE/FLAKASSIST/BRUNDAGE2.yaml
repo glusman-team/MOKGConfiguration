@@ -87,7 +87,6 @@ sections:
       subject:
         method: column
         encoding: A
-        prefix: UKB_
         prioritize:
           - EnvironmentalExposure
       predicate: related_to

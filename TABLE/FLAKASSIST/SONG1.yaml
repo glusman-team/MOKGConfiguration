@@ -8,18 +8,15 @@ template:
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13128347/
     sheet: S_Table3
     row_slice: [1, auto]
-    reindex:
-      - column: G
-        comparison: lt
-        comparator: 0.05
 
   statement:
     subject:
       method: column
-      encoding: B
+      encoding: H
       taxon: 9606
       prioritize:
         - Gene
+        - Protein
     predicate: associated_with
     object:
       method: value
@@ -42,13 +39,13 @@ template:
   annotations:
     - annotation: log fold change
       method: column
-      encoding: C
+      encoding: B
     - annotation: p value
       method: column
-      encoding: F
+      encoding: E
     - annotation: adjusted p value
       method: column
-      encoding: G
+      encoding: F
     - annotation: miscellaneous notes
       method: value
       encoding: "Differentially expressed genes between Alzheimer's disease subtypes from MayoRNAseq dataset"

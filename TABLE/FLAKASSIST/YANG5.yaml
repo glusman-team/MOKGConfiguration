@@ -14,6 +14,7 @@ template:
       method: column
       encoding: A
       taxon: 9606
+      prefix: "UniProtKB:"
       prioritize:
         - Protein
     predicate: biomarker_for

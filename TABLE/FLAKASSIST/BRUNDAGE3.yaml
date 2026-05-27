@@ -25,7 +25,6 @@ sections:
         regex:
           - pattern: ^\\d+___(.+?)__\\d+_\\d+$
             replacement: ""
-        prefix: UKB_
         prioritize:
           - PhenotypicFeature
       predicate: related_to
@@ -114,7 +113,6 @@ sections:
         encoding: B
         prioritize:
           - Disease
-        suffix: _incident
     annotations:
       - annotation: N
         method: column
@@ -151,6 +149,8 @@ sections:
         encoding: A
         prioritize:
           - Gene
+          - Protein
+        prefix: "UniProtKB:"
       predicate: related_to
       object:
         method: value
@@ -189,7 +189,7 @@ sections:
       subject:
         method: column
         encoding: A
-        prefix: UKB_
+
         prioritize:
           - EnvironmentalExposure
       predicate: related_to

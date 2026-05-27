@@ -5,13 +5,14 @@ template:
     kind: excel
     local: ./DATALAKE/PMC13167369_sj-xlsx-1-tct-10.1177_15330338261449014.xlsx
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13167369.1/sj-xlsx-1-tct-10.1177_15330338261449014.xlsx
+    sheet: Table S34
     row_slice:
       - 1
       - auto
   statement:
     subject:
       method: column
-      encoding: A
+      encoding: D
       prioritize:
         - Gene
       taxon: 9606
@@ -56,11 +57,3 @@ template:
     - annotation: nsnp_heidi
       method: column
       encoding: J
-sections:
-  - source:
-      sheet: Table S34
-    statement:
-      subject:
-        encoding: A
-      object:
-        encoding: C

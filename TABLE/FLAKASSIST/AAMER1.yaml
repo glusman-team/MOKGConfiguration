@@ -22,8 +22,6 @@ template:
       encoding: AN
       explode_by: ;
       prefix: "OMIM:"
-      prioritize:
-        - Disease
       remove:
         - ^\.$
     qualifiers:

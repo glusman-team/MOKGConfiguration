@@ -18,6 +18,7 @@ template:
       prioritize:
         - SmallMolecule
         - ChemicalEntity
+        - Drug
       taxon: 9606
     predicate: associated_with
     object:

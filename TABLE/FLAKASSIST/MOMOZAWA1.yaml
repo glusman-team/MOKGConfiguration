@@ -29,7 +29,7 @@ template:
     qualifiers:
       - qualifier: subject_form_or_variant_qualifier
         method: value
-        encoding: germline pathogenic variant
+        encoding: pathogenic
   provenance:
     repo: PMC
     publication: PMC6172276

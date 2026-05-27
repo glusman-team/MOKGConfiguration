@@ -21,7 +21,13 @@ template:
       method: column
       encoding: D
       prioritize:
+        - Pathway
+        - MolecularActivity
+        - BiologicalProcess
+        - PhenotypicFeature
+        - DiseaseOrPhenotypicFeature
         - Disease
+      explode_by: ;
   provenance:
     repo: PMC
     publication: PMC11061114

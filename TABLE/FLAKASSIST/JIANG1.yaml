@@ -13,8 +13,8 @@ template:
       encoding: A
       prioritize:
         - Gene
+        - Protein
       taxon: 9606
-      prefix: "HGNC:"
     predicate: related_to
     object:
       method: value

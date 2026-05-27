@@ -16,6 +16,7 @@ template:
       taxon: 10116
       prioritize:
         - Protein
+      prefix: "UniProtKB:"
     predicate: related_to
     object:
       method: value

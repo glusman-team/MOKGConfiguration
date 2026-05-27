@@ -17,7 +17,6 @@ template:
     subject:
       method: column
       encoding: A
-      prefix: "RS:"
       remove:
         - "^NA$"
       prioritize:

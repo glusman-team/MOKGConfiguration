@@ -22,6 +22,10 @@ template:
       encoding: A
       prioritize:
         - Pathway
+        - MolecularActivity
+        - BiologicalProcess
+      remove:
+        - wp\d+
   annotations:
     - annotation: protein accession
       method: column

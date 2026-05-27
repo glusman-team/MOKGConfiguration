@@ -38,7 +38,7 @@ sections:
       subject:
         method: column
         encoding: A
-        prefix: UKB_
+
         prioritize:
           - PhenotypicFeature
       predicate: related_to
@@ -51,7 +51,7 @@ sections:
       subject:
         method: column
         encoding: A
-        prefix: UKB_
+
         prioritize:
           - PhenotypicFeature
       predicate: related_to
@@ -64,7 +64,7 @@ sections:
       subject:
         method: column
         encoding: A
-        prefix: UKB_
+
         prioritize:
           - PhenotypicFeature
       predicate: related_to

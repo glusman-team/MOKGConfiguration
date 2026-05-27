@@ -19,7 +19,7 @@ template:
     predicate: associated_with_increased_likelihood_of
     object:
       method: value
-      encoding: Dementia unspecified
+      encoding: Dementia
       prioritize:
         - Disease
   provenance:
