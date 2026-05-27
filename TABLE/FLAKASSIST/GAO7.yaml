@@ -7,70 +7,65 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13175492.1/pone.0349199.s013.xlsx
     sheet: Sheet1
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: C
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: genetic_association
     object:
       method: value
       encoding: age-related eye disease
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13175492
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      comment: Significant TWAS genes - 7 gene-trait associations with TWAS z-scores
-        and posterior inclusion probabilities (gtex_v8)
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
   annotations:
-  - annotation: ENS_gene_id
-    method: column
-    encoding: B
-  - annotation: tissue
-    method: column
-    encoding: D
-  - annotation: ref_model
-    method: column
-    encoding: E
-  - annotation: gene_type
-    method: column
-    encoding: F
-  - annotation: chrom
-    method: column
-    encoding: G
-  - annotation: tx_start
-    method: column
-    encoding: H
-  - annotation: tx_stop
-    method: column
-    encoding: I
-  - annotation: cv.R2
-    method: column
-    encoding: M
-  - annotation: cv.R2_pval
-    method: column
-    encoding: N
-  - annotation: twas_z
-    method: column
-    encoding: Q
-  - annotation: PIPs
-    method: column
-    encoding: R
-  - annotation: in_cred_set
-    method: column
-    encoding: S
-  - annotation: eqtl_file
-    method: column
-    encoding: T
+    - annotation: ENS_gene_id
+      method: column
+      encoding: B
+    - annotation: tissue
+      method: column
+      encoding: D
+    - annotation: ref_model
+      method: column
+      encoding: E
+    - annotation: gene_type
+      method: column
+      encoding: F
+    - annotation: chrom
+      method: column
+      encoding: G
+    - annotation: tx_start
+      method: column
+      encoding: H
+    - annotation: tx_stop
+      method: column
+      encoding: I
+    - annotation: cv.R2
+      method: column
+      encoding: M
+    - annotation: cv.R2_pval
+      method: column
+      encoding: N
+    - annotation: twas_z
+      method: column
+      encoding: Q
+    - annotation: PIPs
+      method: column
+      encoding: R
+    - annotation: in_cred_set
+      method: column
+      encoding: S
+    - annotation: eqtl_file
+      method: column
+      encoding: T

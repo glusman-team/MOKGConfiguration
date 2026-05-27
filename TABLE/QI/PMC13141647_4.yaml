@@ -32,7 +32,7 @@ template:
         name: tablassist
         date: "06 MAY 2026"
       - kind: curation
-        name: Tablassert pipeline
+        name: tablassist
         date: "06 MAY 2026"
 
   annotations:

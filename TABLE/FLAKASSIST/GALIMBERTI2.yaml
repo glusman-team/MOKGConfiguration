@@ -9,248 +9,245 @@ template:
     repo: PMC
     publication: PMC12339386
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
 sections:
-- source:
-    sheet: Supplementary Table 7
-    row_slice:
-    - 1
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: B
-      taxon: 9606
-      prioritize:
-      - Gene
-    predicate: related_to
-    object:
-      method: column
-      encoding: B
-      taxon: 9606
-      prioritize:
-      - Gene
-  annotations:
-  - annotation: ENS_gene_ID
-    method: column
-    encoding: A
-  - annotation: CHR
-    method: column
-    encoding: C
-  - annotation: START
-    method: column
-    encoding: D
-  - annotation: STOP
-    method: column
-    encoding: E
-  - annotation: NSNPS
-    method: column
-    encoding: F
-  - annotation: NPARAM
-    method: column
-    encoding: G
-  - annotation: N
-    method: column
-    encoding: H
-  - annotation: ZSTAT
-    method: column
-    encoding: I
-  - annotation: P
-    method: column
-    encoding: J
-- source:
-    sheet: Supplementary Table 8
-    row_slice:
-    - 1
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: A
-      taxon: 9606
-      prioritize:
-      - Gene
-    predicate: related_to
-    object:
-      method: column
-      encoding: A
-      taxon: 9606
-      prioritize:
-      - Gene
-  annotations:
-  - annotation: hgnc_symbol
-    method: column
-    encoding: B
-  - annotation: tissue
-    method: column
-    encoding: C
-  - annotation: GRCP
-    method: column
-    encoding: D
-  - annotation: GLCP
-    method: column
-    encoding: E
-- source:
-    sheet: Supplementary Table 30
-    row_slice:
-    - 1
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: A
-      taxon: 9606
-      prioritize:
-      - Gene
-    predicate: related_to
-    object:
-      method: column
-      encoding: A
-      taxon: 9606
-      prioritize:
-      - Gene
-  annotations:
-  - annotation: hgnc_symbol
-    method: column
-    encoding: B
-  - annotation: tissue
-    method: column
-    encoding: C
-  - annotation: GRCP
-    method: column
-    encoding: D
-  - annotation: GLCP
-    method: column
-    encoding: E
-- source:
-    sheet: Supplementary Table 9
-    row_slice:
-    - 1
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: B
-      taxon: 9606
-      prioritize:
-      - Gene
-    predicate: related_to
-    object:
-      method: column
-      encoding: B
-      taxon: 9606
-      prioritize:
-      - Gene
-  annotations:
-  - annotation: ENS_gene_ID
-    method: column
-    encoding: A
-  - annotation: TWAS.Z
-    method: column
-    encoding: C
-  - annotation: TWAS.P
-    method: column
-    encoding: D
-  - annotation: tissue
-    method: column
-    encoding: E
-- source:
-    sheet: Supplementary Table 10
-    row_slice:
-    - 1
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: B
-      taxon: 9606
-      prioritize:
-      - Gene
-    predicate: related_to
-    object:
-      method: column
-      encoding: B
-      taxon: 9606
-      prioritize:
-      - Gene
-  annotations:
-  - annotation: ens_gene_id
-    method: column
-    encoding: A
-  - annotation: tissue
-    method: column
-    encoding: C
-  - annotation: ref_name
-    method: column
-    encoding: D
-  - annotation: type
-    method: column
-    encoding: E
-  - annotation: pip
-    method: column
-    encoding: F
-  - annotation: cv.R2
-    method: column
-    encoding: G
-  - annotation: twas_z
-    method: column
-    encoding: H
-- source:
-    sheet: Supplementary Table 11
-    row_slice:
-    - 1
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: A
-      prioritize:
-      - SequenceVariant
-    predicate: related_to
-    object:
-      method: column
-      encoding: A
-      prioritize:
-      - SequenceVariant
-  annotations:
-  - annotation: Closest gene
-    method: column
-    encoding: B
-  - annotation: CHR
-    method: column
-    encoding: C
-  - annotation: BP
-    method: column
-    encoding: D
-  - annotation: A1
-    method: column
-    encoding: E
-  - annotation: A2
-    method: column
-    encoding: F
-  - annotation: N
-    method: column
-    encoding: G
-  - annotation: Z
-    method: column
-    encoding: H
-  - annotation: PIP
-    method: column
-    encoding: I
-  - annotation: BETA_MEAN
-    method: column
-    encoding: J
-  - annotation: BETA_SD
-    method: column
-    encoding: K
-  - annotation: Distance from closest gene
-    method: column
-    encoding: L
-  - annotation: Best annotation
-    method: column
-    encoding: M
+  - source:
+      sheet: Supplementary Table 7
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: related_to
+      object:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: ENS_gene_ID
+        method: column
+        encoding: A
+      - annotation: CHR
+        method: column
+        encoding: C
+      - annotation: START
+        method: column
+        encoding: D
+      - annotation: STOP
+        method: column
+        encoding: E
+      - annotation: NSNPS
+        method: column
+        encoding: F
+      - annotation: NPARAM
+        method: column
+        encoding: G
+      - annotation: N
+        method: column
+        encoding: H
+      - annotation: ZSTAT
+        method: column
+        encoding: I
+      - annotation: P
+        method: column
+        encoding: J
+  - source:
+      sheet: Supplementary Table 8
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: related_to
+      object:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: hgnc_symbol
+        method: column
+        encoding: B
+      - annotation: tissue
+        method: column
+        encoding: C
+      - annotation: GRCP
+        method: column
+        encoding: D
+      - annotation: GLCP
+        method: column
+        encoding: E
+  - source:
+      sheet: Supplementary Table 30
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: related_to
+      object:
+        method: column
+        encoding: A
+        taxon: 9606
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: hgnc_symbol
+        method: column
+        encoding: B
+      - annotation: tissue
+        method: column
+        encoding: C
+      - annotation: GRCP
+        method: column
+        encoding: D
+      - annotation: GLCP
+        method: column
+        encoding: E
+  - source:
+      sheet: Supplementary Table 9
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: related_to
+      object:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: ENS_gene_ID
+        method: column
+        encoding: A
+      - annotation: TWAS.Z
+        method: column
+        encoding: C
+      - annotation: TWAS.P
+        method: column
+        encoding: D
+      - annotation: tissue
+        method: column
+        encoding: E
+  - source:
+      sheet: Supplementary Table 10
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+      predicate: related_to
+      object:
+        method: column
+        encoding: B
+        taxon: 9606
+        prioritize:
+          - Gene
+    annotations:
+      - annotation: ens_gene_id
+        method: column
+        encoding: A
+      - annotation: tissue
+        method: column
+        encoding: C
+      - annotation: ref_name
+        method: column
+        encoding: D
+      - annotation: type
+        method: column
+        encoding: E
+      - annotation: pip
+        method: column
+        encoding: F
+      - annotation: cv.R2
+        method: column
+        encoding: G
+      - annotation: twas_z
+        method: column
+        encoding: H
+  - source:
+      sheet: Supplementary Table 11
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize:
+          - SequenceVariant
+      predicate: related_to
+      object:
+        method: column
+        encoding: A
+        prioritize:
+          - SequenceVariant
+    annotations:
+      - annotation: Closest gene
+        method: column
+        encoding: B
+      - annotation: CHR
+        method: column
+        encoding: C
+      - annotation: BP
+        method: column
+        encoding: D
+      - annotation: A1
+        method: column
+        encoding: E
+      - annotation: A2
+        method: column
+        encoding: F
+      - annotation: N
+        method: column
+        encoding: G
+      - annotation: Z
+        method: column
+        encoding: H
+      - annotation: PIP
+        method: column
+        encoding: I
+      - annotation: BETA_MEAN
+        method: column
+        encoding: J
+      - annotation: BETA_SD
+        method: column
+        encoding: K
+      - annotation: Distance from closest gene
+        method: column
+        encoding: L
+      - annotation: Best annotation
+        method: column
+        encoding: M

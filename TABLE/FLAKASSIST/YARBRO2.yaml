@@ -5,98 +5,95 @@ template:
     kind: excel
     local: ./DATALAKE/PMC12257826_13024_2025_874_MOESM1_ESM.xlsx
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12257826/
-    sheet: '2'
+    sheet: "2"
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: B
       taxon: 9606
       prioritize:
-      - Protein
+        - Protein
     predicate: associated_with
     object:
       method: value
       encoding: MONDO:0004975
       prioritize:
-      - Disease
+        - Disease
     qualifiers:
-    - qualifier: species_context_qualifier
-      method: value
-      encoding: NCBITaxon:9606
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   annotations:
-  - annotation: uniprot id
-    method: column
-    encoding: A
-  - annotation: description
-    method: column
-    encoding: C
-  - annotation: dataset 1 abundance ratio
-    method: column
-    encoding: D
-  - annotation: dataset 1 log2fc
-    method: column
-    encoding: E
-  - annotation: dataset 2 p value
-    method: column
-    encoding: F
-  - annotation: dataset 2 log2fc
-    method: column
-    encoding: G
-  - annotation: dataset 3 p value
-    method: column
-    encoding: H
-  - annotation: dataset 3 log2fc
-    method: column
-    encoding: I
-  - annotation: dataset 4 p value
-    method: column
-    encoding: J
-  - annotation: dataset 4 log2fc
-    method: column
-    encoding: K
-  - annotation: dataset 5 p value
-    method: column
-    encoding: L
-  - annotation: dataset 5 log2fc
-    method: column
-    encoding: M
-  - annotation: dataset 6 p value
-    method: column
-    encoding: N
-  - annotation: dataset 6 log2fc
-    method: column
-    encoding: O
-  - annotation: dataset 7 p value
-    method: column
-    encoding: P
-  - annotation: dataset 7 log2fc
-    method: column
-    encoding: Q
-  - annotation: median log2fc
-    method: column
-    encoding: R
-  - annotation: average log2fc
-    method: column
-    encoding: S
-  - annotation: direction
-    method: column
-    encoding: T
-  - annotation: fisher combined p
-    method: column
-    encoding: U
-  - annotation: fdr
-    method: column
-    encoding: V
+    - annotation: uniprot id
+      method: column
+      encoding: A
+    - annotation: description
+      method: column
+      encoding: C
+    - annotation: dataset 1 abundance ratio
+      method: column
+      encoding: D
+    - annotation: dataset 1 log2fc
+      method: column
+      encoding: E
+    - annotation: dataset 2 p value
+      method: column
+      encoding: F
+    - annotation: dataset 2 log2fc
+      method: column
+      encoding: G
+    - annotation: dataset 3 p value
+      method: column
+      encoding: H
+    - annotation: dataset 3 log2fc
+      method: column
+      encoding: I
+    - annotation: dataset 4 p value
+      method: column
+      encoding: J
+    - annotation: dataset 4 log2fc
+      method: column
+      encoding: K
+    - annotation: dataset 5 p value
+      method: column
+      encoding: L
+    - annotation: dataset 5 log2fc
+      method: column
+      encoding: M
+    - annotation: dataset 6 p value
+      method: column
+      encoding: N
+    - annotation: dataset 6 log2fc
+      method: column
+      encoding: O
+    - annotation: dataset 7 p value
+      method: column
+      encoding: P
+    - annotation: dataset 7 log2fc
+      method: column
+      encoding: Q
+    - annotation: median log2fc
+      method: column
+      encoding: R
+    - annotation: average log2fc
+      method: column
+      encoding: S
+    - annotation: direction
+      method: column
+      encoding: T
+    - annotation: fisher combined p
+      method: column
+      encoding: U
+    - annotation: fdr
+      method: column
+      encoding: V
   provenance:
     repo: PMC
     publication: PMC12257826
     contributors:
-    - kind: curation
-      name: OpenCode
-      date: 13 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026

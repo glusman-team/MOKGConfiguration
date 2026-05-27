@@ -11,7 +11,7 @@ template:
       method: value
       taxon: 9606
       prioritize:
-      - Protein
+        - Protein
     predicate: associated_with
     object:
       method: value
@@ -20,124 +20,124 @@ template:
     repo: PMC
     publication: PMC12874149
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
 sections:
-- statement:
-    subject:
-      encoding: ACAN
-- statement:
-    subject:
-      encoding: ADGRG1
-- statement:
-    subject:
-      encoding: ADGRG2
-- statement:
-    subject:
-      encoding: AGR3
-- statement:
-    subject:
-      encoding: AK1
-- statement:
-    subject:
-      encoding: AZU1
-- statement:
-    subject:
-      encoding: BLVRB
-- statement:
-    subject:
-      encoding: CA9
-- statement:
-    subject:
-      encoding: CD93
-- statement:
-    subject:
-      encoding: CFC1
-- statement:
-    subject:
-      encoding: CGA
-- statement:
-    subject:
-      encoding: CHGB
-- statement:
-    subject:
-      encoding: CLEC11A
-- statement:
-    subject:
-      encoding: CLEC6A
-- statement:
-    subject:
-      encoding: COL9A1
-- statement:
-    subject:
-      encoding: CTSD
-- statement:
-    subject:
-      encoding: CXCL13
-- statement:
-    subject:
-      encoding: DPEP1
-- statement:
-    subject:
-      encoding: FCGR3B
-- statement:
-    subject:
-      encoding: FGF5
-- statement:
-    subject:
-      encoding: FGFR2
-- statement:
-    subject:
-      encoding: FLT3
-- statement:
-    subject:
-      encoding: FLT3LG
-- statement:
-    subject:
-      encoding: GFAP
-- statement:
-    subject:
-      encoding: GGA1
-- statement:
-    subject:
-      encoding: ITGB1BP1
-- statement:
-    subject:
-      encoding: LAMP3
-- statement:
-    subject:
-      encoding: NPM1
-- statement:
-    subject:
-      encoding: NPPB
-- statement:
-    subject:
-      encoding: NPPC
-- statement:
-    subject:
-      encoding: PRL
-- statement:
-    subject:
-      encoding: PRTN3
-- statement:
-    subject:
-      encoding: PSRC1
-- statement:
-    subject:
-      encoding: PTH1R
-- statement:
-    subject:
-      encoding: TEK
-- statement:
-    subject:
-      encoding: TFF2
-- statement:
-    subject:
-      encoding: TIE1
-- statement:
-    subject:
-      encoding: TLR3
-- statement:
-    subject:
-      encoding: TNFRSF11B
+  - statement:
+      subject:
+        encoding: ACAN
+  - statement:
+      subject:
+        encoding: ADGRG1
+  - statement:
+      subject:
+        encoding: ADGRG2
+  - statement:
+      subject:
+        encoding: AGR3
+  - statement:
+      subject:
+        encoding: AK1
+  - statement:
+      subject:
+        encoding: AZU1
+  - statement:
+      subject:
+        encoding: BLVRB
+  - statement:
+      subject:
+        encoding: CA9
+  - statement:
+      subject:
+        encoding: CD93
+  - statement:
+      subject:
+        encoding: CFC1
+  - statement:
+      subject:
+        encoding: CGA
+  - statement:
+      subject:
+        encoding: CHGB
+  - statement:
+      subject:
+        encoding: CLEC11A
+  - statement:
+      subject:
+        encoding: CLEC6A
+  - statement:
+      subject:
+        encoding: COL9A1
+  - statement:
+      subject:
+        encoding: CTSD
+  - statement:
+      subject:
+        encoding: CXCL13
+  - statement:
+      subject:
+        encoding: DPEP1
+  - statement:
+      subject:
+        encoding: FCGR3B
+  - statement:
+      subject:
+        encoding: FGF5
+  - statement:
+      subject:
+        encoding: FGFR2
+  - statement:
+      subject:
+        encoding: FLT3
+  - statement:
+      subject:
+        encoding: FLT3LG
+  - statement:
+      subject:
+        encoding: GFAP
+  - statement:
+      subject:
+        encoding: GGA1
+  - statement:
+      subject:
+        encoding: ITGB1BP1
+  - statement:
+      subject:
+        encoding: LAMP3
+  - statement:
+      subject:
+        encoding: NPM1
+  - statement:
+      subject:
+        encoding: NPPB
+  - statement:
+      subject:
+        encoding: NPPC
+  - statement:
+      subject:
+        encoding: PRL
+  - statement:
+      subject:
+        encoding: PRTN3
+  - statement:
+      subject:
+        encoding: PSRC1
+  - statement:
+      subject:
+        encoding: PTH1R
+  - statement:
+      subject:
+        encoding: TEK
+  - statement:
+      subject:
+        encoding: TFF2
+  - statement:
+      subject:
+        encoding: TIE1
+  - statement:
+      subject:
+        encoding: TLR3
+  - statement:
+      subject:
+        encoding: TNFRSF11B

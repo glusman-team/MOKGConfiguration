@@ -7,89 +7,86 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7206184.1/41467_2020_15823_MOESM9_ESM.xlsx
     sheet: v68.lvef.twas.alltissues
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       taxon: 9606
       prioritize:
-      - Gene
-      - Protein
+        - Gene
+        - Protein
     predicate: related_to
     object:
       method: column
       encoding: C
       prioritize:
-      - SequenceVariant
-      - Snv
+        - SequenceVariant
+        - Snv
     qualifiers:
-    - qualifier: object_form_or_variant_qualifier
-      method: value
-      encoding: TWAS
-    - qualifier: anatomical_context_qualifier
-      method: column
-      encoding: B
+      - qualifier: object_form_or_variant_qualifier
+        method: value
+        encoding: TWAS
+      - qualifier: anatomical_context_qualifier
+        method: column
+        encoding: B
   annotations:
-  - annotation: chromosome
-    method: column
-    encoding: D
-  - annotation: twas z score
-    method: column
-    encoding: E
-  - annotation: twas p value
-    method: column
-    encoding: F
-  - annotation: colocalization pp0
-    method: column
-    encoding: G
-  - annotation: colocalization pp1
-    method: column
-    encoding: H
-  - annotation: colocalization pp2
-    method: column
-    encoding: I
-  - annotation: colocalization pp3
-    method: column
-    encoding: J
-  - annotation: colocalization pp4
-    method: column
-    encoding: K
-  - annotation: hsq
-    method: column
-    encoding: L
-  - annotation: eqtl id
-    method: column
-    encoding: N
-  - annotation: eqtl r squared
-    method: column
-    encoding: O
-  - annotation: eqtl z score
-    method: column
-    encoding: P
-  - annotation: number of snps
-    method: column
-    encoding: Q
-  - annotation: number of weights
-    method: column
-    encoding: R
-  - annotation: model
-    method: column
-    encoding: S
-  - annotation: model cv r squared
-    method: column
-    encoding: T
-  - annotation: model cv p value
-    method: column
-    encoding: U
+    - annotation: chromosome
+      method: column
+      encoding: D
+    - annotation: twas z score
+      method: column
+      encoding: E
+    - annotation: twas p value
+      method: column
+      encoding: F
+    - annotation: colocalization pp0
+      method: column
+      encoding: G
+    - annotation: colocalization pp1
+      method: column
+      encoding: H
+    - annotation: colocalization pp2
+      method: column
+      encoding: I
+    - annotation: colocalization pp3
+      method: column
+      encoding: J
+    - annotation: colocalization pp4
+      method: column
+      encoding: K
+    - annotation: hsq
+      method: column
+      encoding: L
+    - annotation: eqtl id
+      method: column
+      encoding: N
+    - annotation: eqtl r squared
+      method: column
+      encoding: O
+    - annotation: eqtl z score
+      method: column
+      encoding: P
+    - annotation: number of snps
+      method: column
+      encoding: Q
+    - annotation: number of weights
+      method: column
+      encoding: R
+    - annotation: model
+      method: column
+      encoding: S
+    - annotation: model cv r squared
+      method: column
+      encoding: T
+    - annotation: model cv p value
+      method: column
+      encoding: U
   provenance:
     repo: PMC
     publication: PMC7206184
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026

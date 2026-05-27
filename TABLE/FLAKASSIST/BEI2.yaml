@@ -5,63 +5,63 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166580.1/medi-105-e48687-s009.xls
     sheet: Sheet1
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: value
       encoding: HLA DR on CD14- CD16+ monocyte
       prioritize:
-      - PhenotypicFeature
+        - PhenotypicFeature
     predicate: related_to
     object:
       method: value
       encoding: CCL19
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
   provenance:
     repo: PMC
     publication: PMC13166580
     contributors:
-    - name: Skye Lane Goetz
-      kind: curation
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      - CalPoly SLO
-      comment: "Configured for MR results of HLA DR monocyte \u2192 CCL19 mediation"
-    - name: tablassist
-      kind: tool
-      date: 13 MAY 2026
+      - name: Skye Lane Goetz
+        kind: curation
+        date: 13 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+          - CalPoly SLO
+        comment: "Configured for MR results of HLA DR monocyte \u2192 CCL19 mediation"
+      - name: tablassist
+        kind: tool
+        date: 13 MAY 2026
   annotations:
-  - annotation: mr_method
-    method: column
-    encoding: A
-  - annotation: nsnp
-    method: column
-    encoding: B
-  - annotation: beta
-    method: column
-    encoding: C
-  - annotation: se
-    method: column
-    encoding: D
-  - annotation: p_value
-    method: column
-    encoding: E
-  - annotation: lower_ci
-    method: column
-    encoding: F
-  - annotation: upper_ci
-    method: column
-    encoding: G
-  - annotation: odds_ratio
-    method: column
-    encoding: H
-  - annotation: or_lci95
-    method: column
-    encoding: I
-  - annotation: or_uci95
-    method: column
-    encoding: J
+    - annotation: mr_method
+      method: column
+      encoding: A
+    - annotation: nsnp
+      method: column
+      encoding: B
+    - annotation: beta
+      method: column
+      encoding: C
+    - annotation: se
+      method: column
+      encoding: D
+    - annotation: p_value
+      method: column
+      encoding: E
+    - annotation: lower_ci
+      method: column
+      encoding: F
+    - annotation: upper_ci
+      method: column
+      encoding: G
+    - annotation: odds_ratio
+      method: column
+      encoding: H
+    - annotation: or_lci95
+      method: column
+      encoding: I
+    - annotation: or_uci95
+      method: column
+      encoding: J

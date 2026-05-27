@@ -7,35 +7,35 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9043847.1/Table3.XLSX
     sheet: Sheet1
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0004983
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC9043847
     contributors:
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 13 MAY 2026
+      - kind: curation
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: p value
-    method: column
-    encoding: B
-  - annotation: normalized expression testis
-    method: column
-    encoding: C
-  - annotation: odds ratio
-    method: column
-    encoding: D
+    - annotation: p value
+      method: column
+      encoding: B
+    - annotation: normalized expression testis
+      method: column
+      encoding: C
+    - annotation: odds ratio
+      method: column
+      encoding: D

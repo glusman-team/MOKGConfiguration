@@ -7,52 +7,49 @@ template:
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12080641/
     sheet: S6. PGS_assoc
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - Drug
+        - Drug
     predicate: acts_upstream_of_or_within
     object:
       method: column
       encoding: B
       prioritize:
-      - Genotype
+        - Genotype
   annotations:
-  - annotation: or
-    method: column
-    encoding: E
-  - annotation: lower_ci
-    method: column
-    encoding: F
-  - annotation: upper_ci
-    method: column
-    encoding: G
-  - annotation: p_value
-    method: column
-    encoding: H
-  - annotation: r2_diff
-    method: column
-    encoding: K
-  - annotation: r2_diff_percent
-    method: column
-    encoding: L
-  - annotation: nominal_significance
-    method: column
-    encoding: M
-  - annotation: mtc_significance
-    method: column
-    encoding: N
+    - annotation: or
+      method: column
+      encoding: E
+    - annotation: lower_ci
+      method: column
+      encoding: F
+    - annotation: upper_ci
+      method: column
+      encoding: G
+    - annotation: p_value
+      method: column
+      encoding: H
+    - annotation: r2_diff
+      method: column
+      encoding: K
+    - annotation: r2_diff_percent
+      method: column
+      encoding: L
+    - annotation: nominal_significance
+      method: column
+      encoding: M
+    - annotation: mtc_significance
+      method: column
+      encoding: N
   provenance:
     repo: PMC
     publication: PMC12080641
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026

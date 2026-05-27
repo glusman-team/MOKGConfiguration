@@ -7,15 +7,15 @@ template:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/13047824/bin/12933_2026_3128_MOESM1_ESM.xlsx
     sheet: Table S2
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: B
       taxon: 9606
       prioritize:
-      - Protein
+        - Protein
     predicate: associated_with
     object:
       method: value
@@ -24,28 +24,28 @@ template:
     repo: PMC
     publication: PMC13047824
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
   annotations:
-  - annotation: component
-    method: column
-    encoding: A
-  - annotation: network cluster
-    method: column
-    encoding: C
-  - annotation: string edges partners
-    method: column
-    encoding: D
-  - annotation: enrichment go term
-    method: column
-    encoding: E
-  - annotation: fdr
-    method: column
-    encoding: F
-  - annotation: contributing genes
-    method: column
-    encoding: G
-  - annotation: notes
-    method: column
-    encoding: H
+    - annotation: component
+      method: column
+      encoding: A
+    - annotation: network cluster
+      method: column
+      encoding: C
+    - annotation: string edges partners
+      method: column
+      encoding: D
+    - annotation: enrichment go term
+      method: column
+      encoding: E
+    - annotation: fdr
+      method: column
+      encoding: F
+    - annotation: contributing genes
+      method: column
+      encoding: G
+    - annotation: notes
+      method: column
+      encoding: H

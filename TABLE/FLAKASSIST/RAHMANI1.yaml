@@ -12,103 +12,103 @@ template:
       encoding: A
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: associated_with
     object:
       method: value
       encoding: OncoProExp proteome matrix
   annotations:
-  - annotation: C3L.00997
-    method: column
-    encoding: B
-  - annotation: C3N.03849
-    method: column
-    encoding: C
-  - annotation: C3N.03487
-    method: column
-    encoding: D
-  - annotation: C3N.01858
-    method: column
-    encoding: E
-  - annotation: C3L.04791
-    method: column
-    encoding: F
-  - annotation: C3N.04273
-    method: column
-    encoding: G
-  - annotation: C3N.03664
-    method: column
-    encoding: H
-  - annotation: C3N.03781
-    method: column
-    encoding: I
-  - annotation: C3L.00999
-    method: column
-    encoding: J
-  - annotation: C3N.01859
-    method: column
-    encoding: K
-  - annotation: C3N.03009
-    method: column
-    encoding: L
-  - annotation: C3N.03933
-    method: column
-    encoding: M
-  - annotation: C3N.01948
-    method: column
-    encoding: N
-  - annotation: C3N.03490
-    method: column
-    encoding: O
-  - annotation: C3N.03012
-    method: column
-    encoding: P
-  - annotation: C3N.03015
-    method: column
-    encoding: Q
-  - annotation: C3N.01620
-    method: column
-    encoding: R
-  - annotation: C3N.02730
-    method: column
-    encoding: S
-  - annotation: C3N.04277
-    method: column
-    encoding: T
-  - annotation: C3N.03045
-    method: column
-    encoding: U
-  - annotation: C3N.02275
-    method: column
-    encoding: V
-  - annotation: C3N.01758
-    method: column
-    encoding: W
-  - annotation: C3N.01339
-    method: column
-    encoding: X
-  - annotation: C3N.03226
-    method: column
-    encoding: Y
-  - annotation: C3N.03619
-    method: column
-    encoding: Z
-  - annotation: C3N.00871
-    method: column
-    encoding: AA
-  - annotation: C3N.02713
-    method: column
-    encoding: AB
-  - annotation: C3N.01337
-    method: column
-    encoding: AC
-  - annotation: C3L.04844
-    method: column
-    encoding: AD
+    - annotation: C3L.00997
+      method: column
+      encoding: B
+    - annotation: C3N.03849
+      method: column
+      encoding: C
+    - annotation: C3N.03487
+      method: column
+      encoding: D
+    - annotation: C3N.01858
+      method: column
+      encoding: E
+    - annotation: C3L.04791
+      method: column
+      encoding: F
+    - annotation: C3N.04273
+      method: column
+      encoding: G
+    - annotation: C3N.03664
+      method: column
+      encoding: H
+    - annotation: C3N.03781
+      method: column
+      encoding: I
+    - annotation: C3L.00999
+      method: column
+      encoding: J
+    - annotation: C3N.01859
+      method: column
+      encoding: K
+    - annotation: C3N.03009
+      method: column
+      encoding: L
+    - annotation: C3N.03933
+      method: column
+      encoding: M
+    - annotation: C3N.01948
+      method: column
+      encoding: N
+    - annotation: C3N.03490
+      method: column
+      encoding: O
+    - annotation: C3N.03012
+      method: column
+      encoding: P
+    - annotation: C3N.03015
+      method: column
+      encoding: Q
+    - annotation: C3N.01620
+      method: column
+      encoding: R
+    - annotation: C3N.02730
+      method: column
+      encoding: S
+    - annotation: C3N.04277
+      method: column
+      encoding: T
+    - annotation: C3N.03045
+      method: column
+      encoding: U
+    - annotation: C3N.02275
+      method: column
+      encoding: V
+    - annotation: C3N.01758
+      method: column
+      encoding: W
+    - annotation: C3N.01339
+      method: column
+      encoding: X
+    - annotation: C3N.03226
+      method: column
+      encoding: Y
+    - annotation: C3N.03619
+      method: column
+      encoding: Z
+    - annotation: C3N.00871
+      method: column
+      encoding: AA
+    - annotation: C3N.02713
+      method: column
+      encoding: AB
+    - annotation: C3N.01337
+      method: column
+      encoding: AC
+    - annotation: C3L.04844
+      method: column
+      encoding: AD
   provenance:
     repo: PMC
     publication: PMC12465049
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026

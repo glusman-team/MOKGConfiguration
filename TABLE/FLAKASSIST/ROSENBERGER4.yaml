@@ -7,15 +7,15 @@ template:
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12158776/
     sheet: down, late
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: J
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: gene_associated_with_condition
     object:
       method: value
@@ -25,37 +25,34 @@ template:
     repo: PMC
     publication: PMC12158776
     contributors:
-    - kind: curation
-      name: OpenCode
-      date: 13 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: Protein.Group
-    method: column
-    encoding: A
-  - annotation: low_moderate_fc
-    method: column
-    encoding: B
-  - annotation: low_moderate_p
-    method: column
-    encoding: C
-  - annotation: low_moderate_B
-    method: column
-    encoding: D
-  - annotation: moderate_high_fc
-    method: column
-    encoding: E
-  - annotation: moderate_high_p
-    method: column
-    encoding: F
-  - annotation: moderate_high_B
-    method: column
-    encoding: G
-  - annotation: diff_fc
-    method: column
-    encoding: H
-  - annotation: diff_B
-    method: column
-    encoding: I
+    - annotation: Protein.Group
+      method: column
+      encoding: A
+    - annotation: low_moderate_fc
+      method: column
+      encoding: B
+    - annotation: low_moderate_p
+      method: column
+      encoding: C
+    - annotation: low_moderate_B
+      method: column
+      encoding: D
+    - annotation: moderate_high_fc
+      method: column
+      encoding: E
+    - annotation: moderate_high_p
+      method: column
+      encoding: F
+    - annotation: moderate_high_B
+      method: column
+      encoding: G
+    - annotation: diff_fc
+      method: column
+      encoding: H
+    - annotation: diff_B
+      method: column
+      encoding: I

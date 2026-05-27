@@ -12,7 +12,7 @@ template:
       encoding: AN
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: associated_with
     object:
       method: value
@@ -21,34 +21,34 @@ template:
     repo: PMC
     publication: PMC12521215
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
   annotations:
-  - annotation: fold change DZ GX
-    method: column
-    encoding: AE
-  - annotation: p value DZ GX
-    method: column
-    encoding: AF
-  - annotation: regulated DZ GX
-    method: column
-    encoding: AG
-  - annotation: fold change DZ NX
-    method: column
-    encoding: AH
-  - annotation: p value DZ NX
-    method: column
-    encoding: AI
-  - annotation: regulated DZ NX
-    method: column
-    encoding: AJ
-  - annotation: fold change DZ MIX
-    method: column
-    encoding: AK
-  - annotation: p value DZ MIX
-    method: column
-    encoding: AL
-  - annotation: regulated DZ MIX
-    method: column
-    encoding: AM
+    - annotation: fold change DZ GX
+      method: column
+      encoding: AE
+    - annotation: p value DZ GX
+      method: column
+      encoding: AF
+    - annotation: regulated DZ GX
+      method: column
+      encoding: AG
+    - annotation: fold change DZ NX
+      method: column
+      encoding: AH
+    - annotation: p value DZ NX
+      method: column
+      encoding: AI
+    - annotation: regulated DZ NX
+      method: column
+      encoding: AJ
+    - annotation: fold change DZ MIX
+      method: column
+      encoding: AK
+    - annotation: p value DZ MIX
+      method: column
+      encoding: AL
+    - annotation: regulated DZ MIX
+      method: column
+      encoding: AM

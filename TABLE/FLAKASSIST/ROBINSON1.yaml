@@ -7,71 +7,68 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12808955.2/NIHMS2115151-supplement-MMC2.xlsx
     sheet: Table S4
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: G
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0016064
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC12808955
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 13 MAY 2026
+      - kind: curation
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: CHR_POS_REF_ALT
-    method: column
-    encoding: A
-  - annotation: CHROM
-    method: column
-    encoding: B
-  - annotation: POS (hg38)
-    method: column
-    encoding: C
-  - annotation: REF
-    method: column
-    encoding: D
-  - annotation: ALT
-    method: column
-    encoding: E
-  - annotation: Gene
-    method: column
-    encoding: F
-  - annotation: HGNC_ID
-    method: column
-    encoding: I
-  - annotation: ExonicFunc.refGene
-    method: column
-    encoding: J
-  - annotation: Cohort
-    method: column
-    encoding: L
-  - annotation: Subtype
-    method: column
-    encoding: M
-  - annotation: Syndromic
-    method: column
-    encoding: N
-  - annotation: Features
-    method: column
-    encoding: O
-  - annotation: Sex
-    method: column
-    encoding: P
-  - annotation: max_AF
-    method: column
-    encoding: R
+    - annotation: CHR_POS_REF_ALT
+      method: column
+      encoding: A
+    - annotation: CHROM
+      method: column
+      encoding: B
+    - annotation: POS (hg38)
+      method: column
+      encoding: C
+    - annotation: REF
+      method: column
+      encoding: D
+    - annotation: ALT
+      method: column
+      encoding: E
+    - annotation: Gene
+      method: column
+      encoding: F
+    - annotation: HGNC_ID
+      method: column
+      encoding: I
+    - annotation: ExonicFunc.refGene
+      method: column
+      encoding: J
+    - annotation: Cohort
+      method: column
+      encoding: L
+    - annotation: Subtype
+      method: column
+      encoding: M
+    - annotation: Syndromic
+      method: column
+      encoding: N
+    - annotation: Features
+      method: column
+      encoding: O
+    - annotation: Sex
+      method: column
+      encoding: P
+    - annotation: max_AF
+      method: column
+      encoding: R

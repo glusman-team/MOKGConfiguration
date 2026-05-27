@@ -7,62 +7,63 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7394404.1/pone.0236962.s019.xlsx
     sheet: S14_Table
     row_slice:
-    - 1
-    - 16
+      - 1
+      - 16
   statement:
     subject:
       method: column
       encoding: B
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
       regex:
-      - pattern: ^CANA1S$
-        replacement: CACNA1S
+        - pattern: ^CANA1S$
+          replacement: CACNA1S
       remove:
-      - ^X1$
-      - ^X2$
-      - ^X3$
+        - ^X1$
+        - ^X2$
+        - ^X3$
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0005336
       prioritize:
-      - Disease
+        - Disease
     qualifiers:
-    - qualifier: species_context_qualifier
-      method: value
-      encoding: NCBITaxon:9606
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC7394404
     contributors:
-    - name: tablassist
-      kind: tool
-      date: 12 MAY 2026
-      comment: Config from extractor summary of PMC7394404 Table S14 MyoCapture exomes
+      - name: tablassist
+        kind: tool
+        date: 12 MAY 2026
+        comment: Config from extractor summary of PMC7394404 Table S14 MyoCapture exomes
   annotations:
-  - annotation: individual_id
-    method: column
-    encoding: A
-  - annotation: hgvs_genomic
-    method: column
-    encoding: C
-  - annotation: hgvs_coding
-    method: column
-    encoding: D
-  - annotation: hgvs_protein
-    method: column
-    encoding: E
-  - annotation: pubmed_id
-    method: column
-    encoding: F
-  - annotation: year
-    method: column
-    encoding: G
-  - annotation: miscellaneous_notes
-    method: value
-    encoding: MISTIC tool evaluation on MyoCapture clinical exomes; 15 individuals
-      with causal Mendelian myopathy variants. 3 individuals have consent-restricted
-      variant data (HGVSg replaced with contact notice). Summary statistic rows and
-      footer rows excluded.
+    - annotation: individual_id
+      method: column
+      encoding: A
+    - annotation: hgvs_genomic
+      method: column
+      encoding: C
+    - annotation: hgvs_coding
+      method: column
+      encoding: D
+    - annotation: hgvs_protein
+      method: column
+      encoding: E
+    - annotation: pubmed_id
+      method: column
+      encoding: F
+    - annotation: year
+      method: column
+      encoding: G
+    - annotation: miscellaneous_notes
+      method: value
+      encoding:
+        MISTIC tool evaluation on MyoCapture clinical exomes; 15 individuals
+        with causal Mendelian myopathy variants. 3 individuals have consent-restricted
+        variant data (HGVSg replaced with contact notice). Summary statistic rows and
+        footer rows excluded.

@@ -7,51 +7,48 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13167366.1/sj-xlsx-3-cat-10.1177_10760296261438237.xlsx
     sheet: Table s3
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: B
       prioritize:
-      - Gene
-      - Protein
+        - Gene
+        - Protein
       taxon: 9606
       regex:
-      - pattern: ' levels$'
-        replacement: ''
+        - pattern: " levels$"
+          replacement: ""
     predicate: related_to
     object:
       method: column
       encoding: C
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13167366
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 14 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 14 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 14 MAY 2026
   annotations:
-  - annotation: mr_method
-    method: column
-    encoding: E
-  - annotation: nsnp
-    method: column
-    encoding: D
-  - annotation: or_ci
-    method: column
-    encoding: F
-  - annotation: p_value
-    method: column
-    encoding: G
-  - annotation: fdr
-    method: column
-    encoding: H
-  - annotation: id_exposure
-    method: column
-    encoding: A
+    - annotation: mr_method
+      method: column
+      encoding: E
+    - annotation: nsnp
+      method: column
+      encoding: D
+    - annotation: or_ci
+      method: column
+      encoding: F
+    - annotation: p_value
+      method: column
+      encoding: G
+    - annotation: fdr
+      method: column
+      encoding: H
+    - annotation: id_exposure
+      method: column
+      encoding: A

@@ -11,47 +11,47 @@ template:
       method: column
       encoding: B
       regex:
-      - pattern: ^\s*(.*?)\s*$
-        replacement: $1
-      prefix: 'UniProtKB:'
+        - pattern: ^\s*(.*?)\s*$
+          replacement: $1
+      prefix: "UniProtKB:"
       taxon: 9606
       prioritize:
-      - Protein
+        - Protein
     predicate: associated_with
     object:
       method: value
       encoding: MONDO:0010735
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC10920785
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: Phosphosite
-    method: column
-    encoding: A
-  - annotation: Gene symbol
-    method: column
-    encoding: C
-  - annotation: logFC
-    method: column
-    encoding: D
-  - annotation: AveExpr
-    method: column
-    encoding: E
-  - annotation: t
-    method: column
-    encoding: F
-  - annotation: P.Value
-    method: column
-    encoding: G
-  - annotation: adj.P.Val
-    method: column
-    encoding: H
-  - annotation: B
-    method: column
-    encoding: I
+    - annotation: Phosphosite
+      method: column
+      encoding: A
+    - annotation: Gene symbol
+      method: column
+      encoding: C
+    - annotation: logFC
+      method: column
+      encoding: D
+    - annotation: AveExpr
+      method: column
+      encoding: E
+    - annotation: t
+      method: column
+      encoding: F
+    - annotation: P.Value
+      method: column
+      encoding: G
+    - annotation: adj.P.Val
+      method: column
+      encoding: H
+    - annotation: B
+      method: column
+      encoding: I

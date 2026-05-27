@@ -7,42 +7,40 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9118152.1/mmc3.xlsx
     sheet: Table_S3_CHDgenes
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: D
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0005453
       prioritize:
-      - Disease
+        - Disease
     qualifiers:
-    - qualifier: species_context_qualifier
-      method: value
-      encoding: NCBITaxon:9606
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC9118152
     contributors:
-    - kind: curation
-      name: Tablassist Pioneer
-      date: 12 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: curation
+        name: tablassist
+        date: 12 MAY 2026
   annotations:
-  - annotation: miscellaneous notes
-    method: value
-    encoding: 'Curated set of 222 unique congenital heart disease (CHD)-related genes
-      used by the authors to validate whether polygenic risk score (PRS) variants
-      fall near known CHD loci. Sourced from published literature and databases. Note:
-      some genes appear on multiple rows due to multiple genomic intervals.'
-  - annotation: gene source
-    method: value
-    encoding: Curated CHD gene set from Spendlove et al. 2022, used for PRS validation
+    - annotation: miscellaneous notes
+      method: value
+      encoding:
+        "Curated set of 222 unique congenital heart disease (CHD)-related genes
+        used by the authors to validate whether polygenic risk score (PRS) variants
+        fall near known CHD loci. Sourced from published literature and databases. Note:
+        some genes appear on multiple rows due to multiple genomic intervals."
+    - annotation: gene source
+      method: value
+      encoding: Curated CHD gene set from Spendlove et al. 2022, used for PRS validation

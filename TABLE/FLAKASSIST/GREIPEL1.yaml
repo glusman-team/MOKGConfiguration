@@ -7,95 +7,92 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12640069.1/mmc2.xlsx
     sheet: Tabelle2
     row_slice:
-    - 2
-    - 106
+      - 2
+      - 106
   statement:
     subject:
       method: value
       encoding: NCBIGene:5076
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0019719
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC12640069
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 13 MAY 2026
+      - kind: curation
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: patient id
-    method: column
-    encoding: A
-  - annotation: age at last follow up
-    method: column
-    encoding: B
-  - annotation: gender
-    method: column
-    encoding: C
-  - annotation: reference
-    method: column
-    encoding: D
-  - annotation: reported PAX2 transcript variant
-    method: column
-    encoding: E
-  - annotation: reported deduced protein change
-    method: column
-    encoding: F
-  - annotation: chromosomal position hg38
-    method: column
-    encoding: G
-  - annotation: converted to NM_000278.5
-    method: column
-    encoding: H
-  - annotation: NP_000269.3 deduced protein change
-    method: column
-    encoding: I
-  - annotation: heterozygosity
-    method: column
-    encoding: J
-  - annotation: inheritance
-    method: column
-    encoding: K
-  - annotation: ACMG codes
-    method: column
-    encoding: L
-  - annotation: CAKUT type reported
-    method: column
-    encoding: M
-  - annotation: CAKUT type standardized
-    method: column
-    encoding: N
-  - annotation: CKD stage
-    method: column
-    encoding: O
-  - annotation: age at CKD G5 KRT ESKD
-    method: column
-    encoding: P
-  - annotation: proteinuria
-    method: column
-    encoding: Q
-  - annotation: proteinuria level
-    method: column
-    encoding: R
-  - annotation: uACR prior to KTx
-    method: column
-    encoding: S
-  - annotation: kidney biopsy result
-    method: column
-    encoding: T
-  - annotation: ocular phenotype
-    method: column
-    encoding: U
-  - annotation: other extrarenal phenotype
-    method: column
-    encoding: V
+    - annotation: patient id
+      method: column
+      encoding: A
+    - annotation: age at last follow up
+      method: column
+      encoding: B
+    - annotation: gender
+      method: column
+      encoding: C
+    - annotation: reference
+      method: column
+      encoding: D
+    - annotation: reported PAX2 transcript variant
+      method: column
+      encoding: E
+    - annotation: reported deduced protein change
+      method: column
+      encoding: F
+    - annotation: chromosomal position hg38
+      method: column
+      encoding: G
+    - annotation: converted to NM_000278.5
+      method: column
+      encoding: H
+    - annotation: NP_000269.3 deduced protein change
+      method: column
+      encoding: I
+    - annotation: heterozygosity
+      method: column
+      encoding: J
+    - annotation: inheritance
+      method: column
+      encoding: K
+    - annotation: ACMG codes
+      method: column
+      encoding: L
+    - annotation: CAKUT type reported
+      method: column
+      encoding: M
+    - annotation: CAKUT type standardized
+      method: column
+      encoding: N
+    - annotation: CKD stage
+      method: column
+      encoding: O
+    - annotation: age at CKD G5 KRT ESKD
+      method: column
+      encoding: P
+    - annotation: proteinuria
+      method: column
+      encoding: Q
+    - annotation: proteinuria level
+      method: column
+      encoding: R
+    - annotation: uACR prior to KTx
+      method: column
+      encoding: S
+    - annotation: kidney biopsy result
+      method: column
+      encoding: T
+    - annotation: ocular phenotype
+      method: column
+      encoding: U
+    - annotation: other extrarenal phenotype
+      method: column
+      encoding: V

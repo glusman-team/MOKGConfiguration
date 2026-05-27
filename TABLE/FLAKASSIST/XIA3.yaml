@@ -7,14 +7,14 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166711.1/medi-105-e48634-s007.xlsx
     sheet: Table S9
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: related_to
     object:
@@ -24,31 +24,25 @@ template:
     repo: PMC
     publication: PMC13166711
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      - CalPoly SLO
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: number of snps
-    method: column
-    encoding: B
-  - annotation: pp h0 abf
-    method: column
-    encoding: C
-  - annotation: pp h1 abf
-    method: column
-    encoding: D
-  - annotation: pp h2 abf
-    method: column
-    encoding: E
-  - annotation: pp h3 abf
-    method: column
-    encoding: F
-  - annotation: pp h4 abf
-    method: column
-    encoding: G
+    - annotation: number of snps
+      method: column
+      encoding: B
+    - annotation: pp h0 abf
+      method: column
+      encoding: C
+    - annotation: pp h1 abf
+      method: column
+      encoding: D
+    - annotation: pp h2 abf
+      method: column
+      encoding: E
+    - annotation: pp h3 abf
+      method: column
+      encoding: F
+    - annotation: pp h4 abf
+      method: column
+      encoding: G

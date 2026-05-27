@@ -15,29 +15,26 @@ template:
       method: column
       encoding: A
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
   provenance:
     repo: PMC
     publication: PMC13172311
     contributors:
-    - kind: curation
-      name: Tablassist
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
 sections:
-- source:
-    sheet: vU1-8 KO v WT
-  statement:
-    subject:
-      method: value
-      encoding: vU1-8 KO
-    predicate: has_sequence_variant
-    object:
-      method: column
-      encoding: A
-      prioritize:
-      - Gene
-      taxon: 9606
+  - source:
+      sheet: vU1-8 KO v WT
+    statement:
+      subject:
+        method: value
+        encoding: vU1-8 KO
+      predicate: has_sequence_variant
+      object:
+        method: column
+        encoding: A
+        prioritize:
+          - Gene
+        taxon: 9606

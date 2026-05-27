@@ -7,15 +7,15 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12663307.1/41598_2025_26836_MOESM1_ESM.xlsx
     sheet: Table 1
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: N
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: gene_associated_with_condition
     object:
       method: value
@@ -24,101 +24,101 @@ template:
     repo: PMC
     publication: PMC12663307
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: case number
-    method: column
-    encoding: A
-    fill: forward
-  - annotation: family id
-    method: column
-    encoding: B
-  - annotation: reason for referral
-    method: column
-    encoding: C
-  - annotation: testing strategy
-    method: column
-    encoding: D
-  - annotation: type of test
-    method: column
-    encoding: E
-  - annotation: consanguinity
-    method: column
-    encoding: F
-  - annotation: family history
-    method: column
-    encoding: G
-  - annotation: gender
-    method: column
-    encoding: H
-  - annotation: age at report
-    method: column
-    encoding: I
-  - annotation: age group at report
-    method: column
-    encoding: J
-  - annotation: age group onset
-    method: column
-    encoding: K
-  - annotation: patients description
-    method: column
-    encoding: L
-  - annotation: phenotypic group
-    method: column
-    encoding: M
-  - annotation: mutation type
-    method: column
-    encoding: O
-  - annotation: novel status
-    method: column
-    encoding: P
-  - annotation: genomic position
-    method: column
-    encoding: Q
-  - annotation: zygosity
-    method: column
-    encoding: R
-  - annotation: transcript
-    method: column
-    encoding: S
-  - annotation: cdna
-    method: column
-    encoding: T
-  - annotation: protein
-    method: column
-    encoding: U
-  - annotation: omim phenotype
-    method: column
-    encoding: V
-  - annotation: inheritance mode
-    method: column
-    encoding: W
-  - annotation: acmg classification
-    method: column
-    encoding: X
-  - annotation: acmg evidence
-    method: column
-    encoding: Y
-  - annotation: segregation status
-    method: column
-    encoding: Z
-  - annotation: final result
-    method: column
-    encoding: AA
-  - annotation: pmid
-    method: column
-    encoding: AB
-  - annotation: date
-    method: column
-    encoding: AC
-  - annotation: tests before ngs
-    method: column
-    encoding: AD
-  - annotation: cnv confirmed
-    method: column
-    encoding: AE
-  - annotation: clinvar accession
-    method: column
-    encoding: AF
+    - annotation: case number
+      method: column
+      encoding: A
+      fill: forward
+    - annotation: family id
+      method: column
+      encoding: B
+    - annotation: reason for referral
+      method: column
+      encoding: C
+    - annotation: testing strategy
+      method: column
+      encoding: D
+    - annotation: type of test
+      method: column
+      encoding: E
+    - annotation: consanguinity
+      method: column
+      encoding: F
+    - annotation: family history
+      method: column
+      encoding: G
+    - annotation: gender
+      method: column
+      encoding: H
+    - annotation: age at report
+      method: column
+      encoding: I
+    - annotation: age group at report
+      method: column
+      encoding: J
+    - annotation: age group onset
+      method: column
+      encoding: K
+    - annotation: patients description
+      method: column
+      encoding: L
+    - annotation: phenotypic group
+      method: column
+      encoding: M
+    - annotation: mutation type
+      method: column
+      encoding: O
+    - annotation: novel status
+      method: column
+      encoding: P
+    - annotation: genomic position
+      method: column
+      encoding: Q
+    - annotation: zygosity
+      method: column
+      encoding: R
+    - annotation: transcript
+      method: column
+      encoding: S
+    - annotation: cdna
+      method: column
+      encoding: T
+    - annotation: protein
+      method: column
+      encoding: U
+    - annotation: omim phenotype
+      method: column
+      encoding: V
+    - annotation: inheritance mode
+      method: column
+      encoding: W
+    - annotation: acmg classification
+      method: column
+      encoding: X
+    - annotation: acmg evidence
+      method: column
+      encoding: Y
+    - annotation: segregation status
+      method: column
+      encoding: Z
+    - annotation: final result
+      method: column
+      encoding: AA
+    - annotation: pmid
+      method: column
+      encoding: AB
+    - annotation: date
+      method: column
+      encoding: AC
+    - annotation: tests before ngs
+      method: column
+      encoding: AD
+    - annotation: cnv confirmed
+      method: column
+      encoding: AE
+    - annotation: clinvar accession
+      method: column
+      encoding: AF

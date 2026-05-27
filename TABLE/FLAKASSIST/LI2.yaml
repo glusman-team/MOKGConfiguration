@@ -7,14 +7,14 @@ template:
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12835233/
     sheet: Sheet1
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: B
       prioritize:
-      - SmallMolecule
+        - SmallMolecule
     predicate: correlated_with
     object:
       method: value
@@ -23,26 +23,25 @@ template:
     repo: PMC
     publication: PMC12835233
     contributors:
-    - kind: curation
-      name: Tablassist Pioneer
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      comment: Integrated proteomics and metabolomics study of glutathione metabolism
-        in sepsis-associated encephalopathy (mouse model)
+      - kind: curation
+        name: tablassist
+        date: 13 MAY 2026
+        comment:
+          Integrated proteomics and metabolomics study of glutathione metabolism
+          in sepsis-associated encephalopathy (mouse model)
   annotations:
-  - annotation: log2fc
-    method: column
-    encoding: AA
-  - annotation: pval
-    method: column
-    encoding: X
-  - annotation: fdr
-    method: column
-    encoding: Y
-  - annotation: vip
-    method: column
-    encoding: W
-  - annotation: type
-    method: column
-    encoding: AB
+    - annotation: log2fc
+      method: column
+      encoding: AA
+    - annotation: pval
+      method: column
+      encoding: X
+    - annotation: fdr
+      method: column
+      encoding: Y
+    - annotation: vip
+      method: column
+      encoding: W
+    - annotation: type
+      method: column
+      encoding: AB

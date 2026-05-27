@@ -7,42 +7,40 @@ template:
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12604666/
     sheet: Pathogenic Likely Pathogenic
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: F
-      prefix: 'NCBIGene:'
+      prefix: "NCBIGene:"
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: associated_with
     object:
       method: column
       encoding: H
       remove:
-      - Not found
+        - Not found
       explode_by: ;
       regex:
-      - pattern: \s*\(.*?\)\s*$
-        replacement: ''
+        - pattern: \s*\(.*?\)\s*$
+          replacement: ""
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC12604666
     contributors:
-    - name: Skye Lane Lane Goetz
-      date: '2026-05-13'
-    - kind: tool
-      name: tablassist
-      date: '2026-05-13'
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: ClinVar variant ID
-    method: column
-    encoding: E
-    prefix: 'ClinVarVariant:'
-  - annotation: miscellaneous notes
-    method: value
-    encoding: 'ClinVar review status: Pathogenic/Likely pathogenic'
+    - annotation: ClinVar variant ID
+      method: column
+      encoding: E
+      prefix: "ClinVarVariant:"
+    - annotation: miscellaneous notes
+      method: value
+      encoding: "ClinVar review status: Pathogenic/Likely pathogenic"

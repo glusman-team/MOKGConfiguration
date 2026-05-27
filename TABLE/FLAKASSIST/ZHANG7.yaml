@@ -6,85 +6,79 @@ template:
     local: ./DATALAKE/PMC13151332_13073_2026_1629_MOESM2_ESM.xlsx
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13151332.1/13073_2026_1629_MOESM2_ESM.xlsx
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: D
       prioritize:
-      - NamedThing
+        - NamedThing
     predicate: related_to
     object:
       method: column
       encoding: C
       prioritize:
-      - DiseaseOrPhenotypicFeature
+        - DiseaseOrPhenotypicFeature
   provenance:
     repo: PMC
     publication: PMC13151332
     contributors:
-    - name: Skye Lane Goetz
-      kind: curation
-      date: 14 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      - CalPoly SLO
-    - name: tablassist
-      kind: tool
-      date: 14 MAY 2026
+      - name: tablassist
+        kind: tool
+        date: 14 MAY 2026
   annotations:
-  - annotation: trait_file
-    method: column
-    encoding: A
-  - annotation: chromosome
-    method: column
-    encoding: B
-  - annotation: cpg_id
-    method: column
-    encoding: D
-  - annotation: position
-    method: column
-    encoding: E
-  - annotation: r_squared
-    method: column
-    encoding: F
-  - annotation: beta
-    method: column
-    encoding: G
-  - annotation: se
-    method: column
-    encoding: H
-  - annotation: pval
-    method: column
-    encoding: I
-  - annotation: bonferroni_pval
-    method: column
-    encoding: J
-  - annotation: z_score
-    method: column
-    encoding: K
-  - annotation: broad_category
-    method: column
-    encoding: L
-  - annotation: mr_pval_bonferroni
-    method: column
-    encoding: M
-  - annotation: coloc_pph4
-    method: column
-    encoding: N
+    - annotation: trait_file
+      method: column
+      encoding: A
+    - annotation: chromosome
+      method: column
+      encoding: B
+    - annotation: cpg_id
+      method: column
+      encoding: D
+    - annotation: position
+      method: column
+      encoding: E
+    - annotation: r_squared
+      method: column
+      encoding: F
+    - annotation: beta
+      method: column
+      encoding: G
+    - annotation: se
+      method: column
+      encoding: H
+    - annotation: pval
+      method: column
+      encoding: I
+    - annotation: bonferroni_pval
+      method: column
+      encoding: J
+    - annotation: z_score
+      method: column
+      encoding: K
+    - annotation: broad_category
+      method: column
+      encoding: L
+    - annotation: mr_pval_bonferroni
+      method: column
+      encoding: M
+    - annotation: coloc_pph4
+      method: column
+      encoding: N
 sections:
-- source:
-    sheet: Table S5.1 (AA)
-  statement:
-    subject:
-      encoding: D
-    object:
-      encoding: C
-- source:
-    sheet: Table S5.2 (EA)
-  statement:
-    subject:
-      encoding: D
-    object:
-      encoding: C
+  - source:
+      sheet: Table S5.1 (AA)
+    statement:
+      subject:
+        encoding: D
+      object:
+        encoding: C
+  - source:
+      sheet: Table S5.2 (EA)
+    statement:
+      subject:
+        encoding: D
+      object:
+        encoding: C

@@ -7,62 +7,59 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7206184.1/41467_2020_15823_MOESM7_ESM.xlsx
     sheet: Supplementary Data File 1
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - SequenceVariant
-      - Snv
+        - SequenceVariant
+        - Snv
     predicate: related_to
     object:
       method: column
       encoding: B
       taxon: 9606
       prioritize:
-      - Gene
-      - Protein
+        - Gene
+        - Protein
     qualifiers:
-    - qualifier: object_aspect_qualifier
-      method: column
-      encoding: E
+      - qualifier: object_aspect_qualifier
+        method: column
+        encoding: E
   annotations:
-  - annotation: chromosomal location
-    method: column
-    encoding: F
-  - annotation: genomic position hg19
-    method: column
-    encoding: G
-  - annotation: effect allele
-    method: column
-    encoding: H
-  - annotation: other allele
-    method: column
-    encoding: I
-  - annotation: effect allele frequency
-    method: column
-    encoding: J
-  - annotation: imputation info
-    method: column
-    encoding: K
-  - annotation: inverse rank normalized beta
-    method: column
-    encoding: L
-  - annotation: inverse rank normalized standard error
-    method: column
-    encoding: M
-  - annotation: p value
-    method: column
-    encoding: N
+    - annotation: chromosomal location
+      method: column
+      encoding: F
+    - annotation: genomic position hg19
+      method: column
+      encoding: G
+    - annotation: effect allele
+      method: column
+      encoding: H
+    - annotation: other allele
+      method: column
+      encoding: I
+    - annotation: effect allele frequency
+      method: column
+      encoding: J
+    - annotation: imputation info
+      method: column
+      encoding: K
+    - annotation: inverse rank normalized beta
+      method: column
+      encoding: L
+    - annotation: inverse rank normalized standard error
+      method: column
+      encoding: M
+    - annotation: p value
+      method: column
+      encoding: N
   provenance:
     repo: PMC
     publication: PMC7206184
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026

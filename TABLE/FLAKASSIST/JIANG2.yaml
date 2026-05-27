@@ -7,113 +7,111 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13112017.1/BRB3-16-e71366-s002.xlsx
     sheet: Full SMR results
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: F
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0004976
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13112017
     contributors:
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      comment: SMR MR analysis of autophagy-related genes causal for ALS
+      - kind: curation
+        name: tablassist
+        date: 13 MAY 2026
+        comment: SMR MR analysis of autophagy-related genes causal for ALS
   annotations:
-  - annotation: tissue
-    method: column
-    encoding: B
-  - annotation: category
-    method: column
-    encoding: A
-  - annotation: probeID
-    method: column
-    encoding: D
-  - annotation: probe chromosome
-    method: column
-    encoding: E
-  - annotation: topSNP
-    method: column
-    encoding: H
-  - annotation: topSNP chromosome
-    method: column
-    encoding: I
-  - annotation: topSNP position
-    method: column
-    encoding: J
-  - annotation: allele1
-    method: column
-    encoding: K
-  - annotation: allele2
-    method: column
-    encoding: L
-  - annotation: frequency
-    method: column
-    encoding: M
-  - annotation: gwas beta
-    method: column
-    encoding: N
-  - annotation: gwas se
-    method: column
-    encoding: O
-  - annotation: gwas p
-    method: column
-    encoding: P
-  - annotation: eqtl beta
-    method: column
-    encoding: Q
-  - annotation: eqtl se
-    method: column
-    encoding: R
-  - annotation: eqtl p
-    method: column
-    encoding: S
-  - annotation: smr beta
-    method: column
-    encoding: T
-  - annotation: smr se
-    method: column
-    encoding: U
-  - annotation: smr p
-    method: column
-    encoding: V
-  - annotation: heidi p
-    method: column
-    encoding: W
-  - annotation: heidi nsnp
-    method: column
-    encoding: X
+    - annotation: tissue
+      method: column
+      encoding: B
+    - annotation: category
+      method: column
+      encoding: A
+    - annotation: probeID
+      method: column
+      encoding: D
+    - annotation: probe chromosome
+      method: column
+      encoding: E
+    - annotation: topSNP
+      method: column
+      encoding: H
+    - annotation: topSNP chromosome
+      method: column
+      encoding: I
+    - annotation: topSNP position
+      method: column
+      encoding: J
+    - annotation: allele1
+      method: column
+      encoding: K
+    - annotation: allele2
+      method: column
+      encoding: L
+    - annotation: frequency
+      method: column
+      encoding: M
+    - annotation: gwas beta
+      method: column
+      encoding: N
+    - annotation: gwas se
+      method: column
+      encoding: O
+    - annotation: gwas p
+      method: column
+      encoding: P
+    - annotation: eqtl beta
+      method: column
+      encoding: Q
+    - annotation: eqtl se
+      method: column
+      encoding: R
+    - annotation: eqtl p
+      method: column
+      encoding: S
+    - annotation: smr beta
+      method: column
+      encoding: T
+    - annotation: smr se
+      method: column
+      encoding: U
+    - annotation: smr p
+      method: column
+      encoding: V
+    - annotation: heidi p
+      method: column
+      encoding: W
+    - annotation: heidi nsnp
+      method: column
+      encoding: X
 sections:
-- source:
-    reindex:
-    - column: C
-      comparison: eq
-      comparator: eQTL
-- source:
-    reindex:
-    - column: C
-      comparison: eq
-      comparator: mQTL
-- source:
-    reindex:
-    - column: C
-      comparison: eq
-      comparator: pQTL
-- source:
-    reindex:
-    - column: C
-      comparison: eq
-      comparator: sQTL
+  - source:
+      reindex:
+        - column: C
+          comparison: eq
+          comparator: eQTL
+  - source:
+      reindex:
+        - column: C
+          comparison: eq
+          comparator: mQTL
+  - source:
+      reindex:
+        - column: C
+          comparison: eq
+          comparator: pQTL
+  - source:
+      reindex:
+        - column: C
+          comparison: eq
+          comparator: sQTL

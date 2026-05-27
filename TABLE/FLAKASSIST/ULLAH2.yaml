@@ -7,62 +7,59 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13153266.1/41523_2026_926_MOESM2_ESM.xlsx
     sheet: Suppl Table 2
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: D
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0004989
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13153266
     contributors:
-    - kind: curation
-      name: Tablassist
-      date: 13 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: cytogenic location
-    method: column
-    encoding: A
-  - annotation: existing variation
-    method: column
-    encoding: C
-  - annotation: ensembl id
-    method: column
-    encoding: E
-  - annotation: clinvar CLNSIG
-    method: column
-    encoding: Q
-  - annotation: consequence
-    method: column
-    encoding: V
-  - annotation: missense category
-    method: column
-    encoding: AH
-  - annotation: penetrance
-    method: column
-    encoding: AU
-  - annotation: CHR
-    method: column
-    encoding: AK
-  - annotation: POS
-    method: column
-    encoding: AL
-  - annotation: REF
-    method: column
-    encoding: AM
-  - annotation: ALT
-    method: column
-    encoding: AN
+    - annotation: cytogenic location
+      method: column
+      encoding: A
+    - annotation: existing variation
+      method: column
+      encoding: C
+    - annotation: ensembl id
+      method: column
+      encoding: E
+    - annotation: clinvar CLNSIG
+      method: column
+      encoding: Q
+    - annotation: consequence
+      method: column
+      encoding: V
+    - annotation: missense category
+      method: column
+      encoding: AH
+    - annotation: penetrance
+      method: column
+      encoding: AU
+    - annotation: CHR
+      method: column
+      encoding: AK
+    - annotation: POS
+      method: column
+      encoding: AL
+    - annotation: REF
+      method: column
+      encoding: AM
+    - annotation: ALT
+      method: column
+      encoding: AN

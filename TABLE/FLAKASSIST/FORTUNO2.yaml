@@ -7,53 +7,50 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12548217.1/13073_2025_1536_MOESM3_ESM.xlsx
     sheet: Table S3
     row_slice:
-    - 3
-    - auto
+      - 3
+      - auto
   statement:
     subject:
       method: value
       encoding: NCBIGene:7157
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0018875
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC12548217
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: protein change
-    method: column
-    encoding: A
-  - annotation: seq change
-    method: column
-    encoding: B
-  - annotation: kato class
-    method: column
-    encoding: C
-  - annotation: funk class
-    method: column
-    encoding: D
-  - annotation: giacomelli class
-    method: column
-    encoding: E
-  - annotation: kotler class
-    method: column
-    encoding: F
-  - annotation: kawaguchi class
-    method: column
-    encoding: G
-  - annotation: preliminary functional code
-    method: column
-    encoding: H
+    - annotation: protein change
+      method: column
+      encoding: A
+    - annotation: seq change
+      method: column
+      encoding: B
+    - annotation: kato class
+      method: column
+      encoding: C
+    - annotation: funk class
+      method: column
+      encoding: D
+    - annotation: giacomelli class
+      method: column
+      encoding: E
+    - annotation: kotler class
+      method: column
+      encoding: F
+    - annotation: kawaguchi class
+      method: column
+      encoding: G
+    - annotation: preliminary functional code
+      method: column
+      encoding: H

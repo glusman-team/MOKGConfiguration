@@ -7,53 +7,50 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13149156.1/Table1.xlsx
     sheet: ST3.The result of PWAS analysis
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       regex:
-      - pattern: ^.*_
-        replacement: ''
+        - pattern: ^.*_
+          replacement: ""
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: related_to
     object:
       method: value
       encoding: gestational diabetes mellitus
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13149156
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
   annotations:
-  - annotation: beta
-    method: column
-    encoding: B
-  - annotation: standard error
-    method: column
-    encoding: C
-  - annotation: p value
-    method: column
-    encoding: D
-  - annotation: model_r2
-    method: column
-    encoding: E
-  - annotation: n_snps
-    method: column
-    encoding: F
-  - annotation: fdr_corrected_p_value
-    method: column
-    encoding: G
-  - annotation: ancestry
-    method: column
-    encoding: H
+    - annotation: beta
+      method: column
+      encoding: B
+    - annotation: standard error
+      method: column
+      encoding: C
+    - annotation: p value
+      method: column
+      encoding: D
+    - annotation: model_r2
+      method: column
+      encoding: E
+    - annotation: n_snps
+      method: column
+      encoding: F
+    - annotation: fdr_corrected_p_value
+      method: column
+      encoding: G
+    - annotation: ancestry
+      method: column
+      encoding: H

@@ -7,16 +7,16 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7617483.3/S0033291724003349sup001.xlsx
     sheet: ST10
     row_slice:
-    - 4
-    - auto
+      - 4
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       taxon: 9606
       prioritize:
-      - PhenotypicFeature
-      - Disease
+        - PhenotypicFeature
+        - Disease
     predicate: associated_with
     object:
       method: value
@@ -25,38 +25,34 @@ template:
     repo: PMC
     publication: PMC7617483
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      comment: Triangulated MR - diet/PA vs depression/anxiety (3 studies)
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
   annotations:
-  - annotation: study1_b_W1_to_W2
-    method: column
-    encoding: B
-  - annotation: study1_se_W1_to_W2
-    method: column
-    encoding: C
-  - annotation: study1_b_W2_to_W3
-    method: column
-    encoding: D
-  - annotation: study1_se_W2_to_W3
-    method: column
-    encoding: E
-  - annotation: study2_group
-    method: column
-    encoding: G
-  - annotation: study2_b
-    method: column
-    encoding: H
-  - annotation: study2_95ci
-    method: column
-    encoding: I
-  - annotation: study3_n_snps
-    method: column
-    encoding: K
-  - annotation: study3_or_95ci
-    method: column
-    encoding: L
+    - annotation: study1_b_W1_to_W2
+      method: column
+      encoding: B
+    - annotation: study1_se_W1_to_W2
+      method: column
+      encoding: C
+    - annotation: study1_b_W2_to_W3
+      method: column
+      encoding: D
+    - annotation: study1_se_W2_to_W3
+      method: column
+      encoding: E
+    - annotation: study2_group
+      method: column
+      encoding: G
+    - annotation: study2_b
+      method: column
+      encoding: H
+    - annotation: study2_95ci
+      method: column
+      encoding: I
+    - annotation: study3_n_snps
+      method: column
+      encoding: K
+    - annotation: study3_or_95ci
+      method: column
+      encoding: L

@@ -7,15 +7,15 @@ template:
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8359598/
     sheet: S3
     row_slice:
-    - 4
-    - auto
+      - 4
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: gene_associated_with_condition
     object:
       method: value
@@ -25,40 +25,37 @@ template:
     repo: PMC
     publication: PMC8359598
     contributors:
-    - kind: curation
-      name: OpenCode
-      date: 13 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: Protein Accession
-    method: column
-    encoding: B
-  - annotation: Annotation
-    method: column
-    encoding: C
-  - annotation: PSM# (Dataset 1, Bai et al. Neuron 2020)
-    method: column
-    encoding: D
-  - annotation: Median of log2(AD/ctl)
-    method: column
-    encoding: E
-  - annotation: BH FDR
-    method: column
-    encoding: F
-  - annotation: astrocytes
-    method: column
-    encoding: G
-  - annotation: neurons
-    method: column
-    encoding: H
-  - annotation: oligodendrocytes
-    method: column
-    encoding: I
-  - annotation: microglia
-    method: column
-    encoding: J
-  - annotation: endothelia
-    method: column
-    encoding: K
+    - annotation: Protein Accession
+      method: column
+      encoding: B
+    - annotation: Annotation
+      method: column
+      encoding: C
+    - annotation: PSM# (Dataset 1, Bai et al. Neuron 2020)
+      method: column
+      encoding: D
+    - annotation: Median of log2(AD/ctl)
+      method: column
+      encoding: E
+    - annotation: BH FDR
+      method: column
+      encoding: F
+    - annotation: astrocytes
+      method: column
+      encoding: G
+    - annotation: neurons
+      method: column
+      encoding: H
+    - annotation: oligodendrocytes
+      method: column
+      encoding: I
+    - annotation: microglia
+      method: column
+      encoding: J
+    - annotation: endothelia
+      method: column
+      encoding: K

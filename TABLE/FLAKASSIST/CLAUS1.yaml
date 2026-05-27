@@ -7,83 +7,80 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11403095.1/mmc1.xlsx
     sheet: S2a. Diagnostic cohort
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
     reindex:
-    - column: S
-      comparison: eq
-      comparator: 'yes'
+      - column: S
+        comparison: eq
+        comparator: "yes"
   statement:
     subject:
       method: column
       encoding: L
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
       remove:
-      - ^Incidental finding
-      - ^trisomy
-      - ^unbalanced translocation
-      - ^several genes
-      - ^multiple genes
-      - ^XXY$
-      - ^22q11.21 duplication$
+        - ^Incidental finding
+        - ^trisomy
+        - ^unbalanced translocation
+        - ^several genes
+        - ^multiple genes
+        - ^XXY$
+        - ^22q11.21 duplication$
     predicate: gene_associated_with_condition
     object:
       method: column
       encoding: F
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC11403095
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: Patient ID
-    method: column
-    encoding: A
-  - annotation: P_NEF
-    method: column
-    encoding: B
-  - annotation: Family ID
-    method: column
-    encoding: C
-  - annotation: Year tested
-    method: column
-    encoding: D
-  - annotation: Requested diagnostic test
-    method: column
-    encoding: E
-  - annotation: Fitting disease inheritance for gene
-    method: column
-    encoding: M
-  - annotation: Zyogisty
-    method: column
-    encoding: N
-  - annotation: ACMG classification
-    method: column
-    encoding: O
-  - annotation: Variant type (CNV/SNV ...)
-    method: column
-    encoding: T
-  - annotation: Detection method
-    method: column
-    encoding: U
-  - annotation: Number of CNVs detected by ExomeDepth
-    method: column
-    encoding: V
-  - annotation: Relevant gene found in CNV from panel XX
-    method: column
-    encoding: X
-  - annotation: Size CNV
-    method: column
-    encoding: Y
-  - annotation: Alternative genotype after exomedepth
-    method: column
-    encoding: K
+    - annotation: Patient ID
+      method: column
+      encoding: A
+    - annotation: P_NEF
+      method: column
+      encoding: B
+    - annotation: Family ID
+      method: column
+      encoding: C
+    - annotation: Year tested
+      method: column
+      encoding: D
+    - annotation: Requested diagnostic test
+      method: column
+      encoding: E
+    - annotation: Fitting disease inheritance for gene
+      method: column
+      encoding: M
+    - annotation: Zyogisty
+      method: column
+      encoding: N
+    - annotation: ACMG classification
+      method: column
+      encoding: O
+    - annotation: Variant type (CNV/SNV ...)
+      method: column
+      encoding: T
+    - annotation: Detection method
+      method: column
+      encoding: U
+    - annotation: Number of CNVs detected by ExomeDepth
+      method: column
+      encoding: V
+    - annotation: Relevant gene found in CNV from panel XX
+      method: column
+      encoding: X
+    - annotation: Size CNV
+      method: column
+      encoding: Y
+    - annotation: Alternative genotype after exomedepth
+      method: column
+      encoding: K

@@ -27,10 +27,6 @@ template:
     repo: PMC
     publication: PMC13166552
     contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        comment: MR Egger intercept heterogeneity test for microbiota-immune-PD traits
-        date: 14 MAY 2026
       - kind: tool
         name: tablassist
         date: 14 MAY 2026

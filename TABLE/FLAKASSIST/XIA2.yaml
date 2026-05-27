@@ -7,56 +7,50 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166711.1/medi-105-e48634-s008.xlsx
     sheet: Table S10
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: value
       encoding: RNF43
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: related_to
     object:
       method: column
       encoding: E
       prioritize:
-      - PhenotypicFeature
+        - PhenotypicFeature
   provenance:
     repo: PMC
     publication: PMC13166711
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      - CalPoly SLO
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: atlas id
-    method: column
-    encoding: A
-  - annotation: pmid
-    method: column
-    encoding: B
-  - annotation: year
-    method: column
-    encoding: C
-  - annotation: domain
-    method: column
-    encoding: D
-  - annotation: p value
-    method: column
-    encoding: F
-  - annotation: sample size
-    method: column
-    encoding: G
-  - annotation: effect allele
-    method: column
-    encoding: H
-  - annotation: non effect allele
-    method: column
-    encoding: I
+    - annotation: atlas id
+      method: column
+      encoding: A
+    - annotation: pmid
+      method: column
+      encoding: B
+    - annotation: year
+      method: column
+      encoding: C
+    - annotation: domain
+      method: column
+      encoding: D
+    - annotation: p value
+      method: column
+      encoding: F
+    - annotation: sample size
+      method: column
+      encoding: G
+    - annotation: effect allele
+      method: column
+      encoding: H
+    - annotation: non effect allele
+      method: column
+      encoding: I

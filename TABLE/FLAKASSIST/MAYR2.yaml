@@ -7,72 +7,72 @@ template:
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8033531/
     sheet: "Plasma_proteome_Gro\xDFhadern"
     row_slice:
-    - 2
-    - auto
+      - 2
+      - auto
   statement:
     subject:
       method: column
       encoding: D
       regex:
-      - pattern: ;.*$
-        replacement: ''
+        - pattern: ;.*$
+          replacement: ""
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0015925
       prioritize:
-      - Disease
+        - Disease
     qualifiers: []
   provenance:
     repo: PMC
     publication: PMC8033531
     contributors:
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 13 MAY 2026
+      - kind: curation
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: Protein IDs
-    method: column
-    encoding: A
-  - annotation: Majority protein IDs
-    method: column
-    encoding: B
-  - annotation: Protein names
-    method: column
-    encoding: C
-  - annotation: Gene names
-    method: column
-    encoding: D
-  - annotation: LDH correlation coefficient
-    method: column
-    encoding: E
-  - annotation: LDH significance flag
-    method: column
-    encoding: F
-  - annotation: DLCO correlation coefficient
-    method: column
-    encoding: G
-  - annotation: DLCO significance flag
-    method: column
-    encoding: H
-  - annotation: age correlation coefficient
-    method: column
-    encoding: I
-  - annotation: age significance flag
-    method: column
-    encoding: J
-  - annotation: valid values
-    method: column
-    encoding: K
-  - annotation: coefficient of variation
-    method: column
-    encoding: L
-  - annotation: ELF score
-    method: column
-    encoding: M
-  - annotation: ELF enriched flag
-    method: column
-    encoding: N
+    - annotation: Protein IDs
+      method: column
+      encoding: A
+    - annotation: Majority protein IDs
+      method: column
+      encoding: B
+    - annotation: Protein names
+      method: column
+      encoding: C
+    - annotation: Gene names
+      method: column
+      encoding: D
+    - annotation: LDH correlation coefficient
+      method: column
+      encoding: E
+    - annotation: LDH significance flag
+      method: column
+      encoding: F
+    - annotation: DLCO correlation coefficient
+      method: column
+      encoding: G
+    - annotation: DLCO significance flag
+      method: column
+      encoding: H
+    - annotation: age correlation coefficient
+      method: column
+      encoding: I
+    - annotation: age significance flag
+      method: column
+      encoding: J
+    - annotation: valid values
+      method: column
+      encoding: K
+    - annotation: coefficient of variation
+      method: column
+      encoding: L
+    - annotation: ELF score
+      method: column
+      encoding: M
+    - annotation: ELF enriched flag
+      method: column
+      encoding: N

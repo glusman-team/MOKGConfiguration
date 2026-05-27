@@ -5,66 +5,66 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166580.1/medi-105-e48687-s008.xls
     sheet: Sheet1
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       regex:
-      - pattern: ' levels$'
-        replacement: ''
+        - pattern: " levels$"
+          replacement: ""
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: related_to
     object:
       method: value
       encoding: Ankylosing spondylitis
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13166580
     contributors:
-    - name: Skye Lane Goetz
-      kind: curation
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      - CalPoly SLO
-      comment: "Configured for MR results of inflammatory proteins \u2192 AS"
-    - name: tablassist
-      kind: tool
-      date: 13 MAY 2026
+      - name: Skye Lane Goetz
+        kind: curation
+        date: 13 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+          - CalPoly SLO
+        comment: "Configured for MR results of inflammatory proteins \u2192 AS"
+      - name: tablassist
+        kind: tool
+        date: 13 MAY 2026
   annotations:
-  - annotation: mr_method
-    method: column
-    encoding: B
-  - annotation: nsnp
-    method: column
-    encoding: C
-  - annotation: beta
-    method: column
-    encoding: D
-  - annotation: se
-    method: column
-    encoding: E
-  - annotation: p_value
-    method: column
-    encoding: F
-  - annotation: lower_ci
-    method: column
-    encoding: G
-  - annotation: upper_ci
-    method: column
-    encoding: H
-  - annotation: odds_ratio
-    method: column
-    encoding: I
-  - annotation: or_lci95
-    method: column
-    encoding: J
-  - annotation: or_uci95
-    method: column
-    encoding: K
+    - annotation: mr_method
+      method: column
+      encoding: B
+    - annotation: nsnp
+      method: column
+      encoding: C
+    - annotation: beta
+      method: column
+      encoding: D
+    - annotation: se
+      method: column
+      encoding: E
+    - annotation: p_value
+      method: column
+      encoding: F
+    - annotation: lower_ci
+      method: column
+      encoding: G
+    - annotation: upper_ci
+      method: column
+      encoding: H
+    - annotation: odds_ratio
+      method: column
+      encoding: I
+    - annotation: or_lci95
+      method: column
+      encoding: J
+    - annotation: or_uci95
+      method: column
+      encoding: K

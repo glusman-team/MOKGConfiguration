@@ -5,63 +5,61 @@ template:
     kind: text
     local: ./DATALAKE/PMC12417573/FABRY_URINE.csv
     url: https://doi.org/10.23876/j.krcp.23.218
-    delimiter: ','
+    delimiter: ","
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - SmallMolecule
+        - SmallMolecule
     predicate: associated_with
     object:
       method: value
       encoding: MONDO:0010526
       prioritize:
-      - Disease
+        - Disease
     qualifiers:
-    - qualifier: species_context_qualifier
-      method: value
-      encoding: NCBITaxon:10090
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:10090
   annotations:
-  - annotation: p_value_20w
-    method: column
-    encoding: D
-  - annotation: p_value_40w
-    method: column
-    encoding: E
-  - annotation: vip_score_20w
-    method: column
-    encoding: F
-  - annotation: vip_score_40w
-    method: column
-    encoding: G
-  - annotation: auc_20w
-    method: column
-    encoding: H
-  - annotation: auc_40w
-    method: column
-    encoding: I
-  - annotation: quantitative_value_20w
-    method: column
-    encoding: B
-  - annotation: quantitative_value_40w
-    method: column
-    encoding: C
-  - annotation: miscellaneous notes
-    method: value
-    encoding: p-values from Wilcoxon rank-sum test; VIP scores and AUC from PLS-DA;
-      concentrations in pg/ng creatinine; urine metabolites distinguishing FD mice
-      from wild-type at 20w and 40w
+    - annotation: p_value_20w
+      method: column
+      encoding: D
+    - annotation: p_value_40w
+      method: column
+      encoding: E
+    - annotation: vip_score_20w
+      method: column
+      encoding: F
+    - annotation: vip_score_40w
+      method: column
+      encoding: G
+    - annotation: auc_20w
+      method: column
+      encoding: H
+    - annotation: auc_40w
+      method: column
+      encoding: I
+    - annotation: quantitative_value_20w
+      method: column
+      encoding: B
+    - annotation: quantitative_value_40w
+      method: column
+      encoding: C
+    - annotation: miscellaneous notes
+      method: value
+      encoding:
+        p-values from Wilcoxon rank-sum test; VIP scores and AUC from PLS-DA;
+        concentrations in pg/ng creatinine; urine metabolites distinguishing FD mice
+        from wild-type at 20w and 40w
   provenance:
     repo: PMC
     publication: PMC12417573
     contributors:
-    - kind: curation
-      name: Tablassist Pioneer
-      date: 12 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026

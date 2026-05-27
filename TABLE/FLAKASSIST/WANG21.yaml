@@ -7,15 +7,15 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12633141.1/media-2.xlsx
     sheet: S16 - TADA
     row_slice:
-    - 60
-    - auto
+      - 60
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: gene_associated_with_condition
     object:
       method: value
@@ -24,43 +24,43 @@ template:
     repo: PMC
     publication: PMC12633141
     contributors:
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      comment: TADA gene discovery results for OCD/CTD rare coding variant analysis
+      - kind: curation
+        name: tablassist
+        date: 13 MAY 2026
+        organizations:
+          - Institute for Systems Biology
+        comment: TADA gene discovery results for OCD/CTD rare coding variant analysis
   annotations:
-  - annotation: bf ocd
-    method: column
-    encoding: AT
-  - annotation: bf ctd
-    method: column
-    encoding: AW
-  - annotation: bf ocdctd
-    method: column
-    encoding: BA
-  - annotation: q ocd
-    method: column
-    encoding: F
-  - annotation: q ctd
-    method: column
-    encoding: G
-  - annotation: q ocdctd
-    method: column
-    encoding: H
-  - annotation: loeuf
-    method: column
-    encoding: C
-  - annotation: pli
-    method: column
-    encoding: E
-  - annotation: chromosome
-    method: column
-    encoding: BD
-  - annotation: cds length
-    method: column
-    encoding: BE
-  - annotation: num coding exons
-    method: column
-    encoding: BF
+    - annotation: bf ocd
+      method: column
+      encoding: AT
+    - annotation: bf ctd
+      method: column
+      encoding: AW
+    - annotation: bf ocdctd
+      method: column
+      encoding: BA
+    - annotation: q ocd
+      method: column
+      encoding: F
+    - annotation: q ctd
+      method: column
+      encoding: G
+    - annotation: q ocdctd
+      method: column
+      encoding: H
+    - annotation: loeuf
+      method: column
+      encoding: C
+    - annotation: pli
+      method: column
+      encoding: E
+    - annotation: chromosome
+      method: column
+      encoding: BD
+    - annotation: cds length
+      method: column
+      encoding: BE
+    - annotation: num coding exons
+      method: column
+      encoding: BF

@@ -36,9 +36,6 @@ template:
     repo: PMC
     publication: PMC13124936
     contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 12 MAY 2026
       - kind: tool
         name: tablassist
         date: 12 MAY 2026

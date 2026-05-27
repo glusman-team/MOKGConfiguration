@@ -6,42 +6,38 @@ template:
     local: ./DATALAKE/PMC12906803_PBI-24-831-s003.xlsx
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12906803.1/PBI-24-831-s003.xlsx
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       taxon: 3847
       prioritize:
-      - Gene
+        - Gene
     predicate: related_to
     object:
       method: value
       encoding: salt stress response
       prioritize:
-      - BiologicalProcess
+        - BiologicalProcess
   provenance:
     repo: PMC
     publication: PMC12906803
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      comment: DEG analysis - sst1-1 NaCl vs control (nuclear genome)
-      date: 14 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 14 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 14 MAY 2026
   annotations:
-  - annotation: expression_naCl
-    method: column
-    encoding: B
-  - annotation: expression_control
-    method: column
-    encoding: C
-  - annotation: log2_fold_change
-    method: column
-    encoding: D
-  - annotation: p_value
-    method: column
-    encoding: E
+    - annotation: expression_naCl
+      method: column
+      encoding: B
+    - annotation: expression_control
+      method: column
+      encoding: C
+    - annotation: log2_fold_change
+      method: column
+      encoding: D
+    - annotation: p_value
+      method: column
+      encoding: E

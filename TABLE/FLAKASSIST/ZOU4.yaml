@@ -7,56 +7,53 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12900646.1/41588_2025_2486_MOESM4_ESM.xlsx
     sheet: Supp. Table 5
     row_slice:
-    - 6
-    - auto
+      - 6
+      - auto
   statement:
     subject:
       method: column
       encoding: C
-      prefix: 'RS:'
+      prefix: "RS:"
       taxon: 9606
       prioritize:
-      - SequenceVariant
+        - SequenceVariant
     predicate: related_to
     object:
       method: column
       encoding: L
-      explode_by: ','
+      explode_by: ","
       taxon: 9606
       prioritize:
-      - PhenotypicFeature
+        - PhenotypicFeature
   provenance:
     repo: PMC
     publication: PMC12900646
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
   annotations:
-  - annotation: chr
-    method: column
-    encoding: A
-  - annotation: pos
-    method: column
-    encoding: B
-  - annotation: ref
-    method: column
-    encoding: D
-  - annotation: alt
-    method: column
-    encoding: E
-  - annotation: freq
-    method: column
-    encoding: F
-  - annotation: mvSusie pip
-    method: column
-    encoding: G
-  - annotation: susie pip
-    method: column
-    encoding: H
-  - annotation: region
-    method: column
-    encoding: J
+    - annotation: chr
+      method: column
+      encoding: A
+    - annotation: pos
+      method: column
+      encoding: B
+    - annotation: ref
+      method: column
+      encoding: D
+    - annotation: alt
+      method: column
+      encoding: E
+    - annotation: freq
+      method: column
+      encoding: F
+    - annotation: mvSusie pip
+      method: column
+      encoding: G
+    - annotation: susie pip
+      method: column
+      encoding: H
+    - annotation: region
+      method: column
+      encoding: J

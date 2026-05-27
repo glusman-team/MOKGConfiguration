@@ -7,55 +7,51 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC6172276.1/41467_2018_6581_MOESM4_ESM.xlsx
     sheet: SD1
     row_slice:
-    - 2
-    - auto
+      - 2
+      - auto
     reindex:
-    - column: Q
-      comparison: eq
-      comparator: Pathogenic
+      - column: Q
+        comparison: eq
+        comparator: Pathogenic
   statement:
     subject:
       method: column
       encoding: F
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: breast carcinoma
       prioritize:
-      - Disease
+        - Disease
     qualifiers:
-    - qualifier: subject_form_or_variant_qualifier
-      method: value
-      encoding: germline pathogenic variant
+      - qualifier: subject_form_or_variant_qualifier
+        method: value
+        encoding: germline pathogenic variant
   provenance:
     repo: PMC
     publication: PMC6172276
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: variant effect
-    method: column
-    encoding: G
-  - annotation: HGVS coding
-    method: column
-    encoding: H
-  - annotation: p value
-    method: column
-    encoding: N
-  - annotation: odds ratio
-    method: column
-    encoding: O
-  - annotation: miscellaneous notes
-    method: value
-    encoding: Germline variants in 7,051 Japanese female breast cancer patients vs
-      11,241 controls. Variants filtered to Pathogenic clinical significance.
+    - annotation: variant effect
+      method: column
+      encoding: G
+    - annotation: HGVS coding
+      method: column
+      encoding: H
+    - annotation: p value
+      method: column
+      encoding: N
+    - annotation: odds ratio
+      method: column
+      encoding: O
+    - annotation: miscellaneous notes
+      method: value
+      encoding:
+        Germline variants in 7,051 Japanese female breast cancer patients vs
+        11,241 controls. Variants filtered to Pathogenic clinical significance.

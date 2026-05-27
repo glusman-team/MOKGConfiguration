@@ -7,49 +7,46 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12900646.1/41588_2025_2486_MOESM4_ESM.xlsx
     sheet: Supp. Table 4
     row_slice:
-    - 6
-    - auto
+      - 6
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       taxon: 9606
       prioritize:
-      - PhenotypicFeature
+        - PhenotypicFeature
     predicate: related_to
     object:
       method: column
       encoding: H
-      prefix: 'RS:'
+      prefix: "RS:"
       taxon: 9606
       prioritize:
-      - SequenceVariant
+        - SequenceVariant
   provenance:
     repo: PMC
     publication: PMC12900646
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
   annotations:
-  - annotation: start
-    method: column
-    encoding: B
-  - annotation: end
-    method: column
-    encoding: C
-  - annotation: length
-    method: column
-    encoding: D
-  - annotation: snp count
-    method: column
-    encoding: E
-  - annotation: max log10 p value
-    method: column
-    encoding: F
-  - annotation: top trait
-    method: column
-    encoding: G
+    - annotation: start
+      method: column
+      encoding: B
+    - annotation: end
+      method: column
+      encoding: C
+    - annotation: length
+      method: column
+      encoding: D
+    - annotation: snp count
+      method: column
+      encoding: E
+    - annotation: max log10 p value
+      method: column
+      encoding: F
+    - annotation: top trait
+      method: column
+      encoding: G

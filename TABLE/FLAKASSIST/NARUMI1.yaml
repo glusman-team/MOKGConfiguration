@@ -7,45 +7,41 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11096107.1/41588_2024_1735_MOESM4_ESM.xlsx
     sheet: Fig. 1e
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
     reindex:
-    - column: A
-      comparison: ne
-      comparator: Molecularly unsolved
-    - column: A
-      comparison: ne
-      comparator: (TTTG)3/SNV
+      - column: A
+        comparison: ne
+        comparator: Molecularly unsolved
+      - column: A
+        comparison: ne
+        comparator: (TTTG)3/SNV
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: congenital hypothyroidism
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC11096107
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: frequency
-    method: column
-    encoding: B
-  - annotation: miscellaneous notes
-    method: value
-    encoding: Gene frequency in congenital hypothyroidism cohort from Korean CH network.
-      TTTG microsatellite and SNV on 15q26.1 identified as novel cause.
+    - annotation: frequency
+      method: column
+      encoding: B
+    - annotation: miscellaneous notes
+      method: value
+      encoding:
+        Gene frequency in congenital hypothyroidism cohort from Korean CH network.
+        TTTG microsatellite and SNV on 15q26.1 identified as novel cause.

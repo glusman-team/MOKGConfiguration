@@ -7,48 +7,44 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13175492.1/pone.0349199.s014.xlsx
     sheet: Sheet1
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: B
       taxon: 9606
       prioritize:
-      - BiologicalProcess
+        - BiologicalProcess
     predicate: related_to
     object:
       method: value
       encoding: age-related eye disease
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13175492
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      comment: Pathway enrichment - 2 pathway sets with gene overlap statistics
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
   annotations:
-  - annotation: N_genes
-    method: column
-    encoding: C
-  - annotation: N_overlap
-    method: column
-    encoding: D
-  - annotation: p_value
-    method: column
-    encoding: E
-  - annotation: adjP
-    method: column
-    encoding: F
-  - annotation: genes
-    method: column
-    encoding: G
-  - annotation: link
-    method: column
-    encoding: H
+    - annotation: N_genes
+      method: column
+      encoding: C
+    - annotation: N_overlap
+      method: column
+      encoding: D
+    - annotation: p_value
+      method: column
+      encoding: E
+    - annotation: adjP
+      method: column
+      encoding: F
+    - annotation: genes
+      method: column
+      encoding: G
+    - annotation: link
+      method: column
+      encoding: H

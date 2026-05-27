@@ -7,60 +7,57 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13168499.1/41598_2026_44288_MOESM1_ESM.xlsx
     sheet: Sheet1
     row_slice:
-    - 12
-    - auto
+      - 12
+      - auto
   statement:
     subject:
       method: column
       encoding: V
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
-      explode_by: ','
+      explode_by: ","
     predicate: acts_upstream_of_or_within
     object:
       method: value
       encoding: autism spectrum disorder
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13168499
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
   annotations:
-  - annotation: clinvar_id
-    method: column
-    encoding: AA
-  - annotation: snp_id
-    method: column
-    encoding: AB
-  - annotation: cDNA_protein_change
-    method: column
-    encoding: AC
-  - annotation: protein_change
-    method: column
-    encoding: AD
-  - annotation: pLoF_pLI_LOEUF
-    method: column
-    encoding: AE
-  - annotation: missense_z
-    method: column
-    encoding: AF
-  - annotation: gnomAD_all
-    method: column
-    encoding: AM
-  - annotation: OMIM_PubMed
-    method: column
-    encoding: AU
-  - annotation: SFARI_gene_score
-    method: column
-    encoding: AV
-  - annotation: mean_depth_proband
-    method: column
-    encoding: CG
+    - annotation: clinvar_id
+      method: column
+      encoding: AA
+    - annotation: snp_id
+      method: column
+      encoding: AB
+    - annotation: cDNA_protein_change
+      method: column
+      encoding: AC
+    - annotation: protein_change
+      method: column
+      encoding: AD
+    - annotation: pLoF_pLI_LOEUF
+      method: column
+      encoding: AE
+    - annotation: missense_z
+      method: column
+      encoding: AF
+    - annotation: gnomAD_all
+      method: column
+      encoding: AM
+    - annotation: OMIM_PubMed
+      method: column
+      encoding: AU
+    - annotation: SFARI_gene_score
+      method: column
+      encoding: AV
+    - annotation: mean_depth_proband
+      method: column
+      encoding: CG

@@ -8,16 +8,16 @@ template:
     sheet: Selected metabolites
     row_slice: [1, auto]
     reindex:
-    - column: M
-      comparison: ge
-      comparator: 0.9
+      - column: M
+        comparison: ge
+        comparator: 0.9
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - SmallMolecule
-      - ChemicalEntity
+        - SmallMolecule
+        - ChemicalEntity
       taxon: 9606
     predicate: associated_with
     object:
@@ -27,48 +27,48 @@ template:
     repo: PMC
     publication: PMC12684584
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
-      comment: >-
-        Initial config auto-generated from delegated summary for CAD metabolomic
-        biomarkers. `row_slice: [1, auto]` skips the header row because tablassert
-        reads Excel sheets headerlessly before applying reindex filters. Filters to
-        pro_score >= 0.9 (18 of 28 rows).
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
+        comment: >-
+          Initial config auto-generated from delegated summary for CAD metabolomic
+          biomarkers. `row_slice: [1, auto]` skips the header row because tablassert
+          reads Excel sheets headerlessly before applying reindex filters. Filters to
+          pro_score >= 0.9 (18 of 28 rows).
   annotations:
-  - annotation: coef model1
-    method: column
-    encoding: B
-  - annotation: coef model2
-    method: column
-    encoding: C
-  - annotation: coef model3
-    method: column
-    encoding: D
-  - annotation: coef model4
-    method: column
-    encoding: E
-  - annotation: coef model5
-    method: column
-    encoding: F
-  - annotation: coef model6
-    method: column
-    encoding: G
-  - annotation: coef model7
-    method: column
-    encoding: H
-  - annotation: coef model8
-    method: column
-    encoding: I
-  - annotation: coef model9
-    method: column
-    encoding: J
-  - annotation: coef model10
-    method: column
-    encoding: K
-  - annotation: na_counts
-    method: column
-    encoding: L
-  - annotation: pro_score
-    method: column
-    encoding: M
+    - annotation: coef model1
+      method: column
+      encoding: B
+    - annotation: coef model2
+      method: column
+      encoding: C
+    - annotation: coef model3
+      method: column
+      encoding: D
+    - annotation: coef model4
+      method: column
+      encoding: E
+    - annotation: coef model5
+      method: column
+      encoding: F
+    - annotation: coef model6
+      method: column
+      encoding: G
+    - annotation: coef model7
+      method: column
+      encoding: H
+    - annotation: coef model8
+      method: column
+      encoding: I
+    - annotation: coef model9
+      method: column
+      encoding: J
+    - annotation: coef model10
+      method: column
+      encoding: K
+    - annotation: na_counts
+      method: column
+      encoding: L
+    - annotation: pro_score
+      method: column
+      encoding: M

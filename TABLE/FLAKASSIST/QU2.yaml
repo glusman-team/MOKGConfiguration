@@ -7,48 +7,42 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166552.1/medi-105-e48681-s002.xlsx
     sheet: MD-D-26-01270_SUP2
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: C
       prioritize:
-      - PhenotypicFeature
-      - Gene
+        - PhenotypicFeature
+        - Gene
       taxon: 9606
     predicate: related_to
     object:
       method: value
       encoding: Parkinson's disease
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13166552
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      - CalPoly SLO
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: id_exposure
-    method: column
-    encoding: A
-  - annotation: mr_method
-    method: column
-    encoding: D
-  - annotation: heterogeneity_statistic_Q
-    method: column
-    encoding: E
-  - annotation: degrees_of_freedom
-    method: column
-    encoding: F
-  - annotation: heterogeneity_p_value
-    method: column
-    encoding: G
+    - annotation: id_exposure
+      method: column
+      encoding: A
+    - annotation: mr_method
+      method: column
+      encoding: D
+    - annotation: heterogeneity_statistic_Q
+      method: column
+      encoding: E
+    - annotation: degrees_of_freedom
+      method: column
+      encoding: F
+    - annotation: heterogeneity_p_value
+      method: column
+      encoding: G

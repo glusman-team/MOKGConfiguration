@@ -7,83 +7,78 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13158626.1/NIHMS2162696-supplement-2.xlsx
     sheet: Blad1
     row_slice:
-    - 1
-    - 35
+      - 1
+      - 35
   statement:
     subject:
       method: value
       encoding: NCBIGene:129563
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0006058
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13158626
     contributors:
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 12 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      comment: DIS3L2 germline variant cohort in Wilms tumor predisposition
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: curation
+        name: tablassist
+        date: 12 MAY 2026
+        comment: DIS3L2 germline variant cohort in Wilms tumor predisposition
   annotations:
-  - annotation: id
-    method: column
-    encoding: A
-  - annotation: germline dis3l2 event
-    method: column
-    encoding: G
-  - annotation: variant classification
-    method: column
-    encoding: H
-  - annotation: somatic dis3l2 event
-    method: column
-    encoding: I
-  - annotation: sex
-    method: column
-    encoding: F
-  - annotation: age at diagnosis months
-    method: column
-    encoding: E
-  - annotation: tumor laterality
-    method: column
-    encoding: J
-  - annotation: metastases
-    method: column
-    encoding: L
-  - annotation: histological subtype
-    method: column
-    encoding: P
-  - annotation: local stage
-    method: column
-    encoding: O
-  - annotation: outcome
-    method: column
-    encoding: R
-  - annotation: 1q gain
-    method: column
-    encoding: S
-  - annotation: family history
-    method: column
-    encoding: U
-  - annotation: inheritance
-    method: column
-    encoding: V
-  - annotation: treatment protocol
-    method: column
-    encoding: B
-  - annotation: preoperative chemotherapy
-    method: column
-    encoding: M
-  - annotation: radiotherapy
-    method: column
-    encoding: Q
+    - annotation: id
+      method: column
+      encoding: A
+    - annotation: germline dis3l2 event
+      method: column
+      encoding: G
+    - annotation: variant classification
+      method: column
+      encoding: H
+    - annotation: somatic dis3l2 event
+      method: column
+      encoding: I
+    - annotation: sex
+      method: column
+      encoding: F
+    - annotation: age at diagnosis months
+      method: column
+      encoding: E
+    - annotation: tumor laterality
+      method: column
+      encoding: J
+    - annotation: metastases
+      method: column
+      encoding: L
+    - annotation: histological subtype
+      method: column
+      encoding: P
+    - annotation: local stage
+      method: column
+      encoding: O
+    - annotation: outcome
+      method: column
+      encoding: R
+    - annotation: 1q gain
+      method: column
+      encoding: S
+    - annotation: family history
+      method: column
+      encoding: U
+    - annotation: inheritance
+      method: column
+      encoding: V
+    - annotation: treatment protocol
+      method: column
+      encoding: B
+    - annotation: preoperative chemotherapy
+      method: column
+      encoding: M
+    - annotation: radiotherapy
+      method: column
+      encoding: Q

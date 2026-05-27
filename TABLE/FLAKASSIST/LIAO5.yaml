@@ -7,79 +7,74 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13058647.1/S0033291725102559sup001.xlsx
     sheet: TableS9
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: B
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: associated_with
     object:
       method: value
       encoding: major depressive disorder
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13058647
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      comment: Candidate gene multi-omics MDD associations (PGC + FinnGen, 5 tiered
-        genes)
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
   annotations:
-  - annotation: tier
-    method: column
-    encoding: A
-  - annotation: mqtl_probe_id_pg
-    method: column
-    encoding: C
-  - annotation: or_mqtl_pg
-    method: column
-    encoding: D
-  - annotation: p_mqtl_pg
-    method: column
-    encoding: E
-  - annotation: or_eqtl_pg
-    method: column
-    encoding: F
-  - annotation: p_eqtl_pg
-    method: column
-    encoding: G
-  - annotation: or_pqtl_pg
-    method: column
-    encoding: H
-  - annotation: p_pqtl_pg
-    method: column
-    encoding: I
-  - annotation: gene_finnogen
-    method: column
-    encoding: J
-  - annotation: mqtl_probe_id_fg
-    method: column
-    encoding: K
-  - annotation: or_mqtl_fg
-    method: column
-    encoding: L
-  - annotation: p_mqtl_fg
-    method: column
-    encoding: M
-  - annotation: or_eqtl_fg
-    method: column
-    encoding: N
-  - annotation: p_eqtl_fg
-    method: column
-    encoding: O
-  - annotation: or_pqtl_fg
-    method: column
-    encoding: P
-  - annotation: p_pqtl_fg
-    method: column
-    encoding: Q
+    - annotation: tier
+      method: column
+      encoding: A
+    - annotation: mqtl_probe_id_pg
+      method: column
+      encoding: C
+    - annotation: or_mqtl_pg
+      method: column
+      encoding: D
+    - annotation: p_mqtl_pg
+      method: column
+      encoding: E
+    - annotation: or_eqtl_pg
+      method: column
+      encoding: F
+    - annotation: p_eqtl_pg
+      method: column
+      encoding: G
+    - annotation: or_pqtl_pg
+      method: column
+      encoding: H
+    - annotation: p_pqtl_pg
+      method: column
+      encoding: I
+    - annotation: gene_finnogen
+      method: column
+      encoding: J
+    - annotation: mqtl_probe_id_fg
+      method: column
+      encoding: K
+    - annotation: or_mqtl_fg
+      method: column
+      encoding: L
+    - annotation: p_mqtl_fg
+      method: column
+      encoding: M
+    - annotation: or_eqtl_fg
+      method: column
+      encoding: N
+    - annotation: p_eqtl_fg
+      method: column
+      encoding: O
+    - annotation: or_pqtl_fg
+      method: column
+      encoding: P
+    - annotation: p_pqtl_fg
+      method: column
+      encoding: Q

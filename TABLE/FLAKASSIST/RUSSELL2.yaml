@@ -6,85 +6,85 @@ template:
     local: ./DATALAKE/PMC13147394_mmc4.xlsx
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: C
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0004976
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13147394
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
 sections:
-- source:
-    sheet: KnownALSGenes_vIQ Variants
-  statement:
-    qualifiers:
-    - qualifier: statement_qualifier
-      method: value
-      encoding: established
-    - qualifier: object_aspect_qualifier
-      method: value
-      encoding: rare coding variant burden
-  annotations:
-  - annotation: vIQ score
-    method: column
-    encoding: G
-- source:
-    sheet: POLG_vIQ Variants
-  statement:
-    qualifiers:
-    - qualifier: statement_qualifier
-      method: value
-      encoding: candidate
-    - qualifier: object_aspect_qualifier
-      method: value
-      encoding: rare coding variant burden
-  annotations:
-  - annotation: vIQ score
-    method: column
-    encoding: G
-- source:
-    sheet: mtDNAMaintenance_vIQ Variants
-  statement:
-    qualifiers:
-    - qualifier: statement_qualifier
-      method: value
-      encoding: candidate
-    - qualifier: object_aspect_qualifier
-      method: value
-      encoding: rare coding variant burden
-    - qualifier: subject_form_or_variant_qualifier
-      method: column
-      encoding: D
-  annotations:
-  - annotation: site of onset
-    method: column
-    encoding: E
-- source:
-    sheet: Mitophagy_vIQ Variants
-  statement:
-    qualifiers:
-    - qualifier: statement_qualifier
-      method: value
-      encoding: candidate
-    - qualifier: object_aspect_qualifier
-      method: value
-      encoding: rare coding variant burden
-  annotations:
-  - annotation: vIQ score
-    method: column
-    encoding: E
+  - source:
+      sheet: KnownALSGenes_vIQ Variants
+    statement:
+      qualifiers:
+        - qualifier: statement_qualifier
+          method: value
+          encoding: established
+        - qualifier: object_aspect_qualifier
+          method: value
+          encoding: rare coding variant burden
+    annotations:
+      - annotation: vIQ score
+        method: column
+        encoding: G
+  - source:
+      sheet: POLG_vIQ Variants
+    statement:
+      qualifiers:
+        - qualifier: statement_qualifier
+          method: value
+          encoding: candidate
+        - qualifier: object_aspect_qualifier
+          method: value
+          encoding: rare coding variant burden
+    annotations:
+      - annotation: vIQ score
+        method: column
+        encoding: G
+  - source:
+      sheet: mtDNAMaintenance_vIQ Variants
+    statement:
+      qualifiers:
+        - qualifier: statement_qualifier
+          method: value
+          encoding: candidate
+        - qualifier: object_aspect_qualifier
+          method: value
+          encoding: rare coding variant burden
+        - qualifier: subject_form_or_variant_qualifier
+          method: column
+          encoding: D
+    annotations:
+      - annotation: site of onset
+        method: column
+        encoding: E
+  - source:
+      sheet: Mitophagy_vIQ Variants
+    statement:
+      qualifiers:
+        - qualifier: statement_qualifier
+          method: value
+          encoding: candidate
+        - qualifier: object_aspect_qualifier
+          method: value
+          encoding: rare coding variant burden
+    annotations:
+      - annotation: vIQ score
+        method: column
+        encoding: E

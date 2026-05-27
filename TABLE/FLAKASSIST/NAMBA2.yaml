@@ -7,41 +7,39 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9903693.1/mmc2.xlsx
     sheet: Supplementary Table 1
     row_slice:
-    - 2
-    - auto
+      - 2
+      - auto
   statement:
     subject:
       method: column
       encoding: B
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: column
       encoding: A
       prioritize:
-      - Disease
+        - Disease
     qualifiers:
-    - qualifier: species_context_qualifier
-      method: value
-      encoding: NCBITaxon:9606
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC9903693
     contributors:
-    - kind: curation
-      name: Tablassist Pioneer
-      date: 12 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
   annotations:
-  - annotation: prioritization tools
-    method: value
-    encoding: "MAGMA, DEPICT, PoPS, Pi, TWAS (\u22654 required)"
-  - annotation: miscellaneous notes
-    method: value
-    encoding: "Genes nominated by omnibus gene prioritization requiring evidence from\
-      \ \u22654 of 5 tools: MAGMA, DEPICT, PoPS, Pi, TWAS. Applied to 13 diseases\
-      \ from the Global Biobank Meta-analysis Initiative (GBMI)."
+    - annotation: prioritization tools
+      method: value
+      encoding: "MAGMA, DEPICT, PoPS, Pi, TWAS (\u22654 required)"
+    - annotation: miscellaneous notes
+      method: value
+      encoding:
+        "Genes nominated by omnibus gene prioritization requiring evidence from\
+        \ \u22654 of 5 tools: MAGMA, DEPICT, PoPS, Pi, TWAS. Applied to 13 diseases\
+        \ from the Global Biobank Meta-analysis Initiative (GBMI)."

@@ -7,41 +7,41 @@ template:
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12661719/
     sheet: CHEvsCT
     row_slice:
-    - 2
-    - auto
+      - 2
+      - auto
   statement:
     subject:
       method: column
       encoding: C
       taxon: 10090
       prioritize:
-      - Gene
+        - Gene
     predicate: associated_with
     object:
       method: value
       encoding: pathological ovarian aging
       prioritize:
-      - PhenotypicFeature
+        - PhenotypicFeature
   annotations:
-  - annotation: protein accession
-    method: column
-    encoding: A
-  - annotation: protein description
-    method: column
-    encoding: B
-  - annotation: CHE/CT ratio
-    method: column
-    encoding: D
-  - annotation: CHE/CT p value
-    method: column
-    encoding: E
-  - annotation: regulated type
-    method: column
-    encoding: F
+    - annotation: protein accession
+      method: column
+      encoding: A
+    - annotation: protein description
+      method: column
+      encoding: B
+    - annotation: CHE/CT ratio
+      method: column
+      encoding: D
+    - annotation: CHE/CT p value
+      method: column
+      encoding: E
+    - annotation: regulated type
+      method: column
+      encoding: F
   provenance:
     repo: PMC
     publication: PMC12661719
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026

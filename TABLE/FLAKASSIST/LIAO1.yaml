@@ -7,64 +7,59 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13058647.1/S0033291725102559sup001.xlsx
     sheet: TableS2-mqtl (PGC)
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: related_to
     object:
       method: value
       encoding: major depressive disorder
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13058647
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      comment: "mQTL\u2192MDD SMR (PGC, 32851 individuals) - nuclear-encoded mitochondrial\
-        \ genes"
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
   annotations:
-  - annotation: cpg_probe_id
-    method: column
-    encoding: B
-  - annotation: top_snpsmrs_id
-    method: column
-    encoding: C
-  - annotation: smr_beta
-    method: column
-    encoding: D
-  - annotation: smr_se
-    method: column
-    encoding: E
-  - annotation: or_95ci
-    method: column
-    encoding: F
-  - annotation: p_value
-    method: column
-    encoding: G
-  - annotation: heidi_p_value
-    method: column
-    encoding: H
-  - annotation: n_snps_heidi
-    method: column
-    encoding: I
-  - annotation: fdr_corrected_p
-    method: column
-    encoding: J
-  - annotation: pph4
-    method: column
-    encoding: K
-  - annotation: h4_h3h4
-    method: column
-    encoding: L
+    - annotation: cpg_probe_id
+      method: column
+      encoding: B
+    - annotation: top_snpsmrs_id
+      method: column
+      encoding: C
+    - annotation: smr_beta
+      method: column
+      encoding: D
+    - annotation: smr_se
+      method: column
+      encoding: E
+    - annotation: or_95ci
+      method: column
+      encoding: F
+    - annotation: p_value
+      method: column
+      encoding: G
+    - annotation: heidi_p_value
+      method: column
+      encoding: H
+    - annotation: n_snps_heidi
+      method: column
+      encoding: I
+    - annotation: fdr_corrected_p
+      method: column
+      encoding: J
+    - annotation: pph4
+      method: column
+      encoding: K
+    - annotation: h4_h3h4
+      method: column
+      encoding: L

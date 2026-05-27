@@ -7,68 +7,65 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7206184.1/41467_2020_15823_MOESM10_ESM.xlsx
     sheet: Loci v71b vs v68
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - SequenceVariant
-      - Snv
+        - SequenceVariant
+        - Snv
     predicate: related_to
     object:
       method: column
       encoding: B
       taxon: 9606
       prioritize:
-      - Gene
-      - Protein
+        - Gene
+        - Protein
     qualifiers:
-    - qualifier: object_form_or_variant_qualifier
-      method: value
-      encoding: GWAS locus comparison
+      - qualifier: object_form_or_variant_qualifier
+        method: value
+        encoding: GWAS locus comparison
   annotations:
-  - annotation: chromosome
-    method: column
-    encoding: C
-  - annotation: genomic position
-    method: column
-    encoding: D
-  - annotation: effect allele
-    method: column
-    encoding: E
-  - annotation: other allele
-    method: column
-    encoding: F
-  - annotation: effect allele frequency
-    method: column
-    encoding: G
-  - annotation: effect allele frequency euro
-    method: column
-    encoding: H
-  - annotation: beta
-    method: column
-    encoding: I
-  - annotation: beta euro
-    method: column
-    encoding: J
-  - annotation: p value
-    method: column
-    encoding: K
-  - annotation: p value euro
-    method: column
-    encoding: L
-  - annotation: locus id
-    method: column
-    encoding: M
+    - annotation: chromosome
+      method: column
+      encoding: C
+    - annotation: genomic position
+      method: column
+      encoding: D
+    - annotation: effect allele
+      method: column
+      encoding: E
+    - annotation: other allele
+      method: column
+      encoding: F
+    - annotation: effect allele frequency
+      method: column
+      encoding: G
+    - annotation: effect allele frequency euro
+      method: column
+      encoding: H
+    - annotation: beta
+      method: column
+      encoding: I
+    - annotation: beta euro
+      method: column
+      encoding: J
+    - annotation: p value
+      method: column
+      encoding: K
+    - annotation: p value euro
+      method: column
+      encoding: L
+    - annotation: locus id
+      method: column
+      encoding: M
   provenance:
     repo: PMC
     publication: PMC7206184
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026

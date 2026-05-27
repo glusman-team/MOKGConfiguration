@@ -7,70 +7,64 @@ template:
     url: https://s3.amazonaws.com/pmc-oa-opendata/PMC13166790.1/medi-105-e48579-s003.xlsx
     sheet: Sheet1
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - Gene
-      - Protein
+        - Gene
+        - Protein
       taxon: 9606
     predicate: related_to
     object:
       method: column
       encoding: C
       prioritize:
-      - Disease
-      - PhenotypicFeature
+        - Disease
+        - PhenotypicFeature
   provenance:
     repo: PMC
     publication: PMC13166790
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      - CalPoly SLO
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: mr method
-    method: column
-    encoding: D
-  - annotation: number of snps
-    method: column
-    encoding: E
-  - annotation: beta
-    method: column
-    encoding: F
-  - annotation: standard error
-    method: column
-    encoding: G
-  - annotation: p value
-    method: column
-    encoding: H
-  - annotation: odds ratio
-    method: column
-    encoding: I
-  - annotation: or lower ci 95
-    method: column
-    encoding: J
-  - annotation: or upper ci 95
-    method: column
-    encoding: K
-  - annotation: heterogeneity p value
-    method: column
-    encoding: L
-  - annotation: pleiotropy p value
-    method: column
-    encoding: M
-  - annotation: mrpresso p value
-    method: column
-    encoding: N
-  - annotation: mrpresso global test p value
-    method: column
-    encoding: O
+    - annotation: mr method
+      method: column
+      encoding: D
+    - annotation: number of snps
+      method: column
+      encoding: E
+    - annotation: beta
+      method: column
+      encoding: F
+    - annotation: standard error
+      method: column
+      encoding: G
+    - annotation: p value
+      method: column
+      encoding: H
+    - annotation: odds ratio
+      method: column
+      encoding: I
+    - annotation: or lower ci 95
+      method: column
+      encoding: J
+    - annotation: or upper ci 95
+      method: column
+      encoding: K
+    - annotation: heterogeneity p value
+      method: column
+      encoding: L
+    - annotation: pleiotropy p value
+      method: column
+      encoding: M
+    - annotation: mrpresso p value
+      method: column
+      encoding: N
+    - annotation: mrpresso global test p value
+      method: column
+      encoding: O

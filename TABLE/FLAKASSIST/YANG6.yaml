@@ -6,15 +6,15 @@ template:
     local: ./DATALAKE/PMC13173811_12929_2026_1253_MOESM3_ESM.xlsx
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13173811.1/12929_2026_1253_MOESM3_ESM.xlsx
     row_slice:
-    - 2
-    - auto
+      - 2
+      - auto
   statement:
     subject:
       method: column
       encoding: E
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: related_to
     object:
       method: value
@@ -23,106 +23,106 @@ template:
     repo: PMC
     publication: PMC13173811
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
 sections:
-- source:
-    sheet: 2A_AS_vs_iPSC_Control
-    reindex:
-    - column: D
-      comparison: le
-      comparator: 0.05
-  statement:
-    qualifiers:
-    - qualifier: context_qualifier
-      method: value
-      encoding: Astrocyte vs iPSC, Control group
-  annotations:
-  - annotation: log fold change
-    method: column
-    encoding: B
-  - annotation: average expression
-    method: column
-    encoding: C
-  - annotation: adjusted p value
-    method: column
-    encoding: D
-  - annotation: gene description
-    method: column
-    encoding: F
-- source:
-    sheet: 2B_AS_vs_iPSC_Jc patient
-    reindex:
-    - column: D
-      comparison: le
-      comparator: 0.05
-  statement:
-    qualifiers:
-    - qualifier: context_qualifier
-      method: value
-      encoding: Astrocyte vs iPSC, JC patient group
-  annotations:
-  - annotation: log fold change
-    method: column
-    encoding: B
-  - annotation: average expression
-    method: column
-    encoding: C
-  - annotation: adjusted p value
-    method: column
-    encoding: D
-  - annotation: gene description
-    method: column
-    encoding: F
-- source:
-    sheet: 2C_iPSC_JC_vs_Ctrl
-    reindex:
-    - column: F
-      comparison: le
-      comparator: 0.05
-  statement:
-    qualifiers:
-    - qualifier: context_qualifier
-      method: value
-      encoding: iPSC JC vs Control
-  annotations:
-  - annotation: log fold change
-    method: column
-    encoding: B
-  - annotation: average expression
-    method: column
-    encoding: C
-  - annotation: adjusted p value
-    method: column
-    encoding: F
-  - annotation: gene description
-    method: column
-    encoding: I
-- source:
-    sheet: 2D_AS_JC_vs_Ctrl
-    reindex:
-    - column: H
-      comparison: ne
-      comparator: NA
-    - column: F
-      comparison: le
-      comparator: 0.05
-  statement:
-    qualifiers:
-    - qualifier: context_qualifier
-      method: value
-      encoding: Astrocyte JC vs Control
-  annotations:
-  - annotation: log fold change
-    method: column
-    encoding: B
-  - annotation: average expression
-    method: column
-    encoding: C
-  - annotation: adjusted p value
-    method: column
-    encoding: F
-  - annotation: gene description
-    method: column
-    encoding: I
+  - source:
+      sheet: 2A_AS_vs_iPSC_Control
+      reindex:
+        - column: D
+          comparison: le
+          comparator: 0.05
+    statement:
+      qualifiers:
+        - qualifier: context_qualifier
+          method: value
+          encoding: Astrocyte vs iPSC, Control group
+    annotations:
+      - annotation: log fold change
+        method: column
+        encoding: B
+      - annotation: average expression
+        method: column
+        encoding: C
+      - annotation: adjusted p value
+        method: column
+        encoding: D
+      - annotation: gene description
+        method: column
+        encoding: F
+  - source:
+      sheet: 2B_AS_vs_iPSC_Jc patient
+      reindex:
+        - column: D
+          comparison: le
+          comparator: 0.05
+    statement:
+      qualifiers:
+        - qualifier: context_qualifier
+          method: value
+          encoding: Astrocyte vs iPSC, JC patient group
+    annotations:
+      - annotation: log fold change
+        method: column
+        encoding: B
+      - annotation: average expression
+        method: column
+        encoding: C
+      - annotation: adjusted p value
+        method: column
+        encoding: D
+      - annotation: gene description
+        method: column
+        encoding: F
+  - source:
+      sheet: 2C_iPSC_JC_vs_Ctrl
+      reindex:
+        - column: F
+          comparison: le
+          comparator: 0.05
+    statement:
+      qualifiers:
+        - qualifier: context_qualifier
+          method: value
+          encoding: iPSC JC vs Control
+    annotations:
+      - annotation: log fold change
+        method: column
+        encoding: B
+      - annotation: average expression
+        method: column
+        encoding: C
+      - annotation: adjusted p value
+        method: column
+        encoding: F
+      - annotation: gene description
+        method: column
+        encoding: I
+  - source:
+      sheet: 2D_AS_JC_vs_Ctrl
+      reindex:
+        - column: H
+          comparison: ne
+          comparator: NA
+        - column: F
+          comparison: le
+          comparator: 0.05
+    statement:
+      qualifiers:
+        - qualifier: context_qualifier
+          method: value
+          encoding: Astrocyte JC vs Control
+    annotations:
+      - annotation: log fold change
+        method: column
+        encoding: B
+      - annotation: average expression
+        method: column
+        encoding: C
+      - annotation: adjusted p value
+        method: column
+        encoding: F
+      - annotation: gene description
+        method: column
+        encoding: I

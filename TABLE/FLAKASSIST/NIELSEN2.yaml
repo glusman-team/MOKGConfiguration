@@ -7,35 +7,35 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12698088.1/elife-106231-supp2.xlsx
     sheet: All candidate genes
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: B
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0004933
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC12698088
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: Proband
-    method: column
-    encoding: A
-  - annotation: MOI
-    method: column
-    encoding: C
-  - annotation: Gene Alias
-    method: column
-    encoding: D
+    - annotation: Proband
+      method: column
+      encoding: A
+    - annotation: MOI
+      method: column
+      encoding: C
+    - annotation: Gene Alias
+      method: column
+      encoding: D

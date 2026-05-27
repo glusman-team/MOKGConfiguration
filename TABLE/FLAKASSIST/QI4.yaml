@@ -12,7 +12,7 @@ template:
       encoding: A
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: associated_with
     object:
       method: value
@@ -21,10 +21,10 @@ template:
     repo: PMC
     publication: PMC12521215
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
   annotations:
-  - annotation: lasso coefficient
-    method: column
-    encoding: B
+    - annotation: lasso coefficient
+      method: column
+      encoding: B

@@ -7,63 +7,61 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13060403.1/media-2.xlsx
     sheet: TS1 Sums vars per prot
     row_slice:
-    - 2
-    - auto
+      - 2
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0005090
       prioritize:
-      - Disease
+        - Disease
     qualifiers:
-    - qualifier: species_context_qualifier
-      method: value
-      encoding: NCBITaxon:9606
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC13060403
     contributors:
-    - kind: curation
-      name: Tablassist Pioneer
-      date: 12 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
   annotations:
-  - annotation: num_variants
-    method: column
-    encoding: B
-  - annotation: mean_af
-    method: column
-    encoding: C
-  - annotation: median_af
-    method: column
-    encoding: D
-  - annotation: sd_af
-    method: column
-    encoding: E
-  - annotation: total_alleles
-    method: column
-    encoding: F
-  - annotation: variant_type
-    method: column
-    encoding: G
-  - annotation: dataset
-    method: column
-    encoding: H
-  - annotation: dataset_size
-    method: column
-    encoding: I
-  - annotation: miscellaneous_notes
-    method: value
-    encoding: "Rare deleterious variant (CADD\u226525 and LoF) summary statistics\
-      \ per gene from 11,046 schizophrenia spectrum disorder cases vs controls in\
-      \ the iPSYCH Danish cohort. Variant_type: CADD_SSD = CADD\u226525 variants in\
-      \ SSD cases; Dataset sizes vary by variant type."
+    - annotation: num_variants
+      method: column
+      encoding: B
+    - annotation: mean_af
+      method: column
+      encoding: C
+    - annotation: median_af
+      method: column
+      encoding: D
+    - annotation: sd_af
+      method: column
+      encoding: E
+    - annotation: total_alleles
+      method: column
+      encoding: F
+    - annotation: variant_type
+      method: column
+      encoding: G
+    - annotation: dataset
+      method: column
+      encoding: H
+    - annotation: dataset_size
+      method: column
+      encoding: I
+    - annotation: miscellaneous_notes
+      method: value
+      encoding:
+        "Rare deleterious variant (CADD\u226525 and LoF) summary statistics\
+        \ per gene from 11,046 schizophrenia spectrum disorder cases vs controls in\
+        \ the iPSYCH Danish cohort. Variant_type: CADD_SSD = CADD\u226525 variants in\
+        \ SSD cases; Dataset sizes vary by variant type."

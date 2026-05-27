@@ -7,58 +7,53 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13058647.1/S0033291725102559sup001.xlsx
     sheet: TableS7-Brain
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: C
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: related_to
     object:
       method: value
       encoding: major depressive disorder
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13058647
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      comment: "Brain tissue eQTL\u2192MDD SMR (GTEx, 14 brain regions, ~1000 donors)\
-        \ - nuclear-encoded mitochondrial genes"
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
   annotations:
-  - annotation: outcome_source
-    method: column
-    encoding: A
-  - annotation: brain_region
-    method: column
-    encoding: B
-  - annotation: top_snpsmrs_id
-    method: column
-    encoding: D
-  - annotation: smr_beta
-    method: column
-    encoding: E
-  - annotation: smr_se
-    method: column
-    encoding: F
-  - annotation: or_95ci
-    method: column
-    encoding: G
-  - annotation: p_value
-    method: column
-    encoding: H
-  - annotation: heidi_p_value
-    method: column
-    encoding: I
-  - annotation: n_snps_heidi
-    method: column
-    encoding: J
+    - annotation: outcome_source
+      method: column
+      encoding: A
+    - annotation: brain_region
+      method: column
+      encoding: B
+    - annotation: top_snpsmrs_id
+      method: column
+      encoding: D
+    - annotation: smr_beta
+      method: column
+      encoding: E
+    - annotation: smr_se
+      method: column
+      encoding: F
+    - annotation: or_95ci
+      method: column
+      encoding: G
+    - annotation: p_value
+      method: column
+      encoding: H
+    - annotation: heidi_p_value
+      method: column
+      encoding: I
+    - annotation: n_snps_heidi
+      method: column
+      encoding: J

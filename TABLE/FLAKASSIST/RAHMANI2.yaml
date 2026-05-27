@@ -12,7 +12,7 @@ template:
       encoding: protein feature
       taxon: 9606
       prioritize:
-      - Protein
+        - Protein
     predicate: associated_with
     object:
       method: value
@@ -21,31 +21,31 @@ template:
     repo: PMC
     publication: PMC12465049
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
 sections:
-- statement:
-    subject:
-      encoding: AK1
-- statement:
-    subject:
-      encoding: CA9
-- statement:
-    subject:
-      encoding: CD34
-- statement:
-    subject:
-      encoding: EHD2
-- statement:
-    subject:
-      encoding: GPRC5A
-- statement:
-    subject:
-      encoding: KRT5
-- statement:
-    subject:
-      encoding: MME
-- statement:
-    subject:
-      encoding: SOD3
+  - statement:
+      subject:
+        encoding: AK1
+  - statement:
+      subject:
+        encoding: CA9
+  - statement:
+      subject:
+        encoding: CD34
+  - statement:
+      subject:
+        encoding: EHD2
+  - statement:
+      subject:
+        encoding: GPRC5A
+  - statement:
+      subject:
+        encoding: KRT5
+  - statement:
+      subject:
+        encoding: MME
+  - statement:
+      subject:
+        encoding: SOD3

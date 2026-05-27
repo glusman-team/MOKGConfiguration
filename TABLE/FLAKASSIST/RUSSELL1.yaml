@@ -5,218 +5,215 @@ template:
     repo: PMC
     publication: PMC13147394
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 13 MAY 2026
+      - kind: curation
+        name: tablassist
+        date: 13 MAY 2026
   statement:
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0004976
       prioritize:
-      - Disease
+        - Disease
 sections:
-- source:
-    kind: excel
-    local: ./DATALAKE/PMC13147394_mmc4.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
-    sheet: KnownALSGenes_vIQ Variants
-    row_slice:
-    - 2
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: C
-      prioritize:
-      - Gene
-      taxon: 9606
-  annotations:
-  - annotation: id
-    method: column
-    encoding: A
-  - annotation: cohort
-    method: column
-    encoding: B
-  - annotation: variant id
-    method: column
-    encoding: D
-  - annotation: consequence
-    method: column
-    encoding: E
-  - annotation: variant type
-    method: column
-    encoding: F
-  - annotation: viq score
-    method: column
-    encoding: G
-- source:
-    kind: excel
-    local: ./DATALAKE/PMC13147394_mmc4.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
-    sheet: mtDNAMaintenance_vIQ Variants
-    row_slice:
-    - 2
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: C
-      prioritize:
-      - Gene
-      taxon: 9606
-  annotations:
-  - annotation: id
-    method: column
-    encoding: A
-  - annotation: cohort
-    method: column
-    encoding: B
-  - annotation: variant
-    method: column
-    encoding: D
-  - annotation: site of onset
-    method: column
-    encoding: E
-- source:
-    kind: excel
-    local: ./DATALAKE/PMC13147394_mmc4.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
-    sheet: Mitophagy_vIQ Variants
-    row_slice:
-    - 2
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: C
-      prioritize:
-      - Gene
-      taxon: 9606
-  annotations:
-  - annotation: run id
-    method: column
-    encoding: A
-  - annotation: cohort
-    method: column
-    encoding: B
-  - annotation: variant
-    method: column
-    encoding: D
-  - annotation: viq score
-    method: column
-    encoding: E
-- source:
-    kind: excel
-    local: ./DATALAKE/PMC13147394_mmc3.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc3.xlsx
-    sheet: POLGMutations
-    row_slice:
-    - 2
-    - auto
-  statement:
-    subject:
-      method: value
-      encoding: NCBIGene:5428
-      prioritize:
-      - Gene
-      taxon: 9606
-  annotations:
-  - annotation: id
-    method: column
-    encoding: A
-  - annotation: cohort
-    method: column
-    encoding: B
-  - annotation: position
-    method: column
-    encoding: C
-  - annotation: ref
-    method: column
-    encoding: D
-  - annotation: alt
-    method: column
-    encoding: E
-  - annotation: consequence
-    method: column
-    encoding: F
-  - annotation: maf
-    method: column
-    encoding: G
-  - annotation: cadd
-    method: column
-    encoding: H
-  - annotation: revel
-    method: column
-    encoding: I
-  - annotation: phylop
-    method: column
-    encoding: J
-  - annotation: vaast
-    method: column
-    encoding: K
-- source:
-    kind: excel
-    local: ./DATALAKE/PMC13147394_mmc2.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc2.xlsx
-    sheet: BroaderALSTermsPhevor
-    row_slice:
-    - 1
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: B
-      prioritize:
-      - Gene
-      taxon: 9606
-      regex:
-      - pattern: \s+$
-        replacement: ''
-  annotations:
-  - annotation: rank
-    method: column
-    encoding: A
-    regex:
-    - pattern: \s+$
-      replacement: ''
-  - annotation: phevor score
-    method: column
-    encoding: C
-    regex:
-    - pattern: \s+$
-      replacement: ''
-- source:
-    kind: excel
-    local: ./DATALAKE/PMC13147394_mmc2.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc2.xlsx
-    sheet: SpecificALSTermsPhevor
-    row_slice:
-    - 1
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: B
-      prioritize:
-      - Gene
-      taxon: 9606
-      regex:
-      - pattern: \s+$
-        replacement: ''
-  annotations:
-  - annotation: rank
-    method: column
-    encoding: A
-    regex:
-    - pattern: \s+$
-      replacement: ''
-  - annotation: phevor score
-    method: column
-    encoding: C
-    regex:
-    - pattern: \s+$
-      replacement: ''
+  - source:
+      kind: excel
+      local: ./DATALAKE/PMC13147394_mmc4.xlsx
+      url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
+      sheet: KnownALSGenes_vIQ Variants
+      row_slice:
+        - 2
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: C
+        prioritize:
+          - Gene
+        taxon: 9606
+    annotations:
+      - annotation: id
+        method: column
+        encoding: A
+      - annotation: cohort
+        method: column
+        encoding: B
+      - annotation: variant id
+        method: column
+        encoding: D
+      - annotation: consequence
+        method: column
+        encoding: E
+      - annotation: variant type
+        method: column
+        encoding: F
+      - annotation: viq score
+        method: column
+        encoding: G
+  - source:
+      kind: excel
+      local: ./DATALAKE/PMC13147394_mmc4.xlsx
+      url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
+      sheet: mtDNAMaintenance_vIQ Variants
+      row_slice:
+        - 2
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: C
+        prioritize:
+          - Gene
+        taxon: 9606
+    annotations:
+      - annotation: id
+        method: column
+        encoding: A
+      - annotation: cohort
+        method: column
+        encoding: B
+      - annotation: variant
+        method: column
+        encoding: D
+      - annotation: site of onset
+        method: column
+        encoding: E
+  - source:
+      kind: excel
+      local: ./DATALAKE/PMC13147394_mmc4.xlsx
+      url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
+      sheet: Mitophagy_vIQ Variants
+      row_slice:
+        - 2
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: C
+        prioritize:
+          - Gene
+        taxon: 9606
+    annotations:
+      - annotation: run id
+        method: column
+        encoding: A
+      - annotation: cohort
+        method: column
+        encoding: B
+      - annotation: variant
+        method: column
+        encoding: D
+      - annotation: viq score
+        method: column
+        encoding: E
+  - source:
+      kind: excel
+      local: ./DATALAKE/PMC13147394_mmc3.xlsx
+      url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc3.xlsx
+      sheet: POLGMutations
+      row_slice:
+        - 2
+        - auto
+    statement:
+      subject:
+        method: value
+        encoding: NCBIGene:5428
+        prioritize:
+          - Gene
+        taxon: 9606
+    annotations:
+      - annotation: id
+        method: column
+        encoding: A
+      - annotation: cohort
+        method: column
+        encoding: B
+      - annotation: position
+        method: column
+        encoding: C
+      - annotation: ref
+        method: column
+        encoding: D
+      - annotation: alt
+        method: column
+        encoding: E
+      - annotation: consequence
+        method: column
+        encoding: F
+      - annotation: maf
+        method: column
+        encoding: G
+      - annotation: cadd
+        method: column
+        encoding: H
+      - annotation: revel
+        method: column
+        encoding: I
+      - annotation: phylop
+        method: column
+        encoding: J
+      - annotation: vaast
+        method: column
+        encoding: K
+  - source:
+      kind: excel
+      local: ./DATALAKE/PMC13147394_mmc2.xlsx
+      url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc2.xlsx
+      sheet: BroaderALSTermsPhevor
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: B
+        prioritize:
+          - Gene
+        taxon: 9606
+        regex:
+          - pattern: \s+$
+            replacement: ""
+    annotations:
+      - annotation: rank
+        method: column
+        encoding: A
+        regex:
+          - pattern: \s+$
+            replacement: ""
+      - annotation: phevor score
+        method: column
+        encoding: C
+        regex:
+          - pattern: \s+$
+            replacement: ""
+  - source:
+      kind: excel
+      local: ./DATALAKE/PMC13147394_mmc2.xlsx
+      url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc2.xlsx
+      sheet: SpecificALSTermsPhevor
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: B
+        prioritize:
+          - Gene
+        taxon: 9606
+        regex:
+          - pattern: \s+$
+            replacement: ""
+    annotations:
+      - annotation: rank
+        method: column
+        encoding: A
+        regex:
+          - pattern: \s+$
+            replacement: ""
+      - annotation: phevor score
+        method: column
+        encoding: C
+        regex:
+          - pattern: \s+$
+            replacement: ""

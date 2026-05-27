@@ -31,7 +31,7 @@ template:
     contributors:
       - kind: tool
         name: tablassist
-        date: "2026-05-13"
+        date: 13 MAY 2026
 
   annotations:
     - annotation: p value

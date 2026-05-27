@@ -9,206 +9,203 @@ template:
     repo: PMC
     publication: PMC12339386
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
 sections:
-- source:
-    sheet: Supplementary Table 2
-    row_slice:
-    - 1
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: A
-      prioritize:
-      - SequenceVariant
-    predicate: related_to
-    object:
-      method: column
-      encoding: N
-      explode_by: ;
-      prioritize:
-      - SequenceVariant
-  annotations:
-  - annotation: associated loci uniqID
-    method: column
-    encoding: B
-  - annotation: associated loci rsID
-    method: column
-    encoding: C
-  - annotation: chr
-    method: column
-    encoding: D
-  - annotation: p value
-    method: column
-    encoding: E
-  - annotation: start
-    method: column
-    encoding: F
-  - annotation: end
-    method: column
-    encoding: G
-  - annotation: nSNPs
-    method: column
-    encoding: H
-  - annotation: nGWASSNPs
-    method: column
-    encoding: I
-  - annotation: nIndigSNPs
-    method: column
-    encoding: J
-  - annotation: IndigSNPs
-    method: column
-    encoding: M
-- source:
-    sheet: Supplementary Table 3
-    row_slice:
-    - 1
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: A
-      prioritize:
-      - SequenceVariant
-    predicate: related_to
-    object:
-      method: column
-      encoding: N
-      explode_by: ;
-      prioritize:
-      - SequenceVariant
-  annotations:
-  - annotation: associated loci uniqID
-    method: column
-    encoding: B
-  - annotation: associated loci rsID
-    method: column
-    encoding: C
-  - annotation: chr
-    method: column
-    encoding: D
-  - annotation: p value
-    method: column
-    encoding: E
-  - annotation: start
-    method: column
-    encoding: F
-  - annotation: end
-    method: column
-    encoding: G
-  - annotation: nSNPs
-    method: column
-    encoding: H
-  - annotation: nGWASSNPs
-    method: column
-    encoding: I
-  - annotation: nIndigSNPs
-    method: column
-    encoding: J
-  - annotation: IndigSNPs
-    method: column
-    encoding: M
-- source:
-    sheet: Supplementary Table 4
-    row_slice:
-    - 1
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: A
-      prioritize:
-      - SequenceVariant
-    predicate: related_to
-    object:
-      method: column
-      encoding: N
-      explode_by: ;
-      prioritize:
-      - SequenceVariant
-  annotations:
-  - annotation: associated loci uniqID
-    method: column
-    encoding: B
-  - annotation: associated loci rsID
-    method: column
-    encoding: C
-  - annotation: chr
-    method: column
-    encoding: D
-  - annotation: p value
-    method: column
-    encoding: E
-  - annotation: start
-    method: column
-    encoding: F
-  - annotation: end
-    method: column
-    encoding: G
-  - annotation: nSNPs
-    method: column
-    encoding: H
-  - annotation: nGWASSNPs
-    method: column
-    encoding: I
-  - annotation: nIndigSNPs
-    method: column
-    encoding: J
-  - annotation: IndigSNPs
-    method: column
-    encoding: M
-- source:
-    sheet: Supplementary Table 5
-    row_slice:
-    - 1
-    - auto
-  statement:
-    subject:
-      method: column
-      encoding: A
-      prioritize:
-      - SequenceVariant
-    predicate: related_to
-    object:
-      method: column
-      encoding: N
-      explode_by: ;
-      prioritize:
-      - SequenceVariant
-  annotations:
-  - annotation: associated loci uniqID
-    method: column
-    encoding: B
-  - annotation: associated loci rsID
-    method: column
-    encoding: C
-  - annotation: chr
-    method: column
-    encoding: D
-  - annotation: p value
-    method: column
-    encoding: E
-  - annotation: start
-    method: column
-    encoding: F
-  - annotation: end
-    method: column
-    encoding: G
-  - annotation: nSNPs
-    method: column
-    encoding: H
-  - annotation: nGWASSNPs
-    method: column
-    encoding: I
-  - annotation: nIndigSNPs
-    method: column
-    encoding: J
-  - annotation: IndigSNPs
-    method: column
-    encoding: M
+  - source:
+      sheet: Supplementary Table 2
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize:
+          - SequenceVariant
+      predicate: related_to
+      object:
+        method: column
+        encoding: N
+        explode_by: ;
+        prioritize:
+          - SequenceVariant
+    annotations:
+      - annotation: associated loci uniqID
+        method: column
+        encoding: B
+      - annotation: associated loci rsID
+        method: column
+        encoding: C
+      - annotation: chr
+        method: column
+        encoding: D
+      - annotation: p value
+        method: column
+        encoding: E
+      - annotation: start
+        method: column
+        encoding: F
+      - annotation: end
+        method: column
+        encoding: G
+      - annotation: nSNPs
+        method: column
+        encoding: H
+      - annotation: nGWASSNPs
+        method: column
+        encoding: I
+      - annotation: nIndigSNPs
+        method: column
+        encoding: J
+      - annotation: IndigSNPs
+        method: column
+        encoding: M
+  - source:
+      sheet: Supplementary Table 3
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize:
+          - SequenceVariant
+      predicate: related_to
+      object:
+        method: column
+        encoding: N
+        explode_by: ;
+        prioritize:
+          - SequenceVariant
+    annotations:
+      - annotation: associated loci uniqID
+        method: column
+        encoding: B
+      - annotation: associated loci rsID
+        method: column
+        encoding: C
+      - annotation: chr
+        method: column
+        encoding: D
+      - annotation: p value
+        method: column
+        encoding: E
+      - annotation: start
+        method: column
+        encoding: F
+      - annotation: end
+        method: column
+        encoding: G
+      - annotation: nSNPs
+        method: column
+        encoding: H
+      - annotation: nGWASSNPs
+        method: column
+        encoding: I
+      - annotation: nIndigSNPs
+        method: column
+        encoding: J
+      - annotation: IndigSNPs
+        method: column
+        encoding: M
+  - source:
+      sheet: Supplementary Table 4
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize:
+          - SequenceVariant
+      predicate: related_to
+      object:
+        method: column
+        encoding: N
+        explode_by: ;
+        prioritize:
+          - SequenceVariant
+    annotations:
+      - annotation: associated loci uniqID
+        method: column
+        encoding: B
+      - annotation: associated loci rsID
+        method: column
+        encoding: C
+      - annotation: chr
+        method: column
+        encoding: D
+      - annotation: p value
+        method: column
+        encoding: E
+      - annotation: start
+        method: column
+        encoding: F
+      - annotation: end
+        method: column
+        encoding: G
+      - annotation: nSNPs
+        method: column
+        encoding: H
+      - annotation: nGWASSNPs
+        method: column
+        encoding: I
+      - annotation: nIndigSNPs
+        method: column
+        encoding: J
+      - annotation: IndigSNPs
+        method: column
+        encoding: M
+  - source:
+      sheet: Supplementary Table 5
+      row_slice:
+        - 1
+        - auto
+    statement:
+      subject:
+        method: column
+        encoding: A
+        prioritize:
+          - SequenceVariant
+      predicate: related_to
+      object:
+        method: column
+        encoding: N
+        explode_by: ;
+        prioritize:
+          - SequenceVariant
+    annotations:
+      - annotation: associated loci uniqID
+        method: column
+        encoding: B
+      - annotation: associated loci rsID
+        method: column
+        encoding: C
+      - annotation: chr
+        method: column
+        encoding: D
+      - annotation: p value
+        method: column
+        encoding: E
+      - annotation: start
+        method: column
+        encoding: F
+      - annotation: end
+        method: column
+        encoding: G
+      - annotation: nSNPs
+        method: column
+        encoding: H
+      - annotation: nGWASSNPs
+        method: column
+        encoding: I
+      - annotation: nIndigSNPs
+        method: column
+        encoding: J
+      - annotation: IndigSNPs
+        method: column
+        encoding: M

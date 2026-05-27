@@ -7,32 +7,32 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11246516.1/41598_2024_66324_MOESM1_ESM.xlsx
     sheet: S3_GPV list
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0008170
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC11246516
     contributors:
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 12 MAY 2026
+      - kind: curation
+        name: tablassist
+        date: 12 MAY 2026
   annotations:
-  - annotation: dna variant
-    method: column
-    encoding: C
-  - annotation: transcript
-    method: column
-    encoding: D
+    - annotation: dna variant
+      method: column
+      encoding: C
+    - annotation: transcript
+      method: column
+      encoding: D

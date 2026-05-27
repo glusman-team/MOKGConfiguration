@@ -6,67 +6,61 @@ template:
     local: ./DATALAKE/PMC13167369_sj-xlsx-1-tct-10.1177_15330338261449014.xlsx
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13167369.1/sj-xlsx-1-tct-10.1177_15330338261449014.xlsx
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: related_to
     object:
       method: column
       encoding: C
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13167369
     contributors:
-    - name: Skye Lane Goetz
-      kind: curation
-      date: 14 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      - CalPoly SLO
-    - name: tablassist
-      kind: tool
-      date: 14 MAY 2026
+      - name: tablassist
+        kind: tool
+        date: 14 MAY 2026
   annotations:
-  - annotation: probe_id
-    method: column
-    encoding: A
-  - annotation: probe_chr
-    method: column
-    encoding: B
-  - annotation: cancer_type
-    method: column
-    encoding: C
-  - annotation: top_snp
-    method: column
-    encoding: E
-  - annotation: beta_smr
-    method: column
-    encoding: F
-  - annotation: se_smr
-    method: column
-    encoding: G
-  - annotation: p_smr
-    method: column
-    encoding: H
-  - annotation: p_heidi
-    method: column
-    encoding: I
-  - annotation: nsnp_heidi
-    method: column
-    encoding: J
-sections:
-- source:
-    sheet: Table S34
-  statement:
-    subject:
+    - annotation: probe_id
+      method: column
       encoding: A
-    object:
+    - annotation: probe_chr
+      method: column
+      encoding: B
+    - annotation: cancer_type
+      method: column
       encoding: C
+    - annotation: top_snp
+      method: column
+      encoding: E
+    - annotation: beta_smr
+      method: column
+      encoding: F
+    - annotation: se_smr
+      method: column
+      encoding: G
+    - annotation: p_smr
+      method: column
+      encoding: H
+    - annotation: p_heidi
+      method: column
+      encoding: I
+    - annotation: nsnp_heidi
+      method: column
+      encoding: J
+sections:
+  - source:
+      sheet: Table S34
+    statement:
+      subject:
+        encoding: A
+      object:
+        encoding: C

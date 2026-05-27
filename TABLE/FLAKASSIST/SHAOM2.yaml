@@ -6,8 +6,8 @@ template:
     local: ./DATALAKE/PMC13166470_medi-105-e48583-s007.xlsx
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166470.1/medi-105-e48583-s007.xlsx
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: value
@@ -17,39 +17,33 @@ template:
       method: column
       encoding: B
       prioritize:
-      - PhenotypicFeature
+        - PhenotypicFeature
   provenance:
     repo: PMC
     publication: PMC13166470
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      - CalPoly SLO
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: orig id
-    method: column
-    encoding: A
-  - annotation: beta
-    method: column
-    encoding: D
-  - annotation: standard error
-    method: column
-    encoding: E
-  - annotation: p value
-    method: column
-    encoding: F
-  - annotation: odds ratio
-    method: column
-    encoding: G
-  - annotation: lower odds ratio
-    method: column
-    encoding: H
-  - annotation: upper odds ratio
-    method: column
-    encoding: I
+    - annotation: orig id
+      method: column
+      encoding: A
+    - annotation: beta
+      method: column
+      encoding: D
+    - annotation: standard error
+      method: column
+      encoding: E
+    - annotation: p value
+      method: column
+      encoding: F
+    - annotation: odds ratio
+      method: column
+      encoding: G
+    - annotation: lower odds ratio
+      method: column
+      encoding: H
+    - annotation: upper odds ratio
+      method: column
+      encoding: I

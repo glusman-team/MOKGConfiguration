@@ -5,60 +5,57 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166836.1/medi-105-e48456-s002.xlsx
     sheet: TableS2.91 cytokines MR results
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
-      prefix: 'HGNC:'
+      prefix: "HGNC:"
     predicate: related_to
     object:
       method: value
       encoding: Eosinophilic esophagitis
       prioritize:
-      - Disease
+        - Disease
   annotations:
-  - annotation: mr_method
-    method: column
-    encoding: E
-  - annotation: nsnp
-    method: column
-    encoding: F
-  - annotation: beta
-    method: column
-    encoding: G
-  - annotation: se
-    method: column
-    encoding: H
-  - annotation: p_value
-    method: column
-    encoding: I
-  - annotation: lower_ci
-    method: column
-    encoding: J
-  - annotation: upper_ci
-    method: column
-    encoding: K
-  - annotation: odds_ratio
-    method: column
-    encoding: L
-  - annotation: or_lci95
-    method: column
-    encoding: M
-  - annotation: or_uci95
-    method: column
-    encoding: N
+    - annotation: mr_method
+      method: column
+      encoding: E
+    - annotation: nsnp
+      method: column
+      encoding: F
+    - annotation: beta
+      method: column
+      encoding: G
+    - annotation: se
+      method: column
+      encoding: H
+    - annotation: p_value
+      method: column
+      encoding: I
+    - annotation: lower_ci
+      method: column
+      encoding: J
+    - annotation: upper_ci
+      method: column
+      encoding: K
+    - annotation: odds_ratio
+      method: column
+      encoding: L
+    - annotation: or_lci95
+      method: column
+      encoding: M
+    - annotation: or_uci95
+      method: column
+      encoding: N
   provenance:
     contributors:
-    - kind: tool
-      name: tablassist
-      date: '2026-05-13'
-    - kind: curation
-      name: Skye Lane Goetz
-      date: '2026-05-13'
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
     repo: PMC
     publication: PMC13166836

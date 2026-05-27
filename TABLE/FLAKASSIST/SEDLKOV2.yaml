@@ -7,25 +7,25 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13140550.1/MGG3-14-e70209-s001.xlsx
     sheet: Gene_panel_ Epilepsy
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0005027
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13140550
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026

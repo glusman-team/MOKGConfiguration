@@ -7,71 +7,68 @@ template:
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12236936/
     sheet: SuppData5
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - BiologicalProcess
+        - BiologicalProcess
     predicate: associated_with
     object:
       method: column
       encoding: M
       prioritize:
-      - NamedThing
+        - NamedThing
     qualifiers:
-    - qualifier: species_context_qualifier
-      method: value
-      encoding: NCBITaxon:9606
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   annotations:
-  - annotation: description
-    method: column
-    encoding: B
-  - annotation: gene ratio
-    method: column
-    encoding: C
-  - annotation: background ratio
-    method: column
-    encoding: D
-  - annotation: rich factor
-    method: column
-    encoding: E
-  - annotation: fold enrichment
-    method: column
-    encoding: F
-  - annotation: z score
-    method: column
-    encoding: G
-  - annotation: p value
-    method: column
-    encoding: H
-  - annotation: adjusted p value
-    method: column
-    encoding: I
-  - annotation: q value
-    method: column
-    encoding: J
-  - annotation: gene id list
-    method: column
-    encoding: K
-  - annotation: count
-    method: column
-    encoding: L
-  - annotation: cluster
-    method: column
-    encoding: N
-  - annotation: regulation
-    method: column
-    encoding: O
+    - annotation: description
+      method: column
+      encoding: B
+    - annotation: gene ratio
+      method: column
+      encoding: C
+    - annotation: background ratio
+      method: column
+      encoding: D
+    - annotation: rich factor
+      method: column
+      encoding: E
+    - annotation: fold enrichment
+      method: column
+      encoding: F
+    - annotation: z score
+      method: column
+      encoding: G
+    - annotation: p value
+      method: column
+      encoding: H
+    - annotation: adjusted p value
+      method: column
+      encoding: I
+    - annotation: q value
+      method: column
+      encoding: J
+    - annotation: gene id list
+      method: column
+      encoding: K
+    - annotation: count
+      method: column
+      encoding: L
+    - annotation: cluster
+      method: column
+      encoding: N
+    - annotation: regulation
+      method: column
+      encoding: O
   provenance:
     repo: PMC
     publication: PMC12236936
     contributors:
-    - kind: curation
-      name: OpenCode
-      date: 13 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026

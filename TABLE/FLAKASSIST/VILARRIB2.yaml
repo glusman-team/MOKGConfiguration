@@ -7,17 +7,17 @@ template:
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12039315/
     sheet: ST3
     row_slice:
-    - 2
-    - auto
+      - 2
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - NamedThing
+        - NamedThing
       avoid:
-      - Gene
-      - Protein
+        - Gene
+        - Protein
     predicate: genetically_associated_with
     object:
       method: value
@@ -26,19 +26,16 @@ template:
     repo: PMC
     publication: PMC12039315
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026
   annotations:
-  - annotation: estimate
-    method: column
-    encoding: B
-  - annotation: ci
-    method: column
-    encoding: C
-  - annotation: p_value
-    method: column
-    encoding: D
+    - annotation: estimate
+      method: column
+      encoding: B
+    - annotation: ci
+      method: column
+      encoding: C
+    - annotation: p_value
+      method: column
+      encoding: D

@@ -12,7 +12,7 @@ template:
       encoding: AJ
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: associated_with
     object:
       method: value
@@ -21,16 +21,16 @@ template:
     repo: PMC
     publication: PMC12521215
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
   annotations:
-  - annotation: fold change
-    method: column
-    encoding: AF
-  - annotation: p value
-    method: column
-    encoding: AG
-  - annotation: regulated
-    method: column
-    encoding: AH
+    - annotation: fold change
+      method: column
+      encoding: AF
+    - annotation: p value
+      method: column
+      encoding: AG
+    - annotation: regulated
+      method: column
+      encoding: AH

@@ -6,39 +6,39 @@ template:
     local: ./DATALAKE/PMC13083253_41588_2026_2535_MOESM7_ESM.csv
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13083253.1/41588_2026_2535_MOESM7_ESM.csv
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: B
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0004976
       prioritize:
-      - Disease
+        - Disease
     qualifiers:
-    - qualifier: subject_form_or_variant_qualifier
-      method: column
-      encoding: C
-    - qualifier: statement_qualifier
-      method: column
-      encoding: D
+      - qualifier: subject_form_or_variant_qualifier
+        method: column
+        encoding: C
+      - qualifier: statement_qualifier
+        method: column
+        encoding: D
   provenance:
     repo: PMC
     publication: PMC13083253
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
   annotations:
-  - annotation: p value
-    method: column
-    encoding: K
-  - annotation: odds ratio
-    method: column
-    encoding: H
+    - annotation: p value
+      method: column
+      encoding: K
+    - annotation: odds ratio
+      method: column
+      encoding: H

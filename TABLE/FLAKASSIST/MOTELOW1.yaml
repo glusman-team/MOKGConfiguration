@@ -7,43 +7,41 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12933612.1/mmc2.xlsx
     sheet: eTable 11 UR Damaging
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       remove:
-      - ''''
+        - "'"
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0018301
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC12933612
     contributors:
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 12 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-      comment: Interstitial cystitis rare variant exome sequencing study
+      - kind: curation
+        name: tablassist
+        date: 12 MAY 2026
+        comment: Interstitial cystitis rare variant exome sequencing study
   annotations:
-  - annotation: p value
-    method: column
-    encoding: B
-  - annotation: estimate
-    method: column
-    encoding: C
-  - annotation: qualified case
-    method: column
-    encoding: F
-  - annotation: qualified control
-    method: column
-    encoding: H
+    - annotation: p value
+      method: column
+      encoding: B
+    - annotation: estimate
+      method: column
+      encoding: C
+    - annotation: qualified case
+      method: column
+      encoding: F
+    - annotation: qualified control
+      method: column
+      encoding: H

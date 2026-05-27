@@ -7,58 +7,58 @@ template:
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12346698/
     sheet: Table S9
     row_slice:
-    - 3
-    - auto
+      - 3
+      - auto
   statement:
     subject:
       method: column
       encoding: G
-      explode_by: ','
-      prefix: 'NCBIGene:'
+      explode_by: ","
+      prefix: "NCBIGene:"
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: related_to
     object:
       method: value
       encoding: MONDO:0007739
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC12346698
     contributors:
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 13 MAY 2026
+      - kind: curation
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: category
-    method: column
-    encoding: B
-  - annotation: term
-    method: column
-    encoding: C
-  - annotation: description
-    method: column
-    encoding: D
-  - annotation: log p
-    method: column
-    encoding: E
-  - annotation: log q value
-    method: column
-    encoding: F
-  - annotation: symbols
-    method: column
-    encoding: H
-  - annotation: genes
-    method: column
-    encoding: Q
-  - annotation: symbols
-    method: column
-    encoding: R
-  - annotation: genes
-    method: column
-    encoding: AA
-  - annotation: symbols
-    method: column
-    encoding: AB
+    - annotation: category
+      method: column
+      encoding: B
+    - annotation: term
+      method: column
+      encoding: C
+    - annotation: description
+      method: column
+      encoding: D
+    - annotation: log p
+      method: column
+      encoding: E
+    - annotation: log q value
+      method: column
+      encoding: F
+    - annotation: symbols
+      method: column
+      encoding: H
+    - annotation: genes
+      method: column
+      encoding: Q
+    - annotation: symbols
+      method: column
+      encoding: R
+    - annotation: genes
+      method: column
+      encoding: AA
+    - annotation: symbols
+      method: column
+      encoding: AB

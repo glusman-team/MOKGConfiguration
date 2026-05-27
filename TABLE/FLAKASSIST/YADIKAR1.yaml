@@ -7,29 +7,29 @@ template:
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11203991/
     sheet: Proteins
     row_slice:
-    - 3
-    - auto
+      - 3
+      - auto
   statement:
     subject:
       method: column
       encoding: F
       taxon: 10116
       prioritize:
-      - Protein
+        - Protein
     predicate: related_to
     object:
       method: value
       encoding: MONDO:0004975
       prioritize:
-      - Disease
+        - Disease
     qualifiers:
-    - qualifier: species_context_qualifier
-      method: value
-      encoding: NCBITaxon:10116
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:10116
   provenance:
     repo: PMC
     publication: PMC11203991
     contributors:
-    - kind: curation
-      name: OpenCode
-      date: 13 MAY 2026
+      - kind: curation
+        name: tablassist
+        date: 13 MAY 2026

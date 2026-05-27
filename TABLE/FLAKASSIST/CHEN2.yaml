@@ -7,49 +7,49 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12911624.1/jmg-63-2-s002.xlsx
     sheet: Supplementary Table 4
     row_slice:
-    - 2
-    - auto
+      - 2
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       remove:
-      - ^Gene_
+        - ^Gene_
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0017771
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC12911624
     contributors:
-    - kind: curation
-      name: Tablassist Pipeline
-      date: 13 MAY 2026
+      - kind: curation
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: variant count (case)
-    method: column
-    encoding: B
-  - annotation: weighted variant count (case)
-    method: column
-    encoding: C
-  - annotation: variant count (control)
-    method: column
-    encoding: D
-  - annotation: weighted variant count (control)
-    method: column
-    encoding: E
-  - annotation: odds ratio (95% ci)
-    method: column
-    encoding: F
-  - annotation: p value
-    method: column
-    encoding: G
-  - annotation: fdr
-    method: column
-    encoding: H
+    - annotation: variant count (case)
+      method: column
+      encoding: B
+    - annotation: weighted variant count (case)
+      method: column
+      encoding: C
+    - annotation: variant count (control)
+      method: column
+      encoding: D
+    - annotation: weighted variant count (control)
+      method: column
+      encoding: E
+    - annotation: odds ratio (95% ci)
+      method: column
+      encoding: F
+    - annotation: p value
+      method: column
+      encoding: G
+    - annotation: fdr
+      method: column
+      encoding: H

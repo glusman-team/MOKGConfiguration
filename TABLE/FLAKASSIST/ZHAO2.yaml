@@ -7,90 +7,87 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13167090.1/Table1.xlsx
     sheet: Sheet1
     row_slice:
-    - 1
-    - 78
+      - 1
+      - 78
   statement:
     subject:
       method: column
       encoding: A
       fill: forward
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0019019
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13167090
     contributors:
-    - kind: curation
-      name: Tablassist
-      date: 13 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: patient number
-    method: column
-    encoding: B
-  - annotation: zygote type
-    method: column
-    encoding: C
-  - annotation: position
-    method: column
-    encoding: D
-  - annotation: nucleic acid change
-    method: column
-    encoding: E
-  - annotation: amino acid change
-    method: column
-    encoding: F
-  - annotation: variant type
-    method: column
-    encoding: G
-  - annotation: clinical type
-    method: column
-    encoding: H
-  - annotation: sex
-    method: column
-    encoding: I
-  - annotation: age
-    method: column
-    encoding: J
-  - annotation: height
-    method: column
-    encoding: K
-  - annotation: standard deviation of height
-    method: column
-    encoding: L
-  - annotation: number of fractures
-    method: column
-    encoding: M
-  - annotation: blue sclerae
-    method: column
-    encoding: N
-  - annotation: dentinogenesis imperfecta
-    method: column
-    encoding: O
-  - annotation: ligament laxity
-    method: column
-    encoding: P
-  - annotation: limb deformity
-    method: column
-    encoding: Q
-  - annotation: scoliosis
-    method: column
-    encoding: R
-  - annotation: pectus carinatum
-    method: column
-    encoding: S
-  - annotation: limited mobility
-    method: column
-    encoding: T
-  - annotation: hearing loss
-    method: column
-    encoding: U
+    - annotation: patient number
+      method: column
+      encoding: B
+    - annotation: zygote type
+      method: column
+      encoding: C
+    - annotation: position
+      method: column
+      encoding: D
+    - annotation: nucleic acid change
+      method: column
+      encoding: E
+    - annotation: amino acid change
+      method: column
+      encoding: F
+    - annotation: variant type
+      method: column
+      encoding: G
+    - annotation: clinical type
+      method: column
+      encoding: H
+    - annotation: sex
+      method: column
+      encoding: I
+    - annotation: age
+      method: column
+      encoding: J
+    - annotation: height
+      method: column
+      encoding: K
+    - annotation: standard deviation of height
+      method: column
+      encoding: L
+    - annotation: number of fractures
+      method: column
+      encoding: M
+    - annotation: blue sclerae
+      method: column
+      encoding: N
+    - annotation: dentinogenesis imperfecta
+      method: column
+      encoding: O
+    - annotation: ligament laxity
+      method: column
+      encoding: P
+    - annotation: limb deformity
+      method: column
+      encoding: Q
+    - annotation: scoliosis
+      method: column
+      encoding: R
+    - annotation: pectus carinatum
+      method: column
+      encoding: S
+    - annotation: limited mobility
+      method: column
+      encoding: T
+    - annotation: hearing loss
+      method: column
+      encoding: U

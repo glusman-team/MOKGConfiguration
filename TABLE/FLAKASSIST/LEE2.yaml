@@ -6,50 +6,50 @@ template:
     local: ./DATALAKE/PMC13134247_13059_2026_4041_MOESM5_ESM.xlsx
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13134247.1/13059_2026_4041_MOESM5_ESM.xlsx
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: B
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0005258
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13134247
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
   annotations:
-  - annotation: p value
-    method: column
-    encoding: J
-  - annotation: fdr
-    method: column
-    encoding: K
-  - annotation: relative risk
-    method: column
-    encoding: L
+    - annotation: p value
+      method: column
+      encoding: J
+    - annotation: fdr
+      method: column
+      encoding: K
+    - annotation: relative risk
+      method: column
+      encoding: L
 sections:
-- source:
-    sheet: EAS_single_gene_burden
-  statement:
-    qualifiers:
-    - qualifier: population_context_qualifier
-      method: value
-      encoding: East Asian
-- source:
-    sheet: EUR_single_gene_burden
-  statement:
-    qualifiers:
-    - qualifier: population_context_qualifier
-      method: value
-      encoding: European
+  - source:
+      sheet: EAS_single_gene_burden
+    statement:
+      qualifiers:
+        - qualifier: population_context_qualifier
+          method: value
+          encoding: East Asian
+  - source:
+      sheet: EUR_single_gene_burden
+    statement:
+      qualifiers:
+        - qualifier: population_context_qualifier
+          method: value
+          encoding: European

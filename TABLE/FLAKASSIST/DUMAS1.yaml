@@ -7,32 +7,32 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5507771.1/mmc3.xlsx
     sheet: All_TMAO_correlated_genes
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: B
       taxon: 10090
       prioritize:
-      - Gene
+        - Gene
     predicate: correlated_with
     object:
       method: value
       encoding: CHEBI:15676
       prioritize:
-      - ChemicalEntity
+        - ChemicalEntity
   provenance:
     repo: PMC
     publication: PMC5507771
     contributors:
-    - kind: curation
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: curation
+        name: tablassist
+        date: 12 MAY 2026
   annotations:
-  - annotation: correlation
-    method: column
-    encoding: D
-  - annotation: p value
-    method: column
-    encoding: E
+    - annotation: correlation
+      method: column
+      encoding: D
+    - annotation: p value
+      method: column
+      encoding: E

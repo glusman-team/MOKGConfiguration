@@ -11,40 +11,40 @@ template:
       method: column
       encoding: A
       regex:
-      - pattern: ^\s*(.*?)\s*$
-        replacement: $1
+        - pattern: ^\s*(.*?)\s*$
+          replacement: $1
       taxon: 9606
       prioritize:
-      - Protein
+        - Protein
     predicate: associated_with
     object:
       method: value
       encoding: MONDO:0010735
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC10920785
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: baseMean
-    method: column
-    encoding: B
-  - annotation: log2FoldChange
-    method: column
-    encoding: C
-  - annotation: lfcSE
-    method: column
-    encoding: D
-  - annotation: stat
-    method: column
-    encoding: E
-  - annotation: pvalue
-    method: column
-    encoding: F
-  - annotation: padj
-    method: column
-    encoding: G
+    - annotation: baseMean
+      method: column
+      encoding: B
+    - annotation: log2FoldChange
+      method: column
+      encoding: C
+    - annotation: lfcSE
+      method: column
+      encoding: D
+    - annotation: stat
+      method: column
+      encoding: E
+    - annotation: pvalue
+      method: column
+      encoding: F
+    - annotation: padj
+      method: column
+      encoding: G

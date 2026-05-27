@@ -7,8 +7,8 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13099431.1/41591_2026_4228_MOESM2_ESM.xlsx
     sheet: Supplementary Table 7
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
@@ -16,27 +16,27 @@ template:
       explode_by: ;
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: MONDO:0005258
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13099431
     contributors:
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026
   annotations:
-  - annotation: GO Term
-    method: column
-    encoding: A
-  - annotation: Adjusted P Value
-    method: column
-    encoding: D
-  - annotation: Odds Ratio
-    method: column
-    encoding: E
+    - annotation: GO Term
+      method: column
+      encoding: A
+    - annotation: Adjusted P Value
+      method: column
+      encoding: D
+    - annotation: Odds Ratio
+      method: column
+      encoding: E

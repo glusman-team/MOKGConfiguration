@@ -7,45 +7,41 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7377869.1/aging-12-103500-s004..xls
     sheet: supplement table3
     row_slice:
-    - 2
-    - auto
+      - 2
+      - auto
   statement:
     subject:
       method: column
       encoding: N
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: gene_associated_with_condition
     object:
       method: value
       encoding: non-small cell lung carcinoma
       prioritize:
-      - Disease
+        - Disease
     qualifiers:
-    - qualifier: subject_form_or_variant_qualifier
-      method: value
-      encoding: somatic
+      - qualifier: subject_form_or_variant_qualifier
+        method: value
+        encoding: somatic
   provenance:
     repo: PMC
     publication: PMC7377869
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 13 MAY 2026
-      organizations:
-      - Institute for Systems Biology
-    - kind: tool
-      name: tablassist
-      date: 13 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 13 MAY 2026
   annotations:
-  - annotation: mutation_type
-    method: column
-    encoding: M
-  - annotation: variant_allele_frequency
-    method: column
-    encoding: I
-  - annotation: miscellaneous notes
-    method: value
-    encoding: Somatic mutations in 27 candidate genes from targeted sequencing of
-      88 NSCLC patients
+    - annotation: mutation_type
+      method: column
+      encoding: M
+    - annotation: variant_allele_frequency
+      method: column
+      encoding: I
+    - annotation: miscellaneous notes
+      method: value
+      encoding:
+        Somatic mutations in 27 candidate genes from targeted sequencing of
+        88 NSCLC patients

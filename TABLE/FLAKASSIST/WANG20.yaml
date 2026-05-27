@@ -7,39 +7,36 @@ template:
     url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12391241/
     sheet: blue_module_proteins
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: B
       taxon: 9606
       prioritize:
-      - Gene
+        - Gene
     predicate: associated_with
     object:
       method: value
       encoding: MONDO:0100105
       prioritize:
-      - Disease
+        - Disease
     qualifiers:
-    - qualifier: species_context_qualifier
-      method: value
-      encoding: NCBITaxon:9606
+      - qualifier: species_context_qualifier
+        method: value
+        encoding: NCBITaxon:9606
   annotations:
-  - annotation: uniprot
-    method: column
-    encoding: A
-  - annotation: entrez_id
-    method: column
-    encoding: C
+    - annotation: uniprot
+      method: column
+      encoding: A
+    - annotation: entrez_id
+      method: column
+      encoding: C
   provenance:
     repo: PMC
     publication: PMC12391241
     contributors:
-    - kind: curation
-      name: OpenCode
-      date: 12 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 12 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 12 MAY 2026

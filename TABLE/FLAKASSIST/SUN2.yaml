@@ -6,14 +6,14 @@ template:
     local: ./DATALAKE/PMC13168532_FSN3-14-e71814-s003.xlsx
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13168532.1/FSN3-14-e71814-s003.xlsx
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - Gene
+        - Gene
       taxon: 9606
     predicate: related_to
     object:
@@ -23,9 +23,6 @@ template:
     repo: PMC
     publication: PMC13168532
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      date: 15 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 15 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 15 MAY 2026

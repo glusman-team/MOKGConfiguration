@@ -7,60 +7,56 @@ template:
     url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13169133.1/ALZ-22-e71280-s004.xlsx
     sheet: All-cause dementia
     row_slice:
-    - 1
-    - auto
+      - 1
+      - auto
   statement:
     subject:
       method: column
       encoding: A
       prioritize:
-      - SmallMolecule
-      - ChemicalEntity
+        - SmallMolecule
+        - ChemicalEntity
     predicate: associated_with_increased_likelihood_of
     object:
       method: value
       encoding: All-cause dementia
       prioritize:
-      - Disease
+        - Disease
   provenance:
     repo: PMC
     publication: PMC13169133
     contributors:
-    - kind: curation
-      name: Skye Lane Goetz
-      comment: metabolomic ageing hazard ratios - All-cause dementia sheet
-      date: 14 MAY 2026
-    - kind: tool
-      name: tablassist
-      date: 14 MAY 2026
+      - kind: tool
+        name: tablassist
+        date: 14 MAY 2026
   annotations:
-  - annotation: metabolite group
-    method: column
-    encoding: B
-  - annotation: metabolite subgroup
-    method: column
-    encoding: C
-  - annotation: hazard ratio
-    method: column
-    encoding: D
-  - annotation: confidence interval lower bound
-    method: column
-    encoding: E
-  - annotation: confidence interval upper bound
-    method: column
-    encoding: F
-  - annotation: p value
-    method: column
-    encoding: G
-  - annotation: nominal significance
-    method: column
-    encoding: H
-  - annotation: bonferroni significance
-    method: column
-    encoding: I
-  - annotation: transformed p value
-    method: column
-    encoding: J
-  - annotation: mean importance
-    method: column
-    encoding: K
+    - annotation: metabolite group
+      method: column
+      encoding: B
+    - annotation: metabolite subgroup
+      method: column
+      encoding: C
+    - annotation: hazard ratio
+      method: column
+      encoding: D
+    - annotation: confidence interval lower bound
+      method: column
+      encoding: E
+    - annotation: confidence interval upper bound
+      method: column
+      encoding: F
+    - annotation: p value
+      method: column
+      encoding: G
+    - annotation: nominal significance
+      method: column
+      encoding: H
+    - annotation: bonferroni significance
+      method: column
+      encoding: I
+    - annotation: transformed p value
+      method: column
+      encoding: J
+    - annotation: mean importance
+      method: column
+      encoding: K
