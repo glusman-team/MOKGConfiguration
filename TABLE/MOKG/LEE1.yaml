@@ -32,6 +32,8 @@ template:
       method: value
       prioritize:
         - Gene
+        - Protein
+      taxon: 9606
     object:
       method: column
       encoding: A

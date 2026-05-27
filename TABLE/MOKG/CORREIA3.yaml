@@ -99,7 +99,6 @@ sections:
       subject:
         method: column
         encoding: A
-        prefix: "UniProtKB:"
         prioritize:
           - Protein
           - Gene

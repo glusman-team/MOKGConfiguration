@@ -21,6 +21,8 @@ template:
       method: column
       encoding: A
       prioritize:
+        - DiseaseOrPhenotypicFeature
+        - PhenotypicFeature
         - Disease
     qualifiers:
       - qualifier: species_context_qualifier

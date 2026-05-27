@@ -17,6 +17,9 @@ template:
       encoding: A
       prioritize:
         - Disease
+        - Pathway
+        - MolecularActivity
+        - BiologicalProcess
         - PhenotypicFeature
     predicate: disease_has_location
     object:
@@ -25,17 +28,6 @@ template:
       prioritize:
         - GrossAnatomicalStructure
         - AnatomicalEntity
-      avoid:
-        - Disease
-        - PhenotypicFeature
-        - BiologicalProcess
-        - InformationContentEntity
-        - ClinicalAttribute
-        - Publication
-        - Gene
-        - SmallMolecule
-        - OrganismTaxon
-        - Cohort
     qualifiers:
       - qualifier: species_context_qualifier
         method: value

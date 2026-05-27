@@ -20,6 +20,7 @@ template:
       method: column
       encoding: C
       prioritize:
+        - Protein
         - Gene
       taxon: 9606
       regex:
@@ -27,6 +28,7 @@ template:
           replacement: ""
       remove:
         - '-Ab#?\\d+$'
+        - "#.*"
   provenance:
     repo: PMC
     publication: PMC4119355

@@ -17,6 +17,7 @@ template:
       encoding: A
       prioritize:
         - Pathway
+        - MolecularActivity
         - BiologicalProcess
       taxon: 9606
     predicate: associated_with

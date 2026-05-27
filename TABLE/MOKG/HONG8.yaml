@@ -16,6 +16,7 @@ template:
       encoding: A
       prioritize:
         - Gene
+        - Protein
       taxon: 9606
 
     predicate: gene_associated_with_condition

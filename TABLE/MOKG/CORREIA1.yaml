@@ -14,9 +14,9 @@ template:
     subject:
       method: column
       encoding: B
-      prefix: "UniProtKB:"
       prioritize:
         - Protein
+        - Gene
       taxon: 9606
       regex:
         - pattern: "-[0-9]+$"

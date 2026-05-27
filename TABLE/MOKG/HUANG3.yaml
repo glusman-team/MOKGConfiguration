@@ -16,6 +16,7 @@ template:
       explode_by: ";"
       prioritize:
         - Gene
+        - Protein
       taxon: 9606
     predicate: associated_with
     object:

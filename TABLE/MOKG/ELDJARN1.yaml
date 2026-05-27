@@ -34,7 +34,7 @@ template:
         name: JC Roach
         date: 01 JAN 2025
         organizations:
-          - ISB
+          - The Institute for Systems Biology
 
 sections:
   # Section 1: ST16 — Olink protein–phenotype associations
@@ -49,9 +49,9 @@ sections:
       subject:
         method: column
         encoding: B
-        prefix: "UniProtKB:"
         prioritize:
           - Protein
+          - Gene
         taxon: 9606
       predicate: associated_with
       object:
@@ -89,6 +89,7 @@ sections:
         method: column
         encoding: B
         prioritize:
+          - Gene
           - Protein
         taxon: 9606
       predicate: associated_with
@@ -97,6 +98,8 @@ sections:
         encoding: G
         prioritize:
           - DiseaseOrPhenotypicFeature
+          - PhenotypicFeature
+          - Disease
     annotations:
       - annotation: p value
         method: column
@@ -122,9 +125,9 @@ sections:
       subject:
         method: column
         encoding: F
-        prefix: "UniProtKB:"
         prioritize:
           - Protein
+          - Gene
         taxon: 9606
       predicate: associated_with
       object:

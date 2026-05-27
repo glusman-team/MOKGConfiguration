@@ -24,6 +24,7 @@ template:
         - pattern: ":[^:]*:[^:]*$"
           replacement: ""
       prefix: "UniProtKB:"
+      explode_by: _
 
     predicate: biomarker_for
 
