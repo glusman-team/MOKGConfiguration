@@ -22,6 +22,7 @@ template:
         - GWF.*
         - RGB.*
         - sp.*
+        - SP.*
       regex:
         - pattern: ^.*?_
           replacement: ""
