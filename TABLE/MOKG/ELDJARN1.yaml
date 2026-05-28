@@ -10,6 +10,7 @@ template:
       method: column
       encoding: B
       prefix: "UniProtKB:"
+      explode_by: _
       prioritize:
         - Protein
       taxon: 9606

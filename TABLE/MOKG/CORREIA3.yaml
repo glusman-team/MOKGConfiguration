@@ -103,6 +103,7 @@ sections:
           - Protein
           - Gene
         taxon: 9606
+        prefix: "UniProtKB:"
       object:
         method: value
         encoding: "mitochondrial oxidative phosphorylation disorder"
@@ -128,6 +129,7 @@ sections:
         prioritize:
           - Pathway
           - MolecularActivity
+          - BiologicalProcess
         taxon: 9606
         regex:
           - pattern: "^WP"
@@ -158,6 +160,7 @@ sections:
         encoding: A
         prioritize:
           - Pathway
+          - BiologicalProcess
           - MolecularActivity
         taxon: 9606
         regex:
@@ -189,6 +192,7 @@ sections:
         encoding: A
         prioritize:
           - Pathway
+          - BiologicalProcess
           - MolecularActivity
         taxon: 9606
         regex:

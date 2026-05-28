@@ -58,7 +58,7 @@ sections:
       qualifiers:
         - qualifier: temporal_context_qualifier
           method: value
-          encoding: "6 hours post infection"
+          encoding: "6 hours"
         - qualifier: subject_direction_qualifier
           method: column
           encoding: C
@@ -91,7 +91,7 @@ sections:
       qualifiers:
         - qualifier: temporal_context_qualifier
           method: value
-          encoding: "12 hours post infection"
+          encoding: "12 hours"
         - qualifier: subject_direction_qualifier
           method: column
           encoding: H
@@ -124,7 +124,7 @@ sections:
       qualifiers:
         - qualifier: temporal_context_qualifier
           method: value
-          encoding: "24 hours post infection"
+          encoding: "24 hours"
         - qualifier: subject_direction_qualifier
           method: column
           encoding: M
