@@ -24,6 +24,10 @@ template:
         - FULL.*
         - sp.*
         - SP.*
+        - Bacterium.*
+        - bacterium.*
+        - Phage.*
+        - phage.*
       regex:
         - pattern: ^.*?_
           replacement: ""

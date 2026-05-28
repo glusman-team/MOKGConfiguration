@@ -12,13 +12,20 @@ template:
     subject:
       method: column
       encoding: B
+      regex:
+        - pattern: ^K
+          replacement: KEGG.ORTHOLOGY:K
+        - pattern: ^k
+          replacement: KEGG.ORTHOLOGY:k
     predicate: correlated_with
     object:
       method: column
       encoding: C
       prioritize:
+        - DrugOrPhenotypicFeature
         - ChemicalEntity
         - SmallMolecule
+        - PhenotypicFeature
         - Drug
       regex:
         - pattern: ^Plasma_
@@ -27,6 +34,8 @@ template:
           replacement: ""
         - pattern: ^K
           replacement: KEGG.ORTHOLOGY:K
+        - pattern: ^k
+          replacement: KEGG.ORTHOLOGY:k
       remove:
         - \*+$
         - ' \[[^\[\]]*\]$'

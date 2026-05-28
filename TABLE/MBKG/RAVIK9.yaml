@@ -30,6 +30,12 @@ template:
         - ART.*
         - DIAR.*
         - FAA.*
+        - Bacterium.*
+        - bacterium.*
+        - Phage.*
+        - phage.*
+        - Noname.*
+        - noname.*
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier
