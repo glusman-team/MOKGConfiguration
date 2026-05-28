@@ -60,14 +60,6 @@ sections:
         - qualifier: temporal_context_qualifier
           method: value
           encoding: "6 hours"
-        - qualifier: subject_direction_qualifier
-          method: column
-          encoding: H
-          regex:
-            - pattern: "\\+"
-              replacement: "upregulated"
-            - pattern: "-"
-              replacement: "downregulated"
     annotations:
       - annotation: p value
         method: column
@@ -93,14 +85,6 @@ sections:
         - qualifier: temporal_context_qualifier
           method: value
           encoding: "12 hours"
-        - qualifier: subject_direction_qualifier
-          method: column
-          encoding: M
-          regex:
-            - pattern: "\\+"
-              replacement: "upregulated"
-            - pattern: "-"
-              replacement: "downregulated"
     annotations:
       - annotation: p value
         method: column
@@ -126,14 +110,6 @@ sections:
         - qualifier: temporal_context_qualifier
           method: value
           encoding: "24 hours"
-        - qualifier: subject_direction_qualifier
-          method: column
-          encoding: R
-          regex:
-            - pattern: "\\+"
-              replacement: "upregulated"
-            - pattern: "-"
-              replacement: "downregulated"
     annotations:
       - annotation: p value
         method: column
