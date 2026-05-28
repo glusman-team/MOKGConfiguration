@@ -17,7 +17,7 @@ template:
         - MolecularActivity
         - BiologicalProcess
         - Pathway
-      prefix: "KEGG.PATHWAY:"
+      prefix: "KEGG.ORTHOLOGY:"
     predicate: associated_with
     object:
       method: value

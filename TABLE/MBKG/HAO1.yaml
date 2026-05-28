@@ -21,6 +21,7 @@ template:
         - CAG.*
         - GWF.*
         - RGB.*
+        - FULL.*
         - sp.*
         - SP.*
       regex:
