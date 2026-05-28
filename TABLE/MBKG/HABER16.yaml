@@ -22,12 +22,12 @@ template:
         - pattern: _
           replacement: " "
       remove:
-        - "|c "
-        - "|o "
-        - "|p "
-        - "|f "
-        - "|s "
-        - "|g "
+        - "|C "
+        - "|O "
+        - "|P "
+        - "|F "
+        - "|S "
+        - "|G "
     predicate: associated_with
     object:
       method: column

@@ -18,9 +18,9 @@ template:
       remove:
         - '\['
         - '\]'
-        - cag.*
-        - gwf.*
-        - rgb.*
+        - CAG.*
+        - GWF.*
+        - RGB.*
         - sp.*
       regex:
         - pattern: ^.*?_
