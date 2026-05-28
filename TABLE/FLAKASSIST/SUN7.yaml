@@ -18,7 +18,7 @@ template:
         - BiologicalProcess
         - Pathway
       remove:
-        - '*.\'
+        - *.\\
     predicate: related_to
     object:
       method: column
