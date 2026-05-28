@@ -29,7 +29,6 @@ template:
         - pee
         - art
         - diar
-        -
     predicate: associated_with
     qualifiers:
       - qualifier: species_context_qualifier
