@@ -17,9 +17,11 @@ template:
         - OrganismTaxon
       remove:
         - .*__
-        - ucg.*
+        - UCG.*
         - "g  "
         - "o  "
+        - norank
+        - NORANK
         - "f  "
         - "p  "
         - "s  "

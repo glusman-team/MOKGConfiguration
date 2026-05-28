@@ -34,7 +34,7 @@ template:
           replacement: ""
       remove:
         - "(?:^|[^a-zA-Z])([a-z]  )"
-        - ugc.*
+        - UCG.*
     predicate: associated_with
     object:
       method: value

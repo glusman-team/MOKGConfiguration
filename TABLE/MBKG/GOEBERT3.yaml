@@ -30,7 +30,7 @@ template:
           replacement: ""
       remove:
         - "^(r445b|p253418b5|tm73|s247|bs11|rs045|ys2|tg5|smb53|gmd14h09|cf231|02d06|cw040|vadinca11|blvii28)$"
-        - ugc.*
+        - UCG.*
     predicate: associated_with
     object:
       method: value
