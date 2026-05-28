@@ -14,7 +14,6 @@ template:
       method: column
       encoding: A
       explode_by: ","
-      prefix: "rsid:"
       prioritize:
         - SequenceVariant
     predicate: related_to
