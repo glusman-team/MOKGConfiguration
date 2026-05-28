@@ -26,7 +26,7 @@ template:
       method: column
       encoding: A
       prioritize:
-        - protein
+        - Protein
         - Gene
     qualifiers:
       - qualifier: species_context_qualifier

@@ -41,6 +41,8 @@ sections:
         method: column
         encoding: A
         prioritize:
+          - MolecularActivity
+          - BiologicalProcess
           - Pathway
         regex:
           - pattern: ^[^_]*_
