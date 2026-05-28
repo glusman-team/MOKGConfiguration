@@ -20,7 +20,7 @@ template:
           replacement: " "
       remove:
         - sp.*
-        - cag.*
+        - CAG.*
     predicate: correlated_with
     qualifiers:
       - qualifier: species_context_qualifier
