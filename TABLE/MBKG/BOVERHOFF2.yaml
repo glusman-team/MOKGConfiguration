@@ -31,7 +31,7 @@ template:
         - \(.*$
         - "^[^:]*:"
         - _9
-        - "["
+        - \[
         - "]"
         - group
     qualifiers:
