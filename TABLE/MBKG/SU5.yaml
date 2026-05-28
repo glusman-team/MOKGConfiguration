@@ -20,7 +20,7 @@ template:
           replacement: " "
       remove:
         - sp.*
-        - cag.*
+        - CAG.*
     predicate: associated_with
     object:
       method: value
