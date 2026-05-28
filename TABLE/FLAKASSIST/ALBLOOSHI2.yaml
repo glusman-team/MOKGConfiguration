@@ -24,7 +24,7 @@ template:
       prioritize:
         - Disease
       remove:
-        - (.*
+        - \(.*
   provenance:
     repo: PMC
     publication: PMC13099644
