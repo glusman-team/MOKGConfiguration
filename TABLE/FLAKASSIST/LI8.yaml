@@ -36,7 +36,7 @@ sections:
           - pattern: ^Pheno_
             replacement: ""
         remove:
-          - '*.\:'
+          - '\*\.:'
         prioritize:
           - DiseaseOrPhenotypicFeature
           - PhenotypicFeature
