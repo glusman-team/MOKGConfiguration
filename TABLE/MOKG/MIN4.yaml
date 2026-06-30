@@ -80,6 +80,10 @@ template:
       - kind: tool
         name: tablassist
         date: 29 APR 2026
+      - kind: tool
+        name: tablassist
+        date: 30 JUN 2026
+        comment: Added raw p-value annotations (MAST column E, Pseudobulk column J)
 
   annotations:
     - annotation: sample size
@@ -94,6 +98,9 @@ template:
 
 sections:
   - annotations:
+      - annotation: p value
+        method: column
+        encoding: E
       - annotation: FDR
         method: column
         encoding: H
@@ -105,6 +112,9 @@ sections:
         encoding: "Log fold change from MAST analysis"
 
   - annotations:
+      - annotation: p value
+        method: column
+        encoding: J
       - annotation: FDR
         method: column
         encoding: K
