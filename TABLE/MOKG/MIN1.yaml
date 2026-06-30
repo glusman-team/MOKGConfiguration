@@ -41,6 +41,12 @@ template:
           - Institute for Systems Biology
           - CalPoly SLO
         comment: Migrated from TC2 to TC3 with improved predicate and qualifiers
+      - kind: curation
+        name: Skye Lane Goetz
+        date: 30 JUN 2026
+        organizations:
+          - Institute for Systems Biology
+        comment: Added meta p-value in column K to config
       - kind: tool
         name: tablassist
         date: 29 APR 2026
@@ -49,6 +55,9 @@ template:
     - annotation: sample size
       method: value
       encoding: 408
+    - annotation: p value
+      method: column
+      encoding: K
     - annotation: FDR
       method: column
       encoding: L
