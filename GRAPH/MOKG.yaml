@@ -3,7 +3,7 @@
 # TODO: == REQUIRES FEATURE IMPLEMENTATION
 # ! == NEEDS TO BE MANUALLY DOWNLOADED
 
-syntax: GC2
+syntax: GC3
 name: MULTIOMICS_KG
 version: 3.0.0
 tables:
@@ -463,7 +463,5 @@ tables:
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/FLAKASSIST/ZHU10.yaml
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/FLAKASSIST/ZHU11.yaml
 datassert: /local_raid1/sgoetz/STORE/DATASETS/DATASSERT/datassert
-pubmed_db: /local_raid1/sgoetz/DBSTORE/PubMed.db
-pmc_db: /local_raid1/sgoetz/DBSTORE/PMCSuppCaptions.db
 qc: true
 log: true
