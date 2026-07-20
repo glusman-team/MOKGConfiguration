@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC5795274_12915_2017_469_MOESM3_ESM.xlsx
@@ -20,10 +19,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC5795274
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 12 MAY 2026
 sections:
   - statement:
       object:

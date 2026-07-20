@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: beta
+  syntax: TC4
 
   source:
     kind: excel
@@ -69,21 +68,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC10622416
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 29 APR 2026
-        organizations:
-          - Institute for Systems Biology
-          - CalPoly SLO
-        comment: Migrated from TC2 to TC3; changed predicate from associated_with to expressed_in; added disease/anatomical/species qualifiers
-      - kind: tool
-        name: tablassist
-        date: 29 APR 2026
-      - kind: tool
-        name: tablassist
-        date: 30 JUN 2026
-        comment: Added raw p-value annotations (MAST column E, Pseudobulk column J)
 
   annotations:
     - annotation: sample size

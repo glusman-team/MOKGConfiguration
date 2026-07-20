@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC10922603_NIHMS1961897-supplement-1.xlsx
@@ -26,7 +25,3 @@ template:
   provenance:
     repo: PMC
     publication: PMC10922603
-    contributors:
-      - kind: curation
-        name: tablassist
-        date: 13 MAY 2026

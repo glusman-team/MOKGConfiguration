@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC13169133_ALZ-22-e71280-s004.xlsx
@@ -26,10 +25,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13169133
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 14 MAY 2026
   annotations:
     - annotation: metabolite group
       method: column

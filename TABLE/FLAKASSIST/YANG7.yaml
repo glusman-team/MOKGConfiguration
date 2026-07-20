@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC13173811_12929_2026_1253_MOESM2_ESM.xlsx
@@ -26,10 +25,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13173811
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 15 MAY 2026
   annotations:
     - annotation: base mean expression
       method: column

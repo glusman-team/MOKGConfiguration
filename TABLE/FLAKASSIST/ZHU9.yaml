@@ -49,8 +49,3 @@ sections:
     provenance:
       repo: PMC
       publication: PMC13160723
-      contributors:
-        - kind: tool
-          name: tablassist
-          date: 15 MAY 2026
-          comment: Config auto-generated for Table S11 (TET2-CHIP vs 19 cancers)

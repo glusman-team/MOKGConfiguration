@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC8509809_ijms-1413383-st_1-23-proof.xlsx
@@ -30,10 +29,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC8509809
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: Majority protein IDs
       method: column

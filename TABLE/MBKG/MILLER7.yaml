@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: primetime
+  syntax: TC4
   source:
     url: https://static-content.springer.com/esm/art%3A10.1038%2Fs43856-024-00583-y/MediaObjects/43856_2024_583_MOESM9_ESM.xlsx
     local: ./DATALAKE/MILLER7.xlsx
@@ -34,12 +33,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC11329762
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 17 FEB 2026
-        organizations:
-          - Institute for Systems Biology
   annotations:
     - annotation: p value
       method: column

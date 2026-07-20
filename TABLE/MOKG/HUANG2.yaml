@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: beta
+  syntax: TC4
 
   source:
     kind: excel
@@ -32,12 +31,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC11310467
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 28 APR 2026
-        organizations:
-          - Institute for Systems Biology
 
   annotations:
     - annotation: assertion method

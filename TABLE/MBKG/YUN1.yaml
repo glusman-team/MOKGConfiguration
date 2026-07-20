@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: primetime
+  syntax: TC4
   source:
     kind: excel
     sheet: 시트1
@@ -40,12 +39,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC6417675
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 17 FEB 2026
-        organizations:
-          - Institute for Systems Biology
   annotations:
     - annotation: sample size
       method: value

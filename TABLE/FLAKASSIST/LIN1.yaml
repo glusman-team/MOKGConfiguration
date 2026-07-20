@@ -21,10 +21,6 @@ template:
   provenance:
     repo: PMC
     publication: "PMC13121454"
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 12 MAY 2026
   annotations:
     - annotation: TWAS Z-score
       method: column

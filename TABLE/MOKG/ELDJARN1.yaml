@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: beta
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/ELDJARN1.xlsx
@@ -30,12 +29,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC10567571
-    contributors:
-      - kind: curation
-        name: JC Roach
-        date: 01 JAN 2025
-        organizations:
-          - The Institute for Systems Biology
 
 sections:
   # Section 1: ST16 — Olink protein–phenotype associations

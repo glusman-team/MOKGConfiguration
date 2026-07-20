@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: text
     local: ./DATALAKE/PMC11469405_media-1.csv
@@ -26,10 +25,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC11469405
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: HR
       method: column

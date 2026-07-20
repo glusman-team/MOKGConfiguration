@@ -32,7 +32,3 @@ template:
   provenance:
     repo: PMC
     publication: PMC13135409
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 12 MAY 2026

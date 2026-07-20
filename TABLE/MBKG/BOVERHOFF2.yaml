@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: primetime
+  syntax: TC4
   source:
     url: https://ars.els-cdn.com/content/image/1-s2.0-S2211124724010805-mmc2.xlsx
     local: ./DATALAKE/BOVERHOFF2.xlsx
@@ -41,12 +40,6 @@ template:
   provenance:
     repo: PMID
     publication: "39264809"
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 17 FEB 2026
-        organizations:
-          - Institute for Systems Biology
   annotations:
     - annotation: sample size
       method: value

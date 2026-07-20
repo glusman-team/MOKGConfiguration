@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC10400545_41431_2023_1382_MOESM9_ESM.xlsx
@@ -25,10 +24,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC10400545
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: HGVS_cDNA
       method: column

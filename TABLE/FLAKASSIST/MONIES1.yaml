@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC5502059_439_2017_1821_MOESM1_ESM.xlsx
@@ -33,10 +32,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC5502059
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 12 MAY 2026
   annotations:
     - annotation: patient_id
       method: column

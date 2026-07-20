@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12906803_PBI-24-831-s003.xlsx
@@ -27,10 +26,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC12906803
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 14 MAY 2026
   annotations:
     - annotation: expression_naCl
       method: column

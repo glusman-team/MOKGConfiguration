@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC9903693_mmc2.xlsx
@@ -29,10 +28,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC9903693
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 12 MAY 2026
   annotations:
     - annotation: prioritization tools
       method: value

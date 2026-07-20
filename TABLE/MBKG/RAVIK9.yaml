@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: primetime
+  syntax: TC4
   source:
     url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-52097-9/MediaObjects/41467_2024_52097_MOESM9_ESM.xlsx
     local: ./DATALAKE/RAVIK9.xlsx
@@ -60,12 +59,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC11377447
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 17 FEB 2026
-        organizations:
-          - Institute for Systems Biology
   annotations:
     - annotation: sample size
       method: value

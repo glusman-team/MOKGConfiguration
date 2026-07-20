@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: beta
+  syntax: TC4
   source:
     kind: excel
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10349864/bin/42003_2023_5113_MOESM4_ESM.xlsx
@@ -48,13 +47,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC10349864
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 28 APR 2026
-        organizations:
-          - Institute for Systems Biology
-        comment: Migrated from legacy durazo1.yaml while preserving original curator metadata.
   annotations:
     - annotation: sample size
       method: value

@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC7394404_pone.0236962.s019.xlsx
@@ -36,11 +35,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC7394404
-    contributors:
-      - name: tablassist
-        kind: tool
-        date: 12 MAY 2026
-        comment: Config from extractor summary of PMC7394404 Table S14 MyoCapture exomes
   annotations:
     - annotation: individual_id
       method: column

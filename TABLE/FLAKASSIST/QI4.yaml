@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12521215_Table5.xlsx
@@ -20,10 +19,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC12521215
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 12 MAY 2026
   annotations:
     - annotation: lasso coefficient
       method: column

@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: primetime
+  syntax: TC4
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10945560/bin/DataSheet10.XLSX
     local: ./DATALAKE/FORSYTH10.xlsx
@@ -45,12 +44,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC10945560
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 17 FEB 2026
-        organizations:
-          - Institute for Systems Biology
   annotations:
     - annotation: p value
       method: column

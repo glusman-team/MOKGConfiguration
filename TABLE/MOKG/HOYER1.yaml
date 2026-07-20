@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: beta
+  syntax: TC4
 
   source:
     kind: excel
@@ -37,19 +36,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC9377087
-    contributors:
-      - kind: curation
-        name: JC Roach
-        date: 27 DEC 2025
-        organizations:
-          - Institute for Systems Biology
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 28 APR 2026
-        organizations:
-          - Institute for Systems Biology
-          - CalPoly SLO
-        comment: Migrated from pre-TC3 to TC3
 
   annotations:
     - annotation: negative log p value

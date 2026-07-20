@@ -8,10 +8,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13158415
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   statement:
     subject:
       method: column

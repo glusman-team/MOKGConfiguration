@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12158776_41586_2025_8885_MOESM3_ESM.xlsx
@@ -24,10 +23,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC12158776
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: Protein.Group
       method: column

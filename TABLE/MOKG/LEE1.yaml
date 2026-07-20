@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: beta
+  syntax: TC4
 
   source:
     kind: excel
@@ -10,22 +9,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC9616573
-    contributors:
-      - kind: curation
-        name: JC Roach
-        date: 19 JAN 2026
-        organizations:
-          - Institute for Systems Biology
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 29 APR 2026
-        organizations:
-          - Institute for Systems Biology
-          - CalPoly SLO
-        comment: Migrated from TC2 to TC3
-      - kind: tool
-        name: tablassist
-        date: 29 APR 2026
   statement:
     predicate: regulates
     subject:

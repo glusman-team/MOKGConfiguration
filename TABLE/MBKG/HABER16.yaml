@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: primetime
+  syntax: TC4
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/4109533/bin/JCI75436sd16.xlsx
     local: ./DATALAKE/HABER16.xlsx
@@ -43,12 +42,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC4109533
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 17 FEB 2026
-        organizations:
-          - Institute for Systems Biology
   annotations:
     - annotation: sample size
       method: column

@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC13168499_41598_2026_44288_MOESM1_ESM.xlsx
@@ -26,10 +25,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13168499
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 15 MAY 2026
   annotations:
     - annotation: clinvar_id
       method: column

@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: primetime
+  syntax: TC4
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9499989/bin/mmc2.xlsx
     local: ./DATALAKE/NAGATA11.xlsx
@@ -41,12 +40,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC9499989
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 17 FEB 2026
-        organizations:
-          - Institute for Systems Biology
   annotations:
     - annotation: sample size
       method: column

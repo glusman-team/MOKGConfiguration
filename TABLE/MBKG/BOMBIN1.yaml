@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: primetime
+  syntax: TC4
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/8980904/bin/PHY2-10-e15254-s002.xlsx
     local: ./DATALAKE/BOMBIN1.xlsx
@@ -54,15 +53,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC8980904
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 17 FEB 2026
-        organizations:
-          - Institute for Systems Biology
-      - kind: tool
-        name: tablassist
-        date: 07 MAY 2026
   annotations:
     - annotation: p value
       method: column

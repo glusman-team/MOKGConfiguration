@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC13166470_medi-105-e48583-s009.xlsx
@@ -21,10 +20,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13166470
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: orig id
       method: column

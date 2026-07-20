@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12827591_Supplementary_file_1.xlsx
@@ -37,10 +36,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC12827591
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 12 MAY 2026
   annotations:
     - annotation: variant mask
       method: column

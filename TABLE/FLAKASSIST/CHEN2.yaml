@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12911624_jmg-63-2-s002.xlsx
@@ -27,10 +26,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC12911624
-    contributors:
-      - kind: curation
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: variant count (case)
       method: column

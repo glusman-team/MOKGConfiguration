@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./.ledger/disease-proteomics/data/PMC10625308/source/PMC10625308/13195_2023_1324_MOESM9_ESM.xlsx
@@ -29,10 +28,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC10625308
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: logFC
       method: column

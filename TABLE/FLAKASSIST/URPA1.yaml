@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC11061114_41431_2024_1581_MOESM2_ESM.xlsx
@@ -31,10 +30,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC11061114
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: Gene MIM
       method: column

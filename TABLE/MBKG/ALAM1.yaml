@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: primetime
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/ALAM.xlsx
@@ -47,14 +46,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC11708054
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 09 JAN 2025
-        organizations:
-          - Institute for Systems Biology
-          - CalPoly SLO
-        comment: Manual Migration From TC2 to TC3 To Test Tablassert
   annotations:
     - annotation: sample size
       method: value

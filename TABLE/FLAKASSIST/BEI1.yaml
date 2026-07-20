@@ -26,17 +26,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13166580
-    contributors:
-      - name: Skye Lane Goetz
-        kind: curation
-        date: 13 MAY 2026
-        organizations:
-          - Institute for Systems Biology
-          - CalPoly SLO
-        comment: "Configured for MR results of inflammatory proteins \u2192 AS"
-      - name: tablassist
-        kind: tool
-        date: 13 MAY 2026
   annotations:
     - annotation: mr_method
       method: column

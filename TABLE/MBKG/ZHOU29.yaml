@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: primetime
+  syntax: TC4
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9153113/bin/40168_2022_1271_MOESM1_ESM.xls
     local: ./DATALAKE/ZHOU29.xlsx
@@ -48,13 +47,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC9153113
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 17 FEB 2026
-        organizations:
-          - Institute for Systems Biology
-        comment: Audited — fixed species context, assertion method, row_slice, added anatomical qualifier, object prioritize, annotation labels
   annotations:
     - annotation: multiple testing correction method
       method: value

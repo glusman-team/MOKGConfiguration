@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC11383357_jciinsight-9-176383-s090.xlsx
@@ -29,10 +28,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC11383357
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: Age
       method: column

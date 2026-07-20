@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC7720636_NIHMS1642712-supplement-STable5.xlsx
@@ -27,10 +26,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC7720636
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: Gene
       method: column

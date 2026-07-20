@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12487845_jciinsight-10-195577-s236.xlsx
@@ -43,7 +42,3 @@ template:
   provenance:
     repo: PMC
     publication: PMC12487845
-    contributors:
-      - kind: curation
-        name: tablassist
-        date: 12 MAY 2026

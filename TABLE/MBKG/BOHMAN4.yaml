@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: primetime
+  syntax: TC4
   source:
     url: https://static-content.springer.com/esm/art%3A10.1186%2Fs12915-024-01887-0/MediaObjects/12915_2024_1887_MOESM1_ESM.xlsx
     local: ./DATALAKE/BOHMAN4.xlsx
@@ -41,15 +40,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC11040984
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 17 FEB 2026
-        organizations:
-          - Institute for Systems Biology
-      - kind: tool
-        name: tablassist
-        date: 11 MAY 2026
   annotations:
     - annotation: sample size
       method: value

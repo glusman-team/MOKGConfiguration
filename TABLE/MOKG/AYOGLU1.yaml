@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: beta
+  syntax: TC4
   source:
     kind: excel
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/4119355/bin/emmm0006-0918-SD18.xlsx
@@ -32,17 +31,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC4119355
-    contributors:
-      - kind: curation
-        name: JC Roach
-        date: 3 DEC 2025
-        organizations:
-          - Institute for Systems Biology
-      - kind: curation
-        name: SL Goetz
-        date: 12 DEC 2025
-        organizations:
-          - Institute for Systems Biology
   annotations:
     - annotation: sample_size
       method: value

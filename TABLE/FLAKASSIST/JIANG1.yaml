@@ -53,9 +53,5 @@ template:
       method: column
       encoding: N
   provenance:
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
     repo: PMC
     publication: PMC13166836

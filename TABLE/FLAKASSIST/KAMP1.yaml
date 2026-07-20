@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12080641_S0033291725000388sup002.xlsx
@@ -49,7 +48,3 @@ template:
   provenance:
     repo: PMC
     publication: PMC12080641
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 15 MAY 2026

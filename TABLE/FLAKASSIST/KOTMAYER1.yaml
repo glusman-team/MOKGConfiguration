@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12264048_41408_2025_1309_MOESM8_ESM.xlsx
@@ -28,10 +27,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC12264048
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: variant allele frequency
       method: column

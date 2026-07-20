@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC13147394_mmc4.xlsx
@@ -24,10 +23,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13147394
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 12 MAY 2026
 sections:
   - source:
       sheet: KnownALSGenes_vIQ Variants

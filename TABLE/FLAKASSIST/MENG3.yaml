@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./.ledger/disease-proteomics/data/PMC12874149/raw/mmc9.xlsx
@@ -19,10 +18,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC12874149
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 12 MAY 2026
 sections:
   - statement:
       subject:

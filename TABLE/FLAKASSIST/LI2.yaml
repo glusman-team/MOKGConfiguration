@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12835233_Table_4.xlsx
@@ -22,13 +21,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC12835233
-    contributors:
-      - kind: curation
-        name: tablassist
-        date: 13 MAY 2026
-        comment:
-          Integrated proteomics and metabolomics study of glutathione metabolism
-          in sepsis-associated encephalopathy (mouse model)
   annotations:
     - annotation: log2fc
       method: column

@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: text
     local: ./DATALAKE/PMC13083253_41588_2026_2535_MOESM7_ESM.csv
@@ -31,10 +30,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13083253
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 12 MAY 2026
   annotations:
     - annotation: p value
       method: column

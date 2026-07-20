@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: beta
+  syntax: TC4
 
   source:
     kind: excel
@@ -37,15 +36,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC8017771
-    contributors:
-      - kind: curation
-        name: JC Roach
-        date: 11 FEB 2026
-        organizations:
-          - Institute for Systems Biology
-      - kind: tool
-        name: tablassist
-        date: 29 APR 2026
   annotations:
     - annotation: assertion method
       method: value

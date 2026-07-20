@@ -23,10 +23,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13140796
-    contributors:
-      - name: tablassist
-        kind: tool
-        date: 14 MAY 2026
   annotations:
     - annotation: probe_chr
       method: column

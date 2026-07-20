@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC13159318_13023_2026_4339_MOESM1_ESM.xlsx
@@ -25,11 +24,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13159318
-    contributors:
-      - kind: curation
-        name: tablassist
-        date: 12 MAY 2026
-        comment: RYR1 variant catalog in Malignant Hyperthermia Slavonic cohort
   annotations:
     - annotation: ryr1 variant
       method: column

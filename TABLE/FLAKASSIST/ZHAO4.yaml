@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC13149156_Table1.xlsx
@@ -23,10 +22,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13149156
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 15 MAY 2026
   annotations:
     - annotation: chromosome
       method: column

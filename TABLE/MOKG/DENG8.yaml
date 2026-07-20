@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: beta
+  syntax: TC4
   source:
     kind: excel
     url: https://ars.els-cdn.com/content/image/1-s2.0-S0092867424012686-mmc7.xlsx
@@ -25,12 +24,6 @@ template:
   provenance:
     repo: PMID
     publication: "39579765"
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 09 JAN 2025
-        organizations:
-          - Institute for Systems Biology
   annotations:
     - annotation: cluster
       method: column

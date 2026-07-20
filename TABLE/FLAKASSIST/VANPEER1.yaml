@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC13158626_NIHMS2162696-supplement-2.xlsx
@@ -25,11 +24,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13158626
-    contributors:
-      - kind: curation
-        name: tablassist
-        date: 12 MAY 2026
-        comment: DIS3L2 germline variant cohort in Wilms tumor predisposition
   annotations:
     - annotation: id
       method: column

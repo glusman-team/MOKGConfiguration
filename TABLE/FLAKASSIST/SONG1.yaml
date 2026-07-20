@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
 
   source:
     kind: excel
@@ -31,10 +30,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13128347
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 12 MAY 2026
 
   annotations:
     - annotation: log fold change

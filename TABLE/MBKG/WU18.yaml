@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: primetime
+  syntax: TC4
   source:
     url: https://ndownloader.figstatic.com/collections/7296079/versions/1
     local: ./DATALAKE/WU18.xlsx
@@ -33,12 +32,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC11224521
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 17 FEB 2026
-        organizations:
-          - Institute for Systems Biology
   annotations:
     - annotation: sample size
       method: value

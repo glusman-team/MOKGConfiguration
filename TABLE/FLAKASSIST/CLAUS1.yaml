@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC11403095_mmc1.xlsx
@@ -37,10 +36,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC11403095
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: Patient ID
       method: column

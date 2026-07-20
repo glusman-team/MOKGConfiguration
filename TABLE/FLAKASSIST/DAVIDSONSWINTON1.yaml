@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC13155964_BLOOD_BLD-2025-031287-mmc2.xlsx
@@ -8,10 +7,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13155964
-    contributors:
-      - kind: curation
-        name: tablassist
-        date: 13 MAY 2026
   statement:
     predicate: gene_associated_with_condition
 sections:

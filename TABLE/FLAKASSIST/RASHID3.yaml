@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12604666_lqaf143_supplemental_file.xls
@@ -32,10 +31,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC12604666
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
   annotations:
     - annotation: ClinVar variant ID
       method: column

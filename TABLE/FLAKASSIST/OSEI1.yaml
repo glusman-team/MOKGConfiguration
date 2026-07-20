@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12684584_JAH3-14-e043087-s001.xlsx
@@ -27,15 +26,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC12684584
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
-        comment: >-
-          Initial config auto-generated from delegated summary for CAD metabolomic
-          biomarkers. `row_slice: [1, auto]` skips the header row because tablassert
-          reads Excel sheets headerlessly before applying reindex filters. Filters to
-          pro_score >= 0.9 (18 of 28 rows).
   annotations:
     - annotation: coef model1
       method: column

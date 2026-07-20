@@ -27,10 +27,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC12906585
-    contributors:
-      - name: tablassist
-        kind: tool
-        date: 14 MAY 2026
   annotations:
     - annotation: start_bp
       method: column

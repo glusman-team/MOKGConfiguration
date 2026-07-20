@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: alpha
+  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC13124883_11306_2026_2440_MOESM2_ESM.xlsx
@@ -24,13 +23,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC13124883
-    contributors:
-      - kind: tool
-        name: tablassist
-        date: 13 MAY 2026
-        comment:
-          Initial config auto-generated from delegated summary for ILDMDB metabolite-disease
-          associations
   annotations:
     - annotation: matched_name
       method: column

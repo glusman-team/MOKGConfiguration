@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: beta
+  syntax: TC4
 
   source:
     kind: excel
@@ -34,17 +33,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC5622077
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 09 JAN 2025
-        organizations:
-          - Institute for Systems Biology
-        comment: Migrated from legacy pre-TC3 format to TC3
-      - kind: tool
-        name: tablassist
-        date: 28 APR 2026
-        comment: Written by tablassist from legacy pre-TC3 config
 
   annotations:
     - annotation: p value

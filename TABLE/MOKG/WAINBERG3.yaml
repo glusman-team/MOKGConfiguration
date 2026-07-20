@@ -1,6 +1,5 @@
 template:
-  syntax: TC3
-  status: beta
+  syntax: TC4
 
   source:
     kind: excel
@@ -32,14 +31,6 @@ template:
   provenance:
     repo: PMC
     publication: PMC7474629
-    contributors:
-      - kind: curation
-        name: Skye Lane Goetz
-        date: 29 APR 2026
-        organizations:
-          - Institute for Systems Biology
-          - CalPoly SLO
-        comment: Migrated from TC2 to TC3 syntax
 
   annotations:
     - annotation: relationship_strength
