@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12911624_jmg-63-2-s002.xlsx

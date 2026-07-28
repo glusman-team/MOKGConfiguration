@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11792502/bin/spectrum.01368-24-s0002.xlsx
     local: ./DATALAKE/MOTTA13.xlsx

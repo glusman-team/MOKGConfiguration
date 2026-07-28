@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC12970359_media-3.xlsx

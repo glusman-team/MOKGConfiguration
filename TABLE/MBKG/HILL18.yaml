@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/5240274/bin/40168_2016_213_MOESM1_ESM.xlsx
     local: ./DATALAKE/HILL18.xlsx

@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     kind: excel
     local: ./.ledger/disease-proteomics/data/PMC12903537/raw/12933_2025_3049_MOESM2_ESM.xlsx

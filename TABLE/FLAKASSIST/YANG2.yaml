@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC10920785_41467_2024_46358_MOESM5_ESM.xlsx

@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     kind: text
     local: ./DATALAKE/PMC11865420/table_brain_regions.csv

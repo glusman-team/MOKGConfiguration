@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC13155964_BLOOD_BLD-2025-031287-mmc2.xlsx

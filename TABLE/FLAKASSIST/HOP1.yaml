@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     kind: text
     local: ./DATALAKE/PMC13083253_41588_2026_2535_MOESM6_ESM.csv

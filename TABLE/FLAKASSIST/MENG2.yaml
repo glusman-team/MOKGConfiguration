@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     kind: excel
     local: ./.ledger/disease-proteomics/data/PMC12874149/raw/mmc8.xlsx

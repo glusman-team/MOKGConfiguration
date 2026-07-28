@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     kind: text
     local: ./derived/PMC13149156_S2_SUSIE.csv

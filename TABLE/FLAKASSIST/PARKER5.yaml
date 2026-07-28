@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     kind: excel
     local: ./DATALAKE/PMC7720636_NIHMS1642712-supplement-STable4.xlsx

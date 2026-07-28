@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     url: https://pmc.ncbi.nlm.nih.gov/articles/instance/8515199/bin/NIHMS1746460-supplement-Supplementary_tables.xlsx
     local: ./DATALAKE/KURKOV1.xlsx

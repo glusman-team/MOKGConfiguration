@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     url: https://static-content.springer.com/esm/art%3A10.1038%2Fs43587-024-00678-0/MediaObjects/43587_2024_678_MOESM12_ESM.csv
     local: ./DATALAKE/PU12.csv

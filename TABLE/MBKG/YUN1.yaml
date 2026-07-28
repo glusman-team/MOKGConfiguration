@@ -1,5 +1,4 @@
 template:
-  syntax: TC4
   source:
     kind: excel
     sheet: 시트1
