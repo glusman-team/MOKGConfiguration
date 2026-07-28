@@ -7,7 +7,7 @@ name: MULTIOMICS_KG
 version: 3.0.0
 
 description: Placeholder Description
-datassert: /home/skyeav/Desktop/datassert
+fullmap: /local_raid1/sgoetz/DBSTORE/FULLMAP/fullmap
 
 tables:
   - /local_raid1/sgoetz/STORE/CONFIG/TABLASSERT/TABLE/MBKG/AVUTHU1.yaml
