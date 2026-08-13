@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-52097-9/MediaObjects/41467_2024_52097_MOESM9_ESM.xlsx
+    url:
+      - https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-024-52097-9/MediaObjects/41467_2024_52097_MOESM9_ESM.xlsx
     local: ./DATALAKE/RAVIK9.xlsx
     kind: excel
     row_slice:
@@ -36,9 +37,6 @@ template:
         - noname.*
     predicate: associated_with
     qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
       - qualifier: anatomical_context_qualifier
         method: value
         encoding: UBERON:0001555

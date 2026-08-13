@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12604666_lqaf143_supplemental_file.xls
-    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12604666/
+    url:
+      - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12604666/
     sheet: Pathogenic
     row_slice:
       - 1

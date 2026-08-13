@@ -2,7 +2,8 @@ template:
   source:
     kind: text
     local: ./derived/PMC13149156_S2_SUSIE.csv
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13149156.1/Table1.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13149156.1/Table1.xlsx
     delimiter: ","
     row_slice:
       - 1

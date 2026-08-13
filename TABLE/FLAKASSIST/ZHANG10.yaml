@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC7377869_aging-12-103500-s006..xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7377869.1/aging-12-103500-s006..xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC7377869.1/aging-12-103500-s006..xlsx
     sheet: Sheet1
     row_slice:
       - 2
@@ -20,10 +21,6 @@ template:
       encoding: non-small cell lung carcinoma
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: subject_form_or_variant_qualifier
-        method: value
-        encoding: somatic
   provenance:
     repo: PMC
     publication: PMC7377869
@@ -33,6 +30,7 @@ template:
       encoding: G
     - annotation: miscellaneous notes
       method: value
-      encoding:
-        Non-silent somatic mutations detected in 13 NSCLC patients from ANNOVAR
-        analysis
+      encoding: Non-silent somatic mutations detected in 13 NSCLC patients from ANNOVAR analysis
+    - annotation: subject_form_or_variant_qualifier
+      method: value
+      encoding: somatic

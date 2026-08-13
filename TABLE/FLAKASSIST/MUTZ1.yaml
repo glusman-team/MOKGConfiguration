@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13169133_ALZ-22-e71280-s004.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13169133.1/ALZ-22-e71280-s004.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13169133.1/ALZ-22-e71280-s004.xlsx
     sheet: Alzheimer's disease
     row_slice:
       - 1

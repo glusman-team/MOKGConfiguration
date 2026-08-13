@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13155964_BLOOD_BLD-2025-031287-mmc2.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13155964.1/BLOOD_BLD-2025-031287-mmc2.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13155964.1/BLOOD_BLD-2025-031287-mmc2.xlsx
   provenance:
     repo: PMC
     publication: PMC13155964

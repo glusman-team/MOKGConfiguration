@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12346698_cells-3752185-Supplementary Material.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12346698/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC12346698/
     sheet: Table S3
     row_slice:
       - 3

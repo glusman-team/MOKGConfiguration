@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12446642_mmc1.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12446642/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC12446642/
     sheet: Table S3. Cox
     row_slice:
       - 1

@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13172311_41467_2026_73121_MOESM6_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13172311.1/41467_2026_73121_MOESM6_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13172311.1/41467_2026_73121_MOESM6_ESM.xlsx
     sheet: vU1-3KO_vs_WT.dpsi0.1.sig
   statement:
     subject:

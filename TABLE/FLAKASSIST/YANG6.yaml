@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13173811_12929_2026_1253_MOESM3_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13173811.1/12929_2026_1253_MOESM3_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13173811.1/12929_2026_1253_MOESM3_ESM.xlsx
     row_slice:
       - 2
       - auto
@@ -27,11 +28,7 @@ sections:
         - column: D
           comparison: le
           comparator: 0.05
-    statement:
-      qualifiers:
-        - qualifier: context_qualifier
-          method: value
-          encoding: Astrocyte vs iPSC, Control group
+    statement: {}
     annotations:
       - annotation: log fold change
         method: column
@@ -45,17 +42,16 @@ sections:
       - annotation: gene description
         method: column
         encoding: F
+      - annotation: context_qualifier
+        method: value
+        encoding: Astrocyte vs iPSC, Control group
   - source:
       sheet: 2B_AS_vs_iPSC_Jc patient
       reindex:
         - column: D
           comparison: le
           comparator: 0.05
-    statement:
-      qualifiers:
-        - qualifier: context_qualifier
-          method: value
-          encoding: Astrocyte vs iPSC, JC patient group
+    statement: {}
     annotations:
       - annotation: log fold change
         method: column
@@ -69,17 +65,16 @@ sections:
       - annotation: gene description
         method: column
         encoding: F
+      - annotation: context_qualifier
+        method: value
+        encoding: Astrocyte vs iPSC, JC patient group
   - source:
       sheet: 2C_iPSC_JC_vs_Ctrl
       reindex:
         - column: F
           comparison: le
           comparator: 0.05
-    statement:
-      qualifiers:
-        - qualifier: context_qualifier
-          method: value
-          encoding: iPSC JC vs Control
+    statement: {}
     annotations:
       - annotation: log fold change
         method: column
@@ -93,6 +88,9 @@ sections:
       - annotation: gene description
         method: column
         encoding: I
+      - annotation: context_qualifier
+        method: value
+        encoding: iPSC JC vs Control
   - source:
       sheet: 2D_AS_JC_vs_Ctrl
       reindex:
@@ -102,11 +100,7 @@ sections:
         - column: F
           comparison: le
           comparator: 0.05
-    statement:
-      qualifiers:
-        - qualifier: context_qualifier
-          method: value
-          encoding: Astrocyte JC vs Control
+    statement: {}
     annotations:
       - annotation: log fold change
         method: column
@@ -120,3 +114,6 @@ sections:
       - annotation: gene description
         method: column
         encoding: I
+      - annotation: context_qualifier
+        method: value
+        encoding: Astrocyte JC vs Control

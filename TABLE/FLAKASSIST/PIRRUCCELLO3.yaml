@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC7206184_41467_2020_15823_MOESM8_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7206184.1/41467_2020_15823_MOESM8_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC7206184.1/41467_2020_15823_MOESM8_ESM.xlsx
     sheet: Replication
     row_slice:
       - 1
@@ -22,13 +23,6 @@ template:
       prioritize:
         - Gene
         - Protein
-    qualifiers:
-      - qualifier: object_form_or_variant_qualifier
-        method: value
-        encoding: replication
-      - qualifier: object_aspect_qualifier
-        method: column
-        encoding: C
   annotations:
     - annotation: chromosome
       method: column
@@ -60,6 +54,12 @@ template:
     - annotation: biobank japan sign
       method: column
       encoding: M
+    - annotation: object_form_or_variant_qualifier
+      method: value
+      encoding: replication
+    - annotation: object_aspect_qualifier
+      method: column
+      encoding: C
   provenance:
     repo: PMC
     publication: PMC7206184

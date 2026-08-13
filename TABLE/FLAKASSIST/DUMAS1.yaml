@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC5507771_mmc3.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5507771.1/mmc3.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC5507771.1/mmc3.xlsx
     sheet: All_TMAO_correlated_genes
     row_slice:
       - 1

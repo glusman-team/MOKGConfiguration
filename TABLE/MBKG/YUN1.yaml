@@ -26,10 +26,6 @@ template:
         - "^\\s*$"
         - "(?:^|[^a-zA-Z])([a-z]  )"
     predicate: correlated_with
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
     object:
       method: value
       encoding: MONDO:0011978
@@ -59,7 +55,8 @@ template:
       encoding: Zero-inflated Gaussian mixture model
 sections:
   - source:
-      url: https://pmc.ncbi.nlm.nih.gov/articles/instance/6417675/bin/pone.0213692.s002.xlsx
+      url:
+        - https://pmc.ncbi.nlm.nih.gov/articles/instance/6417675/bin/pone.0213692.s002.xlsx
       local: ./DATALAKE/YUN2.xlsx
     statement:
       qualifiers:
@@ -71,7 +68,8 @@ sections:
         method: value
         encoding: Significant taxa in blood microbiota related with NAFLD groups. Both unadjusted and adjusted P-values are provided.
   - source:
-      url: https://pmc.ncbi.nlm.nih.gov/articles/instance/6417675/bin/pone.0213692.s001.xlsx
+      url:
+        - https://pmc.ncbi.nlm.nih.gov/articles/instance/6417675/bin/pone.0213692.s001.xlsx
       local: ./DATALAKE/YUN1.xlsx
     statement:
       qualifiers:

@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13126341_mmc6.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13126341/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC13126341/
     sheet: Sheet1
     row_slice:
       - 2

@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC9903693_mmc2.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9903693.1/mmc2.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC9903693.1/mmc2.xlsx
     sheet: Supplementary Table 1
     row_slice:
       - 2
@@ -20,10 +21,6 @@ template:
       encoding: A
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC9903693

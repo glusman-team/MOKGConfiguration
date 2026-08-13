@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC5507771_mmc5.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5507771.1/mmc5.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC5507771.1/mmc5.xlsx
     sheet: TMAO Genes in Key KEGG Pathways
     row_slice:
       - 1

@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC11061114_41431_2024_1581_MOESM3_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11061114.1/41431_2024_1581_MOESM3_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC11061114.1/41431_2024_1581_MOESM3_ESM.xlsx
     sheet: Rare, damaging variants
     row_slice:
       - 1

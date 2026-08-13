@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC7377869_aging-12-103500-s004..xls
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7377869.1/aging-12-103500-s004..xls
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC7377869.1/aging-12-103500-s004..xls
     sheet: supplement table3
     row_slice:
       - 2
@@ -20,10 +21,6 @@ template:
       encoding: non-small cell lung carcinoma
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: subject_form_or_variant_qualifier
-        method: value
-        encoding: somatic
   provenance:
     repo: PMC
     publication: PMC7377869
@@ -36,6 +33,7 @@ template:
       encoding: I
     - annotation: miscellaneous notes
       method: value
-      encoding:
-        Somatic mutations in 27 candidate genes from targeted sequencing of
-        88 NSCLC patients
+      encoding: Somatic mutations in 27 candidate genes from targeted sequencing of 88 NSCLC patients
+    - annotation: subject_form_or_variant_qualifier
+      method: value
+      encoding: somatic

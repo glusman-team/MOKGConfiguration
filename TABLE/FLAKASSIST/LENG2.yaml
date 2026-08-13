@@ -2,7 +2,8 @@ template:
   source:
     kind: text
     local: ./DATALAKE/PMC12184055_mmc1.csv
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12184055/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC12184055/
     delimiter: ","
     row_slice:
       - 2
@@ -21,10 +22,6 @@ template:
       encoding: MONDO:0004975
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   annotations:
     - annotation: hazard ratio
       method: column

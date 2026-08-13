@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13149156_Table1.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13149156.1/Table1.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13149156.1/Table1.xlsx
     sheet: ST 1. The result of FUMA
     row_slice:
       - 1

@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13168532_FSN3-14-e71814-s004.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13168532.1/FSN3-14-e71814-s004.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13168532.1/FSN3-14-e71814-s004.xlsx
     row_slice:
       - 1
       - auto

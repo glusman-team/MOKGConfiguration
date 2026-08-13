@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC3889913_11357_2013_9562_MOESM1_ESM.xls
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3889913/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC3889913/
     sheet: Table S4
     row_slice:
       - 1

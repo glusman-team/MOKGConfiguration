@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13166580_medi-105-e48687-s009.xls
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166580.1/medi-105-e48687-s009.xls
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13166580.1/medi-105-e48687-s009.xls
     sheet: Sheet1
     row_slice:
       - 1

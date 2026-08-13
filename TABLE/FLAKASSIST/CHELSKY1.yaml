@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13161869_ACN3-13-911-s001.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13161869.1/ACN3-13-911-s001.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13161869.1/ACN3-13-911-s001.xlsx
     sheet: Cap Score - Ion Level
     row_slice:
       - 1

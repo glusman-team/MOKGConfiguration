@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC10922603_NIHMS1961897-supplement-1.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10922603/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC10922603/
     sheet: Renal amyloid_CTRLS_proteome_pr
     row_slice:
       - 1

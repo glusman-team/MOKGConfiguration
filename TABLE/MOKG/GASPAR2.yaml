@@ -3,7 +3,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/GASPAR2.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/5622077/bin/41598_2017_12325_MOESM2_ESM.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/5622077/bin/41598_2017_12325_MOESM2_ESM.xlsx
     sheet: ST10
     row_slice:
       - 3
@@ -24,10 +25,6 @@ template:
       encoding: schizophrenia
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
 
   provenance:
     repo: PMC

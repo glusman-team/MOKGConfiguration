@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC10705403_media-3.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC10705403.1/media-3.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC10705403.1/media-3.xlsx
     sheet: Sheet1
     row_slice:
       - 1
@@ -14,10 +15,6 @@ template:
       encoding: MONDO:0007309
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:10090
   provenance:
     repo: PMC
     publication: PMC10705403
@@ -37,6 +34,7 @@ sections:
       subject:
         method: column
         encoding: B
+        taxon: 10090
         prioritize:
           - Gene
         taxon: 10090

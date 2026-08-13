@@ -2,7 +2,8 @@ template:
   source:
     kind: text
     local: ./DATALAKE/PMC11865420/table_clinical_gene_miglustat.csv
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11865420/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC11865420/
     delimiter: ","
     reindex:
       - column: C
@@ -20,10 +21,6 @@ template:
       encoding: CHEBI:50381
       prioritize:
         - SmallMolecule
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC11865420

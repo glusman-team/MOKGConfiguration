@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC5502059_439_2017_1821_MOESM1_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC5502059.1/439_2017_1821_MOESM1_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC5502059.1/439_2017_1821_MOESM1_ESM.xlsx
     sheet: Sheet2
     row_slice:
       - 1
@@ -24,10 +25,6 @@ template:
       encoding: MONDO:0003847
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC5502059

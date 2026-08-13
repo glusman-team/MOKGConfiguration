@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12970359_media-5.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12970359.1/media-5.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC12970359.1/media-5.xlsx
   statement:
     subject:
       method: value

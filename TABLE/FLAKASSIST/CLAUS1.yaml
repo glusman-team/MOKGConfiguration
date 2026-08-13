@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC11403095_mmc1.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11403095.1/mmc1.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC11403095.1/mmc1.xlsx
     sheet: S2a. Diagnostic cohort
     row_slice:
       - 1

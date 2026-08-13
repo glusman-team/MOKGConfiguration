@@ -13,7 +13,8 @@ sections:
   - source:
       kind: excel
       local: ./DATALAKE/PMC13147394_mmc4.xlsx
-      url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
+      url:
+        - https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
       sheet: KnownALSGenes_vIQ Variants
       row_slice:
         - 2
@@ -47,7 +48,8 @@ sections:
   - source:
       kind: excel
       local: ./DATALAKE/PMC13147394_mmc4.xlsx
-      url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
+      url:
+        - https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
       sheet: mtDNAMaintenance_vIQ Variants
       row_slice:
         - 2
@@ -75,7 +77,8 @@ sections:
   - source:
       kind: excel
       local: ./DATALAKE/PMC13147394_mmc4.xlsx
-      url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
+      url:
+        - https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
       sheet: Mitophagy_vIQ Variants
       row_slice:
         - 2
@@ -103,7 +106,8 @@ sections:
   - source:
       kind: excel
       local: ./DATALAKE/PMC13147394_mmc3.xlsx
-      url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc3.xlsx
+      url:
+        - https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc3.xlsx
       sheet: POLGMutations
       row_slice:
         - 2
@@ -152,7 +156,8 @@ sections:
   - source:
       kind: excel
       local: ./DATALAKE/PMC13147394_mmc2.xlsx
-      url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc2.xlsx
+      url:
+        - https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc2.xlsx
       sheet: BroaderALSTermsPhevor
       row_slice:
         - 1
@@ -183,7 +188,8 @@ sections:
   - source:
       kind: excel
       local: ./DATALAKE/PMC13147394_mmc2.xlsx
-      url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc2.xlsx
+      url:
+        - https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc2.xlsx
       sheet: SpecificALSTermsPhevor
       row_slice:
         - 1

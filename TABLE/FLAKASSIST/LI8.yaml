@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC5795274_12915_2017_469_MOESM3_ESM.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5795274/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC5795274/
     sheet: TF annotations
     row_slice:
       - 1
@@ -35,10 +36,10 @@ sections:
           - DiseaseOrPhenotypicFeature
           - PhenotypicFeature
           - Disease
-      qualifiers:
-        - qualifier: subject_aspect_qualifier
-          method: value
-          encoding: enriched
+    annotations:
+      - annotation: subject_aspect_qualifier
+        method: value
+        encoding: enriched
   - statement:
       object:
         method: column
@@ -51,7 +52,7 @@ sections:
             replacement: ""
         prioritize:
           - PhenotypicFeature
-      qualifiers:
-        - qualifier: subject_aspect_qualifier
-          method: value
-          encoding: depleted
+    annotations:
+      - annotation: subject_aspect_qualifier
+        method: value
+        encoding: depleted

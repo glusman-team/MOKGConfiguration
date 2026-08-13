@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC9481236_DataSheet1.XLSX
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9481236.1/DataSheet1.XLSX
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC9481236.1/DataSheet1.XLSX
     sheet: TableS2
     row_slice:
       - 1

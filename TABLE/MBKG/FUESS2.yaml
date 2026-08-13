@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/8262870/bin/mbio.00145-21-sd002.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/8262870/bin/mbio.00145-21-sd002.xlsx
     local: ./DATALAKE/FUESS2.xlsx
     kind: excel
     row_slice:
@@ -17,10 +18,6 @@ template:
       prioritize:
         - Gene
         - Protein
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:69293
   provenance:
     repo: PMC
     publication: PMC8262870
@@ -46,6 +43,7 @@ sections:
       subject:
         method: value
         encoding: Betaproteobacteria
+        taxon: 69293
     source:
       sheet: Betaproteobacteria
   - statement:

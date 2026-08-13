@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC11993224_mmc3.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11993224.1/mmc3.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC11993224.1/mmc3.xlsx
     sheet: Table S2
     row_slice:
       - 1

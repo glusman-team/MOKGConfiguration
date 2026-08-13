@@ -1,7 +1,8 @@
 template:
   source:
     local: ./DATALAKE/PMC13160723_Table_1.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13160723.1/Table_1.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13160723.1/Table_1.xlsx
     row_slice:
       - 4
       - auto

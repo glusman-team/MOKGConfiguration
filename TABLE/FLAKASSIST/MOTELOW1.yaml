@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12933612_mmc2.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12933612.1/mmc2.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC12933612.1/mmc2.xlsx
     sheet: eTable 11 UR Damaging
     row_slice:
       - 1

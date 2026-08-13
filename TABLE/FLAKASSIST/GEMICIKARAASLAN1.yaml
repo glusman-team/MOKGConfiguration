@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13156099_10875_2026_2012_MOESM3_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13156099.1/10875_2026_2012_MOESM3_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13156099.1/10875_2026_2012_MOESM3_ESM.xlsx
     sheet: HPO Terms
     row_slice:
       - 2

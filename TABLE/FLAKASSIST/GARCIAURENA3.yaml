@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13060440_media-3.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13060440.1/media-3.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13060440.1/media-3.xlsx
     sheet: ST2
     row_slice: [2, auto]
   provenance:
@@ -19,10 +20,6 @@ sections:
       object:
         method: value
         encoding: insulin resistance
-      qualifiers:
-        - qualifier: context_qualifier
-          method: column
-          encoding: H
     annotations:
       - annotation: fiadj_bmi_beta
         method: column
@@ -51,3 +48,6 @@ sections:
       - annotation: tghdl_p_value
         method: column
         encoding: AG
+      - annotation: context_qualifier
+        method: column
+        encoding: H

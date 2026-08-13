@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://ndownloader.figstatic.com/collections/7296079/versions/1
+    url:
+      - https://ndownloader.figstatic.com/collections/7296079/versions/1
     local: ./DATALAKE/WU19.xlsx
     kind: excel
     sheet: Table S19
@@ -24,10 +25,6 @@ template:
       encoding: sex
       prioritize:
         - ClinicalAttribute
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC11224521

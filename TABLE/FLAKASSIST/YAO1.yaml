@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13167366_sj-xlsx-3-cat-10.1177_10760296261438237.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13167366.1/sj-xlsx-3-cat-10.1177_10760296261438237.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13167366.1/sj-xlsx-3-cat-10.1177_10760296261438237.xlsx
     sheet: Table s3
     row_slice:
       - 1

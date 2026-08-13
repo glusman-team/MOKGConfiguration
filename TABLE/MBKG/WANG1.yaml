@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-024-03038-y/MediaObjects/41591_2024_3038_MOESM2_ESM.xlsx
+    url:
+      - https://static-content.springer.com/esm/art%3A10.1038%2Fs41591-024-03038-y/MediaObjects/41591_2024_3038_MOESM2_ESM.xlsx
     local: ./DATALAKE/WANG1.xlsx
     kind: excel
     sheet: STable7
@@ -20,10 +21,6 @@ template:
         - sp.*
         - CAG.*
     predicate: correlated_with
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
     object:
       method: value
   provenance:

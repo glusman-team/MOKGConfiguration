@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC11246516_41598_2024_66324_MOESM1_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11246516.1/41598_2024_66324_MOESM1_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC11246516.1/41598_2024_66324_MOESM1_ESM.xlsx
     sheet: S7_case_control
     row_slice:
       - 1

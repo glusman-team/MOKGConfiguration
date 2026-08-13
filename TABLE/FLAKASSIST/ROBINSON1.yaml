@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12808955_NIHMS2115151-supplement-MMC2.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12808955.2/NIHMS2115151-supplement-MMC2.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC12808955.2/NIHMS2115151-supplement-MMC2.xlsx
     sheet: Table S4
     row_slice:
       - 1

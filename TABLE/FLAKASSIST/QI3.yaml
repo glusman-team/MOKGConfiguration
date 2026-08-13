@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12521215_Table4.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12521215/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC12521215/
     sheet: DZ_GX_NX_MIX_diff
   statement:
     subject:

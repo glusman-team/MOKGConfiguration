@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12487845_jciinsight-10-195577-s236.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12487845/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC12487845/
     sheet: S1. Urine protein in ASSESS-AKI
     row_slice:
       - 1
@@ -21,10 +22,6 @@ template:
       encoding: faster eGFR decline after hospitalization
       prioritize:
         - PhenotypicFeature
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   annotations:
     - annotation: beta
       method: column

@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13147394_mmc4.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13147394.1/mmc4.xlsx
     row_slice:
       - 1
       - auto
@@ -25,60 +26,56 @@ template:
 sections:
   - source:
       sheet: KnownALSGenes_vIQ Variants
-    statement:
-      qualifiers:
-        - qualifier: statement_qualifier
-          method: value
-          encoding: established
-        - qualifier: object_aspect_qualifier
-          method: value
-          encoding: rare coding variant burden
+    statement: {}
     annotations:
       - annotation: vIQ score
         method: column
         encoding: G
+      - annotation: statement_qualifier
+        method: value
+        encoding: established
+      - annotation: object_aspect_qualifier
+        method: value
+        encoding: rare coding variant burden
   - source:
       sheet: POLG_vIQ Variants
-    statement:
-      qualifiers:
-        - qualifier: statement_qualifier
-          method: value
-          encoding: candidate
-        - qualifier: object_aspect_qualifier
-          method: value
-          encoding: rare coding variant burden
+    statement: {}
     annotations:
       - annotation: vIQ score
         method: column
         encoding: G
+      - annotation: statement_qualifier
+        method: value
+        encoding: candidate
+      - annotation: object_aspect_qualifier
+        method: value
+        encoding: rare coding variant burden
   - source:
       sheet: mtDNAMaintenance_vIQ Variants
-    statement:
-      qualifiers:
-        - qualifier: statement_qualifier
-          method: value
-          encoding: candidate
-        - qualifier: object_aspect_qualifier
-          method: value
-          encoding: rare coding variant burden
-        - qualifier: subject_form_or_variant_qualifier
-          method: column
-          encoding: D
+    statement: {}
     annotations:
       - annotation: site of onset
         method: column
         encoding: E
+      - annotation: statement_qualifier
+        method: value
+        encoding: candidate
+      - annotation: object_aspect_qualifier
+        method: value
+        encoding: rare coding variant burden
+      - annotation: subject_form_or_variant_qualifier
+        method: column
+        encoding: D
   - source:
       sheet: Mitophagy_vIQ Variants
-    statement:
-      qualifiers:
-        - qualifier: statement_qualifier
-          method: value
-          encoding: candidate
-        - qualifier: object_aspect_qualifier
-          method: value
-          encoding: rare coding variant burden
+    statement: {}
     annotations:
       - annotation: vIQ score
         method: column
         encoding: E
+      - annotation: statement_qualifier
+        method: value
+        encoding: candidate
+      - annotation: object_aspect_qualifier
+        method: value
+        encoding: rare coding variant burden

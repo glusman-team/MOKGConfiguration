@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13060403_media-2.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13060403.1/media-2.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13060403.1/media-2.xlsx
     sheet: TS1 Sums vars per prot
     row_slice:
       - 2
@@ -20,10 +21,6 @@ template:
       encoding: MONDO:0005090
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC13060403

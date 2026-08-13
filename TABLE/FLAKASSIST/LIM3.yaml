@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC9187732_41467_2022_30968_MOESM10_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9187732.1/41467_2022_30968_MOESM10_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC9187732.1/41467_2022_30968_MOESM10_ESM.xlsx
     sheet: Cell type specific genes
     row_slice:
       - 1

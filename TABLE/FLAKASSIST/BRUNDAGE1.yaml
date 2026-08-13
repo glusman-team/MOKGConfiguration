@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC11326326_media-4.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11326326.1/media-4.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC11326326.1/media-4.xlsx
     sheet: SDT8-SpecificityGWAS
     row_slice:
       - 1

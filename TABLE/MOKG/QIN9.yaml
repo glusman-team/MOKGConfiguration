@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/QIN9.xlsx
-    url: https://ndownloader.figstatic.com/files/47044431
+    url:
+      - https://ndownloader.figstatic.com/files/47044431
     sheet: "TableS9 Drug-gene-asso"
     row_slice: [1, auto]
   statement:
@@ -17,15 +18,9 @@ template:
       encoding: B
       prioritize: [SmallMolecule, ChemicalEntity]
     qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
       - qualifier: disease_context_qualifier
         method: value
         encoding: MONDO:0015667
-      - qualifier: subject_form_or_variant_qualifier
-        method: value
-        encoding: mutated
   provenance:
     repo: PMC
     publication: PMC11176916
@@ -49,6 +44,9 @@ template:
       method: value
       encoding: "Associations between mutated genes and drug sensitivity for all significant results"
 
+    - annotation: subject_form_or_variant_qualifier
+      method: value
+      encoding: mutated
 sections:
   - statement:
       predicate: associated_with_resistance_to

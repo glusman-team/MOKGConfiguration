@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13166846_medi-105-e48581-s001.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166846.1/medi-105-e48581-s001.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13166846.1/medi-105-e48581-s001.xlsx
     sheet: Supplementary Table S1
     row_slice:
       - 2

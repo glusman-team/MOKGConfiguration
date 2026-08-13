@@ -3,7 +3,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/CORREIA1.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11530135/bin/jciinsight-9-178645-s129.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/11530135/bin/jciinsight-9-178645-s129.xlsx
     row_slice:
       - 2
       - auto
@@ -20,10 +21,6 @@ template:
         - pattern: "-[0-9]+$"
           replacement: ""
     predicate: correlated_with
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
 
   provenance:
     repo: PMC

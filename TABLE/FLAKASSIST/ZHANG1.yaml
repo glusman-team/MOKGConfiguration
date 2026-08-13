@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13140796_CDR-2026-4594769-s002.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13140796.1/CDR-2026-4594769-s002.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13140796.1/CDR-2026-4594769-s002.xlsx
     sheet: Sheet1
     row_slice:
       - 1

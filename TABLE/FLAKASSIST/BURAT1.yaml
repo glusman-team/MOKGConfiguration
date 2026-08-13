@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC8509809_ijms-1413383-st_1-23-proof.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8509809/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC8509809/
     sheet: Identified proteins
     row_slice:
       - 1

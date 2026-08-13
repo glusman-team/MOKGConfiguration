@@ -3,7 +3,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/WAINBERG3.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/7474629/bin/pnas.2001429117.sd03.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/7474629/bin/pnas.2001429117.sd03.xlsx
 
   statement:
     subject:
@@ -22,10 +23,6 @@ template:
         - DiseaseOrPhenotypicFeature
         - PhenotypicFeature
         - Disease
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
 
   provenance:
     repo: PMC

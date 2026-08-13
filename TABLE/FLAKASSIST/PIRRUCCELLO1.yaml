@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC7206184_41467_2020_15823_MOESM10_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7206184.1/41467_2020_15823_MOESM10_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC7206184.1/41467_2020_15823_MOESM10_ESM.xlsx
     sheet: Loci v71b vs v68
     row_slice:
       - 1
@@ -22,10 +23,6 @@ template:
       prioritize:
         - Gene
         - Protein
-    qualifiers:
-      - qualifier: object_form_or_variant_qualifier
-        method: value
-        encoding: GWAS locus comparison
   annotations:
     - annotation: chromosome
       method: column
@@ -60,6 +57,9 @@ template:
     - annotation: locus id
       method: column
       encoding: M
+    - annotation: object_form_or_variant_qualifier
+      method: value
+      encoding: GWAS locus comparison
   provenance:
     repo: PMC
     publication: PMC7206184

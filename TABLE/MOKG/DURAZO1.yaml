@@ -1,7 +1,8 @@
 template:
   source:
     kind: excel
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10349864/bin/42003_2023_5113_MOESM4_ESM.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/10349864/bin/42003_2023_5113_MOESM4_ESM.xlsx
     local: ./DATALAKE/DURAZO1.xlsx
     row_slice:
       - 2
@@ -37,9 +38,6 @@ template:
         - pattern: ^LBD$
           replacement: Lewy body dementia
     qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
       - qualifier: object_context_qualifier
         method: value
         encoding: UMLS:C2350277
@@ -77,9 +75,6 @@ sections:
         - qualifier: anatomical_context_qualifier
           method: value
           encoding: "UBERON:0002405"
-        - qualifier: subject_aspect_qualifier
-          method: value
-          encoding: "GO:0010467"
         - qualifier: subject_context_qualifier
           method: value
           encoding: UMLS:C3826857
@@ -88,6 +83,9 @@ sections:
         method: value
         encoding: Supplementary_Data_2 captures human single-cell immune eQTL gene-expression traits regionally genetically correlated with disease GWAS liability traits; reported significant correlations satisfy FDR < 0.01.
 
+      - annotation: subject_aspect_qualifier
+        method: value
+        encoding: "GO:0010467"
   - source:
       sheet: Supplementary_Data_5
     statement:
@@ -101,9 +99,6 @@ sections:
         - qualifier: anatomical_context_qualifier
           method: value
           encoding: UBERON:0001969
-        - qualifier: subject_aspect_qualifier
-          method: value
-          encoding: UMLS:C0428479
         - qualifier: subject_context_qualifier
           method: value
           encoding: UMLS:C0597336
@@ -111,3 +106,6 @@ sections:
       - annotation: miscellaneous notes
         method: value
         encoding: Supplementary_Data_5 captures human plasma pQTL protein abundance traits regionally genetically correlated with disease GWAS liability traits; reported significant correlations satisfy FDR < 0.01.
+      - annotation: subject_aspect_qualifier
+        method: value
+        encoding: UMLS:C0428479

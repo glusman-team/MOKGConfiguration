@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12236936_media-2.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12236936/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC12236936/
     sheet: SuppData4
     row_slice:
       - 1
@@ -21,10 +22,6 @@ template:
       encoding: O
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   annotations:
     - annotation: category
       method: column

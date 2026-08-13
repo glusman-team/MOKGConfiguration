@@ -2,7 +2,8 @@ template:
   source:
     kind: text
     local: ./DATALAKE/PMC12417573/FABRY_SERUM.csv
-    url: https://doi.org/10.23876/j.krcp.23.218
+    url:
+      - https://doi.org/10.23876/j.krcp.23.218
     delimiter: ","
     row_slice:
       - 1
@@ -11,6 +12,7 @@ template:
     subject:
       method: column
       encoding: A
+      taxon: 10090
       prioritize:
         - SmallMolecule
     predicate: associated_with
@@ -19,10 +21,6 @@ template:
       encoding: MONDO:0010526
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:10090
   annotations:
     - annotation: p_value_20w
       method: column

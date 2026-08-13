@@ -3,7 +3,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13079829_41467_2026_69405_MOESM5_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13079829.1/41467_2026_69405_MOESM5_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13079829.1/41467_2026_69405_MOESM5_ESM.xlsx
     sheet: "Fig. 6b"
     row_slice: [2, auto]
 

@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC7206184_41467_2020_15823_MOESM9_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC7206184.1/41467_2020_15823_MOESM9_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC7206184.1/41467_2020_15823_MOESM9_ESM.xlsx
     sheet: v68.lvedvi.twas.alltissues
     row_slice:
       - 1
@@ -23,9 +24,6 @@ template:
         - SequenceVariant
         - Snv
     qualifiers:
-      - qualifier: object_form_or_variant_qualifier
-        method: value
-        encoding: TWAS
       - qualifier: anatomical_context_qualifier
         method: column
         encoding: B
@@ -81,6 +79,9 @@ template:
     - annotation: model cv p value
       method: column
       encoding: U
+    - annotation: object_form_or_variant_qualifier
+      method: value
+      encoding: TWAS
   provenance:
     repo: PMC
     publication: PMC7206184

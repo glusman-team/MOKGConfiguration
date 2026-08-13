@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC11000384_13073_2024_1307_MOESM1_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11000384.1/13073_2024_1307_MOESM1_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC11000384.1/13073_2024_1307_MOESM1_ESM.xlsx
     sheet: Table S3
     row_slice:
       - 2
@@ -22,10 +23,6 @@ template:
       prefix: "OMIM:"
       remove:
         - ^\.$
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC11000384

@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11705818/bin/spectrum.02182-24-s0005.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/11705818/bin/spectrum.02182-24-s0005.xlsx
     local: ./DATALAKE/SU5.xlsx
     kind: excel
     sheet: table5
@@ -26,9 +27,6 @@ template:
       prioritize:
         - Disease
     qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
       - qualifier: anatomical_context_qualifier
         method: value
         encoding: UBERON:0001988

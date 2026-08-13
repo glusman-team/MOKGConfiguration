@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13112017_BRB3-16-e71366-s002.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13112017.1/BRB3-16-e71366-s002.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13112017.1/BRB3-16-e71366-s002.xlsx
     sheet: Full SMR results
     row_slice:
       - 1

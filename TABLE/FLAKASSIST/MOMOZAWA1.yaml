@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC6172276_41467_2018_6581_MOESM4_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC6172276.1/41467_2018_6581_MOESM4_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC6172276.1/41467_2018_6581_MOESM4_ESM.xlsx
     sheet: SD1
     row_slice:
       - 2
@@ -24,10 +25,6 @@ template:
       encoding: breast carcinoma
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: subject_form_or_variant_qualifier
-        method: value
-        encoding: pathogenic
   provenance:
     repo: PMC
     publication: PMC6172276
@@ -46,6 +43,7 @@ template:
       encoding: O
     - annotation: miscellaneous notes
       method: value
-      encoding:
-        Germline variants in 7,051 Japanese female breast cancer patients vs
-        11,241 controls. Variants filtered to Pathogenic clinical significance.
+      encoding: Germline variants in 7,051 Japanese female breast cancer patients vs 11,241 controls. Variants filtered to Pathogenic clinical significance.
+    - annotation: subject_form_or_variant_qualifier
+      method: value
+      encoding: pathogenic

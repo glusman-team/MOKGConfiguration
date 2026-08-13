@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12698088_elife-106231-supp2.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12698088.1/elife-106231-supp2.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC12698088.1/elife-106231-supp2.xlsx
     sheet: All candidate genes
     row_slice:
       - 1

@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12827591_Supplementary_file_1.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12827591.1/Supplementary_file_1.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC12827591.1/Supplementary_file_1.xlsx
     sheet: Sheet1
     row_slice:
       - 4
@@ -28,10 +29,6 @@ template:
       encoding: MONDO:0004976
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC12827591

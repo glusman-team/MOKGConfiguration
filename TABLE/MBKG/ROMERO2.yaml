@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10434204/bin/spectrum.03429-22-s0001.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/10434204/bin/spectrum.03429-22-s0001.xlsx
     local: ./DATALAKE/ROMERO2.xlsx
     kind: excel
     sheet: SupplementalTable_2
@@ -34,9 +35,6 @@ template:
       - qualifier: anatomical_context_qualifier
         method: value
         encoding: UBERON:0000996
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10434204

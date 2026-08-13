@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12906585_122_2026_5178_MOESM1_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12906585.1/122_2026_5178_MOESM1_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC12906585.1/122_2026_5178_MOESM1_ESM.xlsx
     sheet: Map
     row_slice:
       - 1

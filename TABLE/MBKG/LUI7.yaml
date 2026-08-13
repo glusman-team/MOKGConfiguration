@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-023-31115-8/MediaObjects/41598_2023_31115_MOESM7_ESM.xlsx
+    url:
+      - https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-023-31115-8/MediaObjects/41598_2023_31115_MOESM7_ESM.xlsx
     local: ./DATALAKE/LUI7.xlsx
     kind: excel
     sheet: Supplementary Table 6
@@ -13,9 +14,6 @@ template:
       - qualifier: anatomical_context_qualifier
         method: value
         encoding: UBERON:0000160
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10052271

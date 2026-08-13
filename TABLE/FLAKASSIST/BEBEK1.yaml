@@ -2,7 +2,8 @@ template:
   source:
     kind: text
     local: ./DATALAKE/PMC12107742_13195_2025_1767_MOESM2_ESM.csv
-    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs13195-025-01767-x/MediaObjects/13195_2025_1767_MOESM2_ESM.csv
+    url:
+      - https://static-content.springer.com/esm/art%3A10.1186%2Fs13195-025-01767-x/MediaObjects/13195_2025_1767_MOESM2_ESM.csv
     delimiter: ","
     row_slice:
       - 2
@@ -22,10 +23,6 @@ template:
       encoding: rapidly progressive Alzheimer's disease
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC12107742

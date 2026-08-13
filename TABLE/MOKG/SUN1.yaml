@@ -3,7 +3,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/SUN1.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10567551/bin/41586_2023_6592_MOESM3_ESM.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/10567551/bin/41586_2023_6592_MOESM3_ESM.xlsx
     sheet: ST7
     row_slice:
       - 5
@@ -26,10 +27,6 @@ template:
 
     predicate: biomarker_for
 
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
 
   provenance:
     repo: PMC

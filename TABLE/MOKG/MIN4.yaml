@@ -3,7 +3,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/MIN4.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/10622416/bin/41467_2023_42626_MOESM7_ESM.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/10622416/bin/41467_2023_42626_MOESM7_ESM.xlsx
     sheet: snRNAseq_MAST_pseudobulk
     row_slice:
       - 1
@@ -54,9 +55,6 @@ template:
           replacement: "Pericytes"
 
     qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: "NCBITaxon:9606"
       - qualifier: disease_context_qualifier
         method: value
         encoding: "MONDO:0019037"

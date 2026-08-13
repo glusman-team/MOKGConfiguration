@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/QIN2.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11401200/bin/mmc2.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/11401200/bin/mmc2.xlsx
     sheet: Sheet1
     row_slice: [1, auto]
   statement:
@@ -19,9 +20,6 @@ template:
       remove: ["\\s*\\(.*"]
       prioritize: [SmallMolecule, ChemicalEntity, Drug]
     qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
       - qualifier: disease_context_qualifier
         method: value
         encoding: MONDO:0015667

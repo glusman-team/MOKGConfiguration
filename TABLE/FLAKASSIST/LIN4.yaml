@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13121454_41467_2026_70374_MOESM3_ESM.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13121454/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC13121454/
     sheet: SD5
     row_slice: [1, auto]
   statement:

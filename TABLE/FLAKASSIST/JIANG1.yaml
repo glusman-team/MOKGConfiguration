@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC13166836_medi-105-e48456-s002.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC13166836.1/medi-105-e48456-s002.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC13166836.1/medi-105-e48456-s002.xlsx
     sheet: TableS2.91 cytokines MR results
     row_slice:
       - 1

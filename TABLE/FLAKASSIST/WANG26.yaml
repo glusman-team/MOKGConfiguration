@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12906803_PBI-24-831-s003.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12906803.1/PBI-24-831-s003.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC12906803.1/PBI-24-831-s003.xlsx
     row_slice:
       - 1
       - auto

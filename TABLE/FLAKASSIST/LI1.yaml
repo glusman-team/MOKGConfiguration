@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12835233_Table_2.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12835233/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC12835233/
     sheet: CLP_vs_Sham_DEPs_annotation
     row_slice:
       - 1

@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC7720636_NIHMS1642712-supplement-STable3.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7720636/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC7720636/
     sheet: Suppl.Table3A_SelectMarkers
     row_slice:
       - 1

@@ -2,7 +2,8 @@ template:
   source:
     kind: text
     local: ./DATALAKE/PMC9842386_elife-74970-fig3-data1.txt
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC9842386.1/elife-74970-fig3-data1.txt
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC9842386.1/elife-74970-fig3-data1.txt
     delimiter: " "
     row_slice:
       - 1

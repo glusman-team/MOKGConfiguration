@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/11792502/bin/spectrum.01368-24-s0002.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/11792502/bin/spectrum.01368-24-s0002.xlsx
     local: ./DATALAKE/MOTTA13.xlsx
     kind: excel
     sheet: Table S13
@@ -15,9 +16,6 @@ template:
         - CellularComponent
     predicate: affects
     qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
       - qualifier: object_context_qualifier
         method: value
         encoding: Caco-2 cell

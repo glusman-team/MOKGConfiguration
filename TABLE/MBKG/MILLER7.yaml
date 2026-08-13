@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs43856-024-00583-y/MediaObjects/43856_2024_583_MOESM9_ESM.xlsx
+    url:
+      - https://static-content.springer.com/esm/art%3A10.1038%2Fs43856-024-00583-y/MediaObjects/43856_2024_583_MOESM9_ESM.xlsx
     local: ./DATALAKE/MILLER7.xlsx
     kind: excel
     sheet: Supplementary Data 3
@@ -19,10 +20,6 @@ template:
         - pattern: '\b(T\d+) (\d+)\b'
           replacement: "${1}-${2}"
     predicate: associated_with
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
     object:
       method: value
       encoding: study cohort

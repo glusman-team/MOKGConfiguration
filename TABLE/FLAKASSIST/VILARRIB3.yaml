@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12039315_S0033291725000145sup002.xlsx
-    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12039315/
+    url:
+      - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12039315/
     sheet: ST3
     row_slice:
       - 2

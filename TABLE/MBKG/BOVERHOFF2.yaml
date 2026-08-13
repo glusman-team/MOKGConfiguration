@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://ars.els-cdn.com/content/image/1-s2.0-S2211124724010805-mmc2.xlsx
+    url:
+      - https://ars.els-cdn.com/content/image/1-s2.0-S2211124724010805-mmc2.xlsx
     local: ./DATALAKE/BOVERHOFF2.xlsx
     kind: excel
     sheet: Supplementary Table 1

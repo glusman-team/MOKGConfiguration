@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9499989/bin/mmc2.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/9499989/bin/mmc2.xlsx
     local: ./DATALAKE/NAGATA5.xlsx
     kind: excel
     sheet: S5
@@ -32,9 +33,6 @@ template:
       - qualifier: anatomical_context_qualifier
         method: value
         encoding: UBERON:0000160
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC9499989

@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC10435378_mmc19.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10435378/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC10435378/
     sheet: Sheet1
     row_slice:
       - 2
@@ -23,10 +24,6 @@ template:
         - MolecularActivity
         - BiologicalProcess
         - Pathway
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC10435378

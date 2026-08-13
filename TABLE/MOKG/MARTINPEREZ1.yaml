@@ -3,7 +3,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/MARTINPEREZ1.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC8017771.1/NIHMS1644812-supplement-1644812_Supp_Tab1.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC8017771.1/NIHMS1644812-supplement-1644812_Supp_Tab1.xlsx
     sheet: Supp.Table1A_log2 LFQ intensity
     row_slice:
       - 4
@@ -23,9 +24,6 @@ template:
         - Protein
       taxon: 10090
     qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:10090
       - qualifier: anatomical_context_qualifier
         method: value
         encoding: UBERON:0000955

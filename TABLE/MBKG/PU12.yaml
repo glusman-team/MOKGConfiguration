@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs43587-024-00678-0/MediaObjects/43587_2024_678_MOESM12_ESM.csv
+    url:
+      - https://static-content.springer.com/esm/art%3A10.1038%2Fs43587-024-00678-0/MediaObjects/43587_2024_678_MOESM12_ESM.csv
     local: ./DATALAKE/PU12.csv
     kind: text
     delimiter: ","
@@ -22,9 +23,6 @@ template:
           replacement: " "
     predicate: associated_with
     qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
       - qualifier: anatomical_context_qualifier
         method: value
         encoding: UBERON:0001988

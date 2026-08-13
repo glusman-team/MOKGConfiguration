@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/ELDJARN1.xlsx
-    url: https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-023-06563-x/MediaObjects/41586_2023_6563_MOESM3_ESM.xlsx
+    url:
+      - https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-023-06563-x/MediaObjects/41586_2023_6563_MOESM3_ESM.xlsx
   statement:
     subject:
       method: column
@@ -19,9 +20,6 @@ template:
       prioritize:
         - DiseaseOrPhenotypicFeature
     qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: "NCBITaxon:9606"
       - qualifier: anatomical_context_qualifier
         method: value
         encoding: "UBERON:0000178"

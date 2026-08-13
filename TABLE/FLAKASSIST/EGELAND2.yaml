@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC11554838_41416_2024_2875_MOESM7_ESM.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC11554838.1/41416_2024_2875_MOESM7_ESM.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC11554838.1/41416_2024_2875_MOESM7_ESM.xlsx
     sheet: Sheet1
     row_slice:
       - 2
@@ -20,10 +21,6 @@ template:
       encoding: triple-negative breast carcinoma
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: subject_form_or_variant_qualifier
-        method: value
-        encoding: somatic
   provenance:
     repo: PMC
     publication: PMC11554838
@@ -36,6 +33,7 @@ template:
       encoding: F
     - annotation: miscellaneous notes
       method: value
-      encoding:
-        Somatic variants specific to MAS98.12PR PDX model (paclitaxel-resistant).
-        Includes ATRX frameshift classified as Likely_Oncogenic.
+      encoding: Somatic variants specific to MAS98.12PR PDX model (paclitaxel-resistant). Includes ATRX frameshift classified as Likely_Oncogenic.
+    - annotation: subject_form_or_variant_qualifier
+      method: value
+      encoding: somatic

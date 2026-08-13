@@ -1,6 +1,7 @@
 template:
   source:
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/4787260/bin/NIHMS762705-supplement-Supplementary_Tables_1-17.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/4787260/bin/NIHMS762705-supplement-Supplementary_Tables_1-17.xlsx
     local: ./DATALAKE/BLANTON1.xlsx
     kind: excel
     sheet: Table S17.
@@ -8,6 +9,7 @@ template:
     subject:
       method: column
       encoding: A
+      taxon: 10090
       prioritize:
         - OrganismTaxon
       remove:
@@ -16,9 +18,6 @@ template:
         - ^\(c\) liver and gastrocnemius organic acids\.$
     predicate: associated_with
     qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:10090
       - qualifier: disease_context_qualifier
         method: value
         encoding: MONDO:0001371

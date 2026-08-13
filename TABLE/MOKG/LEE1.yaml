@@ -3,7 +3,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/LEE1.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/instance/9616573/bin/supplementary_data_ddac040.xlsx
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/instance/9616573/bin/supplementary_data_ddac040.xlsx
     row_slice: [1, auto]
   provenance:
     repo: PMC
@@ -55,9 +56,6 @@ sections:
       object:
         taxon: 9606
       qualifiers:
-        - qualifier: species_context_qualifier
-          method: value
-          encoding: "NCBITaxon:9606"
         - qualifier: object_aspect_qualifier
           method: value
           encoding: expression
@@ -71,9 +69,6 @@ sections:
       object:
         taxon: 10090
       qualifiers:
-        - qualifier: species_context_qualifier
-          method: value
-          encoding: "NCBITaxon:10090"
         - qualifier: object_aspect_qualifier
           method: value
           encoding: expression
@@ -87,9 +82,6 @@ sections:
       object:
         taxon: 10090
       qualifiers:
-        - qualifier: species_context_qualifier
-          method: value
-          encoding: "NCBITaxon:10090"
         - qualifier: object_aspect_qualifier
           method: value
           encoding: expression
@@ -103,9 +95,6 @@ sections:
       object:
         taxon: 10090
       qualifiers:
-        - qualifier: species_context_qualifier
-          method: value
-          encoding: "NCBITaxon:10090"
         - qualifier: object_aspect_qualifier
           method: value
           encoding: expression

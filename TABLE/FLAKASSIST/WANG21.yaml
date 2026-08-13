@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12633141_media-2.xlsx
-    url: https://pmc-oa-opendata.s3.amazonaws.com/PMC12633141.1/media-2.xlsx
+    url:
+      - https://pmc-oa-opendata.s3.amazonaws.com/PMC12633141.1/media-2.xlsx
     sheet: S16 - TADA
     row_slice:
       - 60

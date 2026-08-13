@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12187248_NIHMS2090365-supplement-3.xlsx
-    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12187248/
+    url:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC12187248/
     sheet: 2. LD Proteome
     row_slice:
       - 2

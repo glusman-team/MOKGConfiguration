@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12107742_13195_2025_1767_MOESM3_ESM.xlsx
-    url: https://static-content.springer.com/esm/art%3A10.1186%2Fs13195-025-01767-x/MediaObjects/13195_2025_1767_MOESM3_ESM.xlsx
+    url:
+      - https://static-content.springer.com/esm/art%3A10.1186%2Fs13195-025-01767-x/MediaObjects/13195_2025_1767_MOESM3_ESM.xlsx
     sheet: spAD and rpAD
     row_slice:
       - 1
@@ -26,10 +27,6 @@ template:
       encoding: rapidly progressive Alzheimer's disease
       prioritize:
         - Disease
-    qualifiers:
-      - qualifier: species_context_qualifier
-        method: value
-        encoding: NCBITaxon:9606
   provenance:
     repo: PMC
     publication: PMC12107742

@@ -2,7 +2,8 @@ template:
   source:
     kind: excel
     local: ./DATALAKE/PMC12080641_S0033291725000388sup002.xlsx
-    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12080641/
+    url:
+      - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12080641/
     sheet: S6. PGS_assoc
     row_slice:
       - 1
